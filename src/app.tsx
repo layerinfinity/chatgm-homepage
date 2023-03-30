@@ -11,6 +11,7 @@ export default function App() {
     <ThemeProvider>
       <Layout>
         <IntroductionSection />
+        <Space h={100} />
         <ChatGMSection />
         <Space h={100} />
         <PayGMSection />
