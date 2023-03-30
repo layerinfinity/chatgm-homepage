@@ -7,5 +7,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/extensions': 'off',
     'arrow-body-style': 'off',
+    'linebreak-style': 'off',
   },
 };

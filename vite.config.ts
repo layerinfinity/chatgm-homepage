@@ -20,6 +20,10 @@ export default defineConfig({
         find: '~/layouts',
         replacement: path.resolve(__dirname, 'src', 'layouts'),
       },
+      {
+        find: '~/components',
+        replacement: path.resolve(__dirname, 'src', 'components'),
+      },
     ],
   },
 });

@@ -18,7 +18,8 @@
     "paths": {
       "@test-utils": ["./test-utils"],
       "~/sections/*": ["./src/sections/*"],
-      "~/layouts/*": ["./src/layouts/*"]
+      "~/layouts/*": ["./src/layouts/*"],
+      "~/components/*": ["./src/components/*"]
     }
   },
   "include": ["src", "test-utils"],
