@@ -1,4 +1,4 @@
-import { AppShell, Container } from '@mantine/core';
+import { AppShell } from '@mantine/core';
 import AppHeader from '~/components/header';
 
 interface Props {
@@ -19,7 +19,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         },
       })}
     >
-      <Container size="lg">{children}</Container>
+      {children}
     </AppShell>
   );
 };

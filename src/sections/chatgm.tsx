@@ -1,18 +1,17 @@
 import { AspectRatio, Text, Title } from '@mantine/core';
 import SubLayout from '~/layouts/sub-layout';
 
-const IntroductionSection = () => {
+const ChatGMSection = () => {
   return (
     <SubLayout>
-      <Title size="5em" align="center">
-        Chat, Pay, Crypto
+      <Title order={1} align="center" mb="md">
+        Chat GM
       </Title>
-      <Text size="3em" weight="bold" align="center" mb="xl">
-        Web3{' '}
-        <Text component="span" color="brand.5">
-          All in One
-        </Text>{' '}
-        App
+      <Text align="center" size="xl" mb="xl">
+        Say Goodbye to long Crypto Wallet addresses that no one can remember
+        <br />
+        Say GM to easily searchable User ID with format @gm.[userID] tied directly to multiple
+        wallets.
       </Text>
 
       <AspectRatio ratio={16 / 9} mb="lg">
@@ -34,4 +33,4 @@ const IntroductionSection = () => {
   );
 };
 
-export default IntroductionSection;
+export default ChatGMSection;
