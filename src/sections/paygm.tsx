@@ -1,4 +1,5 @@
 import { Box, Container, Image, Text, Title, createStyles } from '@mantine/core';
+import useCommonStyles from '~/sections/_common';
 
 const useStyles = createStyles(() => ({
   wrapper: {},
@@ -12,13 +13,14 @@ const useStyles = createStyles(() => ({
 
 const PayGMSection = () => {
   const { classes } = useStyles();
+  const { classes: commonClasses } = useCommonStyles();
 
   return (
     <Box className={classes.wrapper}>
-      <Title order={1} align="center">
+      <Title order={1} align="center" mb="md" className={commonClasses.headlineTitle}>
         Pay GM
       </Title>
-      <Text align="center" size="xl">
+      <Text align="center" className={commonClasses.headlineSubtitle}>
         Easy crypto payment in the Metaverse & Real Life
       </Text>
 

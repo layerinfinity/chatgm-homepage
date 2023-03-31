@@ -66,6 +66,14 @@ export function CustomFonts() {
             fontStyle: 'normal',
           },
         },
+        {
+          '@font-face': {
+            fontFamily: 'SF Pro Display',
+            src: "url('/fonts/SF-Pro-Display-Heavy.otf') format('opentype')",
+            fontWeight: 800,
+            fontStyle: 'normal',
+          },
+        },
       ]}
     />
   );

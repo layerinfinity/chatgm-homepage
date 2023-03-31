@@ -14,6 +14,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         main: {
           padding: 0,
           backgroundImage: 'url(/images/newbg.png)',
+          backgroundPosition: '0 -300px',
           minHeight: '4000px',
           backgroundColor:
             theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],

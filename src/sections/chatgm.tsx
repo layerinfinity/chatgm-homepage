@@ -1,13 +1,16 @@
 import { AspectRatio, Text, Title } from '@mantine/core';
 import SubLayout from '~/layouts/sub-layout';
+import useCommonStyles from '~/sections/_common';
 
 const ChatGMSection = () => {
+  const { classes: commonClasses } = useCommonStyles();
+
   return (
     <SubLayout>
-      <Title order={1} align="center" mb="md">
+      <Title order={1} align="center" mb="md" className={commonClasses.headlineTitle}>
         Chat GM
       </Title>
-      <Text align="center" size="xl" mb="xl">
+      <Text align="center" size="xl" mb="xl" className={commonClasses.headlineSubtitle}>
         Say Goodbye to long Crypto Wallet addresses that no one can remember
         <br />
         Say GM to easily searchable User ID with format @gm.[userID] tied directly to multiple
