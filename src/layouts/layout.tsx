@@ -10,12 +10,12 @@ const Layout: React.FC<Props> = ({ children }) => {
     <AppShell
       padding="md"
       header={<AppHeader />}
-      fixed={false}
       styles={(theme) => ({
         main: {
           padding: 0,
           backgroundImage: 'url(/images/newbg.png)',
-          backgroundPosition: '0 -300px',
+          backgroundPosition: '0 -80px',
+          backgroundRepeat: 'no-repeat',
           minHeight: '4000px',
           backgroundColor:
             theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],

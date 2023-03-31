@@ -8,6 +8,7 @@ import {
   MediaQuery,
   Title,
   UnstyledButton,
+  createStyles,
 } from '@mantine/core';
 
 const menu = [
@@ -29,10 +30,20 @@ const menu = [
   },
 ];
 
+const useStyles = createStyles(() => ({
+  header: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    backdropFilter: 'blur(20px)',
+  },
+}));
+
 function AppHeader() {
+  const { classes } = useStyles();
+
   return (
-    <Header fixed={false} height={80} sx={{ backgroundColor: 'transparent', border: 'none' }}>
-      <Container size="lg" sx={{ height: '100%', position: 'relative', zIndex: 2 }}>
+    <Header fixed={false} height={120} className={classes.header}>
+      <Container size="lg" sx={{ height: '100%', zIndex: 2 }}>
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Group position="apart" align="center" sx={{ height: '100%' }}>
             <Image src="/images/chatgm-logo.svg" width={220} fit="contain" />
@@ -45,7 +56,7 @@ function AppHeader() {
               ))}
 
               <Button
-                color="brand.3"
+                color="brand.5"
                 styles={{
                   root: {
                     borderRadius: '3rem',
@@ -61,7 +72,7 @@ function AppHeader() {
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
           <Center py={24}>
             <UnstyledButton component="a" href="/">
-              <Image src="/images/mobile-logo.svg" width={100} fit="contain" />
+              <Image src="/images/mobile-logo.svg" width={80} fit="contain" />
             </UnstyledButton>
           </Center>
         </MediaQuery>

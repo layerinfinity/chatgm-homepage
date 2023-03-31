@@ -8,7 +8,7 @@ const useCommonStyles = createStyles((theme) => ({
   },
   headlineSubtitle: {
     fontSize: '1.1em',
-    fontWeight: 400,
+    fontWeight: 300,
     color: theme.colors.gray[0],
   },
 }));

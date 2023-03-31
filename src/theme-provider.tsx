@@ -4,16 +4,16 @@ export const theme: MantineThemeOverride = {
   colorScheme: 'dark',
   colors: {
     brand: [
-      '#F5F5FC',
-      '#CFD1F4',
-      '#A5A9F5',
-      '#767DFF',
-      '#6269EE',
-      '#555BDA',
-      '#4B51C5',
-      '#484DAC',
-      '#4A4E92',
-      '#494C7D',
+      '#F9F7FC',
+      '#DED5F1',
+      '#C3AFED',
+      '#A886F2',
+      '#8C56FF',
+      '#7C48EB',
+      '#6F3FD5',
+      '#653DBC',
+      '#5F429E',
+      '#594486',
     ],
     lightGreen: [
       '#EBF0ED',
@@ -50,6 +50,14 @@ export function CustomFonts() {
   return (
     <Global
       styles={[
+        {
+          '@font-face': {
+            fontFamily: 'SF Pro Display',
+            src: "url('/fonts/SF-Pro-Display-Light.otf') format('opentype')",
+            fontWeight: 200,
+            fontStyle: 'normal',
+          },
+        },
         {
           '@font-face': {
             fontFamily: 'SF Pro Display',
