@@ -1,25 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import Unfonts from 'unplugin-fonts/vite';
 
 const path = require('path');
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    Unfonts({
-      custom: {
-        families: [
-          {
-            name: 'SF Pro Display',
-            src: './public/fonts/*.otf',
-          },
-        ],
-        injectTo: 'head-prepend',
-      },
-    }),
-  ],
+  plugins: [react()],
   resolve: {
     alias: [
       {

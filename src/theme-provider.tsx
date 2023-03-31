@@ -1,4 +1,4 @@
-import { MantineProvider, MantineThemeOverride } from '@mantine/core';
+import { Global, MantineProvider, MantineThemeOverride } from '@mantine/core';
 
 export const theme: MantineThemeOverride = {
   colorScheme: 'dark',
@@ -29,9 +29,9 @@ export const theme: MantineThemeOverride = {
     ],
   },
   primaryColor: 'brand',
-  fontFamily: 'SF Pro Display, sans-serif',
+  fontFamily: 'SF Pro Display',
   fontFamilyMonospace: 'Monaco, Courier, monospace',
-  headings: { fontFamily: 'Greycliff CF, sans-serif' },
+  headings: { fontFamily: 'SF Pro Display' },
 };
 
 interface ThemeProviderProps {
@@ -43,5 +43,30 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
       {children}
     </MantineProvider>
+  );
+}
+
+export function CustomFonts() {
+  return (
+    <Global
+      styles={[
+        {
+          '@font-face': {
+            fontFamily: 'SF Pro Display',
+            src: "url('/fonts/SF-Pro-Display-Regular.otf') format('opentype')",
+            fontWeight: 400,
+            fontStyle: 'normal',
+          },
+        },
+        {
+          '@font-face': {
+            fontFamily: 'SF Pro Display',
+            src: "url('/fonts/SF-Pro-Display-Semibold.otf') format('opentype')",
+            fontWeight: 600,
+            fontStyle: 'normal',
+          },
+        },
+      ]}
+    />
   );
 }

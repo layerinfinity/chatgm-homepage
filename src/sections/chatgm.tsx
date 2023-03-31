@@ -26,7 +26,7 @@ const ChatGMSection = () => {
         />
       </AspectRatio>
 
-      <Title order={3} color="lightGreen.4" align="center">
+      <Title order={2} color="lightGreen.5" align="center" weight={600}>
         Onboarding BILLIONS of first-time crypto users!
       </Title>
     </SubLayout>

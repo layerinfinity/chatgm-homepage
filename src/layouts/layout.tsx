@@ -12,6 +12,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       header={<AppHeader />}
       styles={(theme) => ({
         main: {
+          padding: 0,
           backgroundImage: 'url(/images/newbg.png)',
           minHeight: '4000px',
           backgroundColor:

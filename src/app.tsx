@@ -4,12 +4,14 @@ import Layout from '~/layouts/layout';
 import ChatGMSection from '~/sections/chatgm';
 import PayGMSection from '~/sections/paygm';
 
-import { ThemeProvider } from './theme-provider';
+import { CustomFonts, ThemeProvider } from './theme-provider';
 
 export default function App() {
   return (
     <ThemeProvider>
+      <CustomFonts />
       <Layout>
+        <Space h={100} />
         <IntroductionSection />
         <Space h={100} />
         <ChatGMSection />
