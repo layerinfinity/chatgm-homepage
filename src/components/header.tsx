@@ -51,7 +51,9 @@ function AppHeader() {
       <Container size="lg" sx={{ height: '100%', zIndex: 2 }}>
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Group position="apart" align="center" sx={{ height: '100%' }}>
-            <Image src="/images/chatgm-logo.svg" width={220} fit="contain" />
+            <UnstyledButton component="a" href="/">
+              <Image src="/images/chatgm-logo.svg" width={220} fit="contain" />
+            </UnstyledButton>
 
             <Group spacing="lg">
               {menu.map((n, idx) => (

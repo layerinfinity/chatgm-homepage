@@ -29,7 +29,7 @@ const MobileFocused = () => {
         AI-supported Crypto & Stock trading
       </Text>
 
-      <Center>
+      <Center px="xl">
         <Image src="/images/blocks-and-chains.png" width="100%" className={classes.animated} />
       </Center>
     </Stack>
