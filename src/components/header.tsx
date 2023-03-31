@@ -30,11 +30,16 @@ const menu = [
   },
 ];
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles((theme) => ({
   header: {
+    height: 80,
     backgroundColor: 'transparent',
     border: 'none',
     backdropFilter: 'blur(20px)',
+    // Simplify media query writing with theme functions
+    [theme.fn.smallerThan('md')]: {
+      height: 120,
+    },
   },
 }));
 

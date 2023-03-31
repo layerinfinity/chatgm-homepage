@@ -15,6 +15,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           padding: 0,
           backgroundImage: 'url(/images/newbg.png)',
           backgroundPosition: '0 -80px',
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           minHeight: '4000px',
           backgroundColor:
