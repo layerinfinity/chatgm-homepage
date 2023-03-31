@@ -31,7 +31,7 @@ const menu = [
 
 function AppHeader() {
   return (
-    <Header height={80} sx={{ backgroundColor: 'transparent', border: 'none' }}>
+    <Header fixed={false} height={80} sx={{ backgroundColor: 'transparent', border: 'none' }}>
       <Container size="lg" sx={{ height: '100%', position: 'relative', zIndex: 2 }}>
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Group position="apart" align="center" sx={{ height: '100%' }}>
@@ -61,7 +61,7 @@ function AppHeader() {
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
           <Center py={24}>
             <UnstyledButton component="a" href="/">
-              <Image src="/images/mobile-logo.png" width={100} fit="contain" />
+              <Image src="/images/mobile-logo.svg" width={100} fit="contain" />
             </UnstyledButton>
           </Center>
         </MediaQuery>

@@ -10,6 +10,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     <AppShell
       padding="md"
       header={<AppHeader />}
+      fixed={false}
       styles={(theme) => ({
         main: {
           padding: 0,
