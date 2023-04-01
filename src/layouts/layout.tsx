@@ -13,12 +13,12 @@ const Layout: React.FC<Props> = ({ children }) => {
       header={<AppHeader />}
       styles={() => ({
         main: {
-          // overflowX: 'hidden',
+          overflowX: 'hidden',
         },
         root: {
           backgroundImage: 'url(/images/newbg.png)',
           backgroundPosition: '0 0px',
-          backgroundSize: 'auto',
+          backgroundSize: 'cover',
           overflowX: 'hidden',
           backgroundRepeat: 'no-repeat',
           padding: 0,
