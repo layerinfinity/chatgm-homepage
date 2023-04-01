@@ -47,7 +47,7 @@ function AppHeader() {
   const { classes } = useStyles();
 
   return (
-    <Header fixed={false} height={120} className={classes.header}>
+    <Header height={120} className={classes.header}>
       <Container size="lg" sx={{ height: '100%', zIndex: 2 }}>
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Group position="apart" align="center" sx={{ height: '100%' }}>

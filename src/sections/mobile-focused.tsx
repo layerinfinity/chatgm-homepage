@@ -1,4 +1,5 @@
 import { Center, Image, Stack, Text, Title, createStyles, keyframes } from '@mantine/core';
+import useCommonStyles from '~/sections/_common';
 
 export const bounce = keyframes({
   '0%': { transform: 'translate3d(0, 0, 0)' },
@@ -14,14 +15,15 @@ const useStyles = createStyles(() => ({
 
 const MobileFocused = () => {
   const { classes } = useStyles();
+  const { classes: commonClasses } = useCommonStyles();
 
   return (
     <Stack align="center">
-      <Title order={1} align="center">
+      <Title order={1} align="center" className={commonClasses.headlineTitle}>
         Mobile-focused Exchange
       </Title>
 
-      <Text align="center">
+      <Text align="center" className={commonClasses.headlineSubtitle}>
         Deposit/Withdraw
         <br />
         Token Launchpad

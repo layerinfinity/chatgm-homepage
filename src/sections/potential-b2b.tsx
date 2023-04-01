@@ -10,7 +10,7 @@ const PotentialB2B = () => {
         Potential B2B Opportunities
       </Title>
 
-      <Text align="center" mb="xl" className={commonClasses.headlineSubtitle}>
+      <Text align="center" className={commonClasses.headlineSubtitle}>
         Web3 Payment for E-Commerce/ In-App Purchase / POS (QR Code)
         <br />
         AI-generated Digital Assets for Brands

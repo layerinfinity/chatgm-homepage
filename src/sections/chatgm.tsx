@@ -5,9 +5,14 @@ import useCommonStyles from '~/sections/_common';
 const useStyles = createStyles((theme) => ({
   videoWrapper: {
     padding: '0 5rem',
-    // Simplify media query writing with theme functions
     [theme.fn.smallerThan('md')]: {
-      padding: '0 3rem',
+      padding: '0 0.1rem',
+    },
+  },
+  onboarding: {
+    fontSize: '1.4rem',
+    [theme.fn.smallerThan('md')]: {
+      fontSize: '1em',
     },
   },
 }));
@@ -18,17 +23,17 @@ const ChatGMSection = () => {
 
   return (
     <SubLayout>
-      <Title order={1} align="center" mb="md" className={commonClasses.headlineTitle}>
+      <Title order={1} align="center" className={commonClasses.headlineTitle}>
         Chat GM
       </Title>
-      <Text align="center" size="xl" mb="xl" className={commonClasses.headlineSubtitle}>
-        Say Goodbye to long Crypto Wallet addresses that no one can remember
+      <Text align="center" size="xl" className={commonClasses.headlineSubtitle}>
+        Say Goodbye to long Crypto Wallet addresses that no one can remember.
         <br />
         Say GM to easily searchable User ID with format @gm.[userID] tied directly to multiple
         wallets.
       </Text>
 
-      <Box className={classes.videoWrapper}>
+      <Box className={classes.videoWrapper} mb="2rem">
         <AspectRatio ratio={16 / 9} mb="lg">
           <iframe
             title="ChatGM"
@@ -42,7 +47,13 @@ const ChatGMSection = () => {
         </AspectRatio>
       </Box>
 
-      <Title order={2} color="lightGreen.5" align="center" weight={600}>
+      <Title
+        order={2}
+        color="lightGreen.5"
+        align="center"
+        weight={600}
+        className={classes.onboarding}
+      >
         Onboarding BILLIONS of first-time crypto users!
       </Title>
     </SubLayout>

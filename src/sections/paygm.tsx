@@ -1,4 +1,4 @@
-import { Box, Container, Image, Space, Text, Title, createStyles, keyframes } from '@mantine/core';
+import { Box, Container, Image, Text, Title, createStyles, keyframes } from '@mantine/core';
 import useCommonStyles from '~/sections/_common';
 
 export const bounce = keyframes({
@@ -41,14 +41,12 @@ const PayGMSection = () => {
 
   return (
     <Box className={classes.wrapper}>
-      <Title order={1} align="center" mb="md" className={commonClasses.headlineTitle}>
+      <Title order={1} align="center" className={commonClasses.headlineTitle}>
         Pay GM
       </Title>
       <Text align="center" className={commonClasses.headlineSubtitle}>
         Easy crypto payment in the Metaverse & Real Life
       </Text>
-
-      <Space h={120} />
 
       <Box sx={{ position: 'relative' }}>
         <Image src="/images/aurora-wave.svg" height="100%" className={classes.aurora} />

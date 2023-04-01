@@ -1,11 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import Unfonts from 'unplugin-fonts/vite';
 
 const path = require('path');
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    Unfonts({
+      google: {
+        preconnect: false,
+        display: 'block',
+        families: ['Open Sans'],
+        injectTo: 'head-prepend',
+      },
+    }),
+  ],
   resolve: {
     alias: [
       {

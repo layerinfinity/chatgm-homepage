@@ -6,14 +6,13 @@ import PayGMSection from '~/sections/paygm';
 import MobileFocused from '~/sections/mobile-focused';
 import PotentialB2B from '~/sections/potential-b2b';
 
-import { CustomFonts, ThemeProvider } from './theme-provider';
+import { ThemeProvider } from './theme-provider';
 
 export default function App() {
   return (
     <ThemeProvider>
-      <CustomFonts />
       <Layout>
-        <Space h={130} />
+        <Space h={40} />
         <IntroductionSection />
         <Space h={100} />
         <ChatGMSection />

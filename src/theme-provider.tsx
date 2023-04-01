@@ -1,4 +1,4 @@
-import { Global, MantineProvider, MantineThemeOverride } from '@mantine/core';
+import { MantineProvider, MantineThemeOverride } from '@mantine/core';
 
 export const theme: MantineThemeOverride = {
   colorScheme: 'dark',
@@ -29,9 +29,9 @@ export const theme: MantineThemeOverride = {
     ],
   },
   primaryColor: 'brand',
-  fontFamily: 'SF Pro Display',
+  fontFamily: 'Open Sans, sans-serif',
   fontFamilyMonospace: 'Monaco, Courier, monospace',
-  headings: { fontFamily: 'SF Pro Display' },
+  headings: { fontFamily: 'Open Sans' },
 };
 
 interface ThemeProviderProps {
@@ -43,46 +43,5 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
       {children}
     </MantineProvider>
-  );
-}
-
-export function CustomFonts() {
-  return (
-    <Global
-      styles={[
-        {
-          '@font-face': {
-            fontFamily: 'SF Pro Display',
-            src: "url('/fonts/SF-Pro-Display-Light.otf') format('opentype')",
-            fontWeight: 200,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'SF Pro Display',
-            src: "url('/fonts/SF-Pro-Display-Regular.otf') format('opentype')",
-            fontWeight: 400,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'SF Pro Display',
-            src: "url('/fonts/SF-Pro-Display-Semibold.otf') format('opentype')",
-            fontWeight: 600,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'SF Pro Display',
-            src: "url('/fonts/SF-Pro-Display-Heavy.otf') format('opentype')",
-            fontWeight: 800,
-            fontStyle: 'normal',
-          },
-        },
-      ]}
-    />
   );
 }
