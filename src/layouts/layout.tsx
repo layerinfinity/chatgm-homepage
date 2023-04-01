@@ -1,5 +1,4 @@
 import { AppShell } from '@mantine/core';
-import AppFooter from '~/components/footer';
 import AppHeader from '~/components/header';
 
 interface Props {
@@ -12,16 +11,14 @@ const Layout: React.FC<Props> = ({ children }) => {
       padding="0"
       fixed={false}
       header={<AppHeader />}
-      footer={<AppFooter />}
       styles={() => ({
         main: {
-          overflowX: 'hidden',
+          // overflowX: 'hidden',
         },
         root: {
-          // minHeight: '2000px',
           backgroundImage: 'url(/images/newbg.png)',
           backgroundPosition: '0 0px',
-          backgroundSize: 'cover',
+          backgroundSize: 'auto',
           overflowX: 'hidden',
           backgroundRepeat: 'no-repeat',
           padding: 0,

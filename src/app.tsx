@@ -8,6 +8,8 @@ import PayGMSection from '~/sections/paygm';
 import MobileFocused from '~/sections/mobile-focused';
 import PotentialB2B from '~/sections/potential-b2b';
 
+import AppFooter from '~/components/footer';
+
 import { ThemeProvider } from './theme-provider';
 
 export default function App() {
@@ -33,6 +35,8 @@ export default function App() {
         <MobileFocused />
         <Space h={100} />
         <PotentialB2B />
+
+        <AppFooter />
       </Layout>
     </ThemeProvider>
   );
