@@ -1,9 +1,24 @@
-import { Box, Container, Image, Text, Title, createStyles, keyframes } from '@mantine/core';
+import {
+  Box,
+  Container,
+  Image,
+  MediaQuery,
+  Text,
+  Title,
+  createStyles,
+  keyframes,
+} from '@mantine/core';
 import useCommonStyles from '~/sections/_common';
 
 export const bounce = keyframes({
   '0%': { transform: 'translate3d(0, 0, 0)' },
   '40%': { transform: 'translate3d(0, -20px, 0)' },
+  '100%': { transform: 'translate3d(0, 0, 0)' },
+});
+
+export const bounceH = keyframes({
+  '0%': { transform: 'translate3d(0, 0, 0)' },
+  '40%': { transform: 'translate3d(-6px, 0, 0)' },
   '100%': { transform: 'translate3d(0, 0, 0)' },
 });
 
@@ -17,6 +32,9 @@ const useStyles = createStyles(() => ({
   },
   animated: {
     animation: `${bounce} 2s ease-in-out infinite`,
+  },
+  animatedH: {
+    animation: `${bounceH} 2s ease-in-out infinite`,
   },
   sign: {
     position: 'absolute',
@@ -33,6 +51,18 @@ const useStyles = createStyles(() => ({
     top: '22%',
     left: '72%',
   },
+  sign1m: {
+    top: '22%',
+    left: '30%',
+  },
+  sign2m: {
+    top: '64%',
+    left: '45%',
+  },
+  sign3m: {
+    top: '43%',
+    left: '36%',
+  },
 }));
 
 const PayGMSection = () => {
@@ -48,29 +78,57 @@ const PayGMSection = () => {
         Easy crypto payment in the Metaverse & Real Life
       </Text>
 
-      <Box sx={{ position: 'relative' }}>
-        <Image src="/images/aurora-wave.svg" height="100%" className={classes.aurora} />
+      <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+        <Box sx={{ position: 'relative' }}>
+          <Image src="/images/aurora-wave.svg" height="100%" className={classes.aurora} />
 
-        <Container sx={{ position: 'relative' }}>
-          <Image
-            src="/images/sign-erc-4337.svg"
-            width="50%"
-            classNames={{ root: cx(classes.sign, classes.sign1, classes.animated) }}
-          />
-          <Image
-            src="/images/sign-multisig.svg"
-            width="38%"
-            classNames={{ root: cx(classes.sign, classes.sign2, classes.animated) }}
-          />
-          <Image
-            src="/images/sign-qrcode-payment.svg"
-            width="48%"
-            classNames={{ root: cx(classes.sign, classes.sign3, classes.animated) }}
-          />
+          <Container sx={{ position: 'relative' }}>
+            <Image
+              src="/images/sign-erc-4337.svg"
+              width="50%"
+              classNames={{ root: cx(classes.sign, classes.sign1, classes.animated) }}
+            />
+            <Image
+              src="/images/sign-multisig.svg"
+              width="38%"
+              classNames={{ root: cx(classes.sign, classes.sign2, classes.animated) }}
+            />
+            <Image
+              src="/images/sign-qrcode-payment.svg"
+              width="48%"
+              classNames={{ root: cx(classes.sign, classes.sign3, classes.animated) }}
+            />
 
-          <Image src="/images/phone-app.png" />
-        </Container>
-      </Box>
+            <Image src="/images/phone-app.png" />
+          </Container>
+        </Box>
+      </MediaQuery>
+
+      <MediaQuery largerThan="md" styles={{ display: 'none' }}>
+        <Box sx={{ position: 'relative' }}>
+          <Image src="/images/aurora-wave.svg" height="100%" className={classes.aurora} />
+
+          <Box sx={{ position: 'relative' }}>
+            <Image
+              src="/images/sign-m-erc-4337.svg"
+              width="80%"
+              classNames={{ root: cx(classes.sign, classes.sign1m, classes.animatedH) }}
+            />
+            <Image
+              src="/images/sign-m-multisig.svg"
+              width="70%"
+              classNames={{ root: cx(classes.sign, classes.sign2m, classes.animatedH) }}
+            />
+            <Image
+              src="/images/sign-m-qrcode-payment.svg"
+              width="76%"
+              classNames={{ root: cx(classes.sign, classes.sign3m, classes.animatedH) }}
+            />
+
+            <Image src="/images/phone-app-m.png" />
+          </Box>
+        </Box>
+      </MediaQuery>
     </Box>
   );
 };

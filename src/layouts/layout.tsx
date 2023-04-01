@@ -18,9 +18,9 @@ const Layout: React.FC<Props> = ({ children }) => {
           overflowX: 'hidden',
         },
         root: {
-          minHeight: '2000px',
+          // minHeight: '2000px',
           backgroundImage: 'url(/images/newbg.png)',
-          backgroundPosition: '0 -80px',
+          backgroundPosition: '0 0px',
           backgroundSize: 'cover',
           overflowX: 'hidden',
           backgroundRepeat: 'no-repeat',
