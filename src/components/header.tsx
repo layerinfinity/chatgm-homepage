@@ -36,7 +36,6 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: 'transparent',
     border: 'none',
     backdropFilter: 'blur(20px)',
-    // Simplify media query writing with theme functions
     [theme.fn.smallerThan('md')]: {
       height: 120,
     },
@@ -55,10 +54,12 @@ function AppHeader() {
               <Image src="/images/chatgm-logo.svg" width={220} fit="contain" />
             </UnstyledButton>
 
-            <Group spacing="lg">
+            <Group spacing="2rem">
               {menu.map((n, idx) => (
                 <UnstyledButton key={idx}>
-                  <Title order={3}>{n.label}</Title>
+                  <Title color="white" order={4}>
+                    {n.label}
+                  </Title>
                 </UnstyledButton>
               ))}
 

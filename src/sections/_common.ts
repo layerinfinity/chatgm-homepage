@@ -21,6 +21,7 @@ const useCommonStyles = createStyles((theme) => ({
     lineHeight: 1.3,
     // Mobile
     [theme.fn.smallerThan('md')]: {
+      marginBottom: '1rem',
       fontSize: '0.86em',
     },
   },

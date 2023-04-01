@@ -26,7 +26,13 @@ const useStyles = createStyles(() => ({
   wrapper: {},
   aurora: {
     position: 'absolute',
-    top: '50%',
+    top: '40%',
+    left: '50%',
+    transform: ' translate(-50%, -50%)',
+  },
+  aurora2: {
+    position: 'absolute',
+    top: '98%',
     left: '50%',
     transform: ' translate(-50%, -50%)',
   },
@@ -106,7 +112,8 @@ const PayGMSection = () => {
 
       <MediaQuery largerThan="md" styles={{ display: 'none' }}>
         <Box sx={{ position: 'relative' }}>
-          <Image src="/images/aurora-wave.svg" height="100%" className={classes.aurora} />
+          <Image src="/images/aurora-wave-m.svg" height="100%" className={classes.aurora} />
+          <Image src="/images/aurora-wave-m.svg" height="100%" className={classes.aurora2} />
 
           <Box sx={{ position: 'relative' }}>
             <Image

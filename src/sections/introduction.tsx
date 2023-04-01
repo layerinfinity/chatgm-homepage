@@ -38,7 +38,11 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const IntroductionSection = () => {
+interface Props {
+  onClick: () => void;
+}
+
+const IntroductionSection: React.FC<Props> = ({ onClick }) => {
   const { classes } = useStyles();
 
   return (
@@ -82,6 +86,7 @@ const IntroductionSection = () => {
               borderRadius: '3rem',
             },
           }}
+          onClick={onClick}
         >
           <Group spacing="xs">
             <Text size="1.2em">Explore</Text>
