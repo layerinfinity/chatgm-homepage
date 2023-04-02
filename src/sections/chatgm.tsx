@@ -29,8 +29,11 @@ const ChatGMSection = () => {
       <Text align="center" size="xl" className={commonClasses.headlineSubtitle}>
         Say Goodbye to long Crypto Wallet addresses that no one can remember.
         <br />
-        Say GM to easily searchable User ID with format @gm.[userID] tied directly to multiple
-        wallets.
+        Say GM to easily searchable User ID with format{' '}
+        <Text color="brand.4" component="span">
+          @gm.[userID]
+        </Text>{' '}
+        tied directly to multiple wallets.
       </Text>
 
       <Box className={classes.videoWrapper} mb="2rem">

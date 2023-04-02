@@ -1,13 +1,4 @@
-import {
-  Box,
-  Container,
-  Footer,
-  Group,
-  MediaQuery,
-  Stack,
-  Text,
-  createStyles,
-} from '@mantine/core';
+import { Box, Container, Group, MediaQuery, Stack, Text, createStyles } from '@mantine/core';
 
 const menu = [
   {
@@ -55,7 +46,7 @@ function AppFooter() {
   const { classes } = useStyles();
 
   return (
-    <Footer height={100} className={classes.footer}>
+    <Box className={classes.footer}>
       <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
         <Container size="lg" className={classes.cont}>
           <Group position="apart">
@@ -85,7 +76,7 @@ function AppFooter() {
           </Group>
         </Box>
       </MediaQuery>
-    </Footer>
+    </Box>
   );
 }
 export default AppFooter;

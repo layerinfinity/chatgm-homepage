@@ -8,6 +8,7 @@ import PayGMSection from '~/sections/paygm';
 import MobileFocused from '~/sections/mobile-focused';
 import PotentialB2B from '~/sections/potential-b2b';
 
+import AppHeader from '~/components/header';
 import AppFooter from '~/components/footer';
 
 import { ThemeProvider } from './theme-provider';
@@ -25,7 +26,8 @@ export default function App() {
         <Drawer opened={opened} onClose={close} title="Authentication">
           {/* Drawer content */}
         </Drawer>
-        <Space h={40} />
+        <AppHeader />
+        <Space h={140} />
         <IntroductionSection onClick={scrollIntoView} />
         <Space h={100} ref={targetRef} />
         <ChatGMSection />

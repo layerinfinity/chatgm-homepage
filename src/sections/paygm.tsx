@@ -23,7 +23,10 @@ export const bounceH = keyframes({
 });
 
 const useStyles = createStyles(() => ({
-  wrapper: {},
+  wrapper: {
+    overflowX: 'hidden',
+    overflowY: 'hidden',
+  },
   aurora: {
     position: 'absolute',
     top: '40%',

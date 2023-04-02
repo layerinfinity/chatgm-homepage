@@ -33,6 +33,7 @@ const menu = [
 const useStyles = createStyles((theme) => ({
   header: {
     height: 80,
+    position: 'fixed',
     backgroundColor: 'transparent',
     border: 'none',
     backdropFilter: 'blur(20px)',
@@ -46,7 +47,7 @@ function AppHeader() {
   const { classes } = useStyles();
 
   return (
-    <Header height={120} className={classes.header}>
+    <Header fixed={false} height={120} className={classes.header}>
       <Container size="lg" sx={{ height: '100%', zIndex: 2 }}>
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Group position="apart" align="center" sx={{ height: '100%' }}>
