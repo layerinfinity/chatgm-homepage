@@ -1,5 +1,4 @@
 import { AppShell } from '@mantine/core';
-import AppHeader from '~/components/header';
 
 interface Props {
   children: React.ReactNode;
@@ -10,7 +9,6 @@ const Layout: React.FC<Props> = ({ children }) => {
     <AppShell
       padding="0"
       fixed={false}
-      header={<AppHeader />}
       styles={() => ({
         main: {
           backgroundImage: 'url(/images/newbg.png)',

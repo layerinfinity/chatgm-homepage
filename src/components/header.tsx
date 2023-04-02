@@ -36,7 +36,7 @@ const useStyles = createStyles((theme) => ({
     position: 'fixed',
     backgroundColor: 'transparent',
     border: 'none',
-    backdropFilter: 'blur(20px)',
+    backdropFilter: 'blur(12px)',
     [theme.fn.smallerThan('md')]: {
       height: 120,
     },
