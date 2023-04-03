@@ -12,9 +12,10 @@ const Layout: React.FC<Props> = ({ children }) => {
       styles={() => ({
         main: {
           backgroundImage: 'url(/images/newbg.png)',
+          backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          backgroundRepeat: 'repeat',
-          minHeight: '3000px',
+          backgroundAttachment: 'scroll',
+          minHeight: '3100px',
         },
         root: {
           padding: 0,
