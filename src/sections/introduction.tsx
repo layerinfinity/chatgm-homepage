@@ -48,8 +48,12 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
   return (
     <>
       <Box sx={{ position: 'relative' }}>
-        <MediaQuery largerThan="md" styles={{ display: 'none' }}>
-          <Image src="/images/first-wave-m.svg" alt="" sx={{ position: 'absolute' }} />
+        <MediaQuery largerThan="md" styles={{ display: 'none', position: 'relative' }}>
+          <Image
+            src="/images/first-wave-m.svg"
+            alt=""
+            sx={{ position: 'absolute', top: '-7rem', zIndex: -1 }}
+          />
         </MediaQuery>
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Image src="/images/first-wave.svg" alt="" sx={{ position: 'absolute' }} />

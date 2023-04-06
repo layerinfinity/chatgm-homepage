@@ -12,7 +12,13 @@ export default defineConfig({
       google: {
         preconnect: false,
         display: 'block',
-        families: ['Open Sans'],
+        families: [
+          'Open Sans',
+          {
+            name: 'Open Sans',
+            styles: 'wght@800',
+          },
+        ],
         injectTo: 'head-prepend',
       },
     }),

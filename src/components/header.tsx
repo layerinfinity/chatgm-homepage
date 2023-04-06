@@ -1,6 +1,5 @@
 import {
   Button,
-  Center,
   Container,
   Group,
   Header,
@@ -79,11 +78,13 @@ function AppHeader() {
         </MediaQuery>
 
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
-          <Center py={24}>
+          <Group py={24} position="apart">
+            <Image width={40} src="/images/icon-burger.svg" alt="" sx={{ visibility: 'hidden' }} />
             <UnstyledButton component="a" href="/">
               <Image src="/images/mobile-logo.svg" width={80} fit="contain" />
             </UnstyledButton>
-          </Center>
+            <Image width={40} src="/images/icon-burger.svg" alt="" />
+          </Group>
         </MediaQuery>
       </Container>
     </Header>
