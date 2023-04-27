@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Button,
@@ -11,6 +12,7 @@ import {
   createStyles,
   keyframes,
 } from '@mantine/core';
+import { SubcribeBox } from '~/components/subcribe-box';
 
 export const bounce = keyframes({
   '0%': { transform: 'translate3d(0, 0, 0)' },
@@ -45,6 +47,17 @@ interface Props {
 const IntroductionSection: React.FC<Props> = ({ onClick }) => {
   const { classes } = useStyles();
 
+  const [showSubscribeBox, setShowSubscribeBox] = React.useState(true);
+
+  const onSubscribeSucceeded = () => {
+    console.log('on subscribe succeeded');
+    setShowSubscribeBox(false);
+  };
+
+  const onSubscribeFailed = (error: any) => {
+    console.log('on subscribe failed', error);
+  };
+
   return (
     <>
       <Box sx={{ position: 'relative' }}>
@@ -55,6 +68,7 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
             sx={{ position: 'absolute', top: '-7rem', zIndex: -1 }}
           />
         </MediaQuery>
+
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Image src="/images/first-wave.svg" alt="" sx={{ position: 'absolute' }} />
         </MediaQuery>
@@ -80,30 +94,43 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
         </Container>
       </Box>
 
-      <Center>
-        <Button
-          color="brand.5"
-          styles={{
-            root: {
-              height: '4rem',
-              width: '12rem',
-              borderRadius: '3rem',
-            },
-          }}
-          onClick={onClick}
-        >
-          <Group spacing="xs">
-            <Text size="1.2em">Explore</Text>
-            <Image
-              alt=""
-              width="1.3rem"
-              fit="contain"
-              src="images/icon-next.svg"
-              className={classes.animated}
+      {showSubscribeBox ? (
+        <>
+          <div style={{ marginTop: '6.5rem' }} />
+
+          <Center>
+            <SubcribeBox
+              onSubscribeFailed={onSubscribeFailed}
+              onSubscribeSucceeded={onSubscribeSucceeded}
             />
-          </Group>
-        </Button>
-      </Center>
+          </Center>
+        </>
+      ) : (
+        <Center>
+          <Button
+            color="brand.5"
+            styles={{
+              root: {
+                height: '4rem',
+                width: '12rem',
+                borderRadius: '3rem',
+              },
+            }}
+            onClick={onClick}
+          >
+            <Group spacing="xs">
+              <Text size="1.2em">Explore</Text>
+              <Image
+                alt=""
+                width="1.3rem"
+                fit="contain"
+                src="images/icon-next.svg"
+                className={classes.animated}
+              />
+            </Group>
+          </Button>
+        </Center>
+      )}
     </>
   );
 };
