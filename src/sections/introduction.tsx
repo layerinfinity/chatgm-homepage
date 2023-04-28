@@ -12,7 +12,7 @@ import {
   createStyles,
   keyframes,
 } from '@mantine/core';
-import { SubcribeBox } from '~/components/subcribe-box';
+import { EmailSubscriptionBox } from '~/components/email-subscription-box';
 
 export const bounce = keyframes({
   '0%': { transform: 'translate3d(0, 0, 0)' },
@@ -50,13 +50,10 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
   const [showSubscribeBox, setShowSubscribeBox] = React.useState(true);
 
   const onSubscribeSucceeded = () => {
-    console.log('on subscribe succeeded');
     setShowSubscribeBox(false);
   };
 
-  const onSubscribeFailed = (error: any) => {
-    console.log('on subscribe failed', error);
-  };
+  const onSubscribeFailed = (error: any) => {};
 
   return (
     <>
@@ -99,7 +96,7 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
           <div style={{ marginTop: '6.5rem' }} />
 
           <Center>
-            <SubcribeBox
+            <EmailSubscriptionBox
               onSubscribeFailed={onSubscribeFailed}
               onSubscribeSucceeded={onSubscribeSucceeded}
             />

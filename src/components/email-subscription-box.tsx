@@ -1,27 +1,29 @@
 import React from 'react';
 import { Button, Flex, Input, MediaQuery, Stack, Text } from '@mantine/core';
-import { axiosClient } from '../api/client';
+import { useAddEmailSubscription } from '../api/hooks';
 
-export type SubcribeBoxProps = {
+export type EmailSubscriptionBoxProps = {
   onSubscribeFailed?: (error: any) => void;
   onSubscribeSucceeded?: () => void;
 };
 
-export const SubcribeBox = (props: SubcribeBoxProps) => {
+export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
   const { onSubscribeFailed, onSubscribeSucceeded } = props;
   const [email, setEmail] = React.useState('');
+  const { mutate, isLoading } = useAddEmailSubscription();
 
   const onButtonSubscribeClicked = () => {
-    axiosClient
-      .post('/email/subscription/add', {
-        email: email,
-      })
-      .then(() => {
-        onSubscribeSucceeded?.();
-      })
-      .catch((error) => {
-        onSubscribeFailed?.(error?.response?.data?.message || error.toString());
-      });
+    mutate(
+      { email },
+      {
+        onError: (error: any) => {
+          onSubscribeFailed?.(error?.response?.data?.message || error.toString());
+        },
+        onSuccess: (data) => {
+          onSubscribeSucceeded?.();
+        },
+      }
+    );
   };
 
   return (

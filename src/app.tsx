@@ -1,5 +1,6 @@
 import { Drawer, Space } from '@mantine/core';
 import { useScrollIntoView, useDisclosure } from '@mantine/hooks';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 import IntroductionSection from '~/sections/introduction';
 import Layout from '~/layouts/layout';
@@ -13,6 +14,8 @@ import AppFooter from '~/components/footer';
 
 import { ThemeProvider } from './theme-provider';
 
+const queryClient = new QueryClient();
+
 export default function App() {
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
     offset: 60,
@@ -21,25 +24,27 @@ export default function App() {
   const [opened, { close }] = useDisclosure(false);
 
   return (
-    <ThemeProvider>
-      <Layout>
-        <Drawer opened={opened} onClose={close} title="Authentication">
-          {/* Drawer content */}
-        </Drawer>
-        <AppHeader />
-        <Space h={140} />
-        <IntroductionSection onClick={scrollIntoView} />
-        <Space h={100} ref={targetRef} />
-        <ChatGMSection />
-        <Space h={100} />
-        <PayGMSection />
-        <Space h={100} />
-        <MobileFocused />
-        <Space h={100} />
-        <PotentialB2B />
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <Layout>
+          <Drawer opened={opened} onClose={close} title="Authentication">
+            {/* Drawer content */}
+          </Drawer>
+          <AppHeader />
+          <Space h={140} />
+          <IntroductionSection onClick={scrollIntoView} />
+          <Space h={100} ref={targetRef} />
+          <ChatGMSection />
+          <Space h={100} />
+          <PayGMSection />
+          <Space h={100} />
+          <MobileFocused />
+          <Space h={100} />
+          <PotentialB2B />
 
-        <AppFooter />
-      </Layout>
-    </ThemeProvider>
+          <AppFooter />
+        </Layout>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
