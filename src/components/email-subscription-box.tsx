@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Flex, Input, MediaQuery, Stack, Text, useMantineTheme } from '@mantine/core';
 import * as Yup from 'yup';
 import { addEmailSubscription } from '~/api/services/email-service';
+import { AddEmailSubscriptionResponse } from '~/api/dto';
 
 const formSchema = Yup.object({
   email: Yup.string().email().required(),
@@ -9,7 +10,7 @@ const formSchema = Yup.object({
 
 export type EmailSubscriptionBoxProps = {
   onSubscribeFailed?: (error: any) => void;
-  onSubscribeSucceeded?: () => void;
+  onSubscribeSucceeded?: (data?: AddEmailSubscriptionResponse) => void;
 };
 
 export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
@@ -26,9 +27,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
       await formSchema.validate(data);
 
       const addEmailSubscriptionRes = await addEmailSubscription(data);
-      onSubscribeSucceeded?.();
-
-      console.log({ addEmailSubscriptionRes });
+      onSubscribeSucceeded?.(addEmailSubscriptionRes);
     } catch (error: any) {
       onSubscribeFailed?.(error.toString());
     } finally {
