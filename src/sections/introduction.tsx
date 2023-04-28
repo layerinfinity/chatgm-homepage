@@ -12,6 +12,7 @@ import {
   createStyles,
   keyframes,
 } from '@mantine/core';
+import { notifications } from '@mantine/notifications';
 import { EmailSubscriptionBox } from '~/components/email-subscription-box';
 
 export const bounce = keyframes({
@@ -51,9 +52,20 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
 
   const onSubscribeSucceeded = () => {
     setShowSubscribeBox(false);
+    notifications.show({
+      title: 'Email Subscription',
+      message: 'Your email was subscribed successful !!',
+      color: 'green',
+    });
   };
 
-  const onSubscribeFailed = (error: any) => {};
+  const onSubscribeFailed = (error: any) => {
+    notifications.show({
+      title: 'Email Subscription',
+      message: error,
+      color: 'red',
+    });
+  };
 
   return (
     <>
