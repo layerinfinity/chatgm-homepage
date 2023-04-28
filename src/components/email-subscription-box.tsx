@@ -60,7 +60,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
                 },
               },
             }}
-            placeholder="Email:"
+            placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
           <Button
@@ -98,7 +98,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
                 },
               },
             }}
-            placeholder="Email:"
+            placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
           <Button
