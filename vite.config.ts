@@ -41,6 +41,14 @@ export default defineConfig({
         find: '~/components',
         replacement: path.resolve(__dirname, 'src', 'components'),
       },
+      {
+        find: '~/api',
+        replacement: path.resolve(__dirname, 'src', 'api'),
+      },
+      {
+        find: '~/configs',
+        replacement: path.resolve(__dirname, 'src', 'configs'),
+      },
     ],
   },
 });

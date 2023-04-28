@@ -1,5 +1,5 @@
-import { axiosClient } from '../client';
-import { AddEmailSubscriptionDto } from '../dto';
+import { axiosClient } from '~/api/client';
+import { AddEmailSubscriptionDto } from '~/api/dto';
 
 export const addEmailSubscription = async (dto: AddEmailSubscriptionDto) => {
   const { email } = dto;

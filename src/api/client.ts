@@ -1,5 +1,6 @@
 import axios from 'axios';
+import { configs } from '~/configs';
 
-axios.defaults.baseURL = `https://chatgm-backend-nestjs-development.up.railway.app/api`;
-
-export const axiosClient = axios.create();
+export const axiosClient = axios.create({
+  baseURL: configs.API_URL,
+});
