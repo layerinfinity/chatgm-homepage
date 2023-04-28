@@ -1,6 +1,11 @@
 import React from 'react';
 import { Button, Flex, Input, MediaQuery, Stack, Text } from '@mantine/core';
 import { useAddEmailSubscription } from '../api/hooks';
+import * as Yup from 'yup';
+
+const formSchema = Yup.object({
+  email: Yup.string().email().required(),
+});
 
 export type EmailSubscriptionBoxProps = {
   onSubscribeFailed?: (error: any) => void;
@@ -12,18 +17,24 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
   const [email, setEmail] = React.useState('');
   const { mutate, isLoading } = useAddEmailSubscription();
 
-  const onButtonSubscribeClicked = () => {
-    mutate(
-      { email },
-      {
-        onError: (error: any) => {
-          onSubscribeFailed?.(error?.response?.data?.message || error.toString());
-        },
-        onSuccess: (data) => {
-          onSubscribeSucceeded?.();
-        },
-      }
-    );
+  const onButtonSubscribeClicked = async () => {
+    try {
+      await formSchema.validate({ email });
+
+      mutate(
+        { email },
+        {
+          onError: (error: any) => {
+            onSubscribeFailed?.(error?.response?.data?.message || error.toString());
+          },
+          onSuccess: () => {
+            onSubscribeSucceeded?.();
+          },
+        }
+      );
+    } catch (error: any) {
+      onSubscribeFailed?.(error.toString());
+    }
   };
 
   return (
@@ -55,6 +66,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
           <Button
             color="brand.5"
             onClick={onButtonSubscribeClicked}
+            disabled={isLoading}
             styles={{
               root: {
                 height: '3.5rem',
@@ -92,6 +104,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
           <Button
             color="brand.5"
             onClick={onButtonSubscribeClicked}
+            disabled={isLoading}
             styles={{
               root: {
                 height: '3.5rem',
