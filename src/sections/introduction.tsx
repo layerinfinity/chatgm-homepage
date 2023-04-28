@@ -55,7 +55,7 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
     setShowSubscribeBox(false);
     notifications.show({
       title: 'Email Subscription',
-      message: 'Your have subscribed successfully!',
+      message: 'You have subscribed successfully!',
       color: 'green',
     });
   };
