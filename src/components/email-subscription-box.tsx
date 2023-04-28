@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Flex, Input, MediaQuery, Stack, Text, useMantineTheme } from '@mantine/core';
-import { useAddEmailSubscription } from '../api/hooks';
 import * as Yup from 'yup';
+import { addEmailSubscription } from '~/api/services/email-service';
 
 const formSchema = Yup.object({
   email: Yup.string().email().required(),
@@ -15,26 +15,24 @@ export type EmailSubscriptionBoxProps = {
 export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
   const { onSubscribeFailed, onSubscribeSucceeded } = props;
   const [email, setEmail] = React.useState('');
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const theme = useMantineTheme();
-  const { mutate, isLoading } = useAddEmailSubscription();
 
   const onButtonSubscribeClicked = async () => {
     try {
-      await formSchema.validate({ email });
+      setIsSubmitting(true);
 
-      mutate(
-        { email },
-        {
-          onError: (error: any) => {
-            onSubscribeFailed?.(error?.response?.data?.message || error.toString());
-          },
-          onSuccess: () => {
-            onSubscribeSucceeded?.();
-          },
-        }
-      );
+      const data = { email };
+      await formSchema.validate(data);
+
+      const addEmailSubscriptionRes = await addEmailSubscription(data);
+      onSubscribeSucceeded?.();
+
+      console.log({ addEmailSubscriptionRes });
     } catch (error: any) {
       onSubscribeFailed?.(error.toString());
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -65,7 +63,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
           <Button
             color="brand.5"
             onClick={onButtonSubscribeClicked}
-            disabled={isLoading}
+            disabled={isSubmitting}
             styles={{
               root: {
                 height: '3.5rem',
@@ -101,7 +99,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
           <Button
             color="brand.5"
             onClick={onButtonSubscribeClicked}
-            disabled={isLoading}
+            disabled={isSubmitting}
             styles={{
               root: {
                 height: '3.5rem',
