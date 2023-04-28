@@ -52,11 +52,9 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
                 borderRadius: '1rem',
                 backgroundColor: 'transparent',
                 border: '1px solid #7C48EB',
+                fontSize: '1.1em',
                 '::placeholder': {
                   color: '#C5C5C5',
-                  fontStyle: 'normal',
-                  fontSize: '18px',
-                  lineHeight: '25px',
                 },
               },
             }}
@@ -90,11 +88,9 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
                 borderRadius: '1rem',
                 backgroundColor: 'transparent',
                 border: '1px solid #7C48EB',
+                fontSize: '1.1em',
                 '::placeholder': {
                   color: '#C5C5C5',
-                  fontStyle: 'normal',
-                  fontSize: '18px',
-                  lineHeight: '25px',
                 },
               },
             }}
