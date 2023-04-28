@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Flex, Input, MediaQuery, Stack, Text } from '@mantine/core';
+import { Button, Flex, Input, MediaQuery, Stack, Text, useMantineTheme } from '@mantine/core';
 import { useAddEmailSubscription } from '../api/hooks';
 import * as Yup from 'yup';
 
@@ -15,6 +15,7 @@ export type EmailSubscriptionBoxProps = {
 export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
   const { onSubscribeFailed, onSubscribeSucceeded } = props;
   const [email, setEmail] = React.useState('');
+  const theme = useMantineTheme();
   const { mutate, isLoading } = useAddEmailSubscription();
 
   const onButtonSubscribeClicked = async () => {
@@ -51,10 +52,10 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
                 height: '3.5rem',
                 borderRadius: '1rem',
                 backgroundColor: 'transparent',
-                border: '1px solid #7C48EB',
+                border: `1px solid ${theme.colors.brand[5]}`,
                 fontSize: '1.1em',
                 '::placeholder': {
-                  color: '#C5C5C5',
+                  color: theme.colors.gray[0],
                 },
               },
             }}
@@ -87,10 +88,10 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
                 height: '3.5rem',
                 borderRadius: '1rem',
                 backgroundColor: 'transparent',
-                border: '1px solid #7C48EB',
+                border: `1px solid ${theme.colors.brand[5]}`,
                 fontSize: '1.1em',
                 '::placeholder': {
-                  color: '#C5C5C5',
+                  color: theme.colors.gray[0],
                 },
               },
             }}
