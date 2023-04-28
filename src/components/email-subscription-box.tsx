@@ -5,7 +5,7 @@ import { addEmailSubscription } from '~/api/services/email-service';
 import { AddEmailSubscriptionResponse } from '~/api/dto';
 
 const formSchema = Yup.object({
-  email: Yup.string().email().required(),
+  email: Yup.string().email().required('Oops, please double check your email!'),
 });
 
 export type EmailSubscriptionBoxProps = {
@@ -40,7 +40,7 @@ export const EmailSubscriptionBox = (props: EmailSubscriptionBoxProps) => {
       <Text align="center">Subscribe for news and waiting list</Text>
 
       <MediaQuery largerThan="sm" styles={{ display: 'none', position: 'relative' }}>
-        <Flex gap={20} direction={'column'} align={'center'}>
+        <Flex gap={20} direction="column" align="center">
           <Input
             styles={{
               input: {
