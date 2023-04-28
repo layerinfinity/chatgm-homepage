@@ -7,6 +7,7 @@ import {
   Group,
   Image,
   MediaQuery,
+  Space,
   Text,
   Title,
   createStyles,
@@ -105,7 +106,7 @@ const IntroductionSection: React.FC<Props> = ({ onClick }) => {
 
       {showSubscribeBox ? (
         <>
-          <div style={{ marginTop: '6.5rem' }} />
+          <Space h={80} />
 
           <Center>
             <EmailSubscriptionBox
