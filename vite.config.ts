@@ -13,10 +13,18 @@ export default defineConfig({
         preconnect: false,
         display: 'block',
         families: [
+          // Open Sans:wght@400;500;600;700;800
           'Open Sans',
           {
             name: 'Open Sans',
-            styles: 'wght@800',
+            styles: 'wght@400;500;600;700;800',
+          },
+
+          // Outfit:wght@400;500;600;700;800;900
+          'Outfit',
+          {
+            name: 'Outfit',
+            styles: 'wght@400;500;600;700;800;900',
           },
         ],
         injectTo: 'head-prepend',
