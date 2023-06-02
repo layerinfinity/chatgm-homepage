@@ -41,7 +41,12 @@ export const MeetOurTeam = () => {
         >
           <Carousel.Slide>
             <Card p={0} radius={20}>
-              <Image src={DEFAULT_DUMMY_IMG_LINK} width={'100%'} height={420} fit="cover" />
+              <Image
+                src="images/team-members/member-1.png"
+                width={'100%'}
+                height={420}
+                fit="cover"
+              />
               <Box p={12} bg="purpleGlow.3">
                 <Text ff="Open Sans" fw={700} size={20} color="white.1" ta="center">
                   Khiem Le
@@ -55,7 +60,12 @@ export const MeetOurTeam = () => {
 
           <Carousel.Slide>
             <Card p={0} radius={20}>
-              <Image src={DEFAULT_DUMMY_IMG_LINK} width={'100%'} height={420} fit="cover" />
+              <Image
+                src="images/team-members/member-2.png"
+                width={'100%'}
+                height={420}
+                fit="cover"
+              />
               <Box p={12} bg="purpleGlow.3">
                 <Text ff="Open Sans" fw={700} size={20} color="white.1" ta="center">
                   Khiem Le
@@ -69,7 +79,12 @@ export const MeetOurTeam = () => {
 
           <Carousel.Slide>
             <Card p={0} radius={20}>
-              <Image src={DEFAULT_DUMMY_IMG_LINK} width={'100%'} height={420} fit="cover" />
+              <Image
+                src="images/team-members/member-3.png"
+                width={'100%'}
+                height={420}
+                fit="cover"
+              />
               <Box p={12} bg="purpleGlow.3">
                 <Text ff="Open Sans" fw={700} size={20} color="white.1" ta="center">
                   Khiem Le
