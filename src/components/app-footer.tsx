@@ -169,31 +169,31 @@ export const AppFooter = () => {
               </p>
               <Flex wrap="wrap" align="center" gap="24px">
                 <Anchor>
-                  <img src="images/icon-telegram.svg" />
+                  <Image src="images/icon-telegram.svg" />
                 </Anchor>
 
                 <Anchor>
-                  <img src="images/icon-discord.svg" />
+                  <Image src="images/icon-discord.svg" />
                 </Anchor>
 
                 <Anchor>
-                  <img src="images/icon-twitter.svg" />
+                  <Image src="images/icon-twitter.svg" />
                 </Anchor>
 
                 <Anchor>
-                  <img src="images/icon-facebook.svg" />
+                  <Image src="images/icon-facebook.svg" />
                 </Anchor>
 
                 <Anchor>
-                  <img src="images/icon-medium.svg" />
+                  <Image src="images/icon-medium.svg" />
                 </Anchor>
 
                 <Anchor>
-                  <img src="images/icon-github.svg" />
+                  <Image src="images/icon-github.svg" />
                 </Anchor>
 
                 <Anchor>
-                  <img src="images/icon-chatgm.svg" />
+                  <Image src="images/icon-chatgm.svg" />
                 </Anchor>
               </Flex>
             </Box>
