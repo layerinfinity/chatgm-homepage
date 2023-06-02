@@ -36,14 +36,14 @@ export const MeetOurTeam = () => {
             },
           }}
           breakpoints={[
-            { maxWidth: 'md', slideSize: '33.333%', slideGap: 30 },
+            { maxWidth: 'md', slideSize: '30%', slideGap: 30 },
             { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
           ]}
           previousControlIcon={<Image src="images/icon-angle-left.svg" />}
           nextControlIcon={<Image src="images/icon-angle-right.svg" />}
         >
           <Carousel.Slide>
-            <Card p={0} radius={20}>
+            <Card p={0} radius={20} mx={{ base: 0, md: 15 }}>
               <Image
                 src="images/team-members/member-1.png"
                 width={'100%'}
@@ -62,7 +62,7 @@ export const MeetOurTeam = () => {
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Card p={0} radius={20}>
+            <Card p={0} radius={20} mx={{ base: 0, md: 15 }}>
               <Image
                 src="images/team-members/member-2.png"
                 width={'100%'}
@@ -81,7 +81,7 @@ export const MeetOurTeam = () => {
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Card p={0} radius={20}>
+            <Card p={0} radius={20} mx={{ base: 0, md: 15 }}>
               <Image
                 src="images/team-members/member-3.png"
                 width={'100%'}
