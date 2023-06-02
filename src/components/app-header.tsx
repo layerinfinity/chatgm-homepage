@@ -125,7 +125,7 @@ export const AppHeader = () => {
           </Anchor>
 
           <Flex direction="column" gap={20} style={{ flex: 1 }}>
-            <Anchor href="/" color="dark.4" ff="Outfit" fw={500} size={24}>
+            <Anchor href="/gm-ecosystem" color="dark.4" ff="Outfit" fw={500} size={24}>
               GM Ecosystem
             </Anchor>
             <Anchor href="/fortless" color="dark.4" ff="Outfit" fw={500} size={24}>
