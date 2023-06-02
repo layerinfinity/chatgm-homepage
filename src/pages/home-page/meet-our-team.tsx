@@ -9,7 +9,7 @@ export const MeetOurTeam = () => {
     <Box
       style={{
         background: `url('images/background/background-1.png'), ${theme.colors.purpleGlow[4]}0D`,
-        backgroundRepeat: 'none',
+        backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
       }}
     >

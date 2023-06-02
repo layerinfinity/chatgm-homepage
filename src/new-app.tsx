@@ -129,6 +129,7 @@ const theme: MantineThemeOverride = {
     },
     html: {
       fontSize: '16px',
+      overflowX: 'hidden',
     },
     ul: {
       listStyle: 'none',
