@@ -1,4 +1,14 @@
-import { Box, Button, Container, Flex, Image, UnstyledButton, createStyles } from '@mantine/core';
+import {
+  Anchor,
+  Box,
+  Button,
+  Container,
+  Flex,
+  Image,
+  Text,
+  UnstyledButton,
+  createStyles,
+} from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -19,7 +29,6 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '200px',
     height: '56px',
     borderRadius: '12px',
     fontFamily: 'Open Sans',
@@ -100,34 +109,58 @@ export const AppFooter = () => {
           </h2>
 
           {/* Download Buttons */}
-          <Flex align="center" justify="space-between" w="100%" mb="100px">
-            <Button className={classes.downloadButton} color="teal.4">
+          <Flex
+            wrap="wrap"
+            align="center"
+            justify="center"
+            w="100%"
+            mb={{ base: 50, md: 100 }}
+            gap={{ base: 10, md: undefined }}
+          >
+            <Button className={classes.downloadButton} color="teal.4" w={{ base: '100%', sm: 200 }}>
               <img src="images/icon-android.svg" />
               &nbsp;Android
             </Button>
 
-            <Button className={classes.downloadButton} color="rose.3">
+            <Button className={classes.downloadButton} color="rose.3" w={{ base: '100%', sm: 200 }}>
               <img src="images/icon-apple.svg" />
               &nbsp;IOS
             </Button>
 
-            <Button className={classes.downloadButton} color="saffron.4">
+            <Button
+              className={classes.downloadButton}
+              color="saffron.4"
+              w={{ base: '100%', sm: 200 }}
+            >
               Web
             </Button>
 
-            <Button className={classes.downloadButton} color="purpleGlow.3">
+            <Button
+              className={classes.downloadButton}
+              color="purpleGlow.3"
+              w={{ base: '100%', sm: 200 }}
+            >
               <img src="images/icon-apple.svg" />
               &nbsp;MacOS
             </Button>
 
-            <Button className={classes.downloadButton} color="sky.4">
+            <Button className={classes.downloadButton} color="sky.4" w={{ base: '100%', sm: 200 }}>
               <img src="images/icon-windows.svg" />
               &nbsp;Windows
             </Button>
           </Flex>
 
           {/* Contact */}
-          <Flex align="center" w="100%" px="100px" mb="85px">
+          <Flex
+            wrap={{
+              base: 'wrap',
+              md: 'nowrap',
+            }}
+            align="center"
+            w="100%"
+            px={{ base: 0, lg: 100 }}
+            mb={{ sm: 50, md: 85 }}
+          >
             {/* Left */}
             <Box w="100%">
               <h3 className={classes.contactUsTitle}>Connect Us</h3>
@@ -166,7 +199,7 @@ export const AppFooter = () => {
             </Box>
 
             {/* Right */}
-            <Box w="100%">
+            <Box w="100%" py={50}>
               <Box className={classes.form}>
                 <input className={classes.textInput} placeholder="Enter Your Email" />
                 <UnstyledButton className={classes.submitButton}>
@@ -178,18 +211,25 @@ export const AppFooter = () => {
 
           {/* Sub Footer */}
           <Flex
+            wrap="wrap"
             align="center"
             justify="space-between"
             w="100%"
-            mih="80px"
-            className={classes.subFooter}
+            mih={80}
+            style={{
+              borderTop: `1px solid ${theme.colors.dark[4]}`,
+            }}
           >
-            <p>©2023 ChatGM. All rights reserved</p>
+            <Box>
+              <Text ff="Outfit" fw={400} size={18} color="dark.4">
+                ©2023 ChatGM. All rights reserved
+              </Text>
+            </Box>
 
-            <Flex gap="40px" style={{ color: theme.colors.gray[2] }}>
-              <a>Team</a>
-              <a>Collaboration</a>
-              <a>Publications</a>
+            <Flex gap={40} style={{ color: theme.colors.gray[2] }}>
+              <Anchor color="dark.4">Team</Anchor>
+              <Anchor color="dark.4">Collaboration</Anchor>
+              <Anchor color="dark.4">Publications</Anchor>
             </Flex>
           </Flex>
         </Flex>
