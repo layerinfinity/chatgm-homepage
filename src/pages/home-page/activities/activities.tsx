@@ -5,7 +5,7 @@ export const Activities = () => {
   return (
     <Box mb={160}>
       <Container>
-        <Text ff="Outfit" fw={500} color="rose.3" size={40}>
+        <Text ff="Outfit" fw={500} color="rose.3" size={40} ta={{ base: 'center', md: 'left' }}>
           Our Activities
         </Text>
         <Flex justify="space-between" mb={40}>
@@ -24,17 +24,11 @@ export const Activities = () => {
           </UnstyledButton>
         </Flex>
 
-        <Grid gutter={30}>
-          <Grid.Col span={4}>
-            <CardActivity />
-          </Grid.Col>
-          <Grid.Col span={4}>
-            <CardActivity />
-          </Grid.Col>
-          <Grid.Col span={4}>
-            <CardActivity />
-          </Grid.Col>
-        </Grid>
+        <Flex direction={{ base: 'column', sm: 'row' }} gap={30}>
+          <CardActivity />
+          <CardActivity />
+          <CardActivity />
+        </Flex>
       </Container>
     </Box>
   );

@@ -4,7 +4,7 @@ import { DEFAULT_DUMMY_IMG_LINK } from '~/configs';
 export const CardActivity = () => {
   return (
     <Card p={10} style={{ boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.25)' }}>
-      <Image src={DEFAULT_DUMMY_IMG_LINK} style={{ width: 340, height: 340 }} mb={10} />
+      <Image src={DEFAULT_DUMMY_IMG_LINK} h="auto" mb={10} />
 
       <Text ff="Open Sans" fw={700} size={14} color="rose.3">
         Release

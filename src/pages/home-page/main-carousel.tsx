@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { Box, Container, Flex, Image, Text, useMantineTheme } from '@mantine/core';
+import { Box, Container, Flex, Image, MediaQuery, Text, useMantineTheme } from '@mantine/core';
 
 export const MainCarousel = () => {
   const autoplay = React.useRef(Autoplay({ delay: 5000 }));
@@ -36,7 +36,7 @@ export const MainCarousel = () => {
           }}
         >
           <Carousel.Slide>
-            <Flex gap="68px">
+            <Flex gap={68}>
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   No{' '}
@@ -50,17 +50,21 @@ export const MainCarousel = () => {
                   email. Chat, instant payment and trade crypto easily and fast
                 </Text>
               </Box>
-              <Box w="100%">
-                <Image src="images/decor/end-to-end-encrypted-messaging.png" />
-              </Box>
+              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+                <Box w="100%">
+                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
+                </Box>
+              </MediaQuery>
             </Flex>
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Flex gap="68px">
-              <Box w="100%">
-                <Image src="images/decor/end-to-end-encrypted-messaging.png" />
-              </Box>
+            <Flex gap={68}>
+              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+                <Box w="100%">
+                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
+                </Box>
+              </MediaQuery>
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   End-To-End{' '}
@@ -80,7 +84,7 @@ export const MainCarousel = () => {
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Flex gap="68px">
+            <Flex gap={68}>
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   <Text component="span" color="purpleGlow.4" lh="5rem">
@@ -94,17 +98,21 @@ export const MainCarousel = () => {
                   smart contract security, regular updates, and user education are prioritized.
                 </Text>
               </Box>
-              <Box w="100%">
-                <Image src="images/decor/end-to-end-encrypted-messaging.png" />
-              </Box>
+              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+                <Box w="100%">
+                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
+                </Box>
+              </MediaQuery>
             </Flex>
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Flex gap="68px">
-              <Box w="100%">
-                <Image src="images/decor/end-to-end-encrypted-messaging.png" />
-              </Box>
+            <Flex gap={68}>
+              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+                <Box w="100%">
+                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
+                </Box>
+              </MediaQuery>
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   <Text component="span" color="purpleGlow.4" lh="5rem">

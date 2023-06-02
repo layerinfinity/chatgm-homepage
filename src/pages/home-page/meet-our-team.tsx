@@ -20,10 +20,9 @@ export const MeetOurTeam = () => {
 
         <Carousel
           slideSize={'33.333%'}
-          slideGap={36}
           loop
           align="start"
-          px={85}
+          px={{ base: 0, md: 85 }}
           styles={{
             controls: {
               padding: 0,
@@ -36,6 +35,10 @@ export const MeetOurTeam = () => {
               boxShadow: 'none',
             },
           }}
+          breakpoints={[
+            { maxWidth: 'md', slideSize: '33.333%', slideGap: 30 },
+            { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
+          ]}
           previousControlIcon={<Image src="images/icon-angle-left.svg" />}
           nextControlIcon={<Image src="images/icon-angle-right.svg" />}
         >
