@@ -1,7 +1,10 @@
+import React from 'react';
 import { Carousel } from '@mantine/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import { Box, Container, Flex, Image, Text, useMantineTheme } from '@mantine/core';
 
 export const MainCarousel = () => {
+  const autoplay = React.useRef(Autoplay({ delay: 5000 }));
   const theme = useMantineTheme();
 
   return (
@@ -11,6 +14,9 @@ export const MainCarousel = () => {
           loop
           withIndicators
           withControls={false}
+          plugins={[autoplay.current]}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={autoplay.current.reset}
           styles={{
             indicators: {
               justifyContent: 'flex-end',
