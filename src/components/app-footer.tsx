@@ -167,34 +167,34 @@ export const AppFooter = () => {
               <p className={classes.contactUsSuggestion}>
                 If there are questions you want to ask, we will answer all your question
               </p>
-              <Flex align="center" gap="24px">
-                <a>
+              <Flex wrap="wrap" align="center" gap="24px">
+                <Anchor>
                   <img src="images/icon-telegram.svg" />
-                </a>
+                </Anchor>
 
-                <a>
+                <Anchor>
                   <img src="images/icon-discord.svg" />
-                </a>
+                </Anchor>
 
-                <a>
+                <Anchor>
                   <img src="images/icon-twitter.svg" />
-                </a>
+                </Anchor>
 
-                <a>
+                <Anchor>
                   <img src="images/icon-facebook.svg" />
-                </a>
+                </Anchor>
 
-                <a>
+                <Anchor>
                   <img src="images/icon-medium.svg" />
-                </a>
+                </Anchor>
 
-                <a>
+                <Anchor>
                   <img src="images/icon-github.svg" />
-                </a>
+                </Anchor>
 
-                <a>
+                <Anchor>
                   <img src="images/icon-chatgm.svg" />
-                </a>
+                </Anchor>
               </Flex>
             </Box>
 
@@ -211,7 +211,7 @@ export const AppFooter = () => {
 
           {/* Sub Footer */}
           <Flex
-            wrap="wrap"
+            direction={{ base: 'column', sm: 'row' }}
             align="center"
             justify="space-between"
             w="100%"
@@ -226,7 +226,7 @@ export const AppFooter = () => {
               </Text>
             </Box>
 
-            <Flex gap={40} style={{ color: theme.colors.gray[2] }}>
+            <Flex gap={{ base: 20, sm: 40 }} style={{ color: theme.colors.gray[2] }}>
               <Anchor color="dark.4">Team</Anchor>
               <Anchor color="dark.4">Collaboration</Anchor>
               <Anchor color="dark.4">Publications</Anchor>
