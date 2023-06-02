@@ -1,4 +1,14 @@
-import { Box, Button, Container, Flex, Text, Image, createStyles, MediaQuery } from '@mantine/core';
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Text,
+  Image,
+  createStyles,
+  MediaQuery,
+  Anchor,
+} from '@mantine/core';
 
 const useStyles = createStyles(() => ({}));
 
@@ -42,12 +52,12 @@ export const DownloadApp = () => {
               p={20}
               style={{ flex: 1 }}
             >
-              <a>
+              <Anchor>
                 <Image src="images/decor/google-play.png" />
-              </a>
-              <a>
+              </Anchor>
+              <Anchor>
                 <Image src="images/decor/app-store.png" />
-              </a>
+              </Anchor>
             </Flex>
           </Flex>
 

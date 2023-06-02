@@ -15,44 +15,16 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: `${theme.colors.purpleGlow[4]}0D`,
   },
 
-  footerHeading: {
-    marginTop: '27px',
-    marginBottom: '40px',
-    fontFamily: 'Outfit',
-    fontWeight: 500,
-    fontSize: '2.5rem',
-    textAlign: 'center',
-  },
-
   downloadButton: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '56px',
-    borderRadius: '12px',
+    height: 56,
+    borderRadius: 12,
     fontFamily: 'Open Sans',
     fontWeight: 700,
-    fontSize: '1.125rem',
-  },
-
-  contactUsTitle: {
-    marginBottom: '24px',
-    fontFamily: 'Outfit',
-    fontWeight: 600,
-    fontSize: '2rem',
-    lineHeight: '2.5rem',
-    color: theme.colors.dark[3],
-  },
-
-  contactUsSuggestion: {
-    maxWidth: '360px',
-    marginBottom: '26px',
-    fontFamily: 'Open Sans',
-    fontWeight: 400,
-    fontSize: '1rem',
-    lineHeight: '1.375rem',
-    color: theme.colors.dark[3],
+    fontSize: 18,
   },
 
   form: {
@@ -61,10 +33,10 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    height: '64px',
-    padding: '8px',
-    borderRadius: '40px',
-    backgroundColor: '#FFFFFF',
+    height: 64,
+    padding: 8,
+    borderRadius: 40,
+    backgroundColor: theme.colors.white[0],
   },
 
   textInput: {
@@ -81,9 +53,9 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '48px',
-    height: '48px',
-    borderRadius: '24px',
+    width: 48,
+    height: 48,
+    borderRadius: 24,
     backgroundColor: theme.colors.purpleGlow[3],
   },
 
@@ -104,9 +76,13 @@ export const AppFooter = () => {
       <Container>
         <Flex direction="column" align="center" justify="center">
           {/* Footer Heading */}
-          <h2 className={classes.footerHeading}>
-            Get <span style={{ color: theme.colors['purpleGlow'][3] }}>ChatGM</span> Now
-          </h2>
+          <Text ff="Outfit" fw={500} size={40} mt={27} mb={40}>
+            Get{' '}
+            <Text component="span" inherit color="purpleGlow.3">
+              ChatGM
+            </Text>{' '}
+            Now
+          </Text>
 
           {/* Download Buttons */}
           <Flex
@@ -163,10 +139,12 @@ export const AppFooter = () => {
           >
             {/* Left */}
             <Box w="100%">
-              <h3 className={classes.contactUsTitle}>Connect Us</h3>
-              <p className={classes.contactUsSuggestion}>
+              <Text ff="Outfit" fw={600} size={32} lh="2.5rem" color="dark.3">
+                Connect Us
+              </Text>
+              <Text ff="Open Sans" fw={400} lh="1.375rem" color="dark.3" maw={360} mb={26}>
                 If there are questions you want to ask, we will answer all your question
-              </p>
+              </Text>
               <Flex wrap="wrap" align="center" gap="24px">
                 <Anchor>
                   <Image src="images/icon-telegram.svg" />
