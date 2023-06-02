@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, createStyles } from '@mantine/core';
+import { Box, Button, Container, Flex, Image, UnstyledButton, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -69,9 +69,13 @@ const useStyles = createStyles((theme) => ({
   },
 
   submitButton: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     width: '48px',
     height: '48px',
     borderRadius: '24px',
+    backgroundColor: theme.colors.purpleGlow[3],
   },
 
   subFooter: {
@@ -165,9 +169,9 @@ export const AppFooter = () => {
             <Box w="100%">
               <Box className={classes.form}>
                 <input className={classes.textInput} placeholder="Enter Your Email" />
-                <Button className={classes.submitButton} color="purpleGlow.3">
-                  &gt;
-                </Button>
+                <UnstyledButton className={classes.submitButton}>
+                  <Image src="images/icon-chevron-right.svg" width={28} height={28} />
+                </UnstyledButton>
               </Box>
             </Box>
           </Flex>
