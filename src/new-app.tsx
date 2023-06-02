@@ -1,7 +1,7 @@
 import { AppShell, Global, MantineProvider, MantineThemeOverride } from '@mantine/core';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { AppFooter, AppHeader } from './components';
-import { GmEcosystemPage, HomePage } from './pages';
+import { FortlessPage, GmEcosystemPage, HomePage } from './pages';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -165,6 +165,7 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
+            <Route path="/fortless" element={<FortlessPage />} />
           </Routes>
         </Router>
       </AppShell>
