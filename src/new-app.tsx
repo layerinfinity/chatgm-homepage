@@ -152,25 +152,25 @@ const theme: MantineThemeOverride = {
 
 export const App = () => {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-      <AppShell
-        header={<AppHeader />}
-        footer={<AppFooter />}
-        styles={(theme) => ({
-          main: {
-            padding: 0,
-          },
-        })}
-      >
-        <Router>
+    <Router>
+      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+        <AppShell
+          header={<AppHeader />}
+          footer={<AppFooter />}
+          styles={(theme) => ({
+            main: {
+              padding: 0,
+            },
+          })}
+        >
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
             <Route path="/fortless" element={<FortlessPage />} />
             <Route path="/500" element={<Error500Page />} />
           </Routes>
-        </Router>
-      </AppShell>
-    </MantineProvider>
+        </AppShell>
+      </MantineProvider>
+    </Router>
   );
 };

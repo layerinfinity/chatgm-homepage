@@ -1,18 +1,17 @@
 import {
-  Anchor,
+  Text,
   Image,
   Button,
   Container,
-  Group,
   Header,
   MediaQuery,
-  UnstyledButton,
   createStyles,
   Flex,
   Burger,
-  Box,
+  Group,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   logo: {
@@ -23,14 +22,17 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 35,
+    gap: 25,
 
-    fontFamily: 'Outfit',
-    fontWeight: 400,
-    fontSize: '1.125rem',
-    color: theme.colors.dark[1],
+    a: {
+      fontFamily: 'Outfit',
+      fontWeight: 400,
+      fontSize: '1.125rem',
+      color: theme.colors.dark[1],
+      textDecoration: 'none',
+    },
 
-    'li a:active': {
+    'a:active': {
       fontWeight: 700,
       color: theme.colors.purpleGlow[4],
       textDecoration: 'underline',
@@ -52,44 +54,30 @@ export const AppHeader = () => {
           <Container>
             <Flex align="center" justify="space-between" h={120}>
               {/* Logo */}
-              <Anchor className={classes.logo} href="/">
+              <Link className={classes.logo} to="/">
                 <Image src="images/logo-horizontal.svg" />
-              </Anchor>
+              </Link>
 
               {/* Nav bar */}
-              <ul className={classes.navBar}>
-                <li>
-                  <Anchor href="gm-ecosystem" color="dark.4">
-                    GM Ecosystem
-                  </Anchor>
-                </li>
-                <li>
-                  <Anchor href="fortless" color="dark.4">
-                    Fortress
-                  </Anchor>
-                </li>
-                <li>
-                  <Anchor color="dark.4">GM Token</Anchor>
-                </li>
-                <li>
-                  <Anchor color="dark.4">News</Anchor>
-                </li>
-                <li>
-                  <Button
-                    color="purpleGlow.4"
-                    px={20}
-                    py={6}
-                    style={{
-                      borderRadius: 44,
-                      fontFamily: 'Outfit',
-                      fontWeight: 400,
-                      fontSize: '1.125rem',
-                    }}
-                  >
-                    Get App
-                  </Button>
-                </li>
-              </ul>
+              <Group className={classes.navBar}>
+                <Link to="/gm-ecosystem">GM Ecosystem</Link>
+                <Link to="/fortless">Fortress</Link>
+                <Link to="#">GM Token</Link>
+                <Link to="#">News</Link>
+                <Button
+                  color="purpleGlow.4"
+                  px={20}
+                  py={6}
+                  style={{
+                    borderRadius: 44,
+                    fontFamily: 'Outfit',
+                    fontWeight: 400,
+                    fontSize: '1.125rem',
+                  }}
+                >
+                  Get App
+                </Button>
+              </Group>
             </Flex>
           </Container>
         </MediaQuery>
@@ -97,11 +85,9 @@ export const AppHeader = () => {
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
           <Container>
             <Flex h={100} align="center" justify="space-between">
-              {/* Logo */}
-              <Anchor className={classes.logo} href="/">
-                <img src="images/logo-horizontal.svg" />
-              </Anchor>
-              {/* Burgur */}
+              <Link className={classes.logo} to="/">
+                <Image src="images/logo-horizontal.svg" />
+              </Link>
               <Burger opened={opened} onClick={toggle} />
             </Flex>
           </Container>
@@ -120,23 +106,31 @@ export const AppHeader = () => {
           px={20}
           style={{ zIndex: 1000, backgroundColor: '#FFFFFF66', backdropFilter: 'blur(12px)' }}
         >
-          <Anchor href="/" mb={40}>
+          <Link to="/">
             <Image src="images/logo-horizontal.svg" width={220} />
-          </Anchor>
+          </Link>
 
-          <Flex direction="column" gap={20} style={{ flex: 1 }}>
-            <Anchor href="/gm-ecosystem" color="dark.4" ff="Outfit" fw={500} size={24}>
-              GM Ecosystem
-            </Anchor>
-            <Anchor href="/fortless" color="dark.4" ff="Outfit" fw={500} size={24}>
-              Fortless
-            </Anchor>
-            <Anchor color="dark.4" ff="Outfit" fw={500} size={24}>
-              GM Token
-            </Anchor>
-            <Anchor color="dark.4" ff="Outfit" fw={500} size={24}>
-              News
-            </Anchor>
+          <Flex direction="column" gap={20} style={{ flex: 1 }} pt={40}>
+            <Link to="/gm-ecosystem" style={{ textDecoration: 'none' }}>
+              <Text ff="Outfit" fw={500} size={24} color="dark.4">
+                GM Ecosystem
+              </Text>
+            </Link>
+            <Link to="/fortless" style={{ textDecoration: 'none' }}>
+              <Text ff="Outfit" fw={500} size={24} color="dark.4">
+                Fortless
+              </Text>
+            </Link>
+            <Link to="#" style={{ textDecoration: 'none' }}>
+              <Text ff="Outfit" fw={500} size={24} color="dark.4">
+                GM Token
+              </Text>
+            </Link>
+            <Link to="#" style={{ textDecoration: 'none' }}>
+              <Text ff="Outfit" fw={500} size={24} color="dark.4">
+                News
+              </Text>
+            </Link>
           </Flex>
 
           <Button
