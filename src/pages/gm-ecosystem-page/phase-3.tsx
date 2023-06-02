@@ -1,7 +1,16 @@
-import { Box, Button, Container, Flex, Text, useMantineTheme } from '@mantine/core';
+import { Box, Button, Container, Flex, Text, createStyles } from '@mantine/core';
+
+const useStyles = createStyles((theme) => ({
+  phaseName: {
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 30,
+      lineHeight: '2rem',
+    },
+  },
+}));
 
 export const Phase3 = () => {
-  const theme = useMantineTheme();
+  const { classes, theme } = useStyles();
 
   return (
     <Box pt={120}>
@@ -10,7 +19,14 @@ export const Phase3 = () => {
           PHASE 3
         </Text>
 
-        <Text ff="Outfit" fw={600} size={72} color="dark.4" lh={'5rem'}>
+        <Text
+          ff="Outfit"
+          fw={600}
+          size={72}
+          color="dark.4"
+          lh={'5rem'}
+          className={classes.phaseName}
+        >
           Layer Infinity deCommerce - Enterprise Service
         </Text>
 

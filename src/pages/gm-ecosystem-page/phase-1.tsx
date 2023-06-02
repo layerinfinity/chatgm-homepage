@@ -1,8 +1,17 @@
-import { Box, Container, Flex, Image, Text, useMantineTheme } from '@mantine/core';
+import { Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
 import { DEFAULT_DUMMY_IMG_LINK } from '~/configs';
 
+const useStyles = createStyles((theme) => ({
+  phaseName: {
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 36,
+      lineHeight: '2rem',
+    },
+  },
+}));
+
 export const Phase1 = () => {
-  const theme = useMantineTheme();
+  const { classes, theme } = useStyles();
 
   return (
     <Box>
@@ -11,18 +20,25 @@ export const Phase1 = () => {
           PHASE 1
         </Text>
 
-        <Text ff="Outfit" fw={600} size={72} color="dark.4" lh={'5rem'}>
+        <Text
+          ff="Outfit"
+          fw={600}
+          size={72}
+          color="dark.4"
+          lh={'5rem'}
+          className={classes.phaseName}
+        >
           Product
           <br />
           Development
         </Text>
 
         <Flex direction="column" gap={71} py={51}>
-          <Flex gap={30} justify="center">
+          <Flex direction={{ base: 'column', md: 'row' }} gap={30} justify="center">
             <Flex w={'100%'}>
               <Image src={DEFAULT_DUMMY_IMG_LINK} height={300} />
             </Flex>
-            <Flex direction="column" w={'100%'} justify="center">
+            <Flex direction="column" w={'100%'} justify="center" gap={10}>
               <Text ff="Open Sans" fw={400} color="dark.3" ta="right">
                 ChatGM is a cutting-edge platform that seamlessly integrates end-to-end encrypted
                 chat with the Matrix protocol. With the added functionality of a crypto wallet,
@@ -30,7 +46,7 @@ export const Phase1 = () => {
                 their chat conversations.
               </Text>
               <Text ff="Outfit" fw={400} size={40} color="dark.4" ta="right" lh="3.25rem">
-                <Text component="span" color="purpleGlow.3">
+                <Text component="span" color="purpleGlow.3" lh="3.25rem">
                   CHAT & SEND
                 </Text>
                 <br /> Crypto easily
@@ -38,10 +54,12 @@ export const Phase1 = () => {
             </Flex>
           </Flex>
 
-          <Flex gap={30} justify="center">
-            <Flex direction="column" w={'100%'} justify="center">
+          <Flex direction={{ base: 'column-reverse', md: 'row' }} gap={30} justify="center">
+            <Flex direction="column" w={'100%'} justify="center" gap={10}>
               <Text ff="Outfit" fw={400} size={40} color="dark.4" lh="3.25rem">
-                <Text color="purpleGlow.3">PEER-TO-PEER</Text>
+                <Text component="span" color="purpleGlow.3" lh="3.25rem">
+                  PEER-TO-PEER
+                </Text>
                 <br /> Borderless
               </Text>
               <Text ff="Open Sans" fw={400} color="dark.3">
