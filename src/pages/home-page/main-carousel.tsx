@@ -5,7 +5,7 @@ export const MainCarousel = () => {
   const theme = useMantineTheme();
 
   return (
-    <Box bg={`${theme.colors.purpleGlow[4]}0D`}>
+    <Box bg={`${theme.colors.purpleGlow[4]}0D`} pt={120}>
       <Container py={40}>
         <Carousel
           loop

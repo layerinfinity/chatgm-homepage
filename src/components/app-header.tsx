@@ -1,4 +1,4 @@
-import { Box, Button, Container, Header, createStyles } from '@mantine/core';
+import { Anchor, Box, Button, Container, Header, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   headerContainer: {},
@@ -44,23 +44,27 @@ export const AppHeader = () => {
       <Container>
         <div className={classes.header}>
           {/* Logo */}
-          <a className={classes.logo}>
+          <Anchor className={classes.logo} href="/">
             <img src="images/logo-horizontal.svg" />
-          </a>
+          </Anchor>
 
           {/* Nav bar */}
           <ul className={classes.navBar}>
             <li>
-              <a>GM Ecosystem</a>
+              <Anchor href="gm-ecosystem" color="dark.4">
+                GM Ecosystem
+              </Anchor>
             </li>
             <li>
-              <a>Fortress</a>
+              <Anchor href="fortless" color="dark.4">
+                Fortress
+              </Anchor>
             </li>
             <li>
-              <a>GM Token</a>
+              <Anchor color="dark.4">GM Token</Anchor>
             </li>
             <li>
-              <a>News</a>
+              <Anchor color="dark.4">News</Anchor>
             </li>
             <li>
               <Button

@@ -9,7 +9,7 @@ import { OurBackers } from './our-backers';
 
 export const HomePage = () => {
   return (
-    <Box pt={120}>
+    <Box>
       <MainCarousel />
       <DownloadApp />
       <Trailer />
