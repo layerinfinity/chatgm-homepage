@@ -1,13 +1,29 @@
-import { Box, Container, Text, useMantineTheme } from '@mantine/core';
+import { Box, Container, Text, createStyles, useMantineTheme } from '@mantine/core';
+
+const useStyles = createStyles((theme) => ({
+  heading: {
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 30,
+      lineHeight: '2.5rem',
+    },
+  },
+}));
 
 export const FortlessPage = () => {
-  const theme = useMantineTheme();
+  const { classes, theme } = useStyles();
 
   return (
     <Box pt={120} pb={70}>
       <Container>
-        <Box px={100}>
-          <Text ff="Outfit" fw={600} size={72} color="dark.4" ta="center">
+        <Box px={{ base: 20, md: 100 }}>
+          <Text
+            ff="Outfit"
+            fw={600}
+            size={72}
+            color="dark.4"
+            ta="center"
+            className={classes.heading}
+          >
             Secure by Fortless<sup style={{ color: theme.colors.purpleGlow[3] }}>TM</sup>
           </Text>
 
