@@ -88,8 +88,11 @@ export const MainCarousel = () => {
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   <Text component="span" color="purpleGlow.4" lh="5rem">
-                    Most Secure App
-                  </Text>{' '}
+                    Most
+                    <br />
+                    Secure App
+                    <br />
+                  </Text>
                   In Web3
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
