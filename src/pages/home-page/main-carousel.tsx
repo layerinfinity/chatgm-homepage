@@ -39,7 +39,11 @@ export const MainCarousel = () => {
             <Flex gap="68px">
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
-                  No <span style={{ color: theme.colors.purpleGlow[4] }}>Sign-Up</span> Border
+                  No{' '}
+                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                    Sign-Up
+                  </Text>{' '}
+                  Border
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
                   Wallet chat with another wallet or easily create an account with phone number or
@@ -60,7 +64,9 @@ export const MainCarousel = () => {
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   End-To-End{' '}
-                  <span style={{ color: theme.colors.purpleGlow[4] }}>Encrypted Messaging</span>
+                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                    Encrypted Messaging
+                  </Text>
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
                   End-to-end encryption (E2EE) with Matrix ensures messages are encrypted on the
@@ -77,7 +83,10 @@ export const MainCarousel = () => {
             <Flex gap="68px">
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
-                  <span style={{ color: theme.colors.purpleGlow[4] }}>Most Secure App</span> In Web3
+                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                    Most Secure App
+                  </Text>{' '}
+                  In Web3
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
                   The app combines EVM and Bitcoin Lightning for secure transactions. It has
@@ -98,7 +107,10 @@ export const MainCarousel = () => {
               </Box>
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
-                  <span style={{ color: theme.colors.purpleGlow[4] }}>ChatGPT 4.0</span> Assistant
+                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                    ChatGPT 4.0
+                  </Text>{' '}
+                  Assistant
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
                   The app combines EVM and Bitcoin Lightning for secure transactions. It has

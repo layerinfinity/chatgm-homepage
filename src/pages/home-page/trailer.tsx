@@ -21,9 +21,9 @@ export const Trailer = () => {
         <Text ff="Open Sans" fw={400} ta="center">
           Say goodbye to long crypto wallet addresses that none can remember.
           <br /> Say GM to easily searchable User ID with format <br />
-          <span style={{ fontWeight: 700, color: theme.colors.teal[4] }}>
+          <Text component="span" fw={700} color="teal.4">
             @gm.[your personal ID]
-          </span>{' '}
+          </Text>{' '}
           tied directly to multiple wallet
         </Text>
       </Container>

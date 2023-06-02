@@ -30,7 +30,9 @@ export const Phase1 = () => {
                 their chat conversations.
               </Text>
               <Text ff="Outfit" fw={400} size={40} color="dark.4" ta="right" lh="3.25rem">
-                <span style={{ color: theme.colors.purpleGlow[3] }}>CHAT & SEND</span>
+                <Text component="span" color="purpleGlow.3">
+                  CHAT & SEND
+                </Text>
                 <br /> Crypto easily
               </Text>
             </Flex>
@@ -39,7 +41,7 @@ export const Phase1 = () => {
           <Flex gap={30} justify="center">
             <Flex direction="column" w={'100%'} justify="center">
               <Text ff="Outfit" fw={400} size={40} color="dark.4" lh="3.25rem">
-                <span style={{ color: theme.colors.purpleGlow[3] }}>PEER-TO-PEER</span>
+                <Text color="purpleGlow.3">PEER-TO-PEER</Text>
                 <br /> Borderless
               </Text>
               <Text ff="Open Sans" fw={400} color="dark.3">
