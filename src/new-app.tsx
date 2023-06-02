@@ -1,7 +1,7 @@
 import { AppShell, Global, MantineProvider, MantineThemeOverride } from '@mantine/core';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { AppFooter, AppHeader } from './components';
-import { HomePage } from './pages';
+import { GmEcosystemPage, HomePage } from './pages';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -33,7 +33,7 @@ const theme: MantineThemeOverride = {
     purpleGlow: [
       '#8C57FF',
       '#8C57FF',
-      '#8C57FF',
+      '#B894F5',
       '#8C57FF',
       '#644CFF',
       '#8C57FF',
@@ -46,7 +46,7 @@ const theme: MantineThemeOverride = {
       '#00BFA5',
       '#00BFA5',
       '#00BFA5',
-      '#00BFA5',
+      '#32DCB4',
       '#00BFA5',
       '#00BFA5',
       '#00BFA5',
@@ -57,7 +57,7 @@ const theme: MantineThemeOverride = {
     rose: [
       '#EE4186',
       '#EE4186',
-      '#EE4186',
+      '#FF80AB',
       '#EE4186',
       '#EE4186',
       '#EE4186',
@@ -82,7 +82,7 @@ const theme: MantineThemeOverride = {
       '#0091EB',
       '#0091EB',
       '#0091EB',
-      '#0091EB',
+      '#00C4FF',
       '#0091EB',
       '#0091EB',
       '#0091EB',
@@ -164,6 +164,7 @@ export const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
           </Routes>
         </Router>
       </AppShell>
