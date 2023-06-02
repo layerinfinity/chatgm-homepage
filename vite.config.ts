@@ -57,6 +57,10 @@ export default defineConfig({
         find: '~/configs',
         replacement: path.resolve(__dirname, 'src', 'configs'),
       },
+      {
+        find: '~/pages',
+        replacement: path.resolve(__dirname, 'src', 'pages'),
+      },
     ],
   },
 });

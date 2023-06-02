@@ -1,16 +1,17 @@
 import { AppShell, Global, MantineProvider, MantineThemeOverride } from '@mantine/core';
-import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { AppFooter, AppHeader } from './components';
+import { HomePage } from './pages';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
   colors: {
     white: [
       '#FFFFFF',
+      '#F2F2F2',
       '#FFFFFF',
       '#FFFFFF',
-      '#FFFFFF',
-      '#FFFFFF',
+      '#B3B3B3',
       '#FFFFFF',
       '#FFFFFF',
       '#FFFFFF',
@@ -148,162 +149,22 @@ const theme: MantineThemeOverride = {
   },
 };
 
-const CustomFonts = () => {
-  return (
-    <Global
-      styles={[
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-700',
-            src: `url('/fonts/OpenSans-Bold.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-700-Italic',
-            src: `url('/fonts/OpenSans-BoldItalic.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-800',
-            src: `url('/fonts/OpenSans-ExtraBold.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-400-Italic',
-            src: `url('/fonts/OpenSans-Italic.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-300',
-            src: `url('/fonts/OpenSans-Light.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-300-Italic',
-            src: `url('/fonts/OpenSans-LightItalic.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-500',
-            src: `url('/fonts/OpenSans-Medium.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-500-Italic',
-            src: `url('/fonts/OpenSans-MediumItalic.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-400',
-            src: `url('/fonts/OpenSans-Regular.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-600',
-            src: `url('/fonts/OpenSans-SemiBold.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'OpenSans-600-Italic',
-            src: `url('/fonts/OpenSans-SemiBoldItalic.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-900',
-            src: `url('/fonts/Outfit-Black.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-700',
-            src: `url('/fonts/Outfit-Bold.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-800',
-            src: `url('/fonts/Outfit-ExtraBold.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-200',
-            src: `url('/fonts/Outfit-ExtraLight.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-300',
-            src: `url('/fonts/Outfit-Light.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-500',
-            src: `url('/fonts/Outfit-Medium.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-400',
-            src: `url('/fonts/Outfit-Regular.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-600',
-            src: `url('/fonts/Outfit-SemiBold.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-        {
-          '@font-face': {
-            fontFamily: 'Outfit-100',
-            src: `url('/fonts/Outfit-Thin.ttf') format("truetype")`,
-            fontStyle: 'normal',
-          },
-        },
-      ]}
-    />
-  );
-};
-
 export const App = () => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-      <CustomFonts />
-      <AppShell header={<AppHeader />} footer={<AppFooter />}>
+      <AppShell
+        header={<AppHeader />}
+        footer={<AppFooter />}
+        styles={(theme) => ({
+          main: {
+            padding: 0,
+          },
+        })}
+      >
         <Router>
-          <Routes></Routes>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
         </Router>
       </AppShell>
     </MantineProvider>

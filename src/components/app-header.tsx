@@ -1,4 +1,4 @@
-import { Box, Button, Container, createStyles } from '@mantine/core';
+import { Box, Button, Container, Header, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   headerContainer: {},
@@ -37,7 +37,10 @@ export const AppHeader = () => {
   const { classes } = useStyles();
 
   return (
-    <Box>
+    <Header
+      height="120px"
+      style={{ border: 0, backgroundColor: '#FFFFFF20', backdropFilter: 'blur(12px)' }}
+    >
       <Container>
         <div className={classes.header}>
           {/* Logo */}
@@ -77,6 +80,6 @@ export const AppHeader = () => {
           </ul>
         </div>
       </Container>
-    </Box>
+    </Header>
   );
 };
