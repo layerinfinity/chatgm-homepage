@@ -1,13 +1,11 @@
 import { Carousel } from '@mantine/carousel';
-import { Box, Container, Flex, Image, Text, createStyles, getStylesRef } from '@mantine/core';
-
-const useStyles = createStyles(() => ({}));
+import { Box, Container, Flex, Image, Text, useMantineTheme } from '@mantine/core';
 
 export const MainCarousel = () => {
-  const { classes, theme } = useStyles();
+  const theme = useMantineTheme();
 
   return (
-    <Box bg={`${theme.colors.purpleGlow[4]}0D`} pt={120}>
+    <Box bg={`${theme.colors.purpleGlow[4]}0D`}>
       <Container py={40}>
         <Carousel
           loop

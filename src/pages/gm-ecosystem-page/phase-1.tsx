@@ -5,7 +5,7 @@ export const Phase1 = () => {
   const theme = useMantineTheme();
 
   return (
-    <Box pt={120}>
+    <Box>
       <Container>
         <Text ff="Outfit" fw={500} size={40} color="purpleGlow.3">
           PHASE 1

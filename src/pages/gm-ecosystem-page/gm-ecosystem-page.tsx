@@ -5,7 +5,7 @@ import { Phase3 } from './phase-3';
 
 export const GmEcosystemPage = () => {
   return (
-    <Box>
+    <Box pt={120}>
       <Phase1 />
       <Phase2 />
       <Phase3 />
