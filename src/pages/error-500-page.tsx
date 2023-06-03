@@ -13,15 +13,8 @@ export const Error500Page = () => {
   const { classes } = useStyles();
 
   return (
-    <Box
-      pt={120}
-      style={{
-        background: "url('images/background/background-1.png')",
-        backgroundSize: '100%',
-        backgroundRepeat: 'no-repeat',
-        backgroundPositionY: 120,
-      }}
-    >
+    <Box pos="relative" pt={120}>
+      <Image src="images/background/background-2.png" pos="absolute" style={{ zIndex: -1 }} />
       <Container>
         <Box px={{ base: 20, md: 100 }} py={50}>
           <MediaQuery largerThan="md" styles={{ display: 'none' }}>

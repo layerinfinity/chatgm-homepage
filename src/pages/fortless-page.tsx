@@ -15,7 +15,7 @@ export const FortlessPage = () => {
   return (
     <Box pt={120} pb={70}>
       <Container>
-        <Box px={{ base: 20, md: 100 }}>
+        <Box px={{ base: 0, md: 100 }}>
           <Text
             ff="Outfit"
             fw={600}
@@ -41,7 +41,7 @@ export const FortlessPage = () => {
           </Text>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12}>
+            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
               Messaging
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -53,7 +53,7 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12}>
+            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
               Top secure in financial transaction
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -65,7 +65,7 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12}>
+            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
               Personal Information
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -79,7 +79,7 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12}>
+            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
               Protect cryptocurrency in wallet
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -93,7 +93,7 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12}>
+            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
               24/7 customer support
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">

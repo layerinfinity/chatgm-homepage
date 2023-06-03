@@ -1,18 +1,12 @@
-import { Box, Card, Container, Text, Image, Center, Grid, useMantineTheme } from '@mantine/core';
+import { Box, Card, Container, Text, Image, useMantineTheme } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
-import { DEFAULT_DUMMY_IMG_LINK } from '~/configs';
 
 export const MeetOurTeam = () => {
   const theme = useMantineTheme();
 
   return (
-    <Box
-      style={{
-        background: `url('images/background/background-1.png'), ${theme.colors.purpleGlow[4]}0D`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }}
-    >
+    <Box bg={`${theme.colors.purpleGlow[4]}0D`} pos="relative">
+      <Image src="images/background/background-1.png" pos="absolute" style={{ zIndex: -1 }} />
       <Container py={70}>
         <Text ff="Outfit" fw={500} size={40} color="purpleGlow.3" ta="center" mb={70}>
           Meet Our Team

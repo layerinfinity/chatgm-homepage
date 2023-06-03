@@ -191,7 +191,7 @@ export const AppFooter = () => {
           <Flex
             direction={{ base: 'column', sm: 'row' }}
             align="center"
-            justify="space-between"
+            justify={{ base: 'space-evenly', sm: 'space-between' }}
             w="100%"
             mih={80}
             style={{
