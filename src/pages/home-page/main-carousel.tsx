@@ -40,7 +40,7 @@ export const MainCarousel = () => {
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   No{' '}
-                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                  <Text component="span" color="purpleGlow.4" inherit>
                     Sign-Up
                   </Text>{' '}
                   Border
@@ -68,7 +68,7 @@ export const MainCarousel = () => {
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
                   End-To-End{' '}
-                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                  <Text component="span" color="purpleGlow.4" inherit>
                     Encrypted Messaging
                   </Text>
                 </Text>
@@ -87,7 +87,7 @@ export const MainCarousel = () => {
             <Flex gap={68}>
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
-                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                  <Text component="span" color="purpleGlow.4" inherit>
                     Most
                     <br />
                     Secure App
@@ -118,7 +118,7 @@ export const MainCarousel = () => {
               </MediaQuery>
               <Box w="100%">
                 <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
-                  <Text component="span" color="purpleGlow.4" lh="5rem">
+                  <Text component="span" color="purpleGlow.4" inherit>
                     ChatGPT 4.0
                   </Text>{' '}
                   Assistant

@@ -46,7 +46,7 @@ export const Phase1 = () => {
                 their chat conversations.
               </Text>
               <Text ff="Outfit" fw={400} size={40} color="dark.4" ta="right" lh="3.25rem">
-                <Text component="span" color="purpleGlow.3" lh="3.25rem">
+                <Text component="span" color="purpleGlow.3" inherit>
                   CHAT & SEND
                 </Text>
                 <br /> Crypto easily
@@ -57,7 +57,7 @@ export const Phase1 = () => {
           <Flex direction={{ base: 'column-reverse', md: 'row' }} gap={30} justify="center">
             <Flex direction="column" w={'100%'} justify="center" gap={10}>
               <Text ff="Outfit" fw={400} size={40} color="dark.4" lh="3.25rem">
-                <Text component="span" color="purpleGlow.3" lh="3.25rem">
+                <Text component="span" color="purpleGlow.3" inherit>
                   PEER-TO-PEER
                 </Text>
                 <br /> Borderless
