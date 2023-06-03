@@ -1,11 +1,29 @@
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { Box, Container, Flex, Image, MediaQuery, Text, useMantineTheme } from '@mantine/core';
+import {
+  Box,
+  Container,
+  Flex,
+  Image,
+  MediaQuery,
+  Text,
+  createStyles,
+  useMantineTheme,
+} from '@mantine/core';
+
+const useStyles = createStyles((theme) => ({
+  slideHeading: {
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 48,
+      lineHeight: '4rem',
+    },
+  },
+}));
 
 export const MainCarousel = () => {
   const autoplay = React.useRef(Autoplay({ delay: 5000 }));
-  const theme = useMantineTheme();
+  const { classes, theme } = useStyles();
 
   return (
     <Box bg={`${theme.colors.purpleGlow[4]}0D`} pt={120}>
@@ -38,7 +56,14 @@ export const MainCarousel = () => {
           <Carousel.Slide>
             <Flex gap={68}>
               <Box w="100%">
-                <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
+                <Text
+                  ff="Outfit"
+                  fw={600}
+                  size="4.5rem"
+                  lh="5rem"
+                  mb="25.5px"
+                  className={classes.slideHeading}
+                >
                   No{' '}
                   <Text component="span" color="purpleGlow.4" inherit>
                     Sign-Up
@@ -66,7 +91,14 @@ export const MainCarousel = () => {
                 </Box>
               </MediaQuery>
               <Box w="100%">
-                <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
+                <Text
+                  ff="Outfit"
+                  fw={600}
+                  size="4.5rem"
+                  lh="5rem"
+                  mb="25.5px"
+                  className={classes.slideHeading}
+                >
                   End-To-End{' '}
                   <Text component="span" color="purpleGlow.4" inherit>
                     Encrypted Messaging
@@ -86,7 +118,14 @@ export const MainCarousel = () => {
           <Carousel.Slide>
             <Flex gap={68}>
               <Box w="100%">
-                <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
+                <Text
+                  ff="Outfit"
+                  fw={600}
+                  size="4.5rem"
+                  lh="5rem"
+                  mb="25.5px"
+                  className={classes.slideHeading}
+                >
                   <Text component="span" color="purpleGlow.4" inherit>
                     Most
                     <br />
@@ -117,7 +156,14 @@ export const MainCarousel = () => {
                 </Box>
               </MediaQuery>
               <Box w="100%">
-                <Text ff="Outfit" fw={600} size="4.5rem" lh="5rem" mb="25.5px">
+                <Text
+                  ff="Outfit"
+                  fw={600}
+                  size="4.5rem"
+                  lh="5rem"
+                  mb="25.5px"
+                  className={classes.slideHeading}
+                >
                   <Text component="span" color="purpleGlow.4" inherit>
                     ChatGPT 4.0
                   </Text>{' '}
