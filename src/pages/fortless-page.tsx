@@ -3,8 +3,14 @@ import { Box, Container, Text, createStyles, useMantineTheme } from '@mantine/co
 const useStyles = createStyles((theme) => ({
   heading: {
     [theme.fn.smallerThan('md')]: {
-      fontSize: 30,
+      fontSize: 40,
       lineHeight: '2.5rem',
+    },
+  },
+  subHeading: {
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 24,
+      lineHeight: '2rem',
     },
   },
 }));
@@ -41,7 +47,15 @@ export const FortlessPage = () => {
           </Text>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               Messaging
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -53,7 +67,15 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               Top secure in financial transaction
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -65,7 +87,15 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               Personal Information
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -79,7 +109,15 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               Protect cryptocurrency in wallet
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -93,7 +131,15 @@ export const FortlessPage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               24/7 customer support
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
