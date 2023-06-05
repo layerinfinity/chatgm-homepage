@@ -6,7 +6,12 @@ export const MeetOurTeam = () => {
 
   return (
     <Box bg={`${theme.colors.purpleGlow[4]}0D`} pos="relative">
-      <Image src="images/background/background-1.png" pos="absolute" style={{ zIndex: -1 }} />
+      <Image
+        src="images/background/background-1.png"
+        pos="absolute"
+        top={80}
+        style={{ zIndex: -1 }}
+      />
       <Container py={70}>
         <Text ff="Outfit" fw={500} size={40} color="purpleGlow.3" ta="center" mb={70}>
           Meet Our Team
