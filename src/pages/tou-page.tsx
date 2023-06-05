@@ -3,8 +3,14 @@ import { Box, Container, Text, createStyles } from '@mantine/core';
 const useStyles = createStyles((theme) => ({
   heading: {
     [theme.fn.smallerThan('md')]: {
-      fontSize: 30,
+      fontSize: 40,
       lineHeight: '2.5rem',
+    },
+  },
+  subHeading: {
+    [theme.fn.smallerThan('md')]: {
+      fontSize: 24,
+      lineHeight: '2rem',
     },
   },
 }));
@@ -28,7 +34,15 @@ export const TermOfUsePage = () => {
           </Text>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               1. Introduction
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -40,7 +54,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               2. Acceptance of Terms
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -51,7 +73,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               3. Eligibility
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -62,7 +92,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               4. Registration and User Accounts
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -74,7 +112,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               5. Service Use and Restrictions
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -93,7 +139,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               6. Privacy and Security
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -104,7 +158,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               7. Intellectual Property Rights
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -116,7 +178,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               8. Modifications to the Service
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -128,7 +198,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               9. Termination
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -138,7 +216,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               10. Disclaimer of Warranties and Limitation of Liability
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -154,7 +240,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               11. Governing Law
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
@@ -164,7 +258,15 @@ export const TermOfUsePage = () => {
           </Box>
 
           <Box py={15}>
-            <Text ff="Outfit" fw={500} size={40} color="purpleGlow.4" mb={12} lh="3rem">
+            <Text
+              ff="Outfit"
+              fw={500}
+              size={40}
+              color="purpleGlow.4"
+              mb={12}
+              lh="3rem"
+              className={classes.subHeading}
+            >
               12. Contact Information
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
