@@ -41,7 +41,7 @@ export const Phase1 = () => {
           </Text>
 
           <Flex direction="column" gap={71} py={51}>
-            <Flex direction={{ base: 'column', md: 'row' }} gap={30} justify="center">
+            <Flex direction={{ base: 'column', sm: 'row' }} gap={30} justify="center">
               <Flex w={'100%'}>
                 <Image src="images/decor/chat-and-send-crypto-easily.png" />
               </Flex>
@@ -69,7 +69,7 @@ export const Phase1 = () => {
               </Flex>
             </Flex>
 
-            <Flex direction={{ base: 'column-reverse', md: 'row' }} gap={30} justify="center">
+            <Flex direction={{ base: 'column-reverse', sm: 'row' }} gap={30} justify="center">
               <Flex direction="column" w={'100%'} justify="center" gap={10}>
                 <Text
                   ff="Outfit"

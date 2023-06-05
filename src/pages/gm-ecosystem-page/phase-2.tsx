@@ -35,7 +35,7 @@ export const Phase2 = () => {
 
           <Flex wrap="wrap" align="stretch" justify="center" gap={30} py={40}>
             <Flex
-              w={{ base: '100%', md: 457 }}
+              w={{ base: '100%', sm: 357, md: 457 }}
               direction="column"
               px={18}
               py={35}
@@ -59,7 +59,7 @@ export const Phase2 = () => {
             </Flex>
 
             <Flex
-              w={{ base: '100%', md: 457 }}
+              w={{ base: '100%', sm: 357, md: 457 }}
               direction="column"
               justify="space-between"
               px={18}
@@ -85,7 +85,7 @@ export const Phase2 = () => {
             </Flex>
 
             <Flex
-              w={{ base: '100%', md: 457 }}
+              w={{ base: '100%', sm: 357, md: 457 }}
               direction="column"
               px={18}
               py={35}
@@ -104,7 +104,7 @@ export const Phase2 = () => {
             </Flex>
 
             <Flex
-              w={{ base: '100%', md: 457 }}
+              w={{ base: '100%', sm: 357, md: 457 }}
               direction="column"
               px={18}
               py={35}
@@ -123,7 +123,7 @@ export const Phase2 = () => {
             </Flex>
 
             <Flex
-              w={{ base: '100%', md: 457 }}
+              w={{ base: '100%', sm: 357, md: 457 }}
               direction="column"
               px={18}
               py={35}
@@ -142,7 +142,7 @@ export const Phase2 = () => {
             </Flex>
 
             <Flex
-              w={{ base: '100%', md: 457 }}
+              w={{ base: '100%', sm: 357, md: 457 }}
               direction="column"
               px={18}
               py={35}
