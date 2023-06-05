@@ -44,7 +44,7 @@ export const MeetOurTeam = () => {
           <Carousel.Slide>
             <Card p={0} radius={20} mx={{ base: 0, md: 15 }}>
               <Image
-                src="images/team-members/member-1.png"
+                src="images/team-members/khiem-le.png"
                 width={'100%'}
                 height={420}
                 fit="cover"
@@ -63,17 +63,17 @@ export const MeetOurTeam = () => {
           <Carousel.Slide>
             <Card p={0} radius={20} mx={{ base: 0, md: 15 }}>
               <Image
-                src="images/team-members/member-2.png"
+                src="images/team-members/jesse-tran.png"
                 width={'100%'}
                 height={420}
                 fit="cover"
               />
               <Box p={12} bg="purpleGlow.3">
                 <Text ff="Open Sans" fw={700} size={20} color="white.1" ta="center">
-                  Khiem Le
+                  Jesse Tran
                 </Text>
                 <Text ff="Open Sans" fw={400} color="white.4" ta="center">
-                  Co-founder & CPO
+                  Co-founder & CEO
                 </Text>
               </Box>
             </Card>
@@ -82,17 +82,17 @@ export const MeetOurTeam = () => {
           <Carousel.Slide>
             <Card p={0} radius={20} mx={{ base: 0, md: 15 }}>
               <Image
-                src="images/team-members/member-3.png"
+                src="images/team-members/quan-tran.png"
                 width={'100%'}
                 height={420}
                 fit="cover"
               />
               <Box p={12} bg="purpleGlow.3">
                 <Text ff="Open Sans" fw={700} size={20} color="white.1" ta="center">
-                  Khiem Le
+                  Quan Tran
                 </Text>
                 <Text ff="Open Sans" fw={400} color="white.4" ta="center">
-                  Co-founder & CPO
+                  Co-founder & CTO
                 </Text>
               </Box>
             </Card>
