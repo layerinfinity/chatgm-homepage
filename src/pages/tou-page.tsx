@@ -168,8 +168,8 @@ export const TermOfUsePage = () => {
               12. Contact Information
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
-              If you have any questions about these Terms, please contact us at k@chatgm.com By
-              using our Services, you are agreeing to these Terms. If you do not agree to these
+              If you have any questions about these Terms, please contact us at <b>k@chatgm.com</b>{' '}
+              By using our Services, you are agreeing to these Terms. If you do not agree to these
               Terms, do not use our Services.
               <br />
               <br />
