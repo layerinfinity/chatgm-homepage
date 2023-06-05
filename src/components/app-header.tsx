@@ -41,7 +41,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export const AppHeader = () => {
-  const { classes } = useStyles();
+  const { classes, theme } = useStyles();
   const [opened, { toggle, close }] = useDisclosure(false);
   const [scroll, scrollTo] = useWindowScroll();
 
@@ -54,7 +54,11 @@ export const AppHeader = () => {
     <>
       <Header
         height={{ base: 100, md: 120 }}
-        style={{ border: 0, backgroundColor: '#FFFFFF20', backdropFilter: 'blur(12px)' }}
+        style={{
+          border: 0,
+          backgroundColor: `${theme.colors.white[1]}20`,
+          backdropFilter: 'blur(12px)',
+        }}
       >
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Container>

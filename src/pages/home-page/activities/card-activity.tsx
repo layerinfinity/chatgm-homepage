@@ -10,7 +10,7 @@ export const CardActivity = ({
   post: { imageUrl = DEFAULT_DUMMY_IMG_LINK, subHeading, heading, brief, date, link },
 }: CardActivityProps) => {
   return (
-    <Card p={10} mih={620} style={{ boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.25)' }}>
+    <Card p={10} mih={620} bg="white.1" style={{ boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.25)' }}>
       <Anchor href={link} target="_blank">
         <Image src={imageUrl} w={'100%'} h={'100%'} mb={10} />
       </Anchor>

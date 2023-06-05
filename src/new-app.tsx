@@ -131,6 +131,9 @@ const theme: MantineThemeOverride = {
       fontSize: '16px',
       overflowX: 'hidden',
     },
+    body: {
+      backgroundColor: theme.colors.white[1],
+    },
     ul: {
       listStyle: 'none',
     },

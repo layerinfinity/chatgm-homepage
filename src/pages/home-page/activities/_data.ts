@@ -29,12 +29,12 @@ export const ACTIVITY_POSTS: Array<ActivityPost> = [
     link: 'https://medium.com/@ethan_4414/84df802627f0',
   },
   {
-    imageUrl: undefined,
+    imageUrl: 'images/activities/crypto-for-dummies.png',
     subHeading: 'Unveiling Chatgm',
-    heading: 'Introducing Our Exciting New Avatar of Chatgm',
+    heading: 'Crypto for dummies: Basic things you need to know about Crypto',
     brief:
-      'Express your unique personality with a wide spectrum of avatars from wild beasts to cosmic zodiac signs. Add a vibrant twist to your chats while embracing our brand philosophy of creativity and innovation.',
-    date: 'Mon, 05 June 2023',
-    link: 'https://medium.com/@ethan_4414/84df802627f0',
+      'How do you get started with crypto? What are the basics you need to know? And how can you stay safe and secure while exploring this new world? In this blog post, we will answer these questions.',
+    date: 'Tue, 06 June 2023',
+    link: 'https://medium.com/@ethan_4414/1c31a8f868d8',
   },
 ];
