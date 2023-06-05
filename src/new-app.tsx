@@ -167,7 +167,7 @@ export const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
             <Route path="/fortless" element={<FortlessPage />} />
-            <Route path="/term-of-use" element={<TermOfUsePage />} />
+            <Route path="/terms-of-use" element={<TermOfUsePage />} />
             <Route path="/500" element={<Error500Page />} />
           </Routes>
         </AppShell>
