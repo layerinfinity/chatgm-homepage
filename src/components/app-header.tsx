@@ -10,7 +10,7 @@ import {
   Burger,
   Group,
 } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
@@ -42,7 +42,13 @@ const useStyles = createStyles((theme) => ({
 
 export const AppHeader = () => {
   const { classes } = useStyles();
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
+  const [scroll, scrollTo] = useWindowScroll();
+
+  const onLinkClicked = () => {
+    close();
+    scrollTo({ y: 0 });
+  };
 
   return (
     <>
@@ -54,16 +60,24 @@ export const AppHeader = () => {
           <Container>
             <Flex align="center" justify="space-between" h={120}>
               {/* Logo */}
-              <Link className={classes.logo} to="/">
+              <Link className={classes.logo} to="/" onClick={onLinkClicked}>
                 <Image src="images/logo-horizontal.svg" />
               </Link>
 
               {/* Nav bar */}
               <Group className={classes.navBar}>
-                <Link to="/gm-ecosystem">GM Ecosystem</Link>
-                <Link to="/fortless">Fortress</Link>
-                <Link to="#">GM Token</Link>
-                <Link to="#">News</Link>
+                <Link to="/gm-ecosystem" onClick={onLinkClicked}>
+                  GM Ecosystem
+                </Link>
+                <Link to="/fortless" onClick={onLinkClicked}>
+                  Fortress
+                </Link>
+                <Link to="#" onClick={onLinkClicked}>
+                  GM Token
+                </Link>
+                <Link to="#" onClick={onLinkClicked}>
+                  News
+                </Link>
                 <Button
                   color="purpleGlow.4"
                   px={20}
@@ -85,7 +99,7 @@ export const AppHeader = () => {
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
           <Container>
             <Flex h={100} align="center" justify="space-between">
-              <Link className={classes.logo} to="/">
+              <Link className={classes.logo} to="/" onClick={onLinkClicked}>
                 <Image src="images/logo-horizontal.svg" />
               </Link>
               <Burger opened={opened} onClick={toggle} />
@@ -106,27 +120,27 @@ export const AppHeader = () => {
           px={20}
           style={{ zIndex: 1000, backgroundColor: '#FFFFFF66', backdropFilter: 'blur(12px)' }}
         >
-          <Link to="/">
+          <Link to="/" onClick={onLinkClicked}>
             <Image src="images/logo-horizontal.svg" width={220} />
           </Link>
 
           <Flex direction="column" gap={20} style={{ flex: 1 }} pt={40}>
-            <Link to="/gm-ecosystem" style={{ textDecoration: 'none' }}>
+            <Link to="/gm-ecosystem" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
                 GM Ecosystem
               </Text>
             </Link>
-            <Link to="/fortless" style={{ textDecoration: 'none' }}>
+            <Link to="/fortless" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
                 Fortless
               </Text>
             </Link>
-            <Link to="#" style={{ textDecoration: 'none' }}>
+            <Link to="#" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
                 GM Token
               </Text>
             </Link>
-            <Link to="#" style={{ textDecoration: 'none' }}>
+            <Link to="#" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
                 News
               </Text>
