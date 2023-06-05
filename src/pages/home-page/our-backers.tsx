@@ -21,7 +21,7 @@ export const OurBackers = () => {
               Founding Team
             </Text>
             <Text ff="Open Sans" fw={400} ta="center">
-              Lorem ipsun
+              (Trung, Aleks, Andy, Jeff)
             </Text>
           </Box>
           <Box>
@@ -32,60 +32,70 @@ export const OurBackers = () => {
               fit="contain"
             />
             <Text ff="Open Sans" fw={700} size={20} ta="center">
-              Founding Team
+              Helsinki
             </Text>
             <Text ff="Open Sans" fw={400} ta="center">
-              Lorem ipsun
+              Finland
             </Text>
           </Box>
           <Box>
             <Image src="images/bakers/parsig.png" width={240} height={200} fit="contain" />
             <Text ff="Open Sans" fw={700} size={20} ta="center">
-              Founding Team
+              Singapore
             </Text>
             <Text ff="Open Sans" fw={400} ta="center">
-              Lorem ipsun
+              Singapore
             </Text>
           </Box>
           <Box>
             <Image src="images/bakers/cvvc.png" width={240} height={200} fit="contain" />
             <Text ff="Open Sans" fw={700} size={20} ta="center">
-              Founding Team
+              Zug
             </Text>
             <Text ff="Open Sans" fw={400} ta="center">
-              Lorem ipsun
+              Switzerland
             </Text>
           </Box>
         </Flex>
 
         <Flex wrap="wrap" gap={60} justify="center">
-          <Box>
-            <Image src="images/bakers/other-1.png" width={300} height={270} fit="contain" />
+          <Flex direction="column" maw={{ base: '100%', md: 'calc(100% / 3 - 3.75rem)' }}>
+            <Image src="images/bakers/other-1.png" />
             <Text ff="Open Sans" fw={700} size={20} ta="center">
-              Founding Team
+              Sten Olsson (Finland)
             </Text>
             <Text ff="Open Sans" fw={400} ta="center">
-              Lorem ipsun
+              Partner of Hannes Snellman Law Finland’s Top Crypto Lawyer
             </Text>
-          </Box>
-          <Box>
-            <Image src="images/bakers/other-2.png" width={300} height={270} fit="contain" />
+          </Flex>
+
+          <Flex
+            direction="column"
+            align="center"
+            maw={{ base: '100%', md: 'calc(100% / 3 - 3.75rem)' }}
+          >
+            <Image src="images/bakers/other-2.png" />
             <Text ff="Open Sans" fw={700} size={20} ta="center">
-              Founding Team
+              Sebastien Borget (France)
             </Text>
             <Text ff="Open Sans" fw={400} ta="center">
-              Lorem ipsun
+              Co-Founder/COO of The Sandbox Prez of Blockchain Game Alliance
             </Text>
-          </Box>
-          <Box>
-            <Image src="images/bakers/other-3.png" width={300} height={270} fit="contain" />
+          </Flex>
+
+          <Flex
+            direction="column"
+            align="center"
+            maw={{ base: '100%', md: 'calc(100% / 3 - 3.75rem)' }}
+          >
+            <Image src="images/bakers/other-3.png" />
             <Text ff="Open Sans" fw={700} size={20} ta="center">
-              Founding Team
+              YOU, our new investor (!?)
             </Text>
             <Text ff="Open Sans" fw={400} ta="center">
-              Lorem ipsun
+              Track Record, Web3 Believer, Know-how, Network Access
             </Text>
-          </Box>
+          </Flex>
         </Flex>
       </Container>
     </Box>
