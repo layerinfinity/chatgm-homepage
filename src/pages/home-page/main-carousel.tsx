@@ -77,7 +77,7 @@ export const MainCarousel = () => {
               </Box>
               <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
                 <Box w="100%">
-                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
+                  <Image src="images/decor/no-sign-up-border.png" />
                 </Box>
               </MediaQuery>
             </Flex>
@@ -142,7 +142,7 @@ export const MainCarousel = () => {
               </Box>
               <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
                 <Box w="100%">
-                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
+                  <Image src="images/decor/most-secure-app-in-web3.png" />
                 </Box>
               </MediaQuery>
             </Flex>
@@ -152,7 +152,7 @@ export const MainCarousel = () => {
             <Flex gap={68}>
               <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
                 <Box w="100%">
-                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
+                  <Image src="images/decor/chat-gpt-assistant.png" />
                 </Box>
               </MediaQuery>
               <Box w="100%">

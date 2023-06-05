@@ -43,7 +43,7 @@ export const Phase1 = () => {
           <Flex direction="column" gap={71} py={51}>
             <Flex direction={{ base: 'column', md: 'row' }} gap={30} justify="center">
               <Flex w={'100%'}>
-                <Image src={DEFAULT_DUMMY_IMG_LINK} height={300} />
+                <Image src="images/decor/chat-and-send-crypto-easily.png" />
               </Flex>
               <Flex direction="column" w={'100%'} justify="center" gap={10}>
                 <Text ff="Open Sans" fw={400} color="dark.3" ta="right">
@@ -54,7 +54,7 @@ export const Phase1 = () => {
                 </Text>
                 <Text
                   ff="Outfit"
-                  fw={400}
+                  fw={500}
                   size={40}
                   color="dark.4"
                   ta="right"
@@ -73,7 +73,7 @@ export const Phase1 = () => {
               <Flex direction="column" w={'100%'} justify="center" gap={10}>
                 <Text
                   ff="Outfit"
-                  fw={400}
+                  fw={500}
                   size={40}
                   color="dark.4"
                   lh="3.25rem"
@@ -92,7 +92,7 @@ export const Phase1 = () => {
                 </Text>
               </Flex>
               <Flex w={'100%'}>
-                <Image src={DEFAULT_DUMMY_IMG_LINK} height={300} />
+                <Image src="images/decor/peer-to-peer-borderless.png" />
               </Flex>
             </Flex>
           </Flex>
