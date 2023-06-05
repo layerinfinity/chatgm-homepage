@@ -32,7 +32,7 @@ const theme: MantineThemeOverride = {
     ],
     purpleGlow: [
       '#8C57FF',
-      '#8C57FF',
+      '#D4BFFA',
       '#B894F5',
       '#8C57FF',
       '#644CFF',
@@ -68,9 +68,9 @@ const theme: MantineThemeOverride = {
     ],
     saffron: [
       '#FFC400',
+      '#FFE580',
       '#FFC400',
-      '#FFC400',
-      '#FFC400',
+      '#FFD600',
       '#FFC400',
       '#FFC400',
       '#FFC400',
@@ -80,7 +80,7 @@ const theme: MantineThemeOverride = {
     ],
     sky: [
       '#0091EB',
-      '#0091EB',
+      '#B2E5FC',
       '#0091EB',
       '#00C4FF',
       '#0091EB',
