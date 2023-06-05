@@ -1,4 +1,4 @@
-import { Card, Image, Text } from '@mantine/core';
+import { Anchor, Card, Image, Text } from '@mantine/core';
 import { DEFAULT_DUMMY_IMG_LINK } from '~/configs';
 import { ActivityPost } from './_data';
 
@@ -7,19 +7,21 @@ export type CardActivityProps = {
 };
 
 export const CardActivity = ({
-  post: { imageUrl = DEFAULT_DUMMY_IMG_LINK, subHeading, heading, brief, date },
+  post: { imageUrl = DEFAULT_DUMMY_IMG_LINK, subHeading, heading, brief, date, link },
 }: CardActivityProps) => {
   return (
     <Card p={10} mih={620} style={{ boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.25)' }}>
-      <Image src={imageUrl} mb={10} />
+      <Anchor href={link} target="_blank">
+        <Image src={imageUrl} w={'100%'} h={'100%'} mb={10} />
+      </Anchor>
 
       <Text ff="Open Sans" fw={700} size={14} color="rose.3">
         {subHeading}
       </Text>
 
-      <Text ff="Open Sans" fw={700} size={20}>
+      <Anchor ff="Open Sans" fw={700} size={20} color="dark.4" href={link} target="_blank">
         {heading}
-      </Text>
+      </Anchor>
 
       <Text ff="Open Sans" fw={400} size={14} color="dark.4" h={170} mah={170}>
         {brief}
