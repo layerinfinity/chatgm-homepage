@@ -1,7 +1,8 @@
-import { AppShell, Global, MantineProvider, MantineThemeOverride } from '@mantine/core';
+import { AppShell, MantineProvider, MantineThemeOverride } from '@mantine/core';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { AppFooter, AppHeader } from './components';
 import { Error500Page, FortlessPage, GmEcosystemPage, HomePage, TermOfUsePage } from './pages';
+import { Notifications } from '@mantine/notifications';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -155,8 +156,9 @@ const theme: MantineThemeOverride = {
 
 export const App = () => {
   return (
-    <Router>
-      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+    <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+      <Notifications position="bottom-right" />
+      <Router>
         <AppShell
           header={<AppHeader />}
           footer={<AppFooter />}
@@ -174,7 +176,7 @@ export const App = () => {
             <Route path="/500" element={<Error500Page />} />
           </Routes>
         </AppShell>
-      </MantineProvider>
-    </Router>
+      </Router>
+    </MantineProvider>
   );
 };

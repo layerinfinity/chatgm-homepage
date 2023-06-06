@@ -2,13 +2,17 @@ import {
   Anchor,
   Box,
   Button,
+  Center,
   Container,
   Flex,
   Image,
+  Input,
   Text,
+  TextInput,
   UnstyledButton,
   createStyles,
 } from '@mantine/core';
+import { ContactBox } from './contact-box/contact-box';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -27,44 +31,16 @@ const useStyles = createStyles((theme) => ({
     fontSize: 18,
   },
 
-  form: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: 64,
-    padding: 8,
-    borderRadius: 40,
-    backgroundColor: theme.colors.white[0],
-  },
-
-  textInput: {
-    flex: 1,
-    padding: '0 10px 0 10px',
-    fontFamily: 'Outfit',
-    fontWeight: 400,
-    fontSize: '1.125rem',
-    border: 0,
-    outline: 0,
-  },
-
   submitButton: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    minWidth: 48,
     width: 48,
+    minHeight: 48,
     height: 48,
     borderRadius: 24,
     backgroundColor: theme.colors.purpleGlow[3],
-  },
-
-  subFooter: {
-    borderTop: '1px solid black',
-    fontFamily: 'Outfit',
-    fontWeight: 400,
-    fontSize: '1.125rem',
-    color: theme.colors.dark[4],
   },
 }));
 
@@ -178,12 +154,7 @@ export const AppFooter = () => {
 
             {/* Right */}
             <Box w="100%" py={50}>
-              <Box className={classes.form}>
-                <input className={classes.textInput} placeholder="Enter Your Email" />
-                <UnstyledButton className={classes.submitButton}>
-                  <Image src="images/icon-chevron-right.svg" width={28} height={28} />
-                </UnstyledButton>
-              </Box>
+              <ContactBox />
             </Box>
           </Flex>
 
