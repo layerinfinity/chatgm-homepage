@@ -21,7 +21,7 @@ export const Error500Page = () => {
             <Image
               src="images/decor/under-construction.png"
               width={300}
-              height={'auto'}
+              height="auto"
               mx="auto"
               mb={61}
             />

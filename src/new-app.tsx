@@ -1,8 +1,9 @@
 import { AppShell, MantineProvider, MantineThemeOverride } from '@mantine/core';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Notifications } from '@mantine/notifications';
 import { AppFooter, AppHeader } from './components';
 import { Error500Page, FortlessPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
-import { Notifications } from '@mantine/notifications';
+import PPPage from './pages/privacy-policy';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -121,7 +122,7 @@ const theme: MantineThemeOverride = {
   fontFamilyMonospace: 'Monaco, Courier, monospace',
   headings: { fontFamily: 'Open Sans' },
 
-  globalStyles: (theme) => ({
+  globalStyles: (t) => ({
     '*': {
       // outline: '1px solid red',
       boxSizing: 'border-box',
@@ -133,7 +134,7 @@ const theme: MantineThemeOverride = {
       overflowX: 'hidden',
     },
     body: {
-      backgroundColor: theme.colors.white[1],
+      backgroundColor: t.colors.white[1],
     },
     ul: {
       listStyle: 'none',
@@ -162,7 +163,7 @@ export const App = () => {
         <AppShell
           header={<AppHeader />}
           footer={<AppFooter />}
-          styles={(theme) => ({
+          styles={() => ({
             main: {
               padding: 0,
             },
@@ -172,7 +173,8 @@ export const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
             <Route path="/fortless" element={<FortlessPage />} />
-            <Route path="/terms-of-use" element={<TermsOfUsePage />} />
+            <Route path="/tos" element={<TermsOfUsePage />} />
+            <Route path="/privacy-policy" element={<PPPage />} />
             <Route path="/500" element={<Error500Page />} />
           </Routes>
         </AppShell>

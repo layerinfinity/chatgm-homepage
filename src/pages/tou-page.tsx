@@ -1,4 +1,4 @@
-import { Box, Container, Text, createStyles } from '@mantine/core';
+import { Box, Container, Text, Title, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   heading: {
@@ -22,16 +22,9 @@ export const TermsOfUsePage = () => {
     <Box pt={120} pb={70}>
       <Container>
         <Box px={{ base: 0, md: 100 }}>
-          <Text
-            ff="Outfit"
-            fw={600}
-            size={72}
-            color="dark.4"
-            ta="center"
-            className={classes.heading}
-          >
+          <Title ff="Outfit" color="dark.4" ta="center" className={classes.heading}>
             CHATGM - TERMS OF USE
-          </Text>
+          </Title>
 
           <Box py={15}>
             <Text

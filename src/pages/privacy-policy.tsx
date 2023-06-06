@@ -1,15 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Container, Space, Stack, Text, Title } from '@mantine/core';
 
-import Layout from '~/layouts/layout';
-
-import AppHeader from '~/components/header';
 import AppFooter from '~/components/footer';
 
 const PPPage = () => {
   return (
-    <Layout>
-      <AppHeader />
+    <>
       <Space h={140} />
       <Container>
         <Stack px="lg">
@@ -174,7 +170,7 @@ const PPPage = () => {
       </Container>
 
       <AppFooter />
-    </Layout>
+    </>
   );
 };
 
