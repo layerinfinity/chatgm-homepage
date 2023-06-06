@@ -1,45 +1,29 @@
-import { Drawer, Space } from '@mantine/core';
-import { useScrollIntoView, useDisclosure } from '@mantine/hooks';
-
-import IntroductionSection from '~/sections/introduction';
-import Layout from '~/layouts/layout';
-import ChatGMSection from '~/sections/chatgm';
-import PayGMSection from '~/sections/paygm';
-import MobileFocused from '~/sections/mobile-focused';
-import PotentialB2B from '~/sections/potential-b2b';
-
-import AppHeader from '~/components/header';
-import AppFooter from '~/components/footer';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { ThemeProvider } from './theme-provider';
+import HomePage from './pages/home';
+import PPPage from './pages/privacy-policy';
+import TOSPage from './pages/terms-of-use';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomePage />,
+  },
+  {
+    path: '/privacy-policy',
+    element: <PPPage />,
+  },
+  {
+    path: '/tos',
+    element: <TOSPage />,
+  },
+]);
 
 export default function App() {
-  const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
-    offset: 60,
-  });
-
-  const [opened, { close }] = useDisclosure(false);
-
   return (
     <ThemeProvider>
-      <Layout>
-        <Drawer opened={opened} onClose={close} title="Authentication">
-          {/* Drawer content */}
-        </Drawer>
-        <AppHeader />
-        <Space h={140} />
-        <IntroductionSection onClick={scrollIntoView} />
-        <Space h={100} ref={targetRef} />
-        <ChatGMSection />
-        <Space h={100} />
-        <PayGMSection />
-        <Space h={100} />
-        <MobileFocused />
-        <Space h={100} />
-        <PotentialB2B />
-
-        <AppFooter />
-      </Layout>
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }

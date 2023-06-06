@@ -26,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-router-dom": "6.11.2",
     "react-waypoint": "10.3.0",
+    "sort-by": "1.2.0",
     "trig-js": "2.1.7",
     "unplugin-fonts": "1.0.3",
     "yup": "1.2.0"
