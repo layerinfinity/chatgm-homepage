@@ -13,12 +13,12 @@ const PPPage = () => {
           <Text>
             CHATGM, LLC (“CHATGM”) endeavors to protect your personal privacy. This Privacy Policy
             addresses CHATGM’s practices regarding information collected from users of the web
-            properties of CHATGM, including but not limited to all main and subdomains of
-            CHATGMoriginal.com (collectively, the “Site”). This Privacy Policy does not address or
-            govern any information-gathering, use, or dissemination practices related to information
-            collected from you other than directly through or from the Site, such as from other
-            websites, telephone, facsimile, postal mail, personal delivery, or other or additional
-            offline means or media.
+            properties of CHATGM, including but not limited to all main and subdomains of CHATGM.com
+            (collectively, the “Site”). This Privacy Policy does not address or govern any
+            information-gathering, use, or dissemination practices related to information collected
+            from you other than directly through or from the Site, such as from other websites,
+            telephone, facsimile, postal mail, personal delivery, or other or additional offline
+            means or media.
             <br />
             <br />
             If you have any questions about our privacy policies, please contact us at
