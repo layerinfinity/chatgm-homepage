@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Text, UnstyledButton, Image, Grid } from '@mantine/core';
+import { Box, Container, Flex, Text, UnstyledButton, Image } from '@mantine/core';
 import { CardActivity } from './card-activity';
 import { ACTIVITY_POSTS } from './_data';
 
@@ -33,11 +33,9 @@ export const Activities = () => {
           </UnstyledButton> */}
         </Flex>
 
-        <Flex direction={{ base: 'column', sm: 'row' }} justify="center" gap={30}>
+        <Flex direction={{ base: 'column', sm: 'row' }} justify="center" align="stretch" gap={30}>
           {ACTIVITY_POSTS.map((post) => (
-            <Box maw={{ base: '100%', md: 'calc(100% / 3 - 1.875rem)' }}>
-              <CardActivity post={post} />
-            </Box>
+            <CardActivity post={post} />
           ))}
         </Flex>
       </Container>
