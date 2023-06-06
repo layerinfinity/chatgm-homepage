@@ -15,8 +15,8 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export const TermOfUsePage = () => {
-  const { classes, theme } = useStyles();
+export const TermsOfUsePage = () => {
+  const { classes } = useStyles();
 
   return (
     <Box pt={120} pb={70}>
