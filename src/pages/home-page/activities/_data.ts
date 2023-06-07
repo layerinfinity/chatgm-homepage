@@ -1,5 +1,3 @@
-import { date } from 'yup';
-
 export type ActivityPost = {
   imageUrl?: string;
   subHeading: string;
@@ -17,7 +15,7 @@ export const ACTIVITY_POSTS: Array<ActivityPost> = [
     brief:
       'Explore why ChatGM is the ultimate choice for GenZ and crypto users today! With secure chats, user-friendly crypto wallets, and a web3 browser, we’re revolutionizing digital connectivity.',
     date: 'Mon, 05 June 2023',
-    link: 'https://medium.com/@ethan_4414/bf462945c052',
+    link: 'https://medium.com/@ethan_4414/84df802627f0',
   },
   {
     imageUrl: 'images/activities/introducing-our-exciting-new-avatar-of-chatgm.png',
@@ -26,7 +24,7 @@ export const ACTIVITY_POSTS: Array<ActivityPost> = [
     brief:
       'Express your unique personality with a wide spectrum of avatars from wild beasts to cosmic zodiac signs. Add a vibrant twist to your chats while embracing our brand philosophy of creativity and innovation.',
     date: 'Mon, 05 June 2023',
-    link: 'https://medium.com/@ethan_4414/84df802627f0',
+    link: 'https://medium.com/@ethan_4414/bf462945c052',
   },
   {
     imageUrl: 'images/activities/crypto-for-dummies.png',
