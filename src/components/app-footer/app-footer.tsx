@@ -1,18 +1,7 @@
-import {
-  Anchor,
-  Box,
-  Button,
-  Center,
-  Container,
-  Flex,
-  Image,
-  Input,
-  Text,
-  TextInput,
-  UnstyledButton,
-  createStyles,
-} from '@mantine/core';
+import { Anchor, Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
 import { ContactBox } from './contact-box/contact-box';
+import { ANDROID_STORE_URL } from '~/configs';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -69,37 +58,61 @@ export const AppFooter = () => {
             mb={{ base: 50, md: 100 }}
             gap={{ base: 10, md: undefined }}
           >
-            <Button className={classes.downloadButton} color="teal.4" w={{ base: '100%', sm: 200 }}>
+            <Anchor
+              className={classes.downloadButton}
+              color="white.0"
+              bg="teal.4"
+              underline={false}
+              w={{ base: '100%', sm: 200 }}
+              href={ANDROID_STORE_URL}
+              target="_blank"
+            >
               <img src="images/icon-android.svg" />
               &nbsp;Android
-            </Button>
+            </Anchor>
 
-            <Button className={classes.downloadButton} color="rose.3" w={{ base: '100%', sm: 200 }}>
+            <Anchor
+              className={classes.downloadButton}
+              color="white.0"
+              bg="rose.3"
+              underline={false}
+              w={{ base: '100%', sm: 200 }}
+            >
               <img src="images/icon-apple.svg" />
               &nbsp;IOS
-            </Button>
+            </Anchor>
 
-            <Button
+            <Anchor
               className={classes.downloadButton}
-              color="saffron.4"
+              color="white.0"
+              underline={false}
+              bg="saffron.4"
               w={{ base: '100%', sm: 200 }}
             >
               Web
-            </Button>
+            </Anchor>
 
-            <Button
+            <Anchor
               className={classes.downloadButton}
-              color="purpleGlow.3"
+              color="white.0"
+              bg="purpleGlow.3"
+              underline={false}
               w={{ base: '100%', sm: 200 }}
             >
               <img src="images/icon-apple.svg" />
               &nbsp;MacOS
-            </Button>
+            </Anchor>
 
-            <Button className={classes.downloadButton} color="sky.4" w={{ base: '100%', sm: 200 }}>
+            <Anchor
+              className={classes.downloadButton}
+              color="white.0"
+              bg="sky.4"
+              underline={false}
+              w={{ base: '100%', sm: 200 }}
+            >
               <img src="images/icon-windows.svg" />
               &nbsp;Windows
-            </Button>
+            </Anchor>
           </Flex>
 
           {/* Contact */}
@@ -122,10 +135,6 @@ export const AppFooter = () => {
                 If there are questions you want to ask, we will answer all your question
               </Text>
               <Flex wrap="wrap" align="center" gap="24px">
-                <Anchor>
-                  <Image src="images/icon-telegram.svg" />
-                </Anchor>
-
                 <Anchor>
                   <Image src="images/icon-discord.svg" />
                 </Anchor>
@@ -165,17 +174,30 @@ export const AppFooter = () => {
             justify={{ base: 'space-evenly', sm: 'space-between' }}
             w="100%"
             mih={80}
+            py={{ base: 10, sm: 0 }}
             style={{
               borderTop: `1px solid ${theme.colors.dark[4]}`,
             }}
           >
             <Box>
-              <Text ff="Outfit" fw={400} size={18} color="dark.4">
+              <Text ff="Outfit" fw={400} size={18} color="dark.4" mb={{ base: 10, sm: 0 }}>
                 ©2023 ChatGM. All rights reserved
               </Text>
             </Box>
 
-            <Flex gap={{ base: 20, sm: 40 }} style={{ color: theme.colors.gray[2] }}>
+            <Flex
+              wrap="wrap"
+              rowGap={5}
+              columnGap={25}
+              justify="center"
+              style={{ color: theme.colors.gray[2] }}
+            >
+              <Anchor color="dark.4" href="tos" target="_blank">
+                Terms Of Use
+              </Anchor>
+              <Anchor color="dark.4" href="privacy-policy" target="_blank">
+                Privacy Policy
+              </Anchor>
               <Anchor color="dark.4">Team</Anchor>
               <Anchor color="dark.4">Collaboration</Anchor>
               <Anchor color="dark.4">Publications</Anchor>

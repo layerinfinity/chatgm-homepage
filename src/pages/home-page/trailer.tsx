@@ -19,12 +19,14 @@ export const Trailer = () => {
         </AspectRatio>
 
         <Text ff="Open Sans" fw={400} ta="center">
-          Say goodbye to long crypto wallet addresses that none can remember.
-          <br /> Say GM to easily searchable User ID with format <br />
+          Say goodbye to long crypto wallet addresses that no one can remember.
+          <br />
+          Say GM to an easily searchable User ID with the format
+          <br />
           <Text component="span" fw={700} color="teal.4" inherit>
             @gm.[your personal ID]
           </Text>{' '}
-          tied directly to multiple wallet
+          tied directly to multiple wallets.
         </Text>
       </Container>
     </Box>
