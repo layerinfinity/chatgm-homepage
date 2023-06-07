@@ -56,7 +56,8 @@ export const AppHeader = () => {
         height={{ base: 100, md: 120 }}
         style={{
           border: 0,
-          backgroundColor: `${theme.colors.white[1]}20`,
+          backgroundColor: `${theme.colors.white[1]}33`,
+          WebkitBackdropFilter: 'blur(12px)',
           backdropFilter: 'blur(12px)',
         }}
       >
@@ -116,13 +117,18 @@ export const AppHeader = () => {
         <Flex
           direction={'column'}
           h="100%"
-          w="85%"
+          w="calc(100% - 66px)"
           pos={'fixed'}
           top={0}
           left={0}
           py={20}
           px={20}
-          style={{ zIndex: 1000, backgroundColor: '#FFFFFF66', backdropFilter: 'blur(12px)' }}
+          style={{
+            zIndex: 1000,
+            backgroundColor: '#FFFFFF99',
+            WebkitBackdropFilter: 'blur(12px)',
+            backdropFilter: 'blur(12px)',
+          }}
         >
           <Link to="/" onClick={onLinkClicked}>
             <Image src="images/logo-horizontal.svg" width={220} />
