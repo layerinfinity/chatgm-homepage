@@ -163,9 +163,9 @@ export const MainCarousel = () => {
                   Assistant
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
-                  The app combines EVM and Bitcoin Lightning for secure transactions. It has
-                  encryption, 2FA, hardware wallet integration, and strong key management. Privacy,
-                  smart contract security, regular updates, and user education are prioritized.
+                  Anywhere, anytime on any platform whether it's a self-chat, 2-way chat or group
+                  chat. We provide end-to-end encryption and only AI-mentioned messages are shared
+                  with openAI.
                 </Text>
               </Box>
             </Flex>

@@ -79,10 +79,9 @@ export const FortlessPage = () => {
               Top secure in financial transaction
             </Text>
             <Text ff="Open Sans" fw={400} color="dark.3">
-              ChatGM is powered by the Matrix protocol, ensuring that messages remain uncensored and
-              unblocked. Users have the option to maintain pseudo-anonymity, and only the intended
-              recipients can access their messages. Rest assured that your privacy is safeguarded,
-              empowering you to communicate freely and securely.
+              Sending, storing, and receiving cryptocurrencies or tokens within the ChatGM wallet is
+              safe due to Fortless technology. Private keys are never exposed. Transactions are only
+              processed when initiated and confirmed by the owner of the private keys.
             </Text>
           </Box>
 
