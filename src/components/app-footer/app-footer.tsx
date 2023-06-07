@@ -1,18 +1,6 @@
-import {
-  Anchor,
-  Box,
-  Button,
-  Center,
-  Container,
-  Flex,
-  Image,
-  Input,
-  Text,
-  TextInput,
-  UnstyledButton,
-  createStyles,
-} from '@mantine/core';
+import { Anchor, Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
 import { ContactBox } from './contact-box/contact-box';
+import { ANDROID_STORE_URL } from '~/configs';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -69,37 +57,61 @@ export const AppFooter = () => {
             mb={{ base: 50, md: 100 }}
             gap={{ base: 10, md: undefined }}
           >
-            <Button className={classes.downloadButton} color="teal.4" w={{ base: '100%', sm: 200 }}>
+            <Anchor
+              className={classes.downloadButton}
+              color="white.0"
+              bg="teal.4"
+              underline={false}
+              w={{ base: '100%', sm: 200 }}
+              href={ANDROID_STORE_URL}
+              target="_blank"
+            >
               <img src="images/icon-android.svg" />
               &nbsp;Android
-            </Button>
+            </Anchor>
 
-            <Button className={classes.downloadButton} color="rose.3" w={{ base: '100%', sm: 200 }}>
+            <Anchor
+              className={classes.downloadButton}
+              color="white.0"
+              bg="rose.3"
+              underline={false}
+              w={{ base: '100%', sm: 200 }}
+            >
               <img src="images/icon-apple.svg" />
               &nbsp;IOS
-            </Button>
+            </Anchor>
 
-            <Button
+            <Anchor
               className={classes.downloadButton}
-              color="saffron.4"
+              color="white.0"
+              underline={false}
+              bg="saffron.4"
               w={{ base: '100%', sm: 200 }}
             >
               Web
-            </Button>
+            </Anchor>
 
-            <Button
+            <Anchor
               className={classes.downloadButton}
-              color="purpleGlow.3"
+              color="white.0"
+              bg="purpleGlow.3"
+              underline={false}
               w={{ base: '100%', sm: 200 }}
             >
               <img src="images/icon-apple.svg" />
               &nbsp;MacOS
-            </Button>
+            </Anchor>
 
-            <Button className={classes.downloadButton} color="sky.4" w={{ base: '100%', sm: 200 }}>
+            <Anchor
+              className={classes.downloadButton}
+              color="white.0"
+              bg="sky.4"
+              underline={false}
+              w={{ base: '100%', sm: 200 }}
+            >
               <img src="images/icon-windows.svg" />
               &nbsp;Windows
-            </Button>
+            </Anchor>
           </Flex>
 
           {/* Contact */}

@@ -9,6 +9,7 @@ import {
   MediaQuery,
   Anchor,
 } from '@mantine/core';
+import { ANDROID_STORE_URL } from '~/configs';
 
 const useStyles = createStyles(() => ({}));
 
@@ -52,7 +53,7 @@ export const DownloadApp = () => {
               p={20}
               style={{ flex: 1 }}
             >
-              <Anchor>
+              <Anchor href={ANDROID_STORE_URL} target="_blank">
                 <Image src="images/decor/google-play.png" />
               </Anchor>
               <Anchor>
