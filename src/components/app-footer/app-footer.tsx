@@ -169,9 +169,9 @@ export const AppFooter = () => {
 
           {/* Sub Footer */}
           <Flex
-            direction={{ base: 'column', sm: 'row' }}
+            direction={{ base: 'column', lg: 'row' }}
             align="center"
-            justify={{ base: 'space-evenly', sm: 'space-between' }}
+            justify={{ base: 'space-around', sm: 'space-around', lg: 'space-between' }}
             w="100%"
             mih={80}
             py={{ base: 10, sm: 0 }}

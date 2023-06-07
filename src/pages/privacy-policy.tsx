@@ -168,8 +168,7 @@ const PPPage = () => {
           to notify you of that development.
         </Stack>
       </Container>
-
-      <AppFooter />
+      <Space h={140} />
     </>
   );
 };
