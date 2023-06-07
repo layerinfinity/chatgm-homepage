@@ -15,7 +15,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export const FortlessPage = () => {
+export const FotressPage = () => {
   const { classes, theme } = useStyles();
 
   return (

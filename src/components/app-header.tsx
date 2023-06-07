@@ -74,8 +74,8 @@ export const AppHeader = () => {
                 <Link to="/gm-ecosystem" onClick={onLinkClicked}>
                   GM Ecosystem
                 </Link>
-                <Link to="/fortless" onClick={onLinkClicked}>
-                  Fortress
+                <Link to="/fotress" onClick={onLinkClicked}>
+                  Fotress
                 </Link>
                 <Link to="#" onClick={onLinkClicked}>
                   GM Token
@@ -140,9 +140,9 @@ export const AppHeader = () => {
                 GM Ecosystem
               </Text>
             </Link>
-            <Link to="/fortless" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link to="/fotress" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
-                Fortless
+                Fotress
               </Text>
             </Link>
             <Link to="#" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
