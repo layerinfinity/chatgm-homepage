@@ -117,10 +117,7 @@ export const AppFooter = () => {
 
           {/* Contact */}
           <Flex
-            wrap={{
-              base: 'wrap',
-              md: 'nowrap',
-            }}
+            direction={{ base: 'column', sm: 'row' }}
             align="center"
             w="100%"
             px={{ base: 0, lg: 100 }}
@@ -128,7 +125,7 @@ export const AppFooter = () => {
           >
             {/* Left */}
             <Box w="100%">
-              <Text ff="Outfit" fw={600} size={32} lh="2.5rem" color="dark.3">
+              <Text ff="Outfit" fw={600} size={32} lh="2.5rem" color="dark.3" mb={24}>
                 Connect Us
               </Text>
               <Text ff="Open Sans" fw={400} lh="1.375rem" color="dark.3" maw={360} mb={26}>
@@ -171,7 +168,8 @@ export const AppFooter = () => {
           <Flex
             direction={{ base: 'column', lg: 'row' }}
             align="center"
-            justify={{ base: 'space-around', sm: 'space-around', lg: 'space-between' }}
+            justify={{ base: 'center', lg: 'space-between' }}
+            gap={2}
             w="100%"
             mih={80}
             py={{ base: 10, sm: 0 }}
@@ -192,15 +190,15 @@ export const AppFooter = () => {
               justify="center"
               style={{ color: theme.colors.gray[2] }}
             >
+              <Anchor color="dark.4">Team</Anchor>
+              <Anchor color="dark.4">Collaboration</Anchor>
+              <Anchor color="dark.4">Publications</Anchor>
               <Anchor color="dark.4" href="tos" target="_blank">
                 Terms Of Use
               </Anchor>
               <Anchor color="dark.4" href="privacy-policy" target="_blank">
                 Privacy Policy
               </Anchor>
-              <Anchor color="dark.4">Team</Anchor>
-              <Anchor color="dark.4">Collaboration</Anchor>
-              <Anchor color="dark.4">Publications</Anchor>
             </Flex>
           </Flex>
         </Flex>
