@@ -1,6 +1,7 @@
 import { Anchor, Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
 import { ContactBox } from './contact-box/contact-box';
 import { ANDROID_STORE_URL } from '~/configs';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -135,10 +136,6 @@ export const AppFooter = () => {
               </Text>
               <Flex wrap="wrap" align="center" gap="24px">
                 <Anchor>
-                  <Image src="images/icon-telegram.svg" />
-                </Anchor>
-
-                <Anchor>
                   <Image src="images/icon-discord.svg" />
                 </Anchor>
 
@@ -177,17 +174,30 @@ export const AppFooter = () => {
             justify={{ base: 'space-evenly', sm: 'space-between' }}
             w="100%"
             mih={80}
+            py={{ base: 10, sm: 0 }}
             style={{
               borderTop: `1px solid ${theme.colors.dark[4]}`,
             }}
           >
             <Box>
-              <Text ff="Outfit" fw={400} size={18} color="dark.4">
+              <Text ff="Outfit" fw={400} size={18} color="dark.4" mb={{ base: 10, sm: 0 }}>
                 ©2023 ChatGM. All rights reserved
               </Text>
             </Box>
 
-            <Flex gap={{ base: 20, sm: 40 }} style={{ color: theme.colors.gray[2] }}>
+            <Flex
+              wrap="wrap"
+              rowGap={5}
+              columnGap={25}
+              justify="center"
+              style={{ color: theme.colors.gray[2] }}
+            >
+              <Anchor color="dark.4" href="tos" target="_blank">
+                Terms Of Use
+              </Anchor>
+              <Anchor color="dark.4" href="privacy-policy" target="_blank">
+                Privacy Policy
+              </Anchor>
               <Anchor color="dark.4">Team</Anchor>
               <Anchor color="dark.4">Collaboration</Anchor>
               <Anchor color="dark.4">Publications</Anchor>

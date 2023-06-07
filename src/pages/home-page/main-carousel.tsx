@@ -1,16 +1,7 @@
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import {
-  Box,
-  Container,
-  Flex,
-  Image,
-  MediaQuery,
-  Text,
-  createStyles,
-  useMantineTheme,
-} from '@mantine/core';
+import { Box, Container, Flex, Image, MediaQuery, Text, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   slideHeading: {
@@ -71,8 +62,10 @@ export const MainCarousel = () => {
                   Border
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
-                  Wallet chat with another wallet or easily create an account with phone number or
-                  email. Chat, instant payment and trade crypto easily and fast
+                  Chat with another wallet or easily create an account with a phone number or an
+                  email.
+                  <br />
+                  Chat, make instant payments and trade crypto easily - quickly.
                 </Text>
               </Box>
               <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
@@ -105,11 +98,12 @@ export const MainCarousel = () => {
                   </Text>
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
-                  End-to-end encryption (E2EE) with Matrix ensures messages are encrypted on the
-                  sender's device and can only be decrypted on the recipient's device. No
-                  intermediaries can access the content. Users generate keys, encrypt messages with
-                  recipients' keys, and the Matrix server relays them securely. Recipients decrypt
-                  the messages locally for secure communication.
+                  Experience Secure Communication with Matrix's End-to-End Encryption (E2EE)!
+                  Protect your messages with rock-solid security: they're encrypted on your device
+                  and can only be decrypted by the intended recipient. No intermediaries can peek at
+                  your content. It's simple: generate keys, encrypt messages with your recipients'
+                  keys, and our Matrix server securely relays them. Recipients decrypt the messages
+                  locally for secure communication.
                 </Text>
               </Box>
             </Flex>
@@ -126,16 +120,15 @@ export const MainCarousel = () => {
                   mb="25.5px"
                   className={classes.slideHeading}
                 >
+                  The Ultimate
                   <Text component="span" color="purpleGlow.4" inherit>
-                    Most
                     <br />
-                    Secure App
+                    Web3 Security App
                     <br />
                   </Text>
-                  In Web3
                 </Text>
                 <Text ff="Open Sans" fw={400} color="dark.3">
-                  The app combines EVM and Bitcoin Lightning for secure transactions. It has
+                  ChatGM combines EVM and Bitcoin Lightning for secure transactions. It has
                   encryption, 2FA, hardware wallet integration, and strong key management. Privacy,
                   smart contract security, regular updates, and user education are prioritized.
                 </Text>
