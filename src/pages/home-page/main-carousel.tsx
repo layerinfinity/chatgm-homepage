@@ -6,8 +6,8 @@ import { Box, Container, Flex, Image, MediaQuery, Text, createStyles } from '@ma
 const useStyles = createStyles((theme) => ({
   slideHeading: {
     [theme.fn.smallerThan('md')]: {
-      fontSize: 48,
-      lineHeight: '4rem',
+      fontSize: 44,
+      lineHeight: '3.25rem',
     },
   },
 }));
@@ -45,14 +45,24 @@ export const MainCarousel = () => {
           }}
         >
           <Carousel.Slide>
-            <Flex gap={68}>
-              <Box w="100%">
+            <Flex
+              bg="url('images/decor/no-sign-up-border.png')"
+              bgsz="cover"
+              bgp="center"
+              h={600}
+              style={{ borderRadius: 12 }}
+              align="flex-end"
+              px={{ base: 10, sm: 42 }}
+              py={38}
+            >
+              <Box bg="#0C0D0EE5" px={30} py={20} style={{ borderRadius: 10 }}>
                 <Text
                   ff="Outfit"
                   fw={600}
-                  size="4.5rem"
+                  size={72}
                   lh="5rem"
                   mb="25.5px"
+                  color="white.1"
                   className={classes.slideHeading}
                 >
                   No{' '}
@@ -61,44 +71,50 @@ export const MainCarousel = () => {
                   </Text>{' '}
                   Border
                 </Text>
-                <Text ff="Open Sans" fw={400} color="dark.3">
+                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
                   Chat with another wallet or easily create an account with a phone number or an
                   email.
                   <br />
                   Chat, make instant payments and trade crypto easily - quickly.
                 </Text>
               </Box>
-              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                <Box w="100%">
-                  <Image src="images/decor/no-sign-up-border.png" />
-                </Box>
-              </MediaQuery>
             </Flex>
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Flex gap={68}>
-              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                <Box w="100%">
-                  <Image src="images/decor/end-to-end-encrypted-messaging.png" />
-                </Box>
-              </MediaQuery>
-              <Box w="100%">
+            <Flex
+              bg="url('images/decor/end-to-end-encrypted-messaging.png')"
+              bgsz="cover"
+              bgp="center"
+              h={600}
+              style={{ borderRadius: 12 }}
+              px={{ base: 10, sm: 42 }}
+              py={{ base: 20, sm: 38 }}
+            >
+              <Box
+                bg="#0C0D0EE5"
+                px={30}
+                py={20}
+                style={{ borderRadius: 10 }}
+                w={{ base: '100%', sm: '65%', md: '75%', lg: '60%' }}
+              >
                 <Text
                   ff="Outfit"
                   fw={600}
-                  size="4.5rem"
+                  size={72}
                   lh="5rem"
                   mb="25.5px"
+                  color="white.1"
                   className={classes.slideHeading}
                 >
-                  End-To-End{' '}
                   <Text component="span" color="purpleGlow.4" inherit>
-                    Encrypted Messaging
+                    End-To-End{' '}
                   </Text>
+                  Encrypted Messaging
                 </Text>
-                <Text ff="Open Sans" fw={400} color="dark.3">
+                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
                   Experience Secure Communication with Matrix's End-to-End Encryption (E2EE)!
+                  <br />
                   Protect your messages with rock-solid security: they're encrypted on your device
                   and can only be decrypted by the intended recipient. No intermediaries can peek at
                   your content. It's simple: generate keys, encrypt messages with your recipients'
@@ -110,59 +126,86 @@ export const MainCarousel = () => {
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Flex gap={68}>
-              <Box w="100%">
+            <Flex
+              bg="url('images/decor/most-secure-app-in-web3.png')"
+              bgsz="cover"
+              bgp="center"
+              h={600}
+              align="flex-end"
+              style={{ borderRadius: 12 }}
+              px={{ base: 10, sm: 42 }}
+              py={{ base: 10, sm: 38 }}
+            >
+              <Flex
+                direction={{ base: 'column', sm: 'row' }}
+                bg="#0C0D0EE5"
+                px={{ base: 12, sm: 30 }}
+                py={20}
+                style={{ borderRadius: 10 }}
+                gap={{ base: 10, sm: 50 }}
+                align="center"
+              >
                 <Text
                   ff="Outfit"
                   fw={600}
-                  size="4.5rem"
+                  size={72}
                   lh="5rem"
                   mb="25.5px"
+                  color="white.1"
                   className={classes.slideHeading}
+                  miw={{ base: 'auto', sm: '65%' }}
+                  ta={{ base: 'left', sm: 'right' }}
                 >
-                  The Ultimate
+                  The{' '}
                   <Text component="span" color="purpleGlow.4" inherit>
-                    <br />
-                    Web3 Security App
-                    <br />
-                  </Text>
+                    Ultimate Web3 Security
+                  </Text>{' '}
+                  App
                 </Text>
-                <Text ff="Open Sans" fw={400} color="dark.3">
+                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
                   ChatGM combines EVM and Bitcoin Lightning for secure transactions. It has
                   encryption, 2FA, hardware wallet integration, and strong key management. Privacy,
                   smart contract security, regular updates, and user education are prioritized.
                 </Text>
-              </Box>
-              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                <Box w="100%">
-                  <Image src="images/decor/most-secure-app-in-web3.png" />
-                </Box>
-              </MediaQuery>
+              </Flex>
             </Flex>
           </Carousel.Slide>
 
           <Carousel.Slide>
-            <Flex gap={68}>
-              <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-                <Box w="100%">
-                  <Image src="images/decor/chat-gpt-assistant.png" />
-                </Box>
-              </MediaQuery>
-              <Box w="100%">
+            <Flex
+              bg="url('images/decor/chat-gpt-assistant.png')"
+              bgsz="cover"
+              bgp="center"
+              h={600}
+              align="flex-end"
+              justify="flex-end"
+              style={{ borderRadius: 12 }}
+              px={{ base: 10, sm: 42 }}
+              py={10}
+            >
+              <Box
+                bg="#0C0D0EE5"
+                px={{ base: 15, sm: 30 }}
+                py={20}
+                style={{ borderRadius: 10 }}
+                w={{ base: '100%', md: '50%' }}
+              >
                 <Text
                   ff="Outfit"
                   fw={600}
-                  size="4.5rem"
+                  size={72}
                   lh="5rem"
-                  mb="25.5px"
+                  mb={25}
+                  color="white.1"
                   className={classes.slideHeading}
+                  ta={{ base: 'left', sm: 'right' }}
                 >
                   <Text component="span" color="purpleGlow.4" inherit>
                     ChatGPT 4.0
                   </Text>{' '}
                   Assistant
                 </Text>
-                <Text ff="Open Sans" fw={400} color="dark.3">
+                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
                   Anywhere, anytime on any platform whether it's a self-chat, 2-way chat or group
                   chat. We provide end-to-end encryption and only AI-mentioned messages are shared
                   with openAI.
