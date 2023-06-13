@@ -35,4 +35,14 @@ export const ACTIVITY_POSTS: Array<ActivityPost> = [
     date: 'Tue, 06 June 2023',
     link: 'https://medium.com/@ethan_4414/1c31a8f868d8',
   },
+  {
+    imageUrl:
+      'images/activities/dive-into-these-20-fun-facts-about-the-digital-currency-world.webp',
+    subHeading: 'Unveiling Chatgm',
+    heading: 'Dive Into These 20 fun facts about the Digital Currency World',
+    brief:
+      'Dive into the exhilarating world of cryptocurrencies with our article that unpacks 20 fun, bizarre, and mind-boggling facts about digital currencies. ',
+    date: 'Tue, 13 June 2023',
+    link: 'https://medium.com/@ethan_4414/dive-into-these-20-fun-facts-about-the-digital-currency-world-cd333e9f26d0',
+  },
 ];
