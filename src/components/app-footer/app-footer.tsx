@@ -1,7 +1,13 @@
 import { Anchor, Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
 import { ContactBox } from './contact-box/contact-box';
-import { ANDROID_STORE_URL } from '~/configs';
-import { Link } from 'react-router-dom';
+import {
+  ANDROID_STORE_URL,
+  DISCORD_URL,
+  FACEBOOK_URL,
+  IOS_STORE_URL,
+  MEDIUM_URL,
+  TWITTER_URL,
+} from '~/configs';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -77,6 +83,8 @@ export const AppFooter = () => {
               bg="rose.3"
               underline={false}
               w={{ base: '100%', sm: 200 }}
+              href={IOS_STORE_URL}
+              target="_blank"
             >
               <img src="images/icon-apple.svg" />
               &nbsp;IOS
@@ -132,19 +140,19 @@ export const AppFooter = () => {
                 If there are questions you want to ask, we will answer all your question
               </Text>
               <Flex wrap="wrap" align="center" gap="24px">
-                <Anchor href="https://discord.gg/m4MMtjT7" target="_blank">
+                <Anchor href={DISCORD_URL} target="_blank">
                   <Image src="images/icon-discord.svg" />
                 </Anchor>
 
-                <Anchor href="https://twitter.com/Chatgm_Crypto" target="_blank">
+                <Anchor href={TWITTER_URL} target="_blank">
                   <Image src="images/icon-twitter.svg" />
                 </Anchor>
 
-                <Anchor href="https://www.facebook.com/ChatGMSocialxCrypto" target="_blank">
+                <Anchor href={FACEBOOK_URL} target="_blank">
                   <Image src="images/icon-facebook.svg" />
                 </Anchor>
 
-                <Anchor href="https://medium.com/@ethan_4414" target="_blank">
+                <Anchor href={MEDIUM_URL} target="_blank">
                   <Image src="images/icon-medium.svg" />
                 </Anchor>
 

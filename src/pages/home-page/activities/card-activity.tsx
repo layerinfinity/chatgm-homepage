@@ -16,7 +16,10 @@ export const CardActivity = ({
       align="stretch"
       p={10}
       bg="white.1"
-      style={{ boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.25)', borderRadius: 12 }}
+      style={{
+        boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.25)',
+        borderRadius: 12,
+      }}
     >
       <Anchor href={link} target="_blank">
         <Image src={imageUrl} mb={10} />
@@ -26,11 +29,29 @@ export const CardActivity = ({
         {subHeading}
       </Text>
 
-      <Anchor ff="Open Sans" fw={700} size={20} color="dark.4" href={link} target="_blank">
+      <Anchor
+        ff="Open Sans"
+        fw={700}
+        size={20}
+        color="dark.4"
+        href={link}
+        target="_blank"
+        mih={70}
+        mah={70}
+        style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}
+      >
         {heading}
       </Anchor>
 
-      <Text ff="Open Sans" fw={400} size={14} color="dark.4" h={170} mah={170}>
+      <Text
+        ff="Open Sans"
+        fw={400}
+        size={14}
+        color="dark.4"
+        h={170}
+        mah={170}
+        style={{ overflow: 'hidden' }}
+      >
         {brief}
       </Text>
 

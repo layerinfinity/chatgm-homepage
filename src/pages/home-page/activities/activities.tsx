@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Text, UnstyledButton, Image } from '@mantine/core';
 import { CardActivity } from './card-activity';
 import { ACTIVITY_POSTS } from './_data';
+import { Carousel } from '@mantine/carousel';
 
 export const Activities = () => {
   return (
@@ -9,6 +10,7 @@ export const Activities = () => {
         <Text ff="Outfit" fw={500} color="rose.3" size={40} ta={{ base: 'center', md: 'left' }}>
           Our Activities
         </Text>
+
         <Flex justify="space-between" mb={40}>
           <Text
             ff="Open Sans"
@@ -33,11 +35,35 @@ export const Activities = () => {
           </UnstyledButton> */}
         </Flex>
 
-        <Flex direction={{ base: 'column', sm: 'row' }} justify="center" align="stretch" gap={30}>
+        <Carousel
+          loop
+          align="start"
+          styles={{
+            controls: {
+              padding: 0,
+            },
+            control: {
+              width: 48,
+              height: 48,
+              border: 0,
+              backgroundColor: 'transparent',
+              boxShadow: 'none',
+            },
+          }}
+          slideSize={'33.333%'}
+          breakpoints={[
+            { maxWidth: 'md', slideSize: '33.333%' },
+            { maxWidth: 'sm', slideSize: 'calc(100% - 32px)' },
+          ]}
+          previousControlIcon={<Image src="images/icon-angle-left.svg" />}
+          nextControlIcon={<Image src="images/icon-angle-right.svg" />}
+        >
           {ACTIVITY_POSTS.map((post) => (
-            <CardActivity post={post} />
+            <Carousel.Slide p={{ base: 10, md: 10 }}>
+              <CardActivity post={post} />
+            </Carousel.Slide>
           ))}
-        </Flex>
+        </Carousel>
       </Container>
     </Box>
   );
