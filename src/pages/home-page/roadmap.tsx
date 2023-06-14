@@ -39,7 +39,7 @@ export const RoadMap = () => {
               <Text ff="Open Sans" fw={700} size={14} ta="center" color="saffron.1">
                 Version 1
               </Text>
-              <Text ff="Outfit" fw={400} size={18} ta="center" color="white.1">
+              <Text ff="Outfit" fw={400} size={18} lh="1.45rem" my={5} ta="center" color="white.1">
                 Matrix-powered Decentralized Chat with in-app BTC-EVM wallet
               </Text>
               <Text ff="Open Sans" fw={700} size={14} ta="center" color="saffron.1">
@@ -54,7 +54,7 @@ export const RoadMap = () => {
               <Text ff="Open Sans" fw={700} size={14} ta="center" color="saffron.1">
                 Version 2
               </Text>
-              <Text ff="Outfit" fw={400} size={18} ta="center" color="white.1">
+              <Text ff="Outfit" fw={400} size={18} lh="1.45rem" my={5} ta="center" color="white.1">
                 Multicurrency Peer-to-Peer OTC Exchange for Bitcoin & Ethereum
               </Text>
               <Text ff="Open Sans" fw={700} size={14} ta="center" color="saffron.1">
@@ -69,7 +69,7 @@ export const RoadMap = () => {
               <Text ff="Open Sans" fw={700} size={14} ta="center" color="saffron.1">
                 Version 3
               </Text>
-              <Text ff="Outfit" fw={400} size={18} ta="center" color="white.1">
+              <Text ff="Outfit" fw={400} size={18} lh="1.45rem" my={5} ta="center" color="white.1">
                 Multichain Decentralized Exchange (DEX) Aggregator
               </Text>
               <Text ff="Open Sans" fw={700} size={14} ta="center" color="saffron.1">
