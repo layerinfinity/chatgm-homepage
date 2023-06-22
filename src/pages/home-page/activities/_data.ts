@@ -14,7 +14,7 @@ export const ACTIVITY_POSTS: Array<ActivityPost> = [
     heading: 'From Fiction to Fact: The Whys Behind Cryptocurrency Inception',
     brief:
       'Ever wondered why cryptocurrency was invented in the first place? To answer that, let\'s embark on a journey back in time, exploring the inception of this digital revolution, and demystifying the catalysts that paved the way for the creation of Bitcoin, Ethereum, and the myriad cryptocurrencies we know today.',
-    date: 'Mon, 22 June 2023',
+    date: 'Thu, 22 June 2023',
     link: 'https://medium.com/@chatGM/from-fiction-to-fact-the-whys-behind-cryptocurrency-inception-e46448ff71bb',
   },
   {
@@ -23,7 +23,7 @@ export const ACTIVITY_POSTS: Array<ActivityPost> = [
     heading: "How to Protect Yourself from Cryptocurrency Scams",
     brief:
       'Cryptocurrency is a digital form of money that exists only online and is powered by blockchain technology. It has many advantages, such as fast transactions, low fees, and global accessibility. However, it also comes with some risks, such as volatility, hacking, and scams.',
-    date: 'Mon, 20 June 2023',
+    date: 'Tue, 20 June 2023',
     link: 'https://medium.com/@chatGM/how-to-protect-yourself-from-cryptocurrency-scams-869b49843f75',
   },
   {
