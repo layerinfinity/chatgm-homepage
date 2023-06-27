@@ -9,6 +9,15 @@ export type ActivityPost = {
 
 export const ACTIVITY_POSTS: Array<ActivityPost> = [
   {
+    imageUrl: 'images/activities/what-is-gm-that-people-usually-say.webp',
+    subHeading: 'Unveiling Chatgm',
+    heading: 'What is GM that people usually say?',
+    brief:
+      'If you are active on social media, especially in the crypto and NFT space, you might have seen people saying “GM” to each other. What does this term mean and why is it so popular? In this blog post, we will explain the origin and significance of GM, and how you can join the GM movement with ChatGM, the first app that lets you chat with other GM believers.',
+    date: 'Tue, 27 June 2023',
+    link: 'https://medium.com/@chatGM/what-is-gm-that-people-usually-say-8afc9903ecd'
+  },
+  {
     imageUrl: 'images/activities/from-fiction-to-fact-the-whys-behind-cryptocurrency-inception.webp',
     subHeading: 'Unveiling Chatgm',
     heading: 'From Fiction to Fact: The Whys Behind Cryptocurrency Inception',
