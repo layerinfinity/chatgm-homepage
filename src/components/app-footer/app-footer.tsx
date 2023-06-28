@@ -137,7 +137,7 @@ export const AppFooter = () => {
                 Connect Us
               </Text>
               <Text ff="Open Sans" fw={400} lh="1.375rem" color="dark.3" maw={360} mb={26}>
-                If there are questions you want to ask, we will answer all your question
+                Don't hesitate! We're all ears and ready to help you with anything.
               </Text>
               <Flex wrap="wrap" align="center" gap="24px">
                 <Anchor href={DISCORD_URL} target="_blank">
