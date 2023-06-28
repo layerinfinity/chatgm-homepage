@@ -54,10 +54,10 @@ export const DownloadApp = () => {
               style={{ flex: 1 }}
             >
               <Anchor href={ANDROID_STORE_URL} target="_blank">
-                <Image src="images/decor/google-play.png" />
+                <Image src="images/decor/google-play.svg" width={190} height={56} />
               </Anchor>
               <Anchor href={IOS_STORE_URL} target="_blank">
-                <Image src="images/decor/app-store.png" />
+                <Image src="images/decor/app-store.svg" width={190} height={56} />
               </Anchor>
             </Flex>
           </Flex>
@@ -75,7 +75,7 @@ export const DownloadApp = () => {
                 />
                 <Button
                   color="purpleGlow.4"
-                  h={'auto'}
+                  h="auto"
                   px={13}
                   py={16}
                   ff="Open Sans"

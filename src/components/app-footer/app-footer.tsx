@@ -107,7 +107,7 @@ export const AppFooter = () => {
               underline={false}
               w={{ base: '100%', sm: 200 }}
             >
-              <img src="images/icon-apple.svg" />
+              <img src="images/icon-apple.svg" alt="" />
               &nbsp;MacOS
             </Anchor>
 
@@ -118,7 +118,7 @@ export const AppFooter = () => {
               underline={false}
               w={{ base: '100%', sm: 200 }}
             >
-              <img src="images/icon-windows.svg" />
+              <img src="images/icon-windows.svg" alt="" />
               &nbsp;Windows
             </Anchor>
           </Flex>
