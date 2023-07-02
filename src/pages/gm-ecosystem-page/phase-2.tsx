@@ -68,7 +68,7 @@ export const Phase2 = () => {
               style={{ borderRadius: 12, backgroundColor: theme.colors.rose[2] }}
             >
               <Text ff="Outfit" fw={500} size={30} ta="center" mb={29.5}>
-                Fraued Detection
+                Fraud Detection
               </Text>
 
               <Text ff="Open Sans" fw={400} size={14} ta="center" mb={29.5}>
