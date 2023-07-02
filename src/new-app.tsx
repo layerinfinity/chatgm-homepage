@@ -2,7 +2,7 @@ import { AppShell, MantineProvider, MantineThemeOverride } from '@mantine/core';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Notifications } from '@mantine/notifications';
 import { AppFooter, AppHeader } from './components';
-import { Error500Page, FotressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
+import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
 import PPPage from './pages/privacy-policy';
 
 const theme: MantineThemeOverride = {
@@ -172,7 +172,7 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
-            <Route path="/fotress" element={<FotressPage />} />
+            <Route path="/fortress" element={<FortressPage />} />
             <Route path="/tos" element={<TermsOfUsePage />} />
             <Route path="/privacy-policy" element={<PPPage />} />
             <Route path="/500" element={<Error500Page />} />

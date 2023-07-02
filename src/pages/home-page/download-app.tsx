@@ -1,20 +1,10 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Text,
-  Image,
-  createStyles,
-  MediaQuery,
-  Anchor,
-} from '@mantine/core';
+import { Box, Container, Flex, Text, Image, createStyles, MediaQuery, Anchor } from '@mantine/core';
 import { ANDROID_STORE_URL, IOS_STORE_URL } from '~/configs';
 
 const useStyles = createStyles(() => ({}));
 
 export const DownloadApp = () => {
-  const { classes, theme } = useStyles();
+  const { theme } = useStyles();
 
   return (
     <Box bg={`${theme.colors.purpleGlow[4]}0D`}>
@@ -54,15 +44,25 @@ export const DownloadApp = () => {
               style={{ flex: 1 }}
             >
               <Anchor href={ANDROID_STORE_URL} target="_blank">
-                <Image src="images/decor/google-play.svg" width={190} height={56} />
+                <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+                  <Image src="images/decor/google-play.svg" width={190} height={56} />
+                </MediaQuery>
+                <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+                  <Image src="images/decor/google-play.svg" width={142} height={45} />
+                </MediaQuery>
               </Anchor>
               <Anchor href={IOS_STORE_URL} target="_blank">
-                <Image src="images/decor/app-store.svg" width={190} height={56} />
+                <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+                  <Image src="images/decor/app-store.svg" width={190} height={56} />
+                </MediaQuery>
+                <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+                  <Image src="images/decor/app-store.svg" width={142} height={45} />
+                </MediaQuery>
               </Anchor>
             </Flex>
           </Flex>
 
-          <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+          {/* <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
             <Flex direction="column" style={{ flex: 1, alignItems: 'center' }}>
               <Text maw={457} ta="center" mb={28}>
                 End-to-end encrypted messaging app with
@@ -86,7 +86,7 @@ export const DownloadApp = () => {
                 </Button>
               </Flex>
             </Flex>
-          </MediaQuery>
+          </MediaQuery> */}
         </Flex>
       </Container>
     </Box>

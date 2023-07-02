@@ -1,5 +1,4 @@
 import { Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
-import { DEFAULT_DUMMY_IMG_LINK } from '~/configs';
 
 const useStyles = createStyles((theme) => ({
   phaseName: {
@@ -32,7 +31,7 @@ export const Phase1 = () => {
             fw={600}
             size={72}
             color="dark.4"
-            lh={'5rem'}
+            lh="5rem"
             className={classes.phaseName}
           >
             Product
@@ -42,10 +41,10 @@ export const Phase1 = () => {
 
           <Flex direction="column" gap={71} py={51}>
             <Flex direction={{ base: 'column', sm: 'row' }} gap={30} justify="center">
-              <Flex w={'100%'}>
+              <Flex w="100%">
                 <Image src="images/decor/chat-and-send-crypto-easily.png" />
               </Flex>
-              <Flex direction="column" w={'100%'} justify="center" gap={10}>
+              <Flex direction="column" w="100%" justify="center" gap={10}>
                 <Text ff="Open Sans" fw={400} color="dark.3" ta="right">
                   ChatGM is a cutting-edge platform that seamlessly integrates end-to-end encrypted
                   chat with the Matrix protocol. With the added functionality of a crypto wallet,
@@ -70,7 +69,7 @@ export const Phase1 = () => {
             </Flex>
 
             <Flex direction={{ base: 'column-reverse', sm: 'row' }} gap={30} justify="center">
-              <Flex direction="column" w={'100%'} justify="center" gap={10}>
+              <Flex direction="column" w="100%" justify="center" gap={10}>
                 <Text
                   ff="Outfit"
                   fw={500}
@@ -91,7 +90,7 @@ export const Phase1 = () => {
                   within their chat conversations.
                 </Text>
               </Flex>
-              <Flex w={'100%'}>
+              <Flex w="100%">
                 <Image src="images/decor/peer-to-peer-borderless.png" />
               </Flex>
             </Flex>
@@ -104,7 +103,7 @@ export const Phase1 = () => {
             <Text ff="Open Sans" fw={400} color="dark.3" ta="center" maw={750} mx="auto">
               Bitcoin marketplace that connects buyers and sellers in your friend-list or from
               around the world. It allows users to trade Bitcoin using a wide range of payment
-              methods, including bank transfers, digital wallets, and more. It's fast and super
+              methods, including bank transfers, digital wallets, and more. It&apos;s fast and super
               secure with 247 customer support
             </Text>
           </Box>
