@@ -73,7 +73,7 @@ export const AppFooter = () => {
               href={ANDROID_STORE_URL}
               target="_blank"
             >
-              <img src="images/icon-android.svg" />
+              <img src="images/icon-android.svg" alt="android" />
               &nbsp;Android
             </Anchor>
 
@@ -86,7 +86,7 @@ export const AppFooter = () => {
               href={IOS_STORE_URL}
               target="_blank"
             >
-              <img src="images/icon-apple.svg" />
+              <img src="images/icon-apple.svg" alt="apple" />
               &nbsp;IOS
             </Anchor>
 
@@ -137,7 +137,7 @@ export const AppFooter = () => {
                 Connect Us
               </Text>
               <Text ff="Open Sans" fw={400} lh="1.375rem" color="dark.3" maw={360} mb={26}>
-                Don't hesitate! We're all ears and ready to help you with anything.
+                Don&apos;t hesitate! We&apos;re all ears and ready to help you with anything.
               </Text>
               <Flex wrap="wrap" align="center" gap="24px">
                 <Anchor href={DISCORD_URL} target="_blank">

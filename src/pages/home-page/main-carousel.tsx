@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { Box, Container, Flex, Image, MediaQuery, Text, createStyles } from '@mantine/core';
+import { Box, Container, Flex, Text, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   slideHeading: {
@@ -113,13 +113,13 @@ export const MainCarousel = () => {
                   Encrypted Messaging
                 </Text>
                 <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
-                  Experience Secure Communication with Matrix's End-to-End Encryption (E2EE)!
+                  Experience Secure Communication with Matrix&apos;s End-to-End Encryption (E2EE)!
                   <br />
-                  Protect your messages with rock-solid security: they're encrypted on your device
-                  and can only be decrypted by the intended recipient. No intermediaries can peek at
-                  your content. It's simple: generate keys, encrypt messages with your recipients'
-                  keys, and our Matrix server securely relays them. Recipients decrypt the messages
-                  locally for secure communication.
+                  Protect your messages with rock-solid security: they&apos;re encrypted on your
+                  device and can only be decrypted by the intended recipient. No intermediaries can
+                  peek at your content. It&apos;s simple: generate keys, encrypt messages with your
+                  recipients&apos; keys, and our Matrix server securely relays them. Recipients
+                  decrypt the messages locally for secure communication.
                 </Text>
               </Box>
             </Flex>
@@ -201,14 +201,13 @@ export const MainCarousel = () => {
                   ta={{ base: 'left', sm: 'right' }}
                 >
                   <Text component="span" color="purpleGlow.4" inherit>
-                    ChatGPT 4.0
-                  </Text>{' '}
-                  Assistant
+                    @gm.Ai
+                  </Text>
                 </Text>
                 <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
-                  Anywhere, anytime on any platform whether it's a self-chat, 2-way chat or group
-                  chat. We provide end-to-end encryption and only AI-mentioned messages are shared
-                  with openAI.
+                  Powered by GTP -4. Anywhere, anytime on any platform whether it&apos;s a
+                  self-chat, 2-way chat or group chat. We provide end-to-end encryption and only
+                  Al-mentioned messages are shared with openAl
                 </Text>
               </Box>
             </Flex>
