@@ -9,6 +9,15 @@ export type ActivityPost = {
 
 export const ACTIVITY_POSTS: Array<ActivityPost> = [
   {
+    imageUrl: 'images/activities/a-simple-guide-to-securing-p2p-message-for-crypto-transactions.webp',
+    subHeading: 'Unveiling Chatgm',
+    heading: 'A Simple Guide to Securing P2P Messaging for Crypto Transactions',
+    brief:
+      "If you're someone who enjoys the thrilling world of digital currencies, then you understand the role of communication in this exciting realm. You might need to swap ideas, share valuable insights, negotiate terms, or just have a friendly chat with like-minded digital coin enthusiasts.",
+    date: 'Mon, 03 July 2023',
+    link: 'https://medium.com/@chatGM/an-easy-to-understand-guide-to-secure-chatting-for-digital-coin-transactions-e1a873f9a0e7'
+  },
+  {
     imageUrl: 'images/activities/what-is-gm-that-people-usually-say.webp',
     subHeading: 'Unveiling Chatgm',
     heading: 'What is GM that people usually say?',
