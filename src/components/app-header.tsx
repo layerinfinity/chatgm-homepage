@@ -50,6 +50,14 @@ export const AppHeader = () => {
     scrollTo({ y: 0 });
   };
 
+  const onGetAppButtonClicked = () => {
+    close();
+    const element = document.getElementById('home-page/download-app');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Header
@@ -93,6 +101,7 @@ export const AppHeader = () => {
                     fontWeight: 400,
                     fontSize: '1.125rem',
                   }}
+                  onClick={onGetAppButtonClicked}
                 >
                   Get App
                 </Button>
@@ -169,6 +178,7 @@ export const AppHeader = () => {
               borderRadius: 12,
               fontSize: '1.125rem',
             }}
+            onClick={onGetAppButtonClicked}
           >
             Get App
           </Button>
