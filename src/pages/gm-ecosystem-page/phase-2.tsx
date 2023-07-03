@@ -67,11 +67,11 @@ export const Phase2 = () => {
               py={35}
               style={{ borderRadius: 12, backgroundColor: theme.colors.rose[2] }}
             >
-              <Text ff="Outfit" fw={500} size={30} ta="center" mb={29.5}>
+              <Text ff="Outfit" fw={500} size={30} ta="center" mb={48.5}>
                 Fraud Detection
               </Text>
 
-              <Text ff="Open Sans" fw={400} size={14} ta="center" mb={29.5}>
+              <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
                 As it evolves with more internal, public, & market pattern data, @gm.Al will further
                 develop an advanced fraud detection system, proactively identifying potential scam
                 activities & fraudulent accounts, thus enhancing security & trust within the ChatGM
