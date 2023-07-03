@@ -7,7 +7,13 @@ export const DownloadApp = () => {
   const { theme } = useStyles();
 
   return (
-    <Box bg={`${theme.colors.purpleGlow[4]}0D`}>
+    <Box
+      bg={`${theme.colors.purpleGlow[4]}0D`}
+      id="home-page/download-app"
+      style={{
+        scrollMargin: 120,
+      }}
+    >
       <Container>
         <Flex direction={{ base: 'column', md: 'row' }} pt={54}>
           <Flex
