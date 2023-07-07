@@ -19,7 +19,7 @@ export const MainCarousel = () => {
   return (
     <Box bg={`${theme.colors.purpleGlow[4]}0D`} pt={120}>
       <Container py={40}>
-        <Text ta="center" mb={50} ff="Outfit" fw={700} size={24} color="dark.4">
+        <Text ta="center" mb={32} ff="Outfit" fw={700} size={24} color="dark.4">
           ChatGM is the 1st End-to-End Encrypted & Fully Anonymous Messenger for Web3.
         </Text>
 
