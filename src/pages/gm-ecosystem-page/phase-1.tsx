@@ -46,10 +46,11 @@ export const Phase1 = () => {
               </Flex>
               <Flex direction="column" w="100%" justify="center" gap={10}>
                 <Text ff="Open Sans" fw={400} color="dark.3" ta="right">
-                  ChatGM is a cutting-edge platform that seamlessly integrates end-to-end encrypted
-                  chat with the Matrix protocol. With the added functionality of a crypto wallet,
-                  ChatGM empowers users worldwide to effortlessly send global payments directly
-                  within their chat conversations.
+                  ChatGM is the 1st End-to-End Encrypted & Fully Anonymous Messenger for Web3. We
+                  are a cutting-edge platform that seamlessly integrates end-to-end encrypted chat
+                  with the Matrix protocol. With the added functionality of a crypto wallet, ChatGM
+                  empowers users worldwide to effortlessly send global payments directly within
+                  their chat conversations.
                 </Text>
                 <Text
                   ff="Outfit"
