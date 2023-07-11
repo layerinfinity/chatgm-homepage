@@ -75,9 +75,9 @@ export const MainCarousel = () => {
                   </Text>{' '}
                   Border
                 </Text>
-                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
-                  Chat with another wallet or easily create an account with a phone number or an
-                  email.
+                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem" maw={700}>
+                  Chat with another wallet and fully anonymous registration with just a crypto
+                  wallet. Users can also register with emails or phone numbers if preferred.
                   <br />
                   Chat, make instant payments and trade crypto easily - quickly.
                 </Text>
