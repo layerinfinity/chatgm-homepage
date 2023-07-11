@@ -46,10 +46,11 @@ export const Phase2 = () => {
               </Text>
 
               <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
-                Utilizing OpenAl, is your in-app personal Al assistant in the world of crypto. By
-                analyzing your transaction history, portfolio, external market patterns & other
-                activities, @gm.Al generates personalized insights & recommendations that are
-                delivered through an intuitive messaging interface within ChatGM.
+                <b>@gm.AI</b>, utilizing OpenAI, is your in-app personal AI assistant in the world
+                of crypto. By analyzing your transaction history, portfolio, external market
+                patterns & other activities, <b>@gm.AI</b> generates personalized insights &
+                recommendations that are delivered through an intuitive messaging interface within
+                ChatGM.
               </Text>
 
               {/* <UnstyledButton>
@@ -62,7 +63,6 @@ export const Phase2 = () => {
             <Flex
               w={{ base: '100%', sm: 'calc(50% - 1.875rem)' }}
               direction="column"
-              justify="space-between"
               px={18}
               py={35}
               style={{ borderRadius: 12, backgroundColor: theme.colors.rose[2] }}
@@ -72,10 +72,10 @@ export const Phase2 = () => {
               </Text>
 
               <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
-                As it evolves with more internal, public, & market pattern data, @gm.Al will further
-                develop an advanced fraud detection system, proactively identifying potential scam
-                activities & fraudulent accounts, thus enhancing security & trust within the ChatGM
-                ecosystem.
+                As it evolves with more internal & public data, <b>@gm.AI</b> will further develop
+                an advanced fraud detection system, proactively identifying & blocking scam websites
+                or dApps from accessing your wallets, keys & data across blockchains & applications.
+                An AI shield for crypto wallets.
               </Text>
 
               {/* <UnstyledButton>
@@ -85,7 +85,7 @@ export const Phase2 = () => {
               </UnstyledButton> */}
             </Flex>
 
-            <Flex
+            {/* <Flex
               w={{ base: '100%', sm: 'calc(50% - 1.875rem)' }}
               direction="column"
               px={18}
@@ -103,7 +103,7 @@ export const Phase2 = () => {
                 tolerance. Our platform prioritizes security, enabling confident, seamless, &
                 automated navigation of the crypto market.
               </Text>
-            </Flex>
+            </Flex> */}
 
             <Flex
               w={{ base: '100%', sm: 'calc(50% - 1.875rem)' }}
