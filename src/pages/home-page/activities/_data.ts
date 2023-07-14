@@ -9,6 +9,15 @@ export type ActivityPost = {
 
 export const ACTIVITY_POSTS: Array<ActivityPost> = [
   {
+    imageUrl: 'images/activities/guardian-of-blockchain-galaxy.webp',
+    subHeading: 'Unveiling Chatgm',
+    heading: 'Guardians of the Blockchain Galaxy: The Crypto Wallet',
+    brief:
+      'Once upon a time, in the not-too-distant past, there was a brave adventurer named Alex. Alex was no ordinary explorer — he was a digital nomad venturing into the vast, uncharted territory of cryptocurrency.',
+    date: 'Wed, 14 July 2023',
+    link: 'https://medium.com/@chatGM/guardians-of-the-blockchain-galaxy-the-crypto-wallet-2b2c21f75939',
+  },
+  {
     imageUrl: 'images/activities/building-trust-in-crypto-chat-platforms.webp',
     subHeading: 'Unveiling Chatgm',
     heading: 'Building Trust in Crypto Chat Platforms',
