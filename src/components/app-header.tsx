@@ -88,7 +88,7 @@ export const AppHeader = () => {
                 <Link to="#" onClick={onLinkClicked}>
                   GM Token
                 </Link>
-                <Link to="#" onClick={onLinkClicked}>
+                <Link to="https://news.chatgm.com/" onClick={onLinkClicked}>
                   News
                 </Link>
                 <Button

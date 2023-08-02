@@ -1,9 +1,25 @@
-import { Box, Container, Flex, Text, UnstyledButton, Image } from '@mantine/core';
-import { CardActivity } from './card-activity';
-import { ACTIVITY_POSTS } from './_data';
+import { Box, Container, Flex, Text, Image, Loader } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
+import { useQuery } from '@tanstack/react-query';
+
+import { CardActivity } from './card-activity';
+import { ActivityPost } from './_data';
 
 export const Activities = () => {
+  const { data } = useQuery<{ posts: ActivityPost[] }>({
+    queryKey: ['repoData'],
+    queryFn: () =>
+      fetch(
+        `https://news.chatgm.com/ghost/api/content/posts?include=authors&key=${
+          import.meta.env.VITE_GHOST_CONTENT_API_KEY
+        }`
+      ).then((res) => res.json()),
+  });
+
+  if (!data) {
+    return <Loader />;
+  }
+
   return (
     <Box mb={160}>
       <Container>
@@ -24,15 +40,6 @@ export const Activities = () => {
             ChatGM journey. Strap in, stay savvy, and let’s navigate the thrilling roadmap of the
             digital age together!
           </Text>
-
-          {/* <UnstyledButton
-            style={{ width: 155, display: 'flex', flexDirection: 'row', alignItems: 'center' }}
-          >
-            <Text ff="Open Sans" fw={400} size={14} color="dark.4">
-              More News
-            </Text>
-            <Image src="images/decor/arrow-at-2-o-clock.png" style={{ width: 56, height: 56 }} />
-          </UnstyledButton> */}
         </Flex>
 
         <Carousel
@@ -50,7 +57,7 @@ export const Activities = () => {
               boxShadow: 'none',
             },
           }}
-          slideSize={'33.333%'}
+          slideSize="33.333%"
           breakpoints={[
             { maxWidth: 'md', slideSize: '33.333%' },
             { maxWidth: 'sm', slideSize: 'calc(100% - 32px)' },
@@ -58,9 +65,9 @@ export const Activities = () => {
           previousControlIcon={<Image src="images/icon-angle-left.svg" />}
           nextControlIcon={<Image src="images/icon-angle-right.svg" />}
         >
-          {ACTIVITY_POSTS.map((post) => (
+          {data.posts.map((post) => (
             <Carousel.Slide p={{ base: 10, md: 10 }}>
-              <CardActivity post={post} />
+              <CardActivity key={post.id} post={post} />
             </Carousel.Slide>
           ))}
         </Carousel>

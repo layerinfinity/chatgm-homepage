@@ -21,6 +21,7 @@
     "@mantine/hooks": "6.0.17",
     "@mantine/notifications": "6.0.17",
     "@tanstack/react-query": "4.32.1",
+    "dayjs": "1.11.9",
     "embla-carousel-autoplay": "7.1.0",
     "embla-carousel-react": "7.1.0",
     "react": "18.2.0",

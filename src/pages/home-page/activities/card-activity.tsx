@@ -1,4 +1,6 @@
 import { Anchor, Flex, Image, Text } from '@mantine/core';
+import dayjs from 'dayjs';
+
 import { DEFAULT_DUMMY_IMG_LINK } from '~/configs';
 import { ActivityPost } from './_data';
 
@@ -7,11 +9,11 @@ export type CardActivityProps = {
 };
 
 export const CardActivity = ({
-  post: { imageUrl = DEFAULT_DUMMY_IMG_LINK, subHeading, heading, brief, date, link },
+  post: { feature_image = DEFAULT_DUMMY_IMG_LINK, title, excerpt, created_at, url },
 }: CardActivityProps) => {
   return (
     <Flex
-      w={'100%'}
+      w="100%"
       direction="column"
       align="stretch"
       p={10}
@@ -21,12 +23,12 @@ export const CardActivity = ({
         borderRadius: 12,
       }}
     >
-      <Anchor href={link} target="_blank">
-        <Image src={imageUrl} mb={10} />
+      <Anchor href={url} target="_blank">
+        <Image src={feature_image} mb={10} />
       </Anchor>
 
       <Text ff="Open Sans" fw={700} size={14} color="rose.3">
-        {subHeading}
+        ChatGM
       </Text>
 
       <Anchor
@@ -34,13 +36,13 @@ export const CardActivity = ({
         fw={700}
         size={20}
         color="dark.4"
-        href={link}
+        href={url}
         target="_blank"
         mih={70}
         mah={70}
         style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}
       >
-        {heading}
+        {title}
       </Anchor>
 
       <Text
@@ -52,11 +54,11 @@ export const CardActivity = ({
         mah={170}
         style={{ overflow: 'hidden' }}
       >
-        {brief}
+        {excerpt}
       </Text>
 
       <Text ff="Open Sans" fw={400} size={14} color="dark.4" ta="right" mt="auto">
-        {date.toString()}
+        {dayjs(created_at).format('YYYY/MM/DD')}
       </Text>
     </Flex>
   );
