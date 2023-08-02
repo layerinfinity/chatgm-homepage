@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { Box, Container, Flex, Image, MediaQuery, Text, createStyles } from '@mantine/core';
+import { Box, Container, Flex, Text, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   slideHeading: {
@@ -19,6 +19,10 @@ export const MainCarousel = () => {
   return (
     <Box bg={`${theme.colors.purpleGlow[4]}0D`} pt={120}>
       <Container py={40}>
+        <Text ta="center" mb={32} ff="Outfit" fw={700} size={24} color="dark.4">
+          ChatGM is the 1st End-to-End Encrypted & Fully Anonymous Messenger for Web3.
+        </Text>
+
         <Carousel
           loop
           withIndicators
@@ -71,9 +75,9 @@ export const MainCarousel = () => {
                   </Text>{' '}
                   Border
                 </Text>
-                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
-                  Chat with another wallet or easily create an account with a phone number or an
-                  email.
+                <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem" maw={700}>
+                  Chat with another wallet and fully anonymous registration with just a crypto
+                  wallet. Users can also register with emails or phone numbers if preferred.
                   <br />
                   Chat, make instant payments and trade crypto easily - quickly.
                 </Text>
@@ -113,13 +117,13 @@ export const MainCarousel = () => {
                   Encrypted Messaging
                 </Text>
                 <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
-                  Experience Secure Communication with Matrix's End-to-End Encryption (E2EE)!
+                  Experience Secure Communication with Matrix&apos;s End-to-End Encryption (E2EE)!
                   <br />
-                  Protect your messages with rock-solid security: they're encrypted on your device
-                  and can only be decrypted by the intended recipient. No intermediaries can peek at
-                  your content. It's simple: generate keys, encrypt messages with your recipients'
-                  keys, and our Matrix server securely relays them. Recipients decrypt the messages
-                  locally for secure communication.
+                  Protect your messages with rock-solid security: they&apos;re encrypted on your
+                  device and can only be decrypted by the intended recipient. No intermediaries can
+                  peek at your content. It&apos;s simple: generate keys, encrypt messages with your
+                  recipients&apos; keys, and our Matrix server securely relays them. Recipients
+                  decrypt the messages locally for secure communication.
                 </Text>
               </Box>
             </Flex>
@@ -201,14 +205,13 @@ export const MainCarousel = () => {
                   ta={{ base: 'left', sm: 'right' }}
                 >
                   <Text component="span" color="purpleGlow.4" inherit>
-                    ChatGPT 4.0
-                  </Text>{' '}
-                  Assistant
+                    @gm.Ai
+                  </Text>
                 </Text>
                 <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
-                  Anywhere, anytime on any platform whether it's a self-chat, 2-way chat or group
-                  chat. We provide end-to-end encryption and only AI-mentioned messages are shared
-                  with openAI.
+                  Powered by GTP -4. Anywhere, anytime on any platform whether it&apos;s a
+                  self-chat, 2-way chat or group chat. We provide end-to-end encryption and only
+                  Al-mentioned messages are shared with openAl
                 </Text>
               </Box>
             </Flex>

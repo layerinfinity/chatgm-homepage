@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Image, Text, UnstyledButton, createStyles } from '@mantine/core';
+import { Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   phaseName: {
@@ -26,7 +26,7 @@ export const Phase2 = () => {
             fw={600}
             size={72}
             color="dark.4"
-            lh={'5rem'}
+            lh="5rem"
             ta="right"
             className={classes.phaseName}
           >
@@ -42,49 +42,50 @@ export const Phase2 = () => {
               style={{ borderRadius: 12, backgroundColor: theme.colors.purpleGlow[2] }}
             >
               <Text ff="Outfit" fw={500} size={30} ta="center" mb={48.5}>
-                Generate Asset with AI
+                @gm.Al
               </Text>
 
               <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
-                Unleash your creativity with a tap! Generate personalized avatars and backgrounds
-                for a unique chat experience that truly reflects your personality. Stand out and
-                express yourself effortlessly.
+                <b>@gm.AI</b>, utilizing OpenAI, is your in-app personal AI assistant in the world
+                of crypto. By analyzing your transaction history, portfolio, external market
+                patterns & other activities, <b>@gm.AI</b> generates personalized insights &
+                recommendations that are delivered through an intuitive messaging interface within
+                ChatGM.
               </Text>
 
-              <UnstyledButton>
+              {/* <UnstyledButton>
                 <Text ff="Open Sans" fw={700} size={14} ta="center" underline>
                   Try it now!
                 </Text>
-              </UnstyledButton>
+              </UnstyledButton> */}
             </Flex>
 
             <Flex
               w={{ base: '100%', sm: 'calc(50% - 1.875rem)' }}
               direction="column"
-              justify="space-between"
               px={18}
               py={35}
               style={{ borderRadius: 12, backgroundColor: theme.colors.rose[2] }}
             >
-              <Text ff="Outfit" fw={500} size={30} ta="center" mb={29.5}>
-                TrueSight<sup>TM</sup>
+              <Text ff="Outfit" fw={500} size={30} ta="center" mb={48.5}>
+                Fraud Detection
               </Text>
 
-              <Text ff="Open Sans" fw={400} size={14} ta="center" mb={29.5}>
-                Unlock the potential of TrueSight technology! Our platform analyzes on-chain data,
-                trading volumes, price trendlines, and market news to provide comprehensive
-                information about tokens in your portfolio. Remember, the data is for reference only
-                and not financial advice. Explore confidently with our powerful insights.
+              <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
+                As it evolves with more internal & public data, <b>@gm.AI</b> will further develop
+                an advanced fraud detection system, proactively identifying & blocking scam websites
+                or dApps from accessing your wallets, keys & data across blockchains & applications.
+                An AI shield for crypto wallets.
               </Text>
 
-              <UnstyledButton>
+              {/* <UnstyledButton>
                 <Text ff="Open Sans" fw={700} size={14} ta="center" underline>
                   Explore now
                 </Text>
-              </UnstyledButton>
+              </UnstyledButton> */}
             </Flex>
 
-            <Flex
+            {/* <Flex
               w={{ base: '100%', sm: 'calc(50% - 1.875rem)' }}
               direction="column"
               px={18}
@@ -92,16 +93,17 @@ export const Phase2 = () => {
               style={{ borderRadius: 12, backgroundColor: theme.colors.teal[3] }}
             >
               <Text ff="Outfit" fw={500} size={30} ta="center" mb={48.5}>
-                Natural Language Program
+                Personalized AI Trader
               </Text>
 
               <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
-                Your personalized AI assistant awaits! Based on your transactions, portfolio, and
-                activities, our advanced technology delivers tailored insights and recommendations
-                just for you via conversation. Experience the power of personalized assistance
-                today!
+                ChatGM&apos;s Personalized Al Trader simplifies profit optimization. It works by
+                autonomously swapping & holding a predetermined set of tokens as per your customized
+                profit & loss strategy, aiming to meet your targets within your specified risk
+                tolerance. Our platform prioritizes security, enabling confident, seamless, &
+                automated navigation of the crypto market.
               </Text>
-            </Flex>
+            </Flex> */}
 
             <Flex
               w={{ base: '100%', sm: 'calc(50% - 1.875rem)' }}
@@ -115,10 +117,9 @@ export const Phase2 = () => {
               </Text>
 
               <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
-                Empower yourself with real-time and up-to-date information! When you assign projects
-                or tokens, our platform provides comprehensive details related to them, enabling you
-                to make informed decisions and manage risks effectively. Stay on top of the game and
-                invest with confidence.
+                @gm.Al crunches public & historic crypto data, providing near real-time insights for
+                your target projects or tokens. Make sharp decisions & manage risks effectively with
+                our comprehensive & easy-to-understand information.
               </Text>
             </Flex>
 
@@ -130,18 +131,19 @@ export const Phase2 = () => {
               style={{ borderRadius: 12, backgroundColor: theme.colors.sky[3] }}
             >
               <Text ff="Outfit" fw={500} size={30} ta="center" mb={48.5}>
-                Fraud Detection
+                AI-Driven insights
               </Text>
 
               <Text ff="Open Sans" fw={400} size={14} ta="center" mb={48.5}>
-                Rest assured with our AI-powered fraud detection system! Utilizing advanced
-                technology, we proactively identify and remove fraudulent or scam accounts, ensuring
-                the utmost security and safety for all our users. Trust in our platform's robust
-                measures to create a secure environment for your peace of mind.
+                Our Al-driven Portfolio Insights analyze on-chain data, trading volumes, price
+                trendlines & market news to provide near real-time information about every token in
+                your holding. This empowers you to make informed & timely investment decisions.
+                Please note that the data \provided is for reference purposes only & should not be
+                considered as financial advice.
               </Text>
             </Flex>
 
-            <Flex
+            {/* <Flex
               w={{ base: '100%', sm: 'calc(50% - 1.875rem)' }}
               direction="column"
               px={18}
@@ -159,7 +161,7 @@ export const Phase2 = () => {
                 secure on our platform, allowing you to trade with confidence. Experience seamless
                 and automated profit optimization today!
               </Text>
-            </Flex>
+            </Flex> */}
           </Flex>
         </Box>
       </Container>

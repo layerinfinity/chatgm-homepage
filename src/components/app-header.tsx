@@ -43,11 +43,19 @@ const useStyles = createStyles((theme) => ({
 export const AppHeader = () => {
   const { classes, theme } = useStyles();
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [scroll, scrollTo] = useWindowScroll();
+  const [, scrollTo] = useWindowScroll();
 
   const onLinkClicked = () => {
     close();
     scrollTo({ y: 0 });
+  };
+
+  const onGetAppButtonClicked = () => {
+    close();
+    const element = document.getElementById('home-page/download-app');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -74,8 +82,8 @@ export const AppHeader = () => {
                 <Link to="/gm-ecosystem" onClick={onLinkClicked}>
                   GM Ecosystem
                 </Link>
-                <Link to="/fotress" onClick={onLinkClicked}>
-                  Fotress
+                <Link to="/fortress" onClick={onLinkClicked}>
+                  Fortress
                 </Link>
                 <Link to="#" onClick={onLinkClicked}>
                   GM Token
@@ -93,6 +101,7 @@ export const AppHeader = () => {
                     fontWeight: 400,
                     fontSize: '1.125rem',
                   }}
+                  onClick={onGetAppButtonClicked}
                 >
                   Get App
                 </Button>
@@ -115,10 +124,10 @@ export const AppHeader = () => {
 
       {opened && (
         <Flex
-          direction={'column'}
+          direction="column"
           h="100%"
           w="calc(100% - 66px)"
-          pos={'fixed'}
+          pos="fixed"
           top={0}
           left={0}
           py={20}
@@ -140,9 +149,9 @@ export const AppHeader = () => {
                 GM Ecosystem
               </Text>
             </Link>
-            <Link to="/fotress" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link to="/fortress" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
-                Fotress
+                Fortress
               </Text>
             </Link>
             <Link to="#" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
@@ -169,6 +178,7 @@ export const AppHeader = () => {
               borderRadius: 12,
               fontSize: '1.125rem',
             }}
+            onClick={onGetAppButtonClicked}
           >
             Get App
           </Button>

@@ -1,10 +1,8 @@
 import { AppShell, MantineProvider, MantineThemeOverride } from '@mantine/core';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Notifications } from '@mantine/notifications';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
 import { AppFooter, AppHeader } from './components';
-import { Error500Page, FotressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
+import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
 import PPPage from './pages/privacy-policy';
 
 const theme: MantineThemeOverride = {
@@ -157,34 +155,30 @@ const theme: MantineThemeOverride = {
   },
 };
 
-const queryClient = new QueryClient();
-
 export const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-        <Notifications position="bottom-right" />
-        <Router>
-          <AppShell
-            header={<AppHeader />}
-            footer={<AppFooter />}
-            styles={() => ({
-              main: {
-                padding: 0,
-              },
-            })}
-          >
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
-              <Route path="/fotress" element={<FotressPage />} />
-              <Route path="/tos" element={<TermsOfUsePage />} />
-              <Route path="/privacy-policy" element={<PPPage />} />
-              <Route path="/500" element={<Error500Page />} />
-            </Routes>
-          </AppShell>
-        </Router>
-      </MantineProvider>
-    </QueryClientProvider>
+    <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+      <Notifications position="bottom-right" />
+      <Router>
+        <AppShell
+          header={<AppHeader />}
+          footer={<AppFooter />}
+          styles={() => ({
+            main: {
+              padding: 0,
+            },
+          })}
+        >
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
+            <Route path="/fortress" element={<FortressPage />} />
+            <Route path="/tos" element={<TermsOfUsePage />} />
+            <Route path="/privacy-policy" element={<PPPage />} />
+            <Route path="/500" element={<Error500Page />} />
+          </Routes>
+        </AppShell>
+      </Router>
+    </MantineProvider>
   );
 };
