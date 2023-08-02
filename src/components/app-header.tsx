@@ -159,7 +159,11 @@ export const AppHeader = () => {
                 GM Token
               </Text>
             </Link>
-            <Link to="#" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link
+              to="https://news.chatgm.com/"
+              style={{ textDecoration: 'none' }}
+              onClick={onLinkClicked}
+            >
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
                 News
               </Text>

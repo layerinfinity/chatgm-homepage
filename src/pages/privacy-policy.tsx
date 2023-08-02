@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Container, Space, Stack, Text, Title } from '@mantine/core';
 
-import AppFooter from '~/components/footer';
-
 const PPPage = () => {
   return (
     <>
