@@ -4,7 +4,7 @@ import { DownloadApp } from './download-app';
 import { Trailer } from './trailer';
 import { Activities } from './activities/activities';
 import { RoadMap } from './roadmap';
-import { MeetOurTeam } from './meet-our-team';
+// import { MeetOurTeam } from './meet-our-team';
 import { OurBackers } from './our-backers';
 
 export const HomePage = () => {
@@ -15,7 +15,7 @@ export const HomePage = () => {
       <Trailer />
       <Activities />
       <RoadMap />
-      <MeetOurTeam />
+      {/* <MeetOurTeam /> */}
       <OurBackers />
     </Box>
   );
