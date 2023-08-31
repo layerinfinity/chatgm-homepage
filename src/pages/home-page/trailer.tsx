@@ -1,15 +1,13 @@
-import { AspectRatio, Box, Text, Container, useMantineTheme } from '@mantine/core';
+import { AspectRatio, Box, Text, Container } from '@mantine/core';
 
 export const Trailer = () => {
-  const theme = useMantineTheme();
-
   return (
     <Box>
       <Container py={180}>
         <AspectRatio ratio={16 / 9} mb="lg">
           <iframe
             title="ChatGM"
-            src="https://drive.google.com/file/d/1nOEo3vGc8388ggfVyhUwus_tEpDHbRtv/preview"
+            src="https://www.youtube.com/embed/vNhkzCgHekU?si=ChXZAcfbtNtMbERI"
             allowFullScreen
             style={{
               border: 'none',

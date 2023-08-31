@@ -40,7 +40,7 @@ const ChatGMSection = () => {
         <AspectRatio ratio={16 / 9} mb="lg">
           <iframe
             title="ChatGM"
-            src="https://drive.google.com/file/d/1nOEo3vGc8388ggfVyhUwus_tEpDHbRtv/preview"
+            src="https://www.youtube.com/embed/vNhkzCgHekU?si=ChXZAcfbtNtMbERI"
             allowFullScreen
             style={{
               border: 'none',
