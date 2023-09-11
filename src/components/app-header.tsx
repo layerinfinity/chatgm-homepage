@@ -74,7 +74,7 @@ export const AppHeader = () => {
             <Flex align="center" justify="space-between" h={120}>
               {/* Logo */}
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-                <Image src="images/logo-horizontal.svg" />
+                <Image width={74} fit="contain" src="images/logo-stacked.svg" />
               </Link>
 
               {/* Nav bar */}
@@ -114,7 +114,7 @@ export const AppHeader = () => {
           <Container>
             <Flex h={100} align="center" justify="space-between">
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-                <Image src="images/logo-horizontal.svg" />
+                <Image width={70} fit="contain" src="images/logo-stacked.svg" />
               </Link>
               <Burger opened={opened} onClick={toggle} />
             </Flex>
