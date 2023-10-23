@@ -20,7 +20,7 @@ export const MainCarousel = () => {
     <Box bg={`${theme.colors.purpleGlow[4]}0D`} pt={120}>
       <Container py={40}>
         <Text ta="center" mb={32} ff="Outfit" fw={700} size={24} color="dark.4">
-          ChatGM is the 1st End-to-End Encrypted & Fully Anonymous Messenger for Web3.
+          Interactive AI Superapp for Web3
         </Text>
 
         <Carousel
@@ -209,9 +209,10 @@ export const MainCarousel = () => {
                   </Text>
                 </Text>
                 <Text ff="Open Sans" fw={400} color="white.1" lh="1.35rem">
-                  Powered by GTP -4. Anywhere, anytime on any platform whether it&apos;s a
-                  self-chat, 2-way chat or group chat. We provide end-to-end encryption and only
-                  Al-mentioned messages are shared with openAl
+                  Powered by GPT-4, This is ChatGM&apos;s Web3 AI Assistant, simplifying blockchain
+                  switches, efficient trading, and safeguarding wallets. Offering real-time crypto
+                  insights, it evolves into an advanced AI shield against phishing in dApps and
+                  websites. Only AI-mentioned messages are shared with OpenAI
                 </Text>
               </Box>
             </Flex>
