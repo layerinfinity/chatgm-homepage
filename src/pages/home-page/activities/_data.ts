@@ -1,9 +1,10 @@
 export type ActivityPost = {
-  feature_image?: string;
-  subHeading: string;
-  title: string;
-  excerpt: string;
-  created_at: string;
-  url: string;
-  id: string;
+  id: number;
+  date: string;
+  link: string;
+  yoast_head_json: {
+    title: string;
+    description: string;
+  };
+  _embedded: Record<string, any>;
 };

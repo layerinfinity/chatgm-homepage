@@ -6,14 +6,10 @@ import { CardActivity } from './card-activity';
 import { ActivityPost } from './_data';
 
 export const Activities = () => {
-  const { data } = useQuery<{ posts: ActivityPost[] }>({
+  const { data } = useQuery<ActivityPost[]>({
     queryKey: ['repoData'],
     queryFn: () =>
-      fetch(
-        `https://news.chatgm.com/ghost/api/content/posts?include=authors&key=${
-          import.meta.env.VITE_GHOST_CONTENT_API_KEY
-        }`
-      ).then((res) => res.json()),
+      fetch('https://blog.chatgm.com/wp-json/wp/v2/posts?_embed').then((res) => res.json()),
   });
 
   if (!data) {
@@ -65,7 +61,7 @@ export const Activities = () => {
           previousControlIcon={<Image src="images/icon-angle-left.svg" />}
           nextControlIcon={<Image src="images/icon-angle-right.svg" />}
         >
-          {data.posts.map((post) => (
+          {data.map((post) => (
             <Carousel.Slide p={{ base: 10, md: 10 }}>
               <CardActivity key={post.id} post={post} />
             </Carousel.Slide>

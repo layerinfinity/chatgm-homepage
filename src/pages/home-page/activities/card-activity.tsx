@@ -9,7 +9,7 @@ export type CardActivityProps = {
 };
 
 export const CardActivity = ({
-  post: { feature_image = DEFAULT_DUMMY_IMG_LINK, title, excerpt, created_at, url },
+  post: { _embedded, yoast_head_json, date, link },
 }: CardActivityProps) => {
   return (
     <Flex
@@ -23,8 +23,12 @@ export const CardActivity = ({
         borderRadius: 12,
       }}
     >
-      <Anchor href={url} target="_blank">
-        <Image src={feature_image} mb={10} />
+      <Anchor href={link} target="_blank">
+        <Image
+          src={_embedded?.['wp:featuredmedia']?.[0]?.source_url || DEFAULT_DUMMY_IMG_LINK}
+          fit="contain"
+          mb={10}
+        />
       </Anchor>
 
       <Text ff="Open Sans" fw={700} size={14} color="rose.3">
@@ -36,13 +40,13 @@ export const CardActivity = ({
         fw={700}
         size={20}
         color="dark.4"
-        href={url}
+        href={link}
         target="_blank"
         mih={70}
         mah={70}
         style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}
       >
-        {title}
+        {yoast_head_json.title}
       </Anchor>
 
       <Text
@@ -54,11 +58,11 @@ export const CardActivity = ({
         mah={170}
         style={{ overflow: 'hidden' }}
       >
-        {excerpt}
+        {yoast_head_json.description}
       </Text>
 
       <Text ff="Open Sans" fw={400} size={14} color="dark.4" ta="right" mt="auto">
-        {dayjs(created_at).format('YYYY/MM/DD')}
+        {dayjs(date).format('YYYY/MM/DD')}
       </Text>
     </Flex>
   );

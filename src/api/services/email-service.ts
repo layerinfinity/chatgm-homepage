@@ -19,7 +19,7 @@ export const addEmailSubscription = async (
 
   if (!rawResponse.ok) {
     let errorMessage = responseJson?.message;
-    errorMessage = typeof errorMessage != 'string' ? errorMessage?.[0] : errorMessage;
+    errorMessage = typeof errorMessage !== 'string' ? errorMessage?.[0] : errorMessage;
 
     throw new Error(errorMessage || 'Failed to subscribe');
   }
