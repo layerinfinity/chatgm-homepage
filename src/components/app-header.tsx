@@ -127,9 +127,7 @@ export const AppHeader = () => {
                 <Link to="/gm-ecosystem" onClick={onLinkClicked}>
                   GM Ecosystem
                 </Link>
-                <Link to="/fortress" onClick={onLinkClicked}>
-                  Fortress
-                </Link>
+
                 <Button
                   color="purpleGlow.4"
                   px={20}
@@ -186,11 +184,6 @@ export const AppHeader = () => {
             <Link to="/gm-ecosystem" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
                 GM Ecosystem
-              </Text>
-            </Link>
-            <Link to="/fortress" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
-              <Text ff="Outfit" fw={500} size={24} color="dark.4">
-                Fortress
               </Text>
             </Link>
           </Flex>
