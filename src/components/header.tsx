@@ -12,10 +12,6 @@ import {
 
 const menu = [
   {
-    label: 'GM Ecosystem',
-    to: 'ecosystem',
-  },
-  {
     label: 'Documentation',
     to: 'documentation',
   },

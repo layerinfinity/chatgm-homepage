@@ -9,9 +9,18 @@ import {
   Flex,
   Burger,
   Group,
+  Menu,
 } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
+import {
+  IconBrandDiscordFilled,
+  IconBrandMedium,
+  IconBrandTelegram,
+  IconBrandTwitterFilled,
+  IconChevronDown,
+} from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
+import { DISCORD_URL, MEDIUM_URL, TELEGRAM_URL, TWITTER_URL } from '~/configs';
 
 const useStyles = createStyles((theme) => ({
   logo: {
@@ -79,17 +88,47 @@ export const AppHeader = () => {
 
               {/* Nav bar */}
               <Group className={classes.navBar}>
+                <Menu shadow="md" width={200}>
+                  <Menu.Target>
+                    <Button color="purple.2" rightIcon={<IconChevronDown size={14} />}>
+                      Community
+                    </Button>
+                  </Menu.Target>
+
+                  <Menu.Dropdown>
+                    <Menu.Label>Application</Menu.Label>
+                    <Menu.Item
+                      onClick={() => window.open(TWITTER_URL, '_blank')}
+                      icon={<IconBrandTwitterFilled size={14} />}
+                    >
+                      Twitter (X)
+                    </Menu.Item>
+                    <Menu.Item
+                      onClick={() => window.open(DISCORD_URL, '_blank')}
+                      icon={<IconBrandDiscordFilled size={14} />}
+                    >
+                      Discord
+                    </Menu.Item>
+                    <Menu.Item
+                      onClick={() => window.open(TELEGRAM_URL, '_blank')}
+                      icon={<IconBrandTelegram size={14} />}
+                    >
+                      Telegram
+                    </Menu.Item>
+                    <Menu.Item
+                      onClick={() => window.open(MEDIUM_URL, '_blank')}
+                      icon={<IconBrandMedium size={14} />}
+                    >
+                      Medium
+                    </Menu.Item>
+                  </Menu.Dropdown>
+                </Menu>
+
                 <Link to="/gm-ecosystem" onClick={onLinkClicked}>
                   GM Ecosystem
                 </Link>
                 <Link to="/fortress" onClick={onLinkClicked}>
                   Fortress
-                </Link>
-                <Link to="#" onClick={onLinkClicked}>
-                  GM Token
-                </Link>
-                <Link to="https://news.chatgm.com/" onClick={onLinkClicked}>
-                  News
                 </Link>
                 <Button
                   color="purpleGlow.4"
@@ -152,20 +191,6 @@ export const AppHeader = () => {
             <Link to="/fortress" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="dark.4">
                 Fortress
-              </Text>
-            </Link>
-            <Link to="#" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
-              <Text ff="Outfit" fw={500} size={24} color="dark.4">
-                GM Token
-              </Text>
-            </Link>
-            <Link
-              to="https://news.chatgm.com/"
-              style={{ textDecoration: 'none' }}
-              onClick={onLinkClicked}
-            >
-              <Text ff="Outfit" fw={500} size={24} color="dark.4">
-                News
               </Text>
             </Link>
           </Flex>

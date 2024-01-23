@@ -1,4 +1,5 @@
 import { Anchor, Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
+import { IconBrandTelegram } from '@tabler/icons-react';
 import { ContactBox } from './contact-box/contact-box';
 import {
   ANDROID_STORE_URL,
@@ -6,6 +7,7 @@ import {
   FACEBOOK_URL,
   IOS_STORE_URL,
   MEDIUM_URL,
+  TELEGRAM_URL,
   TWITTER_URL,
 } from '~/configs';
 
@@ -96,8 +98,9 @@ export const AppFooter = () => {
               underline={false}
               bg="saffron.4"
               w={{ base: '100%', sm: 200 }}
+              href="https://app.chatgm.com/"
             >
-              Web
+              WebApp
             </Anchor>
 
             <Anchor
@@ -148,20 +151,12 @@ export const AppFooter = () => {
                   <Image src="images/icon-twitter.svg" />
                 </Anchor>
 
-                <Anchor href={FACEBOOK_URL} target="_blank">
-                  <Image src="images/icon-facebook.svg" />
-                </Anchor>
-
                 <Anchor href={MEDIUM_URL} target="_blank">
                   <Image src="images/icon-medium.svg" />
                 </Anchor>
 
-                <Anchor>
-                  <Image src="images/icon-github.svg" />
-                </Anchor>
-
-                <Anchor>
-                  <Image src="images/icon-chatgm.svg" />
+                <Anchor href={TELEGRAM_URL} target="_blank">
+                  <IconBrandTelegram color="black" />
                 </Anchor>
               </Flex>
             </Box>
