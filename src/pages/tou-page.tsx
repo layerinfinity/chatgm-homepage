@@ -4,6 +4,7 @@ const useStyles = createStyles((theme) => ({
   heading: {
     fontFamily :"Outfit",
     fontSize: 72,
+    fontWeight: 600,
     // lineHeight: '5rem',
     [theme.fn.smallerThan('md')]: {
       fontSize: 40,
@@ -25,17 +26,17 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
   },
   policySubTitle: { 
-    fontFamily :"Outfit",
+    fontFamily :"Open Sans",
     fontSize: 18,
     
     // lineHeight: '3rem',
     color:'#393E46',
-    fontWeight: 'bold',
+    fontWeight: 700,
   },
   policycontent: { 
     fontFamily :"Open Sans",
     fontSize: 16,
-    color:'#393E46',
+    color:'#202328',
     fontWeight: 400,
     textAlign:'justify',
   },
@@ -50,14 +51,14 @@ export const TermsOfUsePage = () => {
       <Container>
         <Stack px="lg">
           <Title ta="center" color="dark.4" className={classes.heading}>ChatGM Term of Service</Title>
-          <Text pt={15} className={classes.policycontent}>
+          <Text pt={70} className={classes.policycontent}>
             Welcome to ChatGM, a versatile platform designed to integrate the ease of messaging with the innovative world of cryptocurrency transactions. Our services provide secure communication channels alongside robust features for handling digital currencies.<br/><br/>
 
             By using ChatGM ("Service"), you agree to be bound by these Terms of Service ("Terms"). These Terms affect your legal rights and obligations, so if you do not agree to be bound by all of these Terms, do not use the Service.
           </Text>
           <Box>
             {/* 1 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 1. Introduction and Acceptance
               </Text>
@@ -95,7 +96,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 2 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 2. User Account Guidelines
               </Text>
@@ -119,7 +120,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 3 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 3. Wallet and Transaction Terms
               </Text>
@@ -151,7 +152,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 4 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 4.User Responsibilities
               </Text>
@@ -188,7 +189,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 5 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 5. Data Privacy and Security
               </Text>
@@ -252,7 +253,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 7 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 7.Communication Features
               </Text>
@@ -299,7 +300,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 8 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 8. Third-Party Integrations and Bots
               </Text>
@@ -336,7 +337,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 9 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 9. Changes to Terms of Service
               </Text>
@@ -373,7 +374,7 @@ export const TermsOfUsePage = () => {
             </Box>
             
             {/* 10 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 10. Service Availability and Limitations
               </Text>
@@ -410,7 +411,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 11 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 11. Content and Intellectual Property Rights
               </Text>
@@ -457,7 +458,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 12 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 12. Termination and Account Cancellation
               </Text>
@@ -494,7 +495,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 13 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 13. Legal Compliance
               </Text>
@@ -517,7 +518,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
             {/* 14 */}
-            <Box pt={20}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 14. Miscellaneous
               </Text>
@@ -548,7 +549,7 @@ export const TermsOfUsePage = () => {
             </Box>
 
              {/* 15 */}
-             <Box pt={10}>
+             <Box pt={45}>
               <Text className={classes.policyTitle}>
                15. Contact and Feedback
               </Text>

@@ -4,11 +4,13 @@ const useStyles = createStyles((theme) => ({
   heading: {
     fontFamily :"Outfit",
     fontSize: 72,
+    fontWeight: 600,
     // lineHeight: '5rem',
     [theme.fn.smallerThan('md')]: {
       fontSize: 40,
       lineHeight: '2.5rem',
     },
+ 
   },
   subHeading: {
     [theme.fn.smallerThan('md')]: {
@@ -16,7 +18,6 @@ const useStyles = createStyles((theme) => ({
       lineHeight: '2rem',
     },
   },
-
   policyTitle: { 
     fontFamily :"Outfit",
     fontSize: 30,
@@ -25,22 +26,22 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
   },
   policySubTitle: { 
-    fontFamily :"Outfit",
+    fontFamily :"Open Sans",
     fontSize: 18,
     
     // lineHeight: '3rem',
     color:'#393E46',
-    fontWeight: 'bold',
+    fontWeight: 700,
   },
   policycontent: { 
     fontFamily :"Open Sans",
     fontSize: 16,
-    color:'#393E46',
-    // fontWeight: 400,
-
+    color:'#202328',
+    fontWeight: 400,
     textAlign:'justify',
   },
 }));
+
 const PPPage = () => {
   const { classes } = useStyles();
 
@@ -52,7 +53,7 @@ const PPPage = () => {
           <Title ta="center" color="dark.4" className={classes.heading}>ChatGM Privacy Policy</Title>
           <Box>
             {/* 1 */}
-            <Box pt={15}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
               1. Introduction
               </Text>
@@ -80,7 +81,7 @@ const PPPage = () => {
             </Box>
 
             {/* 2 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
               2. Data Collection
               </Text>
@@ -105,7 +106,7 @@ const PPPage = () => {
             </Box>
 
             {/* 3 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 3. Use of Personal Data
               </Text>
@@ -126,6 +127,8 @@ const PPPage = () => {
                   - We use your data to communicate with you about service updates, security alerts, and support messages.<br/>
                   - For customer support purposes, we may access your account information to assist you with issues or queries.
                 </Text>
+              </Box>
+              <Box pt={15}>
                 <Text className={classes.policySubTitle}>
                   3.3 Security and Fraud Prevention
                 </Text>
@@ -137,7 +140,7 @@ const PPPage = () => {
             </Box>
 
             {/* 4 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 4. Data Sharing and Disclosure
               </Text>
@@ -162,7 +165,7 @@ const PPPage = () => {
             </Box>
 
             {/* 5 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 5. Data Security
               </Text>
@@ -187,7 +190,7 @@ const PPPage = () => {
             </Box>
 
             {/* 6 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 6. User Rights and Controls
               </Text>
@@ -212,7 +215,7 @@ const PPPage = () => {
             </Box>
 
             {/* 7 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 7. Data Retention
               </Text>
@@ -224,7 +227,7 @@ const PPPage = () => {
             </Box>
 
             {/* 8 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 8. International Data Transfers
               </Text>
@@ -235,7 +238,7 @@ const PPPage = () => {
             </Box>
 
             {/* 9 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 9. Compliance with Laws and Regulations
               </Text>
@@ -246,7 +249,7 @@ const PPPage = () => {
             </Box>
 
             {/* 10 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 10. Use of Data for AI Training
               </Text>
@@ -258,7 +261,7 @@ const PPPage = () => {
             </Box>
 
             {/* 11 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 11. Policy Updates and Changes
               </Text>
@@ -270,7 +273,7 @@ const PPPage = () => {
             </Box>
 
             {/* 12 */}
-            <Box pt={25}>
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
                 12. Contact Information
               </Text>
