@@ -50,7 +50,7 @@ const PPPage = () => {
       <Space h={140} />
       <Container>
         <Stack px="lg">
-          <Title ta="center" color="dark.4" className={classes.heading}>ChatGM Privacy Policy</Title>
+          <Title ta="center" color="dark.4" className={classes.heading}>Privacy Policy</Title>
           <Box>
             {/* 1 */}
             <Box pt={45}>
@@ -281,6 +281,43 @@ const PPPage = () => {
                 - For any privacy-related questions or concerns, users can contact ChatGM through our email address: team@chatgm.com<br/>
                 - Feedback regarding the Privacy Policy is welcomed and can be submitted through the same channels.
               </Text>
+            </Box>
+
+            {/* 13 */}
+            <Box pt={45}>
+              <Text className={classes.policyTitle}>
+                13. GM Galaxy Features - Age Requirement and User Commitments
+              </Text>
+              <Box pt={15}>
+                <Text className={classes.policySubTitle}>
+                  <li>
+                   GM Galaxy features:
+                  </li>
+                </Text>
+                <Text className={classes.policycontent}>
+                  ChatGM may integrate third-party services to enhance user experience. These services will be governed by their respective terms and privacy policies.
+                </Text>
+              </Box>
+              <Box pt={15}>
+                <Text className={classes.policySubTitle}>
+                  <li>
+                    Age Verification:
+                  </li>
+                </Text>
+                <Text className={classes.policycontent}>
+                  Users may interact with bots or use ChatGM’s API for automation and enhanced functionality. Users are responsible for their interactions with bots and any data they share.
+                </Text>
+              </Box>
+              <Box pt={15}>
+                <Text className={classes.policySubTitle}>
+                  <li>
+                    Legal Capacity:
+                  </li>
+                </Text>
+                <Text className={classes.policycontent}>
+                   ChatGM will only share user data with third parties to the extent necessary for providing the services. User consent will be obtained where required.
+                </Text>
+              </Box>
             </Box>
           </Box>
         </Stack>

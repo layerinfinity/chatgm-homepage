@@ -50,7 +50,7 @@ export const TermsOfUsePage = () => {
       <Space h={140} />
       <Container>
         <Stack px="lg">
-          <Title ta="center" color="dark.4" className={classes.heading}>ChatGM Term of Service</Title>
+          <Title ta="center" color="dark.4" className={classes.heading}>Term of Service</Title>
           <Text pt={70} className={classes.policycontent}>
             Welcome to ChatGM, a versatile platform designed to integrate the ease of messaging with the innovative world of cryptocurrency transactions. Our services provide secure communication channels alongside robust features for handling digital currencies.<br/><br/>
 
