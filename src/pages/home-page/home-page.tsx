@@ -14,7 +14,7 @@ export const HomePage = () => {
       <DownloadApp />
       <Trailer />
       <Activities />
-      <RoadMap />
+      {/* <RoadMap /> */}
       {/* <MeetOurTeam /> */}
       <OurBackers />
     </Box>
