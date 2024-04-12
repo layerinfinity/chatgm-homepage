@@ -155,9 +155,9 @@ export const AppFooter = () => {
                   <Image src="images/icon-medium.svg" />
                 </Anchor>
 
-                <Anchor href={TELEGRAM_URL} target="_blank">
+                {/* <Anchor href={TELEGRAM_URL} target="_blank">
                   <IconBrandTelegram color="black" />
-                </Anchor>
+                </Anchor> */}
               </Flex>
             </Box>
 

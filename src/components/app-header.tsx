@@ -109,12 +109,12 @@ export const AppHeader = () => {
                     >
                       Discord
                     </Menu.Item>
-                    <Menu.Item
+                    {/* <Menu.Item
                       onClick={() => window.open(TELEGRAM_URL, '_blank')}
                       icon={<IconBrandTelegram size={14} />}
                     >
                       Telegram
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <Menu.Item
                       onClick={() => window.open(MEDIUM_URL, '_blank')}
                       icon={<IconBrandMedium size={14} />}
