@@ -4,8 +4,11 @@ import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { AppFooter, AppHeader } from './components';
-import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
+// import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
 import PPPage from './pages/privacy-policy';
+import { WhitePaper } from './pages/WhitePaper/whitepaper';
+import { LandingPage } from './pages/LandingPage/landing-page';
+import { TermsOfUsePage } from './pages/tou-page';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -13,7 +16,7 @@ const theme: MantineThemeOverride = {
     white: [
       '#FFFFFF',
       '#F2F2F2',
-      '#FFFFFF',
+      '#e6e6e6',
       '#FFFFFF',
       '#B3B3B3',
       '#FFFFFF',
@@ -97,7 +100,7 @@ const theme: MantineThemeOverride = {
     dark: [
       '#393E46',
       '#0C0D0E',
-      '#393E46',
+      '#121416',
       '#202328',
       '#393E46',
       '#393E46',
@@ -152,35 +155,42 @@ const theme: MantineThemeOverride = {
         px: {
           md: 150,
         },
+
       },
     },
   },
 };
 
 const queryClient = new QueryClient();
-
 export const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-        <Notifications position="bottom-right" />
+        {/* <Notifications position="bottom-right" /> */}
         <Router>
           <AppShell
             header={<AppHeader />}
             footer={<AppFooter />}
             styles={() => ({
+              // body: {
+              //   height: 500
+              // },
               main: {
                 padding: 0,
+                height: 100
               },
             })}
           >
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path='/white-paper' element={<WhitePaper />}></Route>
+              <Route path="/tos" element={<TermsOfUsePage />} />
+              <Route path="/privacy-policy" element={<PPPage />} />
+              {/* <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
               <Route path="/fortress" element={<FortressPage />} />
               <Route path="/tos" element={<TermsOfUsePage />} />
               <Route path="/privacy-policy" element={<PPPage />} />
-              <Route path="/500" element={<Error500Page />} />
+              <Route path="/500" element={<Error500Page />} /> */}
             </Routes>
           </AppShell>
         </Router>

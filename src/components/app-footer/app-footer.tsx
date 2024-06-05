@@ -21,11 +21,11 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 56,
+    height: 50,
     borderRadius: 12,
     fontFamily: 'Open Sans',
     fontWeight: 700,
-    fontSize: 18,
+    fontSize: 14,
   },
 
   submitButton: {
@@ -47,124 +47,57 @@ export const AppFooter = () => {
   return (
     <Box className={classes.container}>
       <Container>
-        <Flex direction="column" align="center" justify="center">
-          {/* Footer Heading */}
-          <Text ff="Outfit" fw={500} size={40} mt={27} mb={40}>
-            Get{' '}
-            <Text component="span" inherit color="purpleGlow.3">
-              ChatGM
-            </Text>{' '}
-            Now
-          </Text>
+        <Flex pt={20} direction="column" align="center" justify="center">
 
-          {/* Download Buttons */}
           <Flex
             wrap="wrap"
             align="center"
             justify="center"
             w="100%"
-            mb={{ base: 50, md: 100 }}
+            mb={{ base: 25 }}
+            mt={{ base: 25 }}
             gap={{ base: 10, md: undefined }}
           >
             <Anchor
               className={classes.downloadButton}
               color="white.0"
-              bg="teal.4"
+              bg="dark.2"
               underline={false}
               w={{ base: '100%', sm: 200 }}
               href={ANDROID_STORE_URL}
               target="_blank"
             >
-              <img src="images/icon-android.svg" alt="android" />
-              &nbsp;Android
+              <Image width={24} height={13} fit="contain" src="images/icon-android.svg" alt="android" />
+
+              &nbsp;&nbsp;Android
             </Anchor>
 
             <Anchor
               className={classes.downloadButton}
               color="white.0"
-              bg="rose.3"
+              bg="dark.2"
               underline={false}
               w={{ base: '100%', sm: 200 }}
               href={IOS_STORE_URL}
               target="_blank"
             >
-              <img src="images/icon-apple.svg" alt="apple" />
-              &nbsp;IOS
+              <Image width={20} height={24} fit="contain" src="images/icon-apple.svg" alt="apple" />
+              &nbsp;&nbsp;IOS
             </Anchor>
 
             <Anchor
               className={classes.downloadButton}
               color="white.0"
               underline={false}
-              bg="saffron.4"
+              bg="dark.2"
               w={{ base: '100%', sm: 200 }}
               href="https://app.chatgm.com/"
             >
-              WebApp
+              <Image width={24} height={24} fit="contain" src="images/icon-web.svg" alt="android" />
+              &nbsp;&nbsp;WebApp
             </Anchor>
 
-            <Anchor
-              className={classes.downloadButton}
-              color="white.0"
-              bg="purpleGlow.3"
-              underline={false}
-              w={{ base: '100%', sm: 200 }}
-            >
-              <img src="images/icon-apple.svg" alt="" />
-              &nbsp;MacOS
-            </Anchor>
 
-            <Anchor
-              className={classes.downloadButton}
-              color="white.0"
-              bg="sky.4"
-              underline={false}
-              w={{ base: '100%', sm: 200 }}
-            >
-              <img src="images/icon-windows.svg" alt="" />
-              &nbsp;Windows
-            </Anchor>
-          </Flex>
-
-          {/* Contact */}
-          <Flex
-            direction={{ base: 'column', sm: 'row' }}
-            align="center"
-            w="100%"
-            px={{ base: 0, lg: 100 }}
-            mb={{ sm: 50, md: 85 }}
-          >
-            {/* Left */}
-            <Box w="100%">
-              <Text ff="Outfit" fw={600} size={32} lh="2.5rem" color="dark.3" mb={24}>
-                Connect Us
-              </Text>
-              <Text ff="Open Sans" fw={400} lh="1.375rem" color="dark.3" maw={360} mb={26}>
-                Don&apos;t hesitate! We&apos;re all ears and ready to help you with anything.
-              </Text>
-              <Flex wrap="wrap" align="center" gap="24px">
-                <Anchor href={DISCORD_URL} target="_blank">
-                  <Image src="images/icon-discord.svg" />
-                </Anchor>
-
-                <Anchor href={TWITTER_URL} target="_blank">
-                  <Image src="images/icon-twitter.svg" />
-                </Anchor>
-
-                <Anchor href={MEDIUM_URL} target="_blank">
-                  <Image src="images/icon-medium.svg" />
-                </Anchor>
-
-                {/* <Anchor href={TELEGRAM_URL} target="_blank">
-                  <IconBrandTelegram color="black" />
-                </Anchor> */}
-              </Flex>
-            </Box>
-
-            {/* Right */}
-            <Box w="100%" py={50}>
-              <ContactBox />
-            </Box>
           </Flex>
 
           {/* Sub Footer */}
@@ -174,15 +107,13 @@ export const AppFooter = () => {
             justify={{ base: 'center', lg: 'space-between' }}
             gap={2}
             w="100%"
-            mih={80}
+            mih={60}
             py={{ base: 10, sm: 0 }}
-            style={{
-              borderTop: `1px solid ${theme.colors.dark[4]}`,
-            }}
+
           >
             <Box>
-              <Text ff="Outfit" fw={400} size={18} color="dark.4" mb={{ base: 10, sm: 0 }}>
-                ©2023 ChatGM. All rights reserved
+              <Text ff="Outfit" fw={400} size={12} color="dark.4" mb={{ base: 10, sm: 0 }}>
+                ©2024 1chain.AI. All rights reserved
               </Text>
             </Box>
 
@@ -193,19 +124,22 @@ export const AppFooter = () => {
               justify="center"
               style={{ color: theme.colors.gray[2] }}
             >
-              <Anchor color="dark.4">Team</Anchor>
-              <Anchor color="dark.4">Collaboration</Anchor>
-              <Anchor color="dark.4">Publications</Anchor>
+
               <Anchor color="dark.4" href="tos" target="_blank">
-                Terms Of Use
+                <Text ff="Outfit" fw={400} size={14} color="dark.4">
+                  Terms Of Use
+                </Text>
               </Anchor>
               <Anchor color="dark.4" href="privacy-policy" target="_blank">
-                Privacy Policy
+                <Text ff="Outfit" fw={400} size={14} color="dark.4">
+                  Privacy Policy
+                </Text>
+
               </Anchor>
             </Flex>
           </Flex>
         </Flex>
       </Container>
-    </Box>
+    </Box >
   );
 };

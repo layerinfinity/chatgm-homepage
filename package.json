@@ -28,9 +28,11 @@
     "embla-carousel-react": "7.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-qr-code": "2.0.14",
     "react-router-dom": "6.21.3",
     "react-waypoint": "10.3.0",
     "trig-js": "2.2.1",
+    "typewriter-effect": "2.21.0",
     "unplugin-fonts": "1.1.1",
     "yup": "1.3.3"
   },
