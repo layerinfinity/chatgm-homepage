@@ -15,18 +15,21 @@ const useStyles = createStyles((theme) => ({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         height: 50,
         borderRadius: 6,
         fontFamily: 'Open Sans',
-        fontWeight: 700,
-        fontSize: 14,
+        paddingLeft: 8
+
     },
     textContainer: {
         fontFamily: 'Open Sans',
         fontWeight: 400,
         fontSize: 18,
     },
+    textButton: {
+        lineHeight: 1.3
+    }
 
 }));
 
@@ -106,11 +109,11 @@ export const LandingPage = () => {
                             >
 
                                 <Image width={16} fit="contain" src="images/icon-apple.svg" alt="apple" />
-                                <Flex direction='column' justify='center' ml={6} gap={0} mt={5}>
-                                    <Text fw={400} size={8}>
+                                <Flex direction='column' justify='center' ml={6} >
+                                    <Text fw={400} size={8} className={classes.textButton}>
                                         Download in the
                                     </Text>
-                                    <Text fw={700} size={14}>
+                                    <Text className={classes.textButton} fw={700} size={13}>
                                         App Store
                                     </Text>
 
@@ -138,12 +141,12 @@ export const LandingPage = () => {
                                 target="_blank"
                             >
 
-                                <Image width={16} fit="contain" src="images/icon-apple.svg" alt="apple" />
-                                <Flex direction='column' justify='center' ml={6}>
-                                    <Text fw={400} size={8}>
+                                <Image width={16} fit="contain" src="images/icon-playstore.svg" alt="playstore" />
+                                <Flex className={classes.textButton} direction='column' justify='center' ml={6}>
+                                    <Text className={classes.textButton} fw={400} size={8}>
                                         GET IT ON
                                     </Text>
-                                    <Text fw={700} size={14}>
+                                    <Text className={classes.textButton} fw={700} size={13}>
                                         Google Play
                                     </Text>
 

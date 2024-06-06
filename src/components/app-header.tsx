@@ -112,27 +112,7 @@ export const AppHeader = () => {
                 >
                   Whitepaper
                 </Anchor>
-                {/* <Link to="" onClick={onLinkClicked}>
-                  Airdrop
-                </Link>
-                <Link to="/white-paper" onClick={onLinkClicked}>
-                  Whitepaper
-                </Link> */}
-
-                {/* <Button
-                  color="purpleGlow.4"
-                  px={20}
-                  py={6}
-                  style={{
-                    borderRadius: 44,
-                    fontFamily: 'Outfit',
-                    fontWeight: 400,
-                    fontSize: '1.125rem',
-                  }}
-                  onClick={onGetAppButtonClicked}
-                >
-                  Get App
-                </Button> */}
+             
               </Group>
             </Flex>
           </Container>
