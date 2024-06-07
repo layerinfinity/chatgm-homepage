@@ -38,7 +38,7 @@ export const LandingPage = () => {
 
     return (
         <Box py={20} >
-            <Image maw={350} src="images/EDITION 2.svg" pos="absolute" style={{ zIndex: -1 }} />
+            <Image mt={90} maw={350} src="images/EDITION 2.svg" pos="absolute" style={{ zIndex: -1 }} />
             <Container py={{ base: 145 }}  >
 
                 <Flex justify='center'>
@@ -66,7 +66,7 @@ export const LandingPage = () => {
 
                             // }}
                             options={{
-                                strings: ['Simplify Web3 Adoption with Interactive AI_'],
+                                strings: ['1Chain AI - Simplify Web3 Mass Adoption with AI'],
                                 autoStart: true,
                                 loop: true,
                                 delay: 50,
@@ -80,14 +80,28 @@ export const LandingPage = () => {
 
                 <Flex direction={{ base: 'column', sm: 'row' }} mt={73} justify='center' align='center'>
                     <Image maw={660} fit="contain" src="images/landing-page.svg" alt="android" />
-                    <Flex p={9} direction='column' align='center' justify='center' w={180} h={253} >
+                    <Flex direction='column' align='center' justify='center' w={180} h={100} >
                         <Image width={116} fit="contain" src="images/mobile-logo.svg" alt="logo" />
                         <Flex dir='row' justify='center' mt={10} gap={5} h={24}>
                             <Text ff="Outfit" fw={400} size={14} color="black.0">Powered by</Text>
 
                             <Image width={75} height={24} fit="contain" src="images/logo-stacked.svg" />
                         </Flex>
-                        <Flex mt={15} dir='row' justify='space-between' w={'100%'}>
+
+                        <Anchor
+                            // className={classes.downloadButton}
+
+                            underline={false}
+
+                            href={'https://app.chatgm.com/'}
+                            target="_blank">
+                            <Flex dir='row' justify='center' w={'100%'}>
+                                <Text ff="Outfit" fw={400} size={18} color="black.0">Let's chat</Text>
+                                <Image width={24} fit="contain" src="images/cursor-click.svg" />
+                            </Flex>
+                        </Anchor>
+
+                        {/* <Flex mt={15} dir='row' justify='space-between' w={'100%'}>
                             <Box>
                                 <QRCode
                                     size={32}
@@ -155,7 +169,7 @@ export const LandingPage = () => {
 
 
                             </Anchor>
-                        </Flex>
+                        </Flex>  */}
                     </Flex>
                 </Flex>
 

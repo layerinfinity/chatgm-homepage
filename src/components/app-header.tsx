@@ -73,7 +73,7 @@ export const AppHeader = () => {
   return (
     <>
       <Header
-        height={{ base: 100, md: 120 }}
+        height={{ base: 100, md: 110 }}
         style={{
           border: 0,
           backgroundColor: `${theme.colors.white[1]}33`,
@@ -83,7 +83,7 @@ export const AppHeader = () => {
       >
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Container>
-            <Flex align="center" justify="space-between" h={120}>
+            <Flex align="center" justify="space-between" h={110}>
               {/* Logo */}
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
                 <Image width={165} fit="contain" src="images/logo-stacked.svg" />
@@ -92,7 +92,6 @@ export const AppHeader = () => {
               <Group className={classes.navBar}>
                 <Anchor
                   href={'/'}
-                  // className={classes.mainLink}
                   data-active={0 === active || undefined}
                   onClick={(event) => {
                     onLinkClicked();
@@ -103,7 +102,6 @@ export const AppHeader = () => {
                 </Anchor>
                 <Anchor
                   href={'/white-paper'}
-                  // className={classes.mainLink}
                   data-active={1 === active || undefined}
                   onClick={(event) => {
                     onLinkClicked();
@@ -112,7 +110,7 @@ export const AppHeader = () => {
                 >
                   Whitepaper
                 </Anchor>
-             
+
               </Group>
             </Flex>
           </Container>
