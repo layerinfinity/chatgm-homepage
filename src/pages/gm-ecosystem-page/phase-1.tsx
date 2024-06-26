@@ -19,7 +19,7 @@ export const Phase1 = () => {
   const { classes } = useStyles();
 
   return (
-    <Box py={20}>
+    <Box py={20} >
       <Container>
         <Box px={{ base: 0, md: 90 }}>
           <Text ff="Outfit" fw={500} size={40} color="purpleGlow.3">

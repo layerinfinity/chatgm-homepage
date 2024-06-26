@@ -6,7 +6,7 @@ export const OurBackers = () => {
   return (
     <Box
       style={{
-        backgroundColor: `${theme.colors.purpleGlow[4]}0D`,
+        backgroundColor: `${theme.fn.linearGradient(0, 'red', 'green')}`,
       }}
     >
       <Container py={70}>

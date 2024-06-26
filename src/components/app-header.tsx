@@ -70,20 +70,20 @@ export const AppHeader = () => {
   return (
     <>
       <Header
-        height={{ base: 100, md: 120 }}
+        height={85}
         style={{
           border: 0,
-          backgroundColor: `${theme.colors.white[1]}33`,
+          backgroundColor: `${theme.colors.white[1]}00`,
           WebkitBackdropFilter: 'blur(12px)',
           backdropFilter: 'blur(12px)',
         }}
       >
         <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
           <Container>
-            <Flex align="center" justify="space-between" h={120}>
+            <Flex align="center" justify="space-between" h={85}>
               {/* Logo */}
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-                <Image width={74} fit="contain" src="images/logo-stacked.svg" />
+                <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
               </Link>
 
               {/* Nav bar */}

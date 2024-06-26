@@ -13,7 +13,7 @@ const theme: MantineThemeOverride = {
     white: [
       '#FFFFFF',
       '#F2F2F2',
-      '#FFFFFF',
+      '#F5F5F5',
       '#FFFFFF',
       '#B3B3B3',
       '#FFFFFF',
@@ -40,10 +40,10 @@ const theme: MantineThemeOverride = {
       '#B894F5',
       '#8C57FF',
       '#644CFF',
-      '#8C57FF',
-      '#8C57FF',
-      '#8C57FF',
-      '#8C57FF',
+      '#5C5AB2',
+      '#322966',
+      '#411B79',
+      '#D4BFFA',
       '#8C57FF',
     ],
     teal: [
@@ -124,6 +124,7 @@ const theme: MantineThemeOverride = {
   fontFamilyMonospace: 'Monaco, Courier, monospace',
   headings: { fontFamily: 'Open Sans' },
 
+
   globalStyles: (t) => ({
     '*': {
       // outline: '1px solid red',
@@ -136,7 +137,7 @@ const theme: MantineThemeOverride = {
       overflowX: 'hidden',
     },
     body: {
-      backgroundColor: t.colors.white[1],
+      background: t.fn.linearGradient(90, '#0D042F', '#301C61'),
     },
     ul: {
       listStyle: 'none',
@@ -169,9 +170,12 @@ export const App = () => {
             header={<AppHeader />}
             footer={<AppFooter />}
             styles={() => ({
-              main: {
-                padding: 0,
-              },
+              root: {
+                padding: 0
+              }
+              // main: {
+              //   paddingTop: 85,
+              // },
             })}
           >
             <Routes>
