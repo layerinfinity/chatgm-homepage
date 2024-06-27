@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Image, Text, createStyles, useMantineTheme } from '@mantine/core';
+import { TimeLine } from './timeline';
 
 
 const useStyles = createStyles((theme) => ({
@@ -9,13 +10,13 @@ const useStyles = createStyles((theme) => ({
         },
     },
     bgitem: {
-        width: 220,
-        background: theme.fn.linearGradient(270, '#7545FF66', '#B251FF66', '#FF85C766', '#FF41D566'),
+        width: 150,
+        // background: theme.fn.linearGradient(270, '#7545FF66', '#B251FF66', '#FF85C766', '#FF41D566'),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        borderRadius: 6,
-        boxShadow: `9px 10px 10px 0px #00000033`,
+        // borderRadius: 6,
+        // boxShadow: `9px 10px 10px 0px #00000033`,
         color: `${theme.colors.white[0]}`
 
     }
@@ -55,52 +56,61 @@ export const Description = () => {
                     It’s fast and super secure with 247 customer support
                 </Text>
 
-                <Flex wrap="wrap" gap={50} justify='flex-start' mt={57} mb={215}>
+                <Flex wrap="wrap" gap={60} justify='center' maw={765} ml='auto' mr='auto' mt={79} mb={100}>
                     <Box className={classes.bgitem}>
-                        <Text ff="Open Sans" fw={700} size={24} ta="center">
-                            Founding Team
+                        <Image width={86} src='images/one-chainai/white1chain.png' fit='contain' />
+                        <Text ff="Outfit" fw={600} size={15} ta="center" mt={20}>
+                            Innovative AI protocol
                         </Text>
-                        <Text ff="Open Sans" fw={700} size={20} ta="center">
-                            Founding Team
-                        </Text>
-                        <Text ff="Open Sans" fw={400} size={16} ta="center">
-                            (Trung, Aleks, Andy, Jeff)
+
+                        <Text ff="Open Sans" fw={400} size={12} ta="center" color='#7792C6'>
+                            Designed for seamless integration with any decentralized application (dApp)
                         </Text>
                     </Box>
                     <Box className={classes.bgitem}>
-                        <Text ff="Open Sans" fw={700} size={24} ta="center">
-                            Founding Team
+                        <Image width={86} src='images/one-chainai/white1chain.png' fit='contain' />
+                        <Text ff="Outfit" fw={600} size={15} ta="center" mt={20}>
+                            Innovative AI protocol
                         </Text>
-                        <Text ff="Open Sans" fw={700} size={20} ta="center">
-                            Helsinki
-                        </Text>
-                        <Text ff="Open Sans" fw={400} ta="center">
-                            Finland
-                        </Text>
-                    </Box>
-                    <Box className={classes.bgitem}>
-                        <Text ff="Open Sans" fw={700} size={24} ta="center">
-                            Founding Team
-                        </Text>
-                        <Text ff="Open Sans" fw={700} size={20} ta="center">
-                            Singapore
-                        </Text>
-                        <Text ff="Open Sans" fw={400} ta="center">
-                            Singapore
+
+                        <Text ff="Open Sans" fw={400} size={12} ta="center" color='#7792C6'>
+                            Designed for seamless integration with any decentralized application (dApp)
                         </Text>
                     </Box>
                     <Box className={classes.bgitem}>
-                        <Text ff="Open Sans" fw={700} size={24} ta="center">
-                            Founding Team
+                        <Image width={86} src='images/one-chainai/white1chain.png' fit='contain' />
+                        <Text ff="Outfit" fw={600} size={15} ta="center" mt={20}>
+                            Innovative AI protocol
                         </Text>
-                        <Text ff="Open Sans" fw={700} size={20} ta="center">
-                            Zug
-                        </Text>
-                        <Text ff="Open Sans" fw={400} ta="center">
-                            Switzerland
+
+                        <Text ff="Open Sans" fw={400} size={12} ta="center" color='#7792C6'>
+                            Designed for seamless integration with any decentralized application (dApp)
                         </Text>
                     </Box>
+                    <Box className={classes.bgitem}>
+                        <Image width={86} src='images/one-chainai/white1chain.png' fit='contain' />
+                        <Text ff="Outfit" fw={600} size={15} ta="center" mt={20}>
+                            Innovative AI protocol
+                        </Text>
+
+                        <Text ff="Open Sans" fw={400} size={12} ta="center" color='#7792C6'>
+                            Designed for seamless integration with any decentralized application (dApp)
+                        </Text>
+                    </Box>
+                    <Box className={classes.bgitem}>
+                        <Image width={86} src='images/one-chainai/white1chain.png' fit='contain' />
+                        <Text ff="Outfit" fw={600} size={15} ta="center" mt={20}>
+                            Innovative AI protocol
+                        </Text>
+
+                        <Text ff="Open Sans" fw={400} size={12} ta="center" color='#7792C6'>
+                            Designed for seamless integration with any decentralized application (dApp)
+                        </Text>
+                    </Box>
+
+
                 </Flex>
+                <TimeLine />
 
 
             </Container>

@@ -1,8 +1,8 @@
-import { Box, Space, Stack, Container, Text, Title, createStyles,  } from '@mantine/core';
+import { Box, Space, Stack, Container, Text, Title, createStyles, } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   heading: {
-    fontFamily :"Outfit",
+    fontFamily: "Outfit",
     fontSize: 72,
     fontWeight: 600,
     // lineHeight: '5rem',
@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
       fontSize: 40,
       lineHeight: '2.5rem',
     },
- 
+
   },
   subHeading: {
     [theme.fn.smallerThan('md')]: {
@@ -18,27 +18,27 @@ const useStyles = createStyles((theme) => ({
       lineHeight: '2rem',
     },
   },
-  policyTitle: { 
-    fontFamily :"Outfit",
+  policyTitle: {
+    fontFamily: "Outfit",
     fontSize: 30,
     // lineHeight: '3rem',
-    color:'#0091EB',
+    color: theme.colors.white[0],
     fontWeight: 500,
   },
-  policySubTitle: { 
-    fontFamily :"Open Sans",
+  policySubTitle: {
+    fontFamily: "Open Sans",
     fontSize: 18,
-    
+
     // lineHeight: '3rem',
-    color:'#393E46',
+    color: theme.colors.white[2],
     fontWeight: 700,
   },
-  policycontent: { 
-    fontFamily :"Open Sans",
+  policycontent: {
+    fontFamily: "Open Sans",
     fontSize: 16,
-    color:'#202328',
+    color: theme.colors.white[2],
     fontWeight: 400,
-    textAlign:'justify',
+    textAlign: 'justify',
   },
 }));
 
@@ -50,9 +50,9 @@ export const TermsOfUsePage = () => {
       <Space h={140} />
       <Container>
         <Stack px="lg">
-          <Title ta="center" color="dark.4" className={classes.heading}>Term of Service</Title>
+          <Title ta="center" color="white.0" className={classes.heading}>Term of Service</Title>
           <Text pt={70} className={classes.policycontent}>
-            Welcome to ChatGM, a versatile platform designed to integrate the ease of messaging with the innovative world of cryptocurrency transactions. Our services provide secure communication channels alongside robust features for handling digital currencies.<br/><br/>
+            Welcome to ChatGM, a versatile platform designed to integrate the ease of messaging with the innovative world of cryptocurrency transactions. Our services provide secure communication channels alongside robust features for handling digital currencies.<br /><br />
 
             By using ChatGM ("Service"), you agree to be bound by these Terms of Service ("Terms"). These Terms affect your legal rights and obligations, so if you do not agree to be bound by all of these Terms, do not use the Service.
           </Text>
@@ -69,14 +69,14 @@ export const TermsOfUsePage = () => {
                   </li>
                 </Text>
                 <Text className={classes.policycontent}>
-                The service is intended for users who are at least 13 years old. Users under this age, or under the legal age of majority in their jurisdiction, require guardian consent.
+                  The service is intended for users who are at least 13 years old. Users under this age, or under the legal age of majority in their jurisdiction, require guardian consent.
                 </Text>
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Eligibility:
-                </li>
+                  <li>
+                    Eligibility:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   - This policy applies to all users of ChatGM's messaging and cryptocurrency transaction services.<br />
@@ -85,9 +85,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Service Description:
-                </li>
+                  <li>
+                    Service Description:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   ChatGM is a communication platform providing encrypted messaging, voice/video calls, and blockchain-related assistance. It integrates with major services and supports various blockchain networks.
@@ -110,13 +110,13 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                 2.2 Account Security
+                  2.2 Account Security
                 </Text>
                 <Text className={classes.policycontent}>
                   Your account's security is paramount. You are responsible for all activities that occur under your account. ChatGM is not liable for any loss or damage arising from your failure to protect your account credentials.
                 </Text>
               </Box>
-              
+
             </Box>
 
             {/* 3 */}
@@ -137,7 +137,7 @@ export const TermsOfUsePage = () => {
                   3.2 Wallet Usage
                 </Text>
                 <Text className={classes.policycontent}>
-                When you create a wallet on ChatGM, you are responsible for maintaining the security and confidentiality of your wallet's private keys. Loss or unauthorized disclosure of these keys can result in the loss of cryptocurrencies.
+                  When you create a wallet on ChatGM, you are responsible for maintaining the security and confidentiality of your wallet's private keys. Loss or unauthorized disclosure of these keys can result in the loss of cryptocurrencies.
                 </Text>
               </Box>
               <Box pt={15}>
@@ -148,7 +148,7 @@ export const TermsOfUsePage = () => {
                   All transactions are subject to the laws and regulations of the jurisdiction in which you reside. You are responsible for ensuring that your transactions comply with these laws, including anti-money laundering regulation
                 </Text>
               </Box>
-              
+
             </Box>
 
             {/* 4 */}
@@ -163,14 +163,14 @@ export const TermsOfUsePage = () => {
                   </li>
                 </Text>
                 <Text className={classes.policycontent}>
-                Users must comply with all local, national, and international laws while using ChatGM. This includes, but is not limited to, laws related to privacy, intellectual property, data protection, and electronic communications.
+                  Users must comply with all local, national, and international laws while using ChatGM. This includes, but is not limited to, laws related to privacy, intellectual property, data protection, and electronic communications.
                 </Text>
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Prohibited Use:
-                </li>
+                  <li>
+                    Prohibited Use:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Users must not engage in activities such as sending spam, conducting scams, spreading malware, or promoting violence. Content that is illegal, threatening, abusive, defamatory, obscene, or racially, sexually, or otherwise objectionable is strictly prohibited.
@@ -178,9 +178,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Account Security:
-                </li>
+                  <li>
+                    Account Security:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Users are responsible for maintaining the confidentiality of their account information, including passwords. ChatGM should be promptly notified of any unauthorized use of user accounts. major services and supports various blockchain networks.
@@ -217,7 +217,7 @@ export const TermsOfUsePage = () => {
                   User data is not sold or indiscriminately shared. Information may be shared with third-party service providers only to the extent necessary for providing the Services. Any third-party providers are subject to stringent data protection agreements.
                 </Text>
               </Box>
-              
+
             </Box>
 
             {/* 6 */}
@@ -247,9 +247,9 @@ export const TermsOfUsePage = () => {
                 </Text>
                 <Text className={classes.policycontent}>
                   Users are responsible for understanding and complying with all applicable laws and regulations related to cryptocurrency transactions in their jurisdiction.
-                 </Text>
+                </Text>
               </Box>
-              
+
             </Box>
 
             {/* 7 */}
@@ -269,9 +269,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Content Sharing:
-                </li>
+                  <li>
+                    Content Sharing:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Users can share content within the ChatGM platform. Shared content must adhere to legal and community standards.
@@ -279,9 +279,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Interoperability:
-                </li>
+                  <li>
+                    Interoperability:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   ChatGM aims to integrate seamlessly with various blockchain networks and messaging services, offering cross-platform communication capabilities.
@@ -289,9 +289,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  User Conduct in Communication:
-                </li>
+                  <li>
+                    User Conduct in Communication:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Users are expected to maintain respectful and lawful interactions. ChatGM reserves the right to moderate or remove content that violates these standards.
@@ -316,9 +316,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Bots and API Use:
-                </li>
+                  <li>
+                    Bots and API Use:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Users may interact with bots or use ChatGM’s API for automation and enhanced functionality. Users are responsible for their interactions with bots and any data they share.
@@ -326,9 +326,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Data Sharing with Third Parties:
-                </li>
+                  <li>
+                    Data Sharing with Third Parties:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   ChatGM will only share user data with third parties to the extent necessary for providing the services. User consent will be obtained where required.
@@ -353,9 +353,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Notification of Changes:
-                </li>
+                  <li>
+                    Notification of Changes:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Users will be notified of significant changes to the terms through in-app notifications or email. Continued use of the service after changes implies acceptance of the new terms.
@@ -363,16 +363,16 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Feedback on Changes:
-                </li>
+                  <li>
+                    Feedback on Changes:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   ChatGM encourages user feedback on changes to the terms. This feedback can be submitted through provided channels in the service.
                 </Text>
               </Box>
             </Box>
-            
+
             {/* 10 */}
             <Box pt={45}>
               <Text className={classes.policyTitle}>
@@ -390,9 +390,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Limitations of Service:
-                </li>
+                  <li>
+                    Limitations of Service:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Certain features may not be available in all regions or on all devices. Compatibility requirements for various features will be clearly communicated to users.
@@ -400,9 +400,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Modifications to Service:
-                </li>
+                  <li>
+                    Modifications to Service:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   ChatGM reserves the right to modify or discontinue features or services at its discretion. Users will be notified of any significant changes that affect their use of the service.
@@ -427,9 +427,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Intellectual Property:
-                </li>
+                  <li>
+                    Intellectual Property:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   ChatGM respects the intellectual property rights of others. Users must ensure they have the right to share content and that their content does not infringe on others' rights.
@@ -437,9 +437,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Infringement Claims:
-                </li>
+                  <li>
+                    Infringement Claims:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   If a user believes that their intellectual property rights have been violated, they can submit a claim to ChatGM. ChatGM will review and address these claims promptly, including, where appropriate, removing the infringing content.
@@ -447,9 +447,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  User Responsibility:
-                </li>
+                  <li>
+                    User Responsibility:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Users are responsible for any legal claims arising from the infringement of intellectual property rights or other rights related to the content they share on ChatGM.
@@ -474,9 +474,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Termination for Breach:
-                </li>
+                  <li>
+                    Termination for Breach:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   ChatGM reserves the right to terminate or suspend a user's account if they breach the Terms of Service, engage in illegal activities, or harm other users.
@@ -484,9 +484,9 @@ export const TermsOfUsePage = () => {
               </Box>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>
-                <li>
-                  Effect of Termination:
-                </li>
+                  <li>
+                    Effect of Termination:
+                  </li>
                 </Text>
                 <Text className={classes.policycontent}>
                   Upon termination, the user will lose access to their account and all associated data. ChatGM is not liable for any loss or damage following termination.
@@ -548,10 +548,10 @@ export const TermsOfUsePage = () => {
               </Box>
             </Box>
 
-             {/* 15 */}
-             <Box pt={45}>
+            {/* 15 */}
+            <Box pt={45}>
               <Text className={classes.policyTitle}>
-               15. Contact and Feedback
+                15. Contact and Feedback
               </Text>
               <Box pt={15}>
                 <Text className={classes.policySubTitle}>

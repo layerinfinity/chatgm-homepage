@@ -25,24 +25,30 @@ export const TopHeader = () => {
 
     return (
         <Box
-            mt={-100}
+
             h={760}
             style={{
                 background: theme.fn.linearGradient(0, '#6016D900', '#000000ff'),
             }}
         >
+            <Flex top={-360} w='100%' align='center' justify='center' pos='absolute'>
+                <Box
+                    h={1300}
+                    w={1300}
+                    style={{
+                        background: theme.fn.radialGradient('#8D57FF66', '#8657FF0d', '#8357FF00', '#8357FF00'),
+                    }}>
+                    zIndex=-100
+                </Box>
+            </Flex>
             <Box
+                h='100%'
+                py={40}
 
-                h={793}
-                style={{
-                    background: theme.fn.radialGradient('#8D57FF66', '#8657FF0d', '#8357FF00'),
-                }}>
-
-            </Box>
-            <Container py={80} >
-
-                <Flex direction='column' align='center' mt={80} >
+            >
+                < Flex direction='column' align='center' mt={80} >
                     <Image src='images/one-chainai/white1chain.png' width={236} fit="contain" />
+                    <Image src='images/one-chainai/onechain-logo2.png' width={221} fit="contain" mt={36} />
                     <Text ff="Outfit" fw={500} size={30} color="white.0" ta="center" mt={44}>
                         <Typewriter
                             // onInit={(typewriter) => {
@@ -61,7 +67,7 @@ export const TopHeader = () => {
 
                             // }}
                             options={{
-                                strings: ['1Chain AI - Simplify Web3 Mass Adoption with AI'],
+                                strings: ['Simplify Web3 Mass Adoption with AI'],
                                 autoStart: true,
                                 loop: true,
                                 delay: 50,
@@ -78,7 +84,7 @@ export const TopHeader = () => {
 
 
 
-            </Container>
-        </Box>
+            </Box >
+        </Box >
     );
 };

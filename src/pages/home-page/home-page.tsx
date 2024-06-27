@@ -11,6 +11,7 @@ import { OurPartner } from './sections/our-partner';
 import { EcoSystem } from './sections/ecosystem';
 import { Description } from './sections/description';
 import { TopHeader } from './sections/top-header';
+import { Architecture } from './sections/architecture';
 
 export const HomePage = () => {
   return (
@@ -22,6 +23,8 @@ export const HomePage = () => {
       {/* <RoadMap /> */}
       {/* <MeetOurTeam /> */}
       <TopHeader />
+      <Architecture />
+
       <EcoSystem />
       <Description />
       <OurPartner />

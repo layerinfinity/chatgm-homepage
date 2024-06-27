@@ -58,7 +58,7 @@ export const EcoSystem = () => {
                     It’s fast and super secure with 247 customer support
                 </Text>
 
-                <Flex wrap="wrap" gap={50} justify='flex-start' mt={57} mb={215}>
+                <Flex wrap="wrap" gap={20} justify='flex-start' mt={57} mb={215}>
                     <Box className={classes.bgitem}>
                         <Text ff="Open Sans" fw={700} size={24} ta="center">
                             Founding Team

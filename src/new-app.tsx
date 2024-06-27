@@ -148,11 +148,11 @@ const theme: MantineThemeOverride = {
     Container: {
       defaultProps: {
         sizes: {
-          md: 1440,
+          md: 1000,
         },
-        px: {
-          md: 150,
-        },
+        // px: {
+        //   md: 150,
+        // },
       },
     },
   },
@@ -170,12 +170,18 @@ export const App = () => {
             header={<AppHeader />}
             footer={<AppFooter />}
             styles={() => ({
-              root: {
-                padding: 0
-              }
-              // main: {
-              //   paddingTop: 85,
+              // root: {
+              //   padding: 0,
+              //   margin: 0
               // },
+              main: {
+                padding: 0,
+                margin: 0
+              },
+              // body: {
+              //   padding: 0,
+              //   margin: 0
+              // }
             })}
           >
             <Routes>
