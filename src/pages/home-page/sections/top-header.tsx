@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Image, Text, createStyles, useMantineTheme } from '@mantine/core';
+import { Box, Container, Flex, Image, Text, createStyles, em, useMantineTheme } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import Typewriter from 'typewriter-effect';
 const useStyles = createStyles((theme) => ({
     heading: {
@@ -17,11 +18,15 @@ const useStyles = createStyles((theme) => ({
         boxShadow: `9px 10px 10px 0px #00000033`,
         color: `${theme.colors.white[0]}`
 
-    }
+
+    },
+
 
 }));
 export const TopHeader = () => {
     const { classes, theme } = useStyles();
+    const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+
 
     return (
         <Box
@@ -31,6 +36,7 @@ export const TopHeader = () => {
                 background: theme.fn.linearGradient(0, '#6016D900', '#000000ff'),
             }}
         >
+
             <Flex top={-360} w='100%' align='center' justify='center' pos='absolute'>
                 <Box
                     h={1300}
@@ -41,6 +47,8 @@ export const TopHeader = () => {
                     zIndex=-100
                 </Box>
             </Flex>
+            {!isMobile ? <Image maw={{ md: 392, base: 300 }} top={150} fit="contain" src="images/one-chainai/EDITION.png" pos='absolute' alt="" /> : null}
+
             <Box
                 h='100%'
                 py={40}

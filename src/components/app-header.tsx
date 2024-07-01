@@ -37,7 +37,7 @@ const useStyles = createStyles((theme) => ({
       fontFamily: 'Outfit',
       fontWeight: 400,
       fontSize: '1.125rem',
-      color: theme.colors.dark[1],
+      color: theme.colors.white[0],
       textDecoration: 'none',
     },
 
@@ -59,9 +59,9 @@ export const AppHeader = () => {
     scrollTo({ y: 0 });
   };
 
-  const onGetAppButtonClicked = () => {
+  const onMovedEcoSystemClicked = () => {
     close();
-    const element = document.getElementById('home-page/download-app');
+    const element = document.getElementById('ecosystem');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -78,7 +78,7 @@ export const AppHeader = () => {
           backdropFilter: 'blur(12px)',
         }}
       >
-        <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+        <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Container>
             <Flex align="center" justify="space-between" h={85}>
               {/* Logo */}
@@ -88,72 +88,43 @@ export const AppHeader = () => {
 
               {/* Nav bar */}
               <Group className={classes.navBar}>
-                <Menu shadow="md" width={200}>
-                  <Menu.Target>
-                    <Button color="purple.2" rightIcon={<IconChevronDown size={14} />}>
-                      Community
-                    </Button>
-                  </Menu.Target>
-
-                  <Menu.Dropdown>
-                    <Menu.Label>Application</Menu.Label>
-                    <Menu.Item
-                      onClick={() => window.open(TWITTER_URL, '_blank')}
-                      icon={<IconBrandTwitterFilled size={14} />}
-                    >
-                      Twitter (X)
-                    </Menu.Item>
-                    <Menu.Item
-                      onClick={() => window.open(DISCORD_URL, '_blank')}
-                      icon={<IconBrandDiscordFilled size={14} />}
-                    >
-                      Discord
-                    </Menu.Item>
-                    {/* <Menu.Item
-                      onClick={() => window.open(TELEGRAM_URL, '_blank')}
-                      icon={<IconBrandTelegram size={14} />}
-                    >
-                      Telegram
-                    </Menu.Item> */}
-                    <Menu.Item
-                      onClick={() => window.open(MEDIUM_URL, '_blank')}
-                      icon={<IconBrandMedium size={14} />}
-                    >
-                      Medium
-                    </Menu.Item>
-                  </Menu.Dropdown>
-                </Menu>
-
-                <Link to="/gm-ecosystem" onClick={onLinkClicked}>
-                  GM Ecosystem
+                <Link color='white.0' to="/">
+                  About us
                 </Link>
 
-                <Button
-                  color="purpleGlow.4"
+                <Link color='white.0' to="/" onClick={onMovedEcoSystemClicked}>
+                  1chain.AI Ecosystem
+                </Link>
+                <Link color='white.0' to="/" >
+                  Whitepaper
+                </Link>
+
+                {/* <Button
+                  // color="purpleGlow.4"
                   px={20}
                   py={6}
                   style={{
-                    borderRadius: 44,
-                    fontFamily: 'Outfit',
-                    fontWeight: 400,
-                    fontSize: '1.125rem',
+                    // borderRadius: 44,
+                    // fontFamily: 'Outfit',
+                    // fontWeight: 400,
+                    // fontSize: '1.125rem',
                   }}
                   onClick={onGetAppButtonClicked}
                 >
-                  Get App
-                </Button>
+                  Whitepaper
+                </Button> */}
               </Group>
             </Flex>
           </Container>
         </MediaQuery>
 
-        <MediaQuery largerThan="md" styles={{ display: 'none' }}>
+        <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
           <Container>
             <Flex h={100} align="center" justify="space-between">
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-                <Image width={70} fit="contain" src="images/logo-stacked.svg" />
+                <Image width={70} fit="contain" src="images/one-chainai/onechain-logo.png" />
               </Link>
-              <Burger opened={opened} onClick={toggle} />
+              <Burger w={60} color='#ffffff' opened={opened} onClick={toggle} />
             </Flex>
           </Container>
         </MediaQuery>
@@ -163,7 +134,7 @@ export const AppHeader = () => {
         <Flex
           direction="column"
           h="100%"
-          w="calc(100% - 66px)"
+          w="calc(100% - 100px)"
           pos="fixed"
           top={0}
           left={0}
@@ -171,39 +142,34 @@ export const AppHeader = () => {
           px={20}
           style={{
             zIndex: 1000,
-            backgroundColor: '#FFFFFF99',
+            background: theme.fn.linearGradient(0, '#6016D900', '#0000004d'),
             WebkitBackdropFilter: 'blur(12px)',
             backdropFilter: 'blur(12px)',
           }}
         >
           <Link to="/" onClick={onLinkClicked}>
-            <Image src="images/logo-horizontal.svg" width={220} />
+            <Image src="images/one-chainai/onechain-logo.png" width={220} />
           </Link>
 
           <Flex direction="column" gap={20} style={{ flex: 1 }} pt={40}>
-            <Link to="/gm-ecosystem" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
-              <Text ff="Outfit" fw={500} size={24} color="dark.4">
-                GM Ecosystem
+            <Link to="/" style={{ textDecoration: 'none' }} onClick={onMovedEcoSystemClicked}>
+              <Text ff="Outfit" fw={500} size={24} color="white.0">
+                1chain.AI Ecosystem
+              </Text>
+            </Link>
+            <Link to="/" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+              <Text ff="Outfit" fw={500} size={24} color="white.0">
+                Whitepaper
+              </Text>
+            </Link>
+            <Link to="/" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+              <Text ff="Outfit" fw={500} size={24} color="white.0">
+                About us
               </Text>
             </Link>
           </Flex>
 
-          <Button
-            color="purpleGlow.4"
-            px={20}
-            py={15}
-            ff="Outfit"
-            fw="400"
-            fullWidth
-            style={{
-              height: 'auto',
-              borderRadius: 12,
-              fontSize: '1.125rem',
-            }}
-            onClick={onGetAppButtonClicked}
-          >
-            Get App
-          </Button>
+
         </Flex>
       )}
     </>

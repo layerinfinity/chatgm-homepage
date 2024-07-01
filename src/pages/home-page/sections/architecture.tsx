@@ -54,8 +54,7 @@ export const Architecture = () => {
           </Text>
         </Box>
         <Text ff="Open Sans" fw={400} size={14} color="white.2" mt={30}>
-          Bitcoin marketplace that connects buyers and sellers in your friend-list or from around the world. It allows users to trade Bitcoin using a wide range of payment methods, including bank transfers, digital wallets, and more.
-          It’s fast and super secure with 247 customer support
+          1Chain AI is a Web3 AI protocol that helps DApp developers to simplify onboarding and enhance user experience for new crypto users by integrating in-app AI assistants.
         </Text>
         <Image src="images/one-chainai/svg/architecture.svg" maw={945} mt={74} mr='auto' ml='auto' mb={133} width='100%' fit="contain" />
 

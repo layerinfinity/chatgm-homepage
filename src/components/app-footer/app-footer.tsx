@@ -13,8 +13,6 @@ import {
 
 const useStyles = createStyles((theme) => ({
   container: {
-
-    // backgroundColor: `red`,
     backgroundColor: `${theme.colors.purpleGlow[4]}0D`,
   },
 
@@ -52,12 +50,19 @@ export const AppFooter = () => {
       <Container>
         <Flex direction="column" align="center" justify="center">
           {/* Footer Heading */}
-          <Text ff="Outfit" fw={500} size={30} mt={30} color='white.0'>
-            Crypto Chats? Game On!
-          </Text>
+          <Anchor
+            color="white.0"
+            href='https://twitter.com/1ChainAI'
+            target="_blank"
+          >
+            <Text ff="Outfit" fw={700} size={32} mt={30} color='white.0' >
+              FOLLOW US ON TWITTER!
+            </Text>
+
+          </Anchor>
 
           {/* Download Buttons */}
-          <Flex
+          {/* <Flex
             wrap="wrap"
             align="center"
             justify="center"
@@ -103,7 +108,7 @@ export const AppFooter = () => {
               WebApp
             </Anchor>
 
-          </Flex>
+          </Flex> */}
 
           {/* Contact */}
           <Flex
@@ -121,33 +126,13 @@ export const AppFooter = () => {
                 Connect Us
               </Text>
               <Text ff="Open Sans" fw={400} size={16} lh="1.375rem" color="purpleGlow.5" mt={10}>
-                Don&apos;t hesitate! We&apos;re all ears and ready to help you with anything.
+                We will answer all your questions
               </Text>
 
             </Box>
 
-            {/* Right */}
-            <Box py={{ lg: 0, base: 20 }} >
-              <Flex wrap="wrap" align="center" gap="24px">
-                <Anchor href={DISCORD_URL} target="_blank">
-                  <Image color='purpleGlow.5' src="images/icon-discord.svg" />
-                </Anchor>
 
-                <Anchor href={TWITTER_URL} target="_blank">
-                  <Image src="images/icon-twitter.svg" />
-                </Anchor>
-
-                <Anchor href={MEDIUM_URL} target="_blank">
-                  <Image src="images/icon-medium.svg" color='#FFFFFF' />
-                </Anchor>
-
-                {/* <Anchor href={TELEGRAM_URL} target="_blank">
-                  <IconBrandTelegram color="black" />
-                </Anchor> */}
-              </Flex>
-            </Box>
           </Flex>
-          {/* Sub Footer */}
           <Flex
             direction={{ base: 'column', lg: 'row' }}
             align="center"
@@ -164,7 +149,7 @@ export const AppFooter = () => {
           >
             <Box >
               <Text ff="Outfit" fw={400} size={18} color="purpleGlow.5" mb={{ base: 10, sm: 0 }}>
-                ©2023 ChatGM. All rights reserved
+                ©2024 1chain.AI. All rights reserved
               </Text>
             </Box>
 

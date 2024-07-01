@@ -1,5 +1,6 @@
-import { Box, Container, Flex, Text, createStyles } from "@mantine/core"
+import { Box, Container, Flex, List, MediaQuery, Text, createStyles, } from "@mantine/core"
 import { theme } from "../../../theme-provider"
+
 const useStyles = createStyles((theme) => ({
 
   bgitem: {
@@ -22,20 +23,24 @@ export const TimeLine = () => {
   const { classes, theme } = useStyles();
   return (
     <Box
-
     >
       <Container  >
-        <Text ff="Outfit" fw={600} size={72} color="white.0" mt={40} ta='center'>
+        <Text ff="Outfit" fw={600} size={72} color="white.0" ta='center'>
           Story and Future
         </Text>
         <Text ff="Outfit" fw={500} size={32} color="purpleGlow.4" ta='center' >
           Our vision of the Roadmap
         </Text>
-        <Container mt={60}>
-          <TimeLineItem />
-          <TimeLineItem />
-          <TimeLineItem />
-        </Container>
+        <Flex justify='center'>
+          <Container mt={60} >
+            <TimeLineItem listL={['Phase 1', '(Q2’ 2024)']} listR={['Integrate 1Chain AI into ChatGM as the first DApp utilizing 1Chain AI', 'Launch ChatGM with 1Chain AI in-app assistant']} isEnd={false} isCurState={true} />
+            <TimeLineItem listL={['Phase 2', '(Q3’ 2024 - Q1’ 2025)']} listR={['Launch 1Chain AI Protocol SDK', 'Integrate 1Chain AI into 20+ DApps', 'Expand APIs and SDKs offering to DApp Developers']} isEnd={false} isCurState={false} />
+            <TimeLineItem listL={['Phase 3', '(Q2’ - Q3’ 2025)']} listR={['Launch On-Chain Data Services', 'Integrate 1Chain AI Protocol into 100+ DApps including: Market-leading CEXs, DEXs, and Games']} isEnd={false} isCurState={false} />
+            <TimeLineItem listL={['Phase 4', '(Q4’ 2025)']} listR={['Feedback Loop Enhancement', 'Pilot Marketplace for DApp Components', 'Launch a Marketplace (incl. Launchpad services) for Web3 AI Plugins and DApps']} isEnd={true} isCurState={false} />
+          </Container>
+
+        </Flex>
+
 
 
 
@@ -43,33 +48,66 @@ export const TimeLine = () => {
     </Box >
   )
 }
-const TimeLineItem = () => {
+interface TimeLineProps {
+  listL: string[];
+  listR: string[];
+  isEnd: boolean;
+  isCurState: boolean;
+}
+const TimeLineItem = (props: TimeLineProps) => {
   const { classes, theme } = useStyles();
   return (
-    <Flex direction='row' align='center' justify='space-around' py={10} pos='relative'>
-      <Flex direction='column' align='flex-start'>
-        <Text ff="Outfit" fw={500} size={30} color="purpleGlow.4" >
-          Phase 1
-        </Text>
-        <Text ff="Outfit" fw={500} size={30} color="white.0" >
-          (Q1 2024)
-        </Text>
-      </Flex>
-      <Flex direction='column' align='flex-start' w={16} h='100%' bg='red' pos='inherit'>
-        <Box w={3} mt={0} mb={0} bg='#999999' ></Box>
-        <Box w={16} h={16} bg='#999999' ></Box>
+    <Flex direction='row' py={5}
+      justify="flex-start"
+      align="flex-start"
+    >
+
+      <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+        <Flex style={{ width: 360 }} direction='column' align='flex-start'>
+          <Text ff="Outfit" fw={500} size={30} color="purpleGlow.4" lineClamp={1} >
+            {props.listL[0]}
+          </Text>
+          <Text ff="Outfit" fw={500} size={30} color="white.0" lineClamp={1} >
+            {props.listL[1]}
+          </Text>
+        </Flex>
+
+      </MediaQuery>
+
+
+
+      <Flex direction='column' align='center' justify='center' w={50} h='100%' >
+        {
+          props.isCurState ? <Box w={3} mt={0} h='100%' mih={{ md: 146, base: 200 }} mb={0} style={{ background: theme.fn.linearGradient(180, '#D4BFFA', '#644CFF') }} ></Box> : <Box w={3} mt={0} h='100%' mih={{ md: 146, base: 200 }} mb={0} style={{ background: theme.fn.linearGradient(180, '#DFDFDF', '#A9A9A9') }} ></Box>
+        }
+
+        {
+          !props.isEnd ? <Box mt={10} w={16} h={16} style={{ borderRadius: 8 }} bg={props.isCurState ? 'purpleGlow.4' : '#999999'} ></Box> : null
+        }
       </Flex>
       <Flex ml={20} direction='column' justify='flex-start' align='flex-start' maw={302}>
-        <Text ff="Outfit" fw={400} size={14} color="white.0" >
-          - Cross-Platform Messaging Integration
-        </Text>
-        <Text ff="Outfit" fw={400} size={14} color="white.0" >
-          - Fully Anonymous and Flexible Sign-up Registration
-        </Text>
-        <Text ff="Outfit" fw={400} size={14} color="white.0" >
-          - Encrypted Messaging and Calls
-        </Text>
+        <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+          <Flex style={{ width: 360 }} direction='column' align='flex-start'>
+            <Text ff="Outfit" fw={500} size={30} color="purpleGlow.4" lineClamp={1} >
+              {props.listL[0]}
+            </Text>
+            <Text ff="Outfit" fw={500} size={30} color="white.0" lineClamp={1} >
+              {props.listL[1]}
+            </Text>
+          </Flex>
 
+        </MediaQuery>
+
+        <List listStyleType="disc" ff="Outfit" fw={400} size={14} style={{ color: '#ffffff' }} >
+          {
+            props.listR.map((value) => {
+              return <List.Item >
+                {value}
+              </List.Item>
+            })
+          }
+
+        </List>
       </Flex>
 
     </Flex>

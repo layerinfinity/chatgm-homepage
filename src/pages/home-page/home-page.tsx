@@ -26,7 +26,7 @@ export const HomePage = () => {
       <Architecture />
 
       <EcoSystem />
-      <Description />
+      {/* <Description /> */}
       <OurPartner />
     </Box>
   );

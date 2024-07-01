@@ -24,8 +24,8 @@ export const OurPartner = () => {
 
     return (
         <Box
-            pt={{ base: 40, md: 80 }}
-            pb={{ base: 100, md: 210 }}
+            pt={{ base: 40, md: 76 }}
+            pb={{ base: 100, md: 148 }}
 
             style={{
                 background: theme.fn.linearGradient(0, '#6016D900', '#0000004d'),
@@ -36,24 +36,24 @@ export const OurPartner = () => {
                     Our Partner
                 </Text>
 
-                <Flex wrap="wrap" gap={50} justify='center' ml='auto' mr='auto' maw={595} mt={45}>
+                <Flex wrap="wrap" gap={50} justify='center' ml='auto' mr='auto' maw={595} mt={50}>
                     <Box className={classes.bgitem}>
-                        <Image src="images/bakers/axie-infinity.png" width={50} fit="contain" />
+                        <Image src="images/one-chainai/svg/parner/kyber.svg" width={165} fit="contain" />
                     </Box>
                     <Box className={classes.bgitem}>
-                        <Image src="images/bakers/axie-infinity.png" width={50} fit="contain" />
+                        <Image src="images/one-chainai/svg/parner/awn.svg" width={165} fit="contain" />
                     </Box>
                     <Box className={classes.bgitem}>
-                        <Image src="images/bakers/axie-infinity.png" width={50} fit="contain" />
+                        <Image src="images/one-chainai/svg/parner/gg.svg" width={165} fit="contain" />
                     </Box>
                     <Box className={classes.bgitem}>
-                        <Image src="images/bakers/axie-infinity.png" width={50} fit="contain" />
+                        <Image src="images/one-chainai/svg/parner/matrix.svg" width={165} fit="contain" />
                     </Box>
                     <Box className={classes.bgitem}>
-                        <Image src="images/bakers/axie-infinity.png" width={50} fit="contain" />
+                        <Image src="images/one-chainai/svg/parner/sandbox.svg" width={165} fit="contain" />
                     </Box>
                     <Box className={classes.bgitem}>
-                        <Image src="images/bakers/axie-infinity.png" width={50} fit="contain" />
+                        <Image src="images/one-chainai/svg/parner/skymavis.svg" width={165} fit="contain" />
                     </Box>
 
                 </Flex>
