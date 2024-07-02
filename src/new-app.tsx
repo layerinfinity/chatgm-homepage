@@ -7,6 +7,7 @@ import { AppFooter, AppHeader } from './components';
 import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
 import PPPage from './pages/privacy-policy';
 import { ComingSon } from './pages/comingsoon';
+import { AboutUs } from './pages/about-us/about-us';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -105,7 +106,7 @@ const theme: MantineThemeOverride = {
       '#393E46',
       '#393E46',
       '#393E46',
-      '#393E46',
+      '#D4BFFA',
     ],
     gray: [
       '#808080',
@@ -191,8 +192,8 @@ export const App = () => {
               <Route path="/fortress" element={<FortressPage />} />
               <Route path="/tos" element={<TermsOfUsePage />} />
               <Route path="/privacy-policy" element={<PPPage />} />
-              <Route path="/whhite-paper" element={<ComingSon />} />
-              <Route path="/about-us" element={<ComingSon />} />
+              <Route path="/white-paper" element={<ComingSon />} />
+              <Route path="/about-us" element={<AboutUs />} />
               <Route path="/500" element={<Error500Page />} />
             </Routes>
           </AppShell>

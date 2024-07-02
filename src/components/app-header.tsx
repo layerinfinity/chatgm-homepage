@@ -88,14 +88,14 @@ export const AppHeader = () => {
 
               {/* Nav bar */}
               <Group className={classes.navBar}>
-                <Link color='white.0' to="/">
+                <Link color='white.0' to="/about-us">
                   About us
                 </Link>
 
                 <Link color='white.0' to="/" onClick={onMovedEcoSystemClicked}>
                   1chain.AI Ecosystem
                 </Link>
-                <Link color='white.0' to="/" >
+                <Link color='white.0' to="/white-paper" >
                   Whitepaper
                 </Link>
 
@@ -157,12 +157,12 @@ export const AppHeader = () => {
                 1chain.AI Ecosystem
               </Text>
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link to="/white-paper" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
                 Whitepaper
               </Text>
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link to="/about-us" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
                 About us
               </Text>

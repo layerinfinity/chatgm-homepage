@@ -1,4 +1,4 @@
-import { Anchor, Box, Center, Container, Flex, Image, MediaQuery, Space, Text, createStyles, em } from '@mantine/core';
+import { Anchor, Box, Button, Center, Container, Flex, Image, MediaQuery, Space, Text, createStyles, em } from '@mantine/core';
 import { ANDROID_STORE_URL, IOS_STORE_URL } from '~/configs';
 import Typewriter from 'typewriter-effect';
 import { useMediaQuery } from '@mantine/hooks';
@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
 
 }));
 
-export const ComingSon = () => {
+export const AboutUs = () => {
   const { classes, theme } = useStyles();
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
 
@@ -30,7 +30,7 @@ export const ComingSon = () => {
         background: theme.fn.linearGradient(0, '#6016D900', '#000000ff'),
       }}
     >
-      <Flex align='center' justify='center' >
+      <Flex align='flex-start' justify='center' >
         <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
           <Flex align='center' justify='center' >
             <Box
@@ -47,16 +47,18 @@ export const ComingSon = () => {
 
         </MediaQuery>
 
-        <Flex direction='column' color='white.0' maw={461} justify='center' align='center'>
+        <Flex direction='column' color='white.0' maw={461} justify='center' align={{ sm: 'flex-start', base: 'center' }}>
 
-          <Text ff='Outfit' fw={600} size={64} style={{ lineHeight: '64px' }} variant="gradient"
-            gradient={{ from: '#8C56FF', to: '#66E3FF', deg: 180 }}>
-            COMING SOON
-          </Text>
+          <Image mt={45} width={255} fit="contain" src="images/one-chainai/onechain-logo.png" />
           <Text ff='Outfit' size={20} fw={400} style={{ lineHeight: '26px' }} color='white.0'>
-            Our dedicated team is diligently working towards the launch of an exceptional product. Stay tuned for upcoming announcements as we have even more exciting things to reveal in the near future.
+            is a Web3 AI protocol that helps DApp developers to simplify onboarding and enhance user experience for new crypto users by integrating in-app AI assistants.
           </Text>
-          <Image mt={33} maw={355} src="images/one-chainai/Frame@2x.png" />
+          <Button ml={50} onClick={() => { window.open('https://app.chatgm.com', '_blank') }} mt={30} w={150} h={52} style={{ background: '#644CFF', borderRadius: 15 }}>
+            <Image pos='absolute' style={{ width: 60 }} fit='contain' left={-60} src='images/one-chainai/svg/letstart.svg'></Image>
+            Let’s start!
+          </Button>
+
+
         </Flex>
 
       </Flex>

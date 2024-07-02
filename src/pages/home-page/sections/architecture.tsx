@@ -56,7 +56,7 @@ export const Architecture = () => {
         <Text ff="Open Sans" fw={400} size={14} color="white.2" mt={30}>
           1Chain AI is a Web3 AI protocol that helps DApp developers to simplify onboarding and enhance user experience for new crypto users by integrating in-app AI assistants.
         </Text>
-        <Image src="images/one-chainai/svg/architecture.svg" maw={945} mt={74} mr='auto' ml='auto' mb={133} width='100%' fit="contain" />
+        <Image src="images/one-chainai/artchitecture.png" maw={945} mt={74} mr='auto' ml='auto' mb={133} width='100%' fit="contain" />
 
       </Container>
     </Box>

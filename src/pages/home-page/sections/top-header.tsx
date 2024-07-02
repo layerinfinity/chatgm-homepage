@@ -26,8 +26,6 @@ const useStyles = createStyles((theme) => ({
 export const TopHeader = () => {
     const { classes, theme } = useStyles();
     const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
-
-
     return (
         <Box
 
@@ -37,10 +35,10 @@ export const TopHeader = () => {
             }}
         >
 
-            <Flex top={-360} w='100%' align='center' justify='center' pos='absolute'>
+            <Flex top={-450} w='100%' align='center' justify='center' pos='absolute'>
                 <Box
-                    h={1300}
-                    w={1300}
+                    h={1500}
+                    w={1500}
                     style={{
                         background: theme.fn.radialGradient('#8D57FF66', '#8657FF0d', '#8357FF00', '#8357FF00'),
                     }}>
