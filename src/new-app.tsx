@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AppFooter, AppHeader } from './components';
 import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
 import PPPage from './pages/privacy-policy';
+import { ComingSon } from './pages/comingsoon';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -170,18 +171,18 @@ export const App = () => {
             header={<AppHeader />}
             footer={<AppFooter />}
             styles={() => ({
-              // root: {
-              //   padding: 0,
-              //   margin: 0
-              // },
+              root: {
+                padding: 0,
+                margin: 0
+              },
               main: {
                 padding: 0,
                 margin: 0
               },
-              // body: {
-              //   padding: 0,
-              //   margin: 0
-              // }
+              body: {
+                padding: 0,
+                margin: 0
+              }
             })}
           >
             <Routes>
@@ -190,6 +191,8 @@ export const App = () => {
               <Route path="/fortress" element={<FortressPage />} />
               <Route path="/tos" element={<TermsOfUsePage />} />
               <Route path="/privacy-policy" element={<PPPage />} />
+              <Route path="/whhite-paper" element={<ComingSon />} />
+              <Route path="/about-us" element={<ComingSon />} />
               <Route path="/500" element={<Error500Page />} />
             </Routes>
           </AppShell>

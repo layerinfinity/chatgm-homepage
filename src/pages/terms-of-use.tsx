@@ -2,9 +2,8 @@
 import { Container, Space, Stack, Title } from '@mantine/core';
 
 import Layout from '~/layouts/layout';
+import { AppFooter, AppHeader } from '../components';
 
-import AppHeader from '~/components/header';
-import AppFooter from '~/components/footer';
 
 const TOSPage = () => {
   return (
