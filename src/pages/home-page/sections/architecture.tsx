@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Image, Text, createStyles, useMantineTheme } from '@mantine/core';
+import { Box, Container, Flex, Image, Text, createStyles, em, useMantineTheme } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 
 const useStyles = createStyles((theme) => ({
@@ -24,6 +25,8 @@ const useStyles = createStyles((theme) => ({
 }));
 export const Architecture = () => {
   const { classes, theme } = useStyles();
+  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+
 
   return (
     <Box
@@ -49,9 +52,14 @@ export const Architecture = () => {
           }}
 
         >
-          <Text ff="Outfit" fw={600} size={72} color="white.0" mt={-10}>
+
+          <Text ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
             Architecture
           </Text>
+
+
+
+
         </Box>
         <Text ff="Open Sans" fw={400} size={14} color="white.2" mt={30}>
           1Chain AI is a Web3 AI protocol that helps DApp developers to simplify onboarding and enhance user experience for new crypto users by integrating in-app AI assistants.

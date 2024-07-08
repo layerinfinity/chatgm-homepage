@@ -45,6 +45,7 @@ const useStyles = createStyles((theme) => ({
 export const AppFooter = () => {
   const { classes, theme } = useStyles();
 
+
   return (
     <Box className={classes.container}>
       <Container>
@@ -55,7 +56,7 @@ export const AppFooter = () => {
             href='https://twitter.com/1ChainAI'
             target="_blank"
           >
-            <Text ff="Outfit" fw={700} size={32} mt={30} color='white.0' >
+            <Text ff="Outfit" fw={700} size={32} mt={30} color='white.0' align='center' >
               FOLLOW US ON TWITTER!
             </Text>
 
@@ -121,7 +122,7 @@ export const AppFooter = () => {
           // mb={{ sm: 50, md: 85 }}
           >
             {/* Left */}
-            <Box >
+            <Flex direction='column' align={{ sm: 'flex-start', base: 'center' }} >
               <Text ff="Outfit" fw={600} size={32} lh="2.5rem" color="purpleGlow.5">
                 Connect Us
               </Text>
@@ -129,7 +130,7 @@ export const AppFooter = () => {
                 We will answer all your questions
               </Text>
 
-            </Box>
+            </Flex>
 
 
           </Flex>

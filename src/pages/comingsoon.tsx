@@ -49,11 +49,11 @@ export const ComingSon = () => {
 
         <Flex direction='column' color='white.0' maw={461} justify='center' align='center'>
 
-          <Text ff='Outfit' fw={600} size={64} style={{ lineHeight: '64px' }} variant="gradient"
+          <Text ff='Outfit' fw={600} size={isMobile ? 40 : 64} style={{ lineHeight: '64px' }} variant="gradient"
             gradient={{ from: '#8C56FF', to: '#66E3FF', deg: 180 }}>
             COMING SOON
           </Text>
-          <Text ff='Outfit' size={20} fw={400} style={{ lineHeight: '26px' }} color='white.0'>
+          <Text ff='Outfit' size={20} fw={400} style={{ lineHeight: '26px', textAlign: isMobile ? 'center' : 'left' }} color='white.0'>
             Our dedicated team is diligently working towards the launch of an exceptional product. Stay tuned for upcoming announcements as we have even more exciting things to reveal in the near future.
           </Text>
           <Image mt={33} maw={355} src="images/one-chainai/Frame@2x.png" />

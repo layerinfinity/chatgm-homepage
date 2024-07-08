@@ -1,6 +1,6 @@
-import { Anchor, BackgroundImage, Box, Button, Center, Container, Flex, Image, Text, createStyles, useMantineTheme } from '@mantine/core';
+import { Anchor, BackgroundImage, Box, Button, Center, Container, Flex, Image, Text, createStyles, em, useMantineTheme } from '@mantine/core';
 import { TimeLine } from './timeline';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 
 import { useState } from 'react';
 import Modal from 'react-modal';
@@ -62,6 +62,7 @@ const customStyles: Modal.Styles = {
 };
 export const EcoSystem = () => {
     const { classes, theme } = useStyles();
+    const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
     const [item, setItem] = useState(0)
     // let subtitle;
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -158,7 +159,7 @@ export const EcoSystem = () => {
                         }}
 
                     >
-                        <Text ff="Outfit" fw={600} size={72} color="white.0" mt={-10}>
+                        <Text ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
                             Ecosystem
                         </Text>
                     </Box>

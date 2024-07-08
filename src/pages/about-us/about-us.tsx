@@ -50,10 +50,10 @@ export const AboutUs = () => {
         <Flex direction='column' color='white.0' maw={461} justify='center' align={{ sm: 'flex-start', base: 'center' }}>
 
           <Image mt={45} width={255} fit="contain" src="images/one-chainai/onechain-logo.png" />
-          <Text ff='Outfit' size={20} fw={400} style={{ lineHeight: '26px' }} color='white.0'>
+          <Text ff='Outfit' size={20} fw={400} style={{ lineHeight: '26px', textAlign: isMobile ? 'center' : 'left' }} color='white.0' >
             is a Web3 AI protocol that helps DApp developers to simplify onboarding and enhance user experience for new crypto users by integrating in-app AI assistants.
           </Text>
-          <Button ml={50} onClick={() => { window.open('https://app.chatgm.com', '_blank') }} mt={30} w={150} h={52} style={{ background: '#644CFF', borderRadius: 15 }}>
+          <Button ml={{ sm: 50, base: 0 }} onClick={() => { window.open('https://app.chatgm.com', '_blank') }} mt={30} w={150} h={52} style={{ background: '#644CFF', borderRadius: 15 }}>
             <Image pos='absolute' style={{ width: 60 }} fit='contain' left={-60} src='images/one-chainai/svg/letstart.svg'></Image>
             Let’s start!
           </Button>

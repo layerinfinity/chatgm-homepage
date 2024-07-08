@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Image, Text, createStyles, px, useMantineTheme } from '@mantine/core';
+import { Box, Container, Flex, Image, Text, createStyles, em, px, useMantineTheme } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 
 const useStyles = createStyles((theme) => ({
@@ -21,6 +22,7 @@ const useStyles = createStyles((theme) => ({
 }));
 export const OurPartner = () => {
     const { classes, theme } = useStyles();
+    const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
 
     return (
         <Box
@@ -32,7 +34,7 @@ export const OurPartner = () => {
             }}
         >
             <Container  >
-                <Text ff="Outfit" fw={600} size={72} style={{ lineHeight: '80px' }} color="white.0" ta="center">
+                <Text ff="Outfit" fw={600} size={isMobile ? 40 : 72} style={{ lineHeight: '80px' }} color="white.0" ta="center">
                     Our Partner
                 </Text>
 
