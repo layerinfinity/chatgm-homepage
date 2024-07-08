@@ -98,7 +98,7 @@ const TimeLineItem = (props: TimeLineProps) => {
 
       </Flex>
 
-      <Flex pl={{ sm: 80, base: 30 }} w={{ sm: '50%', base: '90%' }} direction='column' justify='flex-start'>
+      <Flex pl={{ sm: 80, base: 30 }} pr={10} w={{ sm: '50%', base: '90%' }} direction='column' justify='flex-start'>
         <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
           <Flex direction='column' align='flex-start'>
             <Text ff="Outfit" fw={500} size={30} color="purpleGlow.4" lineClamp={1} >
