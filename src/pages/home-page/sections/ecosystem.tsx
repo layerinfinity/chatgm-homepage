@@ -141,7 +141,7 @@ export const EcoSystem = () => {
                     background: theme.fn.linearGradient(0, '#6016D900', '#0000004d'),
                 }}
             >
-                <Container py={40}  >
+                <Box  >
                     <Flex direction='row' mt={55}>
                         <Text ff="Outfit" fw={400} size={18} color="white.0" ta="center">
                             1chain.
@@ -236,7 +236,7 @@ export const EcoSystem = () => {
 
 
 
-                </Container>
+                </Box>
             </Box >
         </>
 

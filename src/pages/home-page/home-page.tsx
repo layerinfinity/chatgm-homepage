@@ -16,17 +16,11 @@ import { Architecture } from './sections/architecture';
 export const HomePage = () => {
   return (
     <Box>
-      {/* <MainCarousel /> */}
-      {/* <DownloadApp />
-      <Trailer />
-      <Activities /> */}
-      {/* <RoadMap /> */}
-      {/* <MeetOurTeam /> */}
+
       <TopHeader />
       <Architecture />
 
       <EcoSystem />
-      {/* <Description /> */}
       <OurPartner />
     </Box>
   );
