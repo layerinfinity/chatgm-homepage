@@ -1,4 +1,4 @@
-import { Anchor, Box, Container, Flex, Image, Text, createStyles } from '@mantine/core';
+import { Anchor, Box, Button, Container, Flex, Image, Text, createStyles } from '@mantine/core';
 import { IconBrandTelegram } from '@tabler/icons-react';
 import { ContactBox } from './contact-box/contact-box';
 import {
@@ -39,7 +39,12 @@ const useStyles = createStyles((theme) => ({
     height: 48,
     borderRadius: 24,
     backgroundColor: theme.colors.purpleGlow[3],
+
+
+
   },
+
+
 }));
 
 export const AppFooter = () => {
@@ -50,17 +55,13 @@ export const AppFooter = () => {
     <Box className={classes.container}>
       <Container>
         <Flex direction="column" align="center" justify="center">
-          {/* Footer Heading */}
-          <Anchor
-            color="white.0"
-            href='https://twitter.com/1ChainAI'
-            target="_blank"
-          >
-            <Text ff="Outfit" fw={700} size={32} mt={30} color='white.0' align='center' >
-              FOLLOW US ON TWITTER!
+          <Button onClick={() => { window.open('https://twitter.com/1ChainAI', '_blank') }} mt={35} w={180} h={60} style={{ background: '#644CFF', borderRadius: 20 }}>
+            <Image pos='absolute' style={{ width: 60, transform: 'scale(-1,-1)' }} fit='revert' right={-60} src='images/one-chainai/svg/letstart.svg'></Image>
+            <Text ff="Open Sans" fw={700} size={18} color='white.0' align='center' >
+              Follow us
             </Text>
+          </Button>
 
-          </Anchor>
 
           {/* Download Buttons */}
           {/* <Flex

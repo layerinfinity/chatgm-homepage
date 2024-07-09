@@ -35,7 +35,7 @@ export const OurPartner = () => {
         >
             <Container  >
                 <Text ff="Outfit" fw={600} size={isMobile ? 40 : 72} style={{ lineHeight: '80px' }} color="white.0" ta="center">
-                    Our Partner
+                    Our Partners
                 </Text>
 
                 <Flex wrap="wrap" gap={50} justify='center' ml='auto' mr='auto' maw={595} mt={50}>
