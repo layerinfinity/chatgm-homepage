@@ -95,7 +95,7 @@ export const AppHeader = () => {
                 <Link color='white.0' to="/" onClick={onMovedEcoSystemClicked}>
                   1chain.AI Ecosystem
                 </Link>
-                <Link color='white.0' to="/white-paper" >
+                <Link color='white.0' to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' >
                   Whitepaper
                 </Link>
 
@@ -157,7 +157,7 @@ export const AppHeader = () => {
                 1chain.AI Ecosystem
               </Text>
             </Link>
-            <Link to="/white-paper" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
                 Whitepaper
               </Text>

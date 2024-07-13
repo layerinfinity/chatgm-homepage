@@ -164,7 +164,7 @@ export const EcoSystem = () => {
                         </Text>
                     </Box>
 
-                    <Flex wrap="wrap" gap={40} justify='center' mt={57} mb={220}>
+                    <Flex wrap="wrap" gap={{ sm: 40, base: 20 }} justify='center' mt={57} mb={220}>
 
 
                         <BackgroundImage className={classes.bgitem} src="images/one-chainai/svg/Acti1.svg" onClick={() => {
