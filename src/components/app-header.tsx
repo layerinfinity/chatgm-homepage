@@ -36,13 +36,13 @@ const useStyles = createStyles((theme) => ({
     a: {
       fontFamily: 'Outfit',
       fontWeight: 400,
-      fontSize: '1.125rem',
+      fontSize: '0.938rem',
       color: theme.colors.white[0],
       textDecoration: 'none',
     },
 
     'a:active': {
-      fontWeight: 700,
+      fontWeight: 600,
       color: theme.colors.purpleGlow[4],
       textDecoration: 'underline',
     },
@@ -88,31 +88,19 @@ export const AppHeader = () => {
 
               {/* Nav bar */}
               <Group className={classes.navBar}>
-                <Link color='white.0' to="/about-us">
-                  About us
+                <Link color='white.0' to="/mission">
+                  Mission
+                </Link>
+                <Link color='white.0' to="/protocol">
+                  Protocol
                 </Link>
 
                 <Link color='white.0' to="/" onClick={onMovedEcoSystemClicked}>
-                  1chain.AI Ecosystem
+                  Ecosystem
                 </Link>
                 <Link color='white.0' to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' >
                   Whitepaper
                 </Link>
-
-                {/* <Button
-                  // color="purpleGlow.4"
-                  px={20}
-                  py={6}
-                  style={{
-                    // borderRadius: 44,
-                    // fontFamily: 'Outfit',
-                    // fontWeight: 400,
-                    // fontSize: '1.125rem',
-                  }}
-                  onClick={onGetAppButtonClicked}
-                >
-                  Whitepaper
-                </Button> */}
               </Group>
             </Flex>
           </Container>

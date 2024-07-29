@@ -8,6 +8,8 @@ import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage }
 import PPPage from './pages/privacy-policy';
 import { ComingSon } from './pages/comingsoon';
 import { AboutUs } from './pages/about-us/about-us';
+import Mission from './pages/mission';
+import { Protocol } from './pages/protocol';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -195,6 +197,8 @@ export const App = () => {
               <Route path="/white-paper" element={<ComingSon />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/500" element={<Error500Page />} />
+              <Route path="/mission" element={<Mission />} />
+              <Route path="/protocol" element={<Protocol />} />
             </Routes>
           </AppShell>
         </Router>

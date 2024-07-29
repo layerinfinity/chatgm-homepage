@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: "Outfit",
     fontSize: 30,
     // lineHeight: '3rem',
-    color: theme.colors.white[0],
+    color: theme.colors.purpleGlow[0],
     fontWeight: 500,
   },
   policySubTitle: {
@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: 18,
 
     // lineHeight: '3rem',
-    color: theme.colors.white[2],
+    color: theme.colors.purpleGlow[1],
     fontWeight: 700,
   },
   policycontent: {
@@ -43,10 +43,12 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export const TermsOfUsePage = () => {
-  const { classes } = useStyles();
+  const { classes, theme } = useStyles();
 
   return (
     <>
+      <Box style={{ position: 'absolute', height: 760, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }}>
+      </Box>
       <Space h={140} />
       <Container>
         <Stack px="lg">
