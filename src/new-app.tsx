@@ -176,15 +176,18 @@ export const App = () => {
             styles={() => ({
               root: {
                 padding: 0,
-                margin: 0
+                margin: 0,
+                background: '#00000026'
               },
               main: {
                 padding: 0,
-                margin: 0
+                margin: 0,
+
               },
               body: {
                 padding: 0,
-                margin: 0
+                margin: 0,
+
               }
             })}
           >

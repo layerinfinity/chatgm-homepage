@@ -117,7 +117,7 @@ export const WAAP = () => {
           <Text ff="Outfit" fw={500} size={40} color={theme.colors.purpleGlow[0]} mt={-10} align='center'>
             Fundamental Tasks
           </Text>
-          <Flex wrap="wrap" gap={{ sm: 20, base: 20 }} justify='center' mt={57}>
+          <Flex wrap="wrap" gap={{ sm: 20, base: 40 }} justify='center' mt={57}>
 
 
 

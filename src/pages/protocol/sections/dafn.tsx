@@ -109,19 +109,42 @@ export const DAFN = () => {
         </Box>
         <Box mt={100} >
           <Flex justify='center'>
-            <Text maw={600} ff="Outfit" fw={500} size={40} color="white.0" ta='center'>
+            <Text maw={600} ff="Outfit" fw={500} size={isMobile ? 30 : 40} color="white.0" ta='center'>
               <span >The Process of  </span>
               <span style={{ color: theme.colors.purpleGlow[0] }}>1chain.AI's
                 Decentralized AI Fidelity Network</span>
             </Text>
           </Flex>
           <Image mt={100} src='images/one-chainai/dafn/dafn1.png' width='100%' fit='contain' />
-          <Flex justify='end'>
-            {/* <Box w='50%'></Box> */}
-            <Image style={{ width: '65%' }} mt={100} src='images/one-chainai/dafn/dafn2.png'
+          <Container style={{ position: 'relative' }}>
+            {!isMobile ? <>
 
-              fit="contain" />
-          </Flex>
+              <Box
+                h={1700}
+                w={1700}
+                left={-1000}
+                top={-550}
+
+                style={{
+                  background: theme.fn.radialGradient('#8D57FF66', '#8657FF0d', '#8357FF00', '#8357FF00'),
+                  position: 'absolute',
+
+                }}>
+
+              </Box>
+
+              <Image display='inherit' pos='absolute' left={{ md: -200, base: -60 }} top={{ md: 80, base: 120 }} maw={{ md: 463, base: 300 }} fit="contain" src="images/one-chainai/robot.png" alt="" />
+            </> : <></>
+
+            }
+
+            <Flex justify='end'>
+              <Image style={{ width: '65%' }} mt={100} src='images/one-chainai/dafn/dafn2.png'
+
+                fit="contain" />
+            </Flex>
+
+          </Container>
 
           <Box mt={100}>
             <Text className={classes.policyTitle}>
@@ -218,16 +241,16 @@ export const DAFN = () => {
 
           </Box>
 
-          <Flex direction='column' align='center' mt={100} bg='#02000733' py={60}>
-            <Image mt={100} src='images/one-chainai/dafn/dafn3.png' style={{ width: '70%' }} fit='contain' />
-            <Image mt={100} src='images/one-chainai/dafn/dafn4.png' style={{ width: '70%' }} fit='contain' />
+          <Flex direction='column' align='center' mt={100} bg='#02000733' py={60} >
+            <Image src='images/one-chainai/dafn/dafn3.png' style={{ width: '70%', height: 'auto' }} fit='contain' />
+            <Image mt={146} src='images/one-chainai/dafn/dafn4.png' style={{ width: '70%', height: 'auto' }} fit='contain' />
           </Flex>
 
 
 
         </Box>
         <Box mt={100} mb={92}>
-          <Text ff="Outfit" fw={500} size={40} color="white.0" ta='center'>
+          <Text ff="Outfit" fw={500} size={isMobile ? 30 : 40} color="white.0" ta='center'>
             <span style={{ color: theme.colors.purpleGlow[0] }}>AI </span>
             <span >Oracles</span>
           </Text>

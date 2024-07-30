@@ -11,8 +11,11 @@ const useStyles = createStyles((theme) => ({
 export const Protocol = () => {
   const { classes, theme } = useStyles();
   return (
-    <Box>
-      <Box style={{ position: 'absolute', height: 760, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }} />
+    <Box
+    >
+      <Box style={{ position: 'absolute', height: 760, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }}>
+
+      </Box>
       <Space h={55} />
       <WAAP />
       <DAFN />
