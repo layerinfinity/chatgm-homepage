@@ -5,22 +5,23 @@ import { Trailer } from './trailer';
 import { Activities } from './activities/activities';
 import { RoadMap } from './roadmap';
 // import { MeetOurTeam } from './meet-our-team';
-import { OurBackers } from './our-backers';
+import { OurBackers } from './sections/our-backers';
 import { Phase1 } from '../gm-ecosystem-page/phase-1';
 import { OurPartner } from './sections/our-partner';
 import { EcoSystem } from './sections/ecosystem';
 import { Description } from './sections/description';
 import { TopHeader } from './sections/top-header';
 import { Architecture } from './sections/architecture';
+import { UseCase } from './sections/usecase';
 
 export const HomePage = () => {
   return (
     <Box>
 
       <TopHeader />
-      <Architecture />
-
+      <UseCase />
       <EcoSystem />
+      <OurBackers />
       <OurPartner />
     </Box>
   );

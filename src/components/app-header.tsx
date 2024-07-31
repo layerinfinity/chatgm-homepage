@@ -140,9 +140,19 @@ export const AppHeader = () => {
           </Link>
 
           <Flex direction="column" gap={20} style={{ flex: 1 }} pt={40}>
+            <Link to="/mission" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+              <Text ff="Outfit" fw={500} size={24} color="white.0">
+                Mission
+              </Text>
+            </Link>
+            <Link to="/Protocol" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+              <Text ff="Outfit" fw={500} size={24} color="white.0">
+                Protocol
+              </Text>
+            </Link>
             <Link to="/" style={{ textDecoration: 'none' }} onClick={onMovedEcoSystemClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
-                1chain.AI Ecosystem
+                Ecosystem
               </Text>
             </Link>
             <Link to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
@@ -150,11 +160,7 @@ export const AppHeader = () => {
                 Whitepaper
               </Text>
             </Link>
-            <Link to="/about-us" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
-              <Text ff="Outfit" fw={500} size={24} color="white.0">
-                About us
-              </Text>
-            </Link>
+
           </Flex>
 
 

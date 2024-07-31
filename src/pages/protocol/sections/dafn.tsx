@@ -23,7 +23,7 @@ const useStyles = createStyles((theme) => ({
     // lineHeight: '3rem',
     color: theme.colors.purpleGlow[0],
     fontWeight: 500,
-    marginLeft: 4
+    marginLeft: 6
   },
   policySubTitle: {
     fontFamily: "Open Sans",
@@ -61,16 +61,11 @@ export const DAFN = () => {
           <span style={{ color: theme.colors.purpleGlow[0] }}>AI </span>
           <span >Fidelity Network</span>
         </Text>
-        <Box
-          style={{
-            width: 323,
-            borderBottom: `4px solid ${theme.colors.purpleGlow[6]}`,
-          }}
-        >
-          <Text ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
-            DAFN
-          </Text>
-        </Box>
+
+        <Text style={{ textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
+          DAFN
+        </Text>
+
 
         <Text ff="Open Sans" fw={400} size='0.875rem' color="white.2" mt={30}>
           AI fidelity refers to the degree of accuracy, reliability, and consistency with which an AI system understands prompts, interprets data, and executes tasks. It ensures that AI models provide precise, error-free outputs and make accurate decisions based on both on-chain and off-chain data. Current AI models, such as GPT-4, have hallucination rates ranging from 3% to 27%, with most models averaging around 10-15%​​. For blockchain applications, where transactions are irreversible, the ideal AI fidelity rate should be close to 99% to ensure precision and trustworthiness. High AI fidelity is crucial for maintaining trust and security, enabling the mass adoption of AI in web3. This, in turn, paves the way for broader adoption of crypto via AI, as reliable AI systems become integral to crypto infrastructures, apps, and interactions, making them more user-friendly and secure.

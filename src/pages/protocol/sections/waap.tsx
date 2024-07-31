@@ -61,16 +61,10 @@ export const WAAP = () => {
           <span style={{ color: theme.colors.purpleGlow[0] }}>AI </span>
           <span >Agent Protocol</span>
         </Text>
-        <Box
-          style={{
-            width: 323,
-            borderBottom: `4px solid ${theme.colors.purpleGlow[6]}`,
-          }}
-        >
-          <Text ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
-            WAAP
-          </Text>
-        </Box>
+
+        <Text style={{ textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
+          WAAP
+        </Text>
 
         <Text ff="Open Sans" fw={400} size='0.875rem' color="white.2" mt={30}>
           1chain’s Web3 AI Agent Protocol (WAAP) is designed to embed AI assistants into dApps, enabling users to perform complex blockchain tasks through simple chat commands. These AI assistants use Large Language Models (LLMs) to create specialized AI models that can communicate with crypto infrastructures, protocols, and apps to execute tasks easily, securely, and efficiently for new users. These specialized models, known as Large Action Models (LAMs), revolutionize the user experience in the crypto space, making it incredibly straightforward and accessible, thus driving mass crypto adoption.

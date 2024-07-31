@@ -152,17 +152,11 @@ export const EcoSystem = () => {
                     </Flex>
 
 
-                    <Box
-                        style={{
-                            width: 323,
-                            borderBottom: `4px solid ${theme.colors.purpleGlow[6]}`,
-                        }}
 
-                    >
-                        <Text ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
-                            Ecosystem
-                        </Text>
-                    </Box>
+                    <Text style={{ textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
+                        Ecosystem
+                    </Text>
+
 
                     <Flex wrap="wrap" gap={{ sm: 40, base: 20 }} justify='center' mt={57} mb={220}>
 
