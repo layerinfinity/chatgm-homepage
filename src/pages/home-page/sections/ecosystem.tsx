@@ -25,6 +25,7 @@ const useStyles = createStyles((theme) => ({
     bgItemDetail: {
         WebkitBackdropFilter: 'blur(12px)',
         backdropFilter: 'blur(12px)',
+
     },
     content: {
         padding: 20,
@@ -32,7 +33,7 @@ const useStyles = createStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         color: '#ffffff',
-        lineHeight: '0.851rem'
+
     },
 
 
@@ -106,7 +107,7 @@ export const EcoSystem = () => {
 
                     </Box>
                 </BackgroundImage> : <></>}
-                {item == 2 ? <BackgroundImage w={280} h={460} className={classes.bgItemDetail} src="images/one-chainai/svg/Acti2Detail.svg"   >
+                {item == 2 ? <BackgroundImage w={{ sm: 500, base: 320 }} h={{ sm: 350, base: 430 }} className={classes.bgItemDetail} src="images/one-chainai/svg/Acti2Detail.svg"   >
                     <Box className={classes.content}>
                         <Text mt={10} ff="Outfit" fw={700} size={24} ta="center" >
                             Cryptobot.Chat
@@ -120,8 +121,8 @@ export const EcoSystem = () => {
                         </Text>
                     </Box>
                 </BackgroundImage> : <></>}
-                {item == 3 ? <Box w={280} h={385} style={{ background: 'linear-gradient(57.28deg, rgba(255, 65, 213, 0.4) 133.6%, rgba(255, 133, 199, 0.4) 168.69%, rgba(178, 81, 255, 0.4) 202.18%, rgba(117, 69, 255, 0.4) 239.6%)' }} className={classes.bgItemDetail}
-                // src="images/one-chainai/svg/Acti3Detail.svg" 
+                {item == 3 ? <BackgroundImage w={{ sm: 436, base: 320 }} h={{ sm: 340, base: 360 }} className={classes.bgItemDetail}
+                    src="images/one-chainai/svg/Acti3Detail.svg"
                 >
                     <Box className={classes.content}>
                         <Text mt={10} ff="Outfit" fw={700} size={24} ta="center" >
@@ -135,7 +136,7 @@ export const EcoSystem = () => {
                             Coming soon
                         </Text>
                     </Box>
-                </Box> : <></>}
+                </BackgroundImage> : <></>}
 
             </Modal>
             <Box

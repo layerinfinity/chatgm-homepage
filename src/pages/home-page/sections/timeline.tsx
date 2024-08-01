@@ -113,7 +113,7 @@ const TimeLineItem = (props: TimeLineProps) => {
         <List mb={props.isEnd ? 10 : 60} listStyleType="disc" ff="Outfit" fw={400} size={14} style={{ color: '#ffffff' }} >
           {
             props.listR.map((value) => {
-              return <List.Item >
+              return <List.Item key={value} >
                 {value}
               </List.Item>
             })
