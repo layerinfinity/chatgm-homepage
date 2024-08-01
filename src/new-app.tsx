@@ -10,6 +10,7 @@ import { ComingSon } from './pages/comingsoon';
 import { AboutUs } from './pages/about-us/about-us';
 import Mission from './pages/mission';
 import { Protocol } from './pages/protocol';
+import ScrollToTop from './scroll_to_top';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -170,40 +171,43 @@ export const App = () => {
       <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
         <Notifications position="bottom-right" />
         <Router>
-          <AppShell
-            header={<AppHeader />}
-            footer={<AppFooter />}
-            styles={() => ({
-              root: {
-                padding: 0,
-                margin: 0,
-                background: '#00000026'
-              },
-              main: {
-                padding: 0,
-                margin: 0,
+          <ScrollToTop>
+            <AppShell
+              header={<AppHeader />}
+              footer={<AppFooter />}
+              styles={() => ({
+                root: {
+                  padding: 0,
+                  margin: 0,
+                  background: '#00000026'
+                },
+                main: {
+                  padding: 0,
+                  margin: 0,
 
-              },
-              body: {
-                padding: 0,
-                margin: 0,
+                },
+                body: {
+                  padding: 0,
+                  margin: 0,
 
-              }
-            })}
-          >
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
-              <Route path="/fortress" element={<FortressPage />} />
-              <Route path="/tos" element={<TermsOfUsePage />} />
-              <Route path="/privacy-policy" element={<PPPage />} />
-              <Route path="/white-paper" element={<ComingSon />} />
-              <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/500" element={<Error500Page />} />
-              <Route path="/mission" element={<Mission />} />
-              <Route path="/protocol" element={<Protocol />} />
-            </Routes>
-          </AppShell>
+                }
+              })}
+            >
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
+                <Route path="/fortress" element={<FortressPage />} />
+                <Route path="/tos" element={<TermsOfUsePage />} />
+                <Route path="/privacy-policy" element={<PPPage />} />
+                <Route path="/white-paper" element={<ComingSon />} />
+                <Route path="/about-us" element={<AboutUs />} />
+                <Route path="/500" element={<Error500Page />} />
+                <Route path="/mission" element={<Mission />} />
+                <Route path="/protocol" element={<Protocol />} />
+              </Routes>
+            </AppShell>
+          </ScrollToTop>
+
         </Router>
       </MantineProvider>
     </QueryClientProvider>
