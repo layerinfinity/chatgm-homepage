@@ -45,7 +45,7 @@ export const TopHeader = () => {
                     zIndex=-100
                 </Box>
             </Flex>
-            {!isMobile ? <Image maw={{ md: 392, base: 300 }} top={150} fit="contain" src="images/one-chainai/EDITION.png" pos='absolute' alt="" /> : null}
+            {!isMobile ? <Image maw={{ md: 392, base: 300 }} top={150} fit="contain" src="images/one-chainai/EDITION.png" pos='absolute' style={{ rotate: '18deg' }} alt="" /> : null}
 
             <Box
                 h='100%'

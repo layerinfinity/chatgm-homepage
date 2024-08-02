@@ -11,6 +11,7 @@ import { AboutUs } from './pages/about-us/about-us';
 import Mission from './pages/mission';
 import { Protocol } from './pages/protocol';
 import ScrollToTop from './scroll_to_top';
+import { Tokenomics } from './pages/tokenomics';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -204,6 +205,7 @@ export const App = () => {
                 <Route path="/500" element={<Error500Page />} />
                 <Route path="/mission" element={<Mission />} />
                 <Route path="/protocol" element={<Protocol />} />
+                <Route path="/a1" element={<Tokenomics />} />
               </Routes>
             </AppShell>
           </ScrollToTop>

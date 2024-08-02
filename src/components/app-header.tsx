@@ -10,6 +10,7 @@ import {
   Burger,
   Group,
   Menu,
+  Anchor,
 } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import {
@@ -82,11 +83,11 @@ export const AppHeader = () => {
           <Container>
             <Flex align="center" justify="space-between" h={85}>
               {/* Logo */}
+
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
                 <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
               </Link>
 
-              {/* Nav bar */}
               <Group className={classes.navBar}>
                 <Link color='white.0' to="/mission">
                   Mission
@@ -97,6 +98,9 @@ export const AppHeader = () => {
 
                 <Link color='white.0' to="/" onClick={onMovedEcoSystemClicked}>
                   Ecosystem
+                </Link>
+                <Link color='white.0' to="/a1" onClick={onMovedEcoSystemClicked}>
+                  $A1
                 </Link>
                 <Link color='white.0' to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' >
                   Whitepaper
@@ -153,6 +157,11 @@ export const AppHeader = () => {
             <Link to="/" style={{ textDecoration: 'none' }} onClick={onMovedEcoSystemClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
                 Ecosystem
+              </Text>
+            </Link>
+            <Link to="/a1" style={{ textDecoration: 'none' }} onClick={onMovedEcoSystemClicked}>
+              <Text ff="Outfit" fw={500} size={24} color="white.0">
+                $A1
               </Text>
             </Link>
             <Link to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
