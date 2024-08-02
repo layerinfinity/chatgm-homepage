@@ -114,7 +114,7 @@ export const AppHeader = () => {
           <Container>
             <Flex h={100} align="center" justify="space-between">
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-                <Image width={70} fit="contain" src="images/one-chainai/onechain-logo.png" />
+                <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
               </Link>
               <Burger w={60} color='#ffffff' opened={opened} onClick={toggle} />
             </Flex>
