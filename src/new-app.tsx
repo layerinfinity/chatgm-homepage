@@ -4,14 +4,15 @@ import { Notifications } from '@mantine/notifications';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { AppFooter, AppHeader } from './components';
-import { Error500Page, FortressPage, GmEcosystemPage, HomePage, TermsOfUsePage } from './pages';
+import { Error500Page, HomePage, TermsOfUsePage } from './pages';
 import PPPage from './pages/privacy-policy';
-import { ComingSon } from './pages/comingsoon';
+
 import { AboutUs } from './pages/about-us/about-us';
-import Mission from './pages/mission';
-import { Protocol } from './pages/protocol';
+
 import ScrollToTop from './scroll_to_top';
-import { Tokenomics } from './pages/tokenomics';
+import { ComingSon } from './pages/comingsoon';
+import { System } from './pages/system';
+import CryptobotChatSystem from './pages/system/CryptobotChatSystem';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -20,7 +21,7 @@ const theme: MantineThemeOverride = {
       '#FFFFFF',
       '#F2F2F2',
       '#F5F5F5',
-      '#FFFFFF',
+      '#82C0CD',
       '#B3B3B3',
       '#FFFFFF',
       '#FFFFFF',
@@ -46,8 +47,8 @@ const theme: MantineThemeOverride = {
       '#B894F5',
       '#8C57FF',
       '#644CFF',
-      '#5C5AB2',
-      '#322966',
+      '#52849F',
+      '#57CDFF33',
       '#411B79',
       '#D4BFFA',
       '#8C57FF',
@@ -143,7 +144,7 @@ const theme: MantineThemeOverride = {
       overflowX: 'hidden',
     },
     body: {
-      background: t.fn.linearGradient(90, '#0D042F', '#301C61'),
+      background: t.fn.linearGradient(90, '#313131', '#1C4061'),
     },
     ul: {
       listStyle: 'none',
@@ -154,7 +155,7 @@ const theme: MantineThemeOverride = {
     Container: {
       defaultProps: {
         sizes: {
-          md: 1000,
+          md: 940,
         },
         // px: {
         //   md: 150,
@@ -180,7 +181,6 @@ export const App = () => {
                 root: {
                   padding: 0,
                   margin: 0,
-                  background: '#00000026'
                 },
                 main: {
                   padding: 0,
@@ -196,16 +196,13 @@ export const App = () => {
             >
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
-                <Route path="/fortress" element={<FortressPage />} />
                 <Route path="/tos" element={<TermsOfUsePage />} />
                 <Route path="/privacy-policy" element={<PPPage />} />
                 <Route path="/white-paper" element={<ComingSon />} />
                 <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/500" element={<Error500Page />} />
-                <Route path="/mission" element={<Mission />} />
-                <Route path="/protocol" element={<Protocol />} />
-                <Route path="/a1" element={<Tokenomics />} />
+                <Route path="/system" element={<System />} />
+
+
               </Routes>
             </AppShell>
           </ScrollToTop>

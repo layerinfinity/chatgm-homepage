@@ -82,25 +82,19 @@ export const AppHeader = () => {
         <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Container>
             <Flex align="center" justify="space-between" h={85}>
-              {/* Logo */}
 
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-                <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
+
+                <Image width={193} fit="contain" src="images/cryptobot_chat/Logo.svg" />
               </Link>
+              <Image width={96} fit='contain' src='images/cryptobot_chat/robot.png'></Image>
 
               <Group className={classes.navBar}>
-                <Link color='white.0' to="/mission">
-                  Mission
+                <Link color='white.0' to="/about-us">
+                  About Us
                 </Link>
-                <Link color='white.0' to="/protocol">
-                  Protocol
-                </Link>
-
-                <Link color='white.0' to="/" onClick={onMovedEcoSystemClicked}>
-                  Ecosystem
-                </Link>
-                <Link color='white.0' to="/a1" onClick={onMovedEcoSystemClicked}>
-                  $A1
+                <Link color='white.0' to="/system">
+                  System
                 </Link>
                 <Link color='white.0' to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' >
                   Whitepaper
@@ -114,7 +108,7 @@ export const AppHeader = () => {
           <Container>
             <Flex h={100} align="center" justify="space-between">
               <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-                <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
+                <Image width={193} fit="contain" src="images/cryptobot_chat/Logo.svg" />
               </Link>
               <Burger w={60} color='#ffffff' opened={opened} onClick={toggle} />
             </Flex>
@@ -140,30 +134,22 @@ export const AppHeader = () => {
           }}
         >
           <Link to="/" onClick={onLinkClicked}>
-            <Image src="images/one-chainai/onechain-logo.png" width={220} />
+
+            <Image src="images/cryptobot_chat/Logo.svg" width={220} />
           </Link>
 
           <Flex direction="column" gap={20} style={{ flex: 1 }} pt={40}>
-            <Link to="/mission" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link to="/about-us" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
-                Mission
+                About Us
               </Text>
             </Link>
-            <Link to="/Protocol" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
+            <Link to="/system" style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
-                Protocol
+                System
               </Text>
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }} onClick={onMovedEcoSystemClicked}>
-              <Text ff="Outfit" fw={500} size={24} color="white.0">
-                Ecosystem
-              </Text>
-            </Link>
-            <Link to="/a1" style={{ textDecoration: 'none' }} onClick={onMovedEcoSystemClicked}>
-              <Text ff="Outfit" fw={500} size={24} color="white.0">
-                $A1
-              </Text>
-            </Link>
+
             <Link to="https://1chain-ai.gitbook.io/1chain-ai-whitepaper" target='blank' style={{ textDecoration: 'none' }} onClick={onLinkClicked}>
               <Text ff="Outfit" fw={500} size={24} color="white.0">
                 Whitepaper

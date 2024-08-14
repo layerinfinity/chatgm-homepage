@@ -1,28 +1,34 @@
-import { Box } from '@mantine/core';
-import { MainCarousel } from './main-carousel';
-import { DownloadApp } from './download-app';
-import { Trailer } from './trailer';
+import { Box, Space, createStyles } from '@mantine/core';
+
 import { Activities } from './activities/activities';
-import { RoadMap } from './roadmap';
-// import { MeetOurTeam } from './meet-our-team';
+
 import { OurBackers } from './sections/our-backers';
-import { Phase1 } from '../gm-ecosystem-page/phase-1';
+
 import { OurPartner } from './sections/our-partner';
 import { EcoSystem } from './sections/ecosystem';
 import { Description } from './sections/description';
 import { TopHeader } from './sections/top-header';
 import { Architecture } from './sections/architecture';
 import { UseCase } from './sections/usecase';
+import { HowItWork } from './sections/howitwork';
+const useStyles = createStyles((theme) => ({
+
+}));
 
 export const HomePage = () => {
+  const { theme } = useStyles();
   return (
-    <Box>
-
+    <Box
+    >
+      <Box style={{ position: 'absolute', height: 660, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }}>
+      </Box>
+      <Space h={55} />
       <TopHeader />
-      <UseCase />
-      <EcoSystem />
-      <OurBackers />
+      {/* <HowItWork /> */}
       <OurPartner />
+
     </Box>
   );
 };
+
+

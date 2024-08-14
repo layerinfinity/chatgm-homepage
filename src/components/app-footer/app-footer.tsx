@@ -13,7 +13,7 @@ import {
 
 const useStyles = createStyles((theme) => ({
   container: {
-    backgroundColor: `${theme.colors.purpleGlow[4]}0D`,
+    backgroundColor: `rgba(0,0,0,0.2)`,
   },
 
   downloadButton: {
@@ -55,64 +55,12 @@ export const AppFooter = () => {
     <Box className={classes.container}>
       <Container>
         <Flex direction="column" align="center" justify="center">
-          <Button onClick={() => { window.open('https://twitter.com/1ChainAI', '_blank') }} mt={35} w={180} h={60} style={{ background: '#644CFF', borderRadius: 20 }}>
+          <Button onClick={() => { window.open('https://twitter.com/1ChainAI', '_blank') }} mt={35} w={180} h={60} style={{ background: '#00BFA5', borderRadius: 20 }}>
             <Image pos='absolute' style={{ width: 60, transform: 'scale(-1,-1)' }} fit='revert' right={-60} src='images/one-chainai/svg/letstart.svg'></Image>
             <Text ff="Open Sans" fw={700} size={18} color='white.0' align='center' >
               Follow us
             </Text>
           </Button>
-
-
-          {/* Download Buttons */}
-          {/* <Flex
-            wrap="wrap"
-            align="center"
-            justify="center"
-            w="100%"
-            mt={25}
-            // h={100}
-            gap={{ base: 10, md: 50 }}
-          >
-            <Anchor
-              className={classes.downloadButton}
-              color="purpleGlow.8"
-              bg="purpleGlow.7"
-              underline={false}
-              w={{ base: '100%', sm: 200 }}
-              href={ANDROID_STORE_URL}
-              target="_blank"
-            >
-              <img width={24} object-fit='contain' src="images/icon-android.svg" alt="android" />
-              &nbsp;Android
-            </Anchor>
-
-            <Anchor
-              className={classes.downloadButton}
-              color="purpleGlow.8"
-              bg="purpleGlow.7"
-              underline={false}
-              w={{ base: '100%', sm: 200 }}
-              href={IOS_STORE_URL}
-              target="_blank"
-            >
-              <img style={{ filter: 'red', fill: 'red' }} width={20} src="images/icon-apple.svg" alt="apple" />
-              &nbsp;IOS
-            </Anchor>
-
-            <Anchor
-              className={classes.downloadButton}
-              color="purpleGlow.8"
-              underline={false}
-              bg="purpleGlow.7"
-              w={{ base: '100%', sm: 200 }}
-              href="https://app.chatgm.com/"
-            >
-              WebApp
-            </Anchor>
-
-          </Flex> */}
-
-          {/* Contact */}
           <Flex
             direction={{ base: 'column', sm: 'row' }}
             align="center"
@@ -120,7 +68,6 @@ export const AppFooter = () => {
             w="100%"
             mt={40}
             px={{ base: 0, lg: 45 }}
-          // mb={{ sm: 50, md: 85 }}
           >
             {/* Left */}
             <Flex direction='column' align={{ sm: 'flex-start', base: 'center' }} >

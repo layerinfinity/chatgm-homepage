@@ -22,49 +22,60 @@ export const AboutUs = () => {
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
 
   return (
-    <Box
-      h={760}
-      pt={120}
+    <Box>
+      <Box style={{ position: 'absolute', height: 760, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }}>
+      </Box>
+      <Space h={55} />
+      <Box
+      >
+        <Box pos='absolute'
+          top={{ base: 50, sm: 0 }}
+          right={-65}
+          w={{ base: '60%', sm: '50%' }}
+          maw={800}
 
-      style={{
-        background: theme.fn.linearGradient(0, '#6016D900', '#000000ff'),
-      }}
-    >
-      <Flex align='flex-start' justify='center' >
-        <MediaQuery smallerThan='sm' styles={{ display: 'none' }}>
-          <Flex align='center' justify='center' >
-            <Box
-              h={1500}
-              w={1500}
-              pos='absolute'
-              style={{
-                background: theme.fn.radialGradient('#8D57FF66', '#8657FF0d', '#8357FF00', '#8357FF00'),
-              }}>
-              zIndex=-100
-            </Box>
-            <Image maw={{ md: 463, base: 300 }} fit="contain" src="images/one-chainai/robot.png" alt="" />
-          </Flex>
-
-        </MediaQuery>
-
-        <Flex direction='column' color='white.0' maw={461} justify='center' align={{ sm: 'flex-start', base: 'center' }}>
-
-          <Image mt={45} width={255} fit="contain" src="images/one-chainai/onechain-logo.png" />
-          <Text ff='Outfit' size={20} fw={400} style={{ lineHeight: '26px', textAlign: isMobile ? 'center' : 'left' }} color='white.0' >
-            is a Web3 AI protocol that helps DApp developers to simplify onboarding and enhance user experience for new crypto users by integrating in-app AI assistants.
+        >
+          <Image
+            fit='contain'
+            src='images/cryptobot_chat/about.png'
+            style={{ width: '100%', }}
+          >
+          </Image>
+        </Box>
+        <Container pt={70} pb={70}>
+          <Image
+            // bg='red'
+            fit='contain'
+            src='images/cryptobot_chat/comment.svg'
+            style={{ maxWidth: '428px', width: '50%' }}
+          >
+          </Image>
+          <Text mt={50} ff="Outfit" fw={400} size={18} color={theme.colors.white[0]} ta="left" style={{ lineHeight: '22px' }}>
+            About
           </Text>
-          <Button ml={{ sm: 50, base: 0 }} onClick={() => { window.open('https://app.chatgm.com', '_blank') }} mt={30} w={150} h={52} style={{ background: '#644CFF', borderRadius: 15 }}>
-            <Image pos='absolute' style={{ width: 60 }} fit='contain' left={-60} src='images/one-chainai/svg/letstart.svg'></Image>
-            Let’s start!
-          </Button>
+
+          <Text style={{ lineHeight: '80px', textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" >
+            Cryptobot.Chat
+          </Text>
+          <Text maw={586} color='#64FFDA' size={24} style={{ lineHeight: '28px', marginTop: '30px' }}>
+            Welcome to our platform, where expertise meets innovation in the world of automated trading.
+          </Text>
+
+          <Text ff="Open Sans" fw={400} size='14px' color="white.2" mt={30} style={{ lineHeight: '19.07px' }}>
+            Welcome to our platform, where expertise meets innovation in the world of automated trading.<br /><br />
+
+            With over 15 years of experience in the blockchain industry, our lead trader has successfully developed and released 100 bots across various decentralized and centralized exchanges (DEX and CEX). These bots have generated over $100 million in profit, demonstrating our commitment to delivering high-performance trading solutions.<br /><br />
+
+            Our mission is to empower both novice and experienced traders by providing cutting-edge, user-friendly automated bots that optimize your investment strategies and maximize returns. Join us and elevate your trading experience effortlessly.
+
+          </Text>
+        </Container>
 
 
-        </Flex>
+      </Box >
 
-      </Flex>
+    </Box>
 
-
-    </Box >
   );
 
 };
