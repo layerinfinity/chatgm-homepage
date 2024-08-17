@@ -26,6 +26,21 @@ const useStyles = createStyles((theme) => ({
     position: 'absolute',
     lef: 0,
     top: 0,
+    width: '100%',
+    height: '100%',
+    borderRadius: '45px',
+    boxShadow: 'inset 0px 0px 20px 0px rgba(255, 255, 255, 0.6)',
+    background: 'linear-gradient(147.05deg, rgba(151, 205, 255, 0.8) 6.4%, rgba(59, 255, 243, 0.8) 51.48%, rgba(105, 255, 246, 0.8) 99.2%)',
+    backgroundSize: '100% 100%',
+    backgroundRepeat: 'no-repeat',
+    transition: '.4s',
+    zIndex: -90,
+    opacity: 0,
+  },
+  leftBg: {
+    position: 'absolute',
+    lef: 0,
+    top: 0,
     width: '100px',
     height: '100%',
     borderRadius: '45px',
@@ -34,21 +49,24 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
     transition: '.4s',
-    zIndex: -90
+    zIndex: -90,
+
   },
 
   item: {
     position: 'relative',
     marginTop: 20,
-
-
-
-    '&:hover p': {
-      color: '#1C5C6A'
+    '&:hover  #detail1': {
+      color: '#1C5C6A',
     },
-    '&:hover span': {
-      background: 'linear-gradient(147.05deg, rgba(151, 205, 255, 0.8) 6.4%, rgba(59, 255, 243, 0.8) 51.48%, rgba(105, 255, 246, 0.8) 99.2%)',
-      width: '100%'
+    '&:hover #boxbg': {
+      opacity: 1,
+    },
+    '&:hover #boxleft': {
+      opacity: 0
+    },
+    '&:hover #titleleft': {
+      textAlign: 'end'
     },
 
 
@@ -79,17 +97,17 @@ export const HowItWork = () => {
           {
             works.map(el => {
               return <Flex className={classes.item} direction='row' mih={131} align='center' justify='left' >
-                <span className={classes.workBackground}></span>
-                <Box>
-                  <Text style={{ textShadow: '0px 4px 4px #00000040', width: '100px', }} color={theme.colors.white[0]} ff='Outfit' size={72} weight={600} ta='center'>{el.number}</Text>
+                <Box id='boxbg' className={classes.workBackground}></Box>
+                <Box id='boxleft' className={classes.leftBg} />
+                <Box >
+                  <Text id='titleleft' style={{ textShadow: '0px 4px 4px #00000040', width: '100px', transition: '.4s' }} color={theme.colors.white[0]} ff='Outfit' size={72} weight={600} ta='center'>{el.number}</Text>
                 </Box>
-
                 <Box ml={50} style={{ padding: '20px 20px 20px 0px' }}>
                   <Text color={theme.colors.white[0]} size={28} ff='Outfit' weight={700} style={{ lineHeight: '35.28px', textShadow: '0px 4px 4px #00000040' }}>
                     {el.title}
                   </Text>
                   <Text mt={10} color={theme.colors.white[3]} size={14} ff='Open Sans' weight={400} style={{ lineHeight: '19px' }}>
-                    <p style={{ transition: '0.4s' }}>
+                    <p id='detail1' style={{ transition: '0.4s' }}>
                       {el.detail}
                     </p>
                   </Text>

@@ -29,7 +29,7 @@ export const System = () => {
       >
         <Box pos='absolute' w='100%'>
           <Image
-            style={{ width: '50%', maxWidth: 800 }}
+            style={{ width: '40%', maxWidth: 800 }}
             src='images/cryptobot_chat/system1.png'
           />
 
@@ -52,10 +52,10 @@ export const System = () => {
             </Box>
           </Flex>
           <Image
-            mt={500}
+            mt={461}
             mb={118}
             style={{ width: '100%', maxWidth: 879 }}
-            src='images/cryptobot_chat/system2.svg'
+            src='images/cryptobot_chat/system2.png'
           />
 
 

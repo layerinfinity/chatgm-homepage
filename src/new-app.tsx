@@ -12,7 +12,6 @@ import { AboutUs } from './pages/about-us/about-us';
 import ScrollToTop from './scroll_to_top';
 import { ComingSon } from './pages/comingsoon';
 import { System } from './pages/system';
-import CryptobotChatSystem from './pages/system/CryptobotChatSystem';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -144,7 +143,7 @@ const theme: MantineThemeOverride = {
       overflowX: 'hidden',
     },
     body: {
-      background: t.fn.linearGradient(90, '#313131', '#1C4061'),
+      // background: t.fn.linearGradient(90, '#313131', '#1C4061'),
     },
     ul: {
       listStyle: 'none',
@@ -185,6 +184,9 @@ export const App = () => {
                 main: {
                   padding: 0,
                   margin: 0,
+                  // backgroundImage: 'url(/images/cryptobot_chat/Newbg.png)',
+                  // backgroundRepeat: 'no-repeat',
+                  // backgroundSize: 'cover',
 
                 },
                 body: {
