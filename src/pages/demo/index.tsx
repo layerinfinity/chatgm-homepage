@@ -86,7 +86,7 @@ export const BetaAI = () => {
                 styles={{
                   input: {
                     fontFamily: 'Open Sans',
-                    color: 'red'
+                    color: 'black'
                   }
                 }}
 
@@ -168,7 +168,42 @@ export const BetaAI = () => {
                     </Text>
                   </Box>
                   <Flex wrap="wrap" justify='center' gap={50} mt={25}>
-                    <Button bg='none' w={148} h={58} className={classes.button} onClick={() => { }} >
+
+                    <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => { }}  >
+                      <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
+
+                      </Image>
+                      <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px', zIndex: 2 }}>
+                        <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
+                          Agree
+                        </Text>
+                      </Flex>
+                    </ActionIcon>
+
+
+
+
+                    <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => { fetchAnswer(question) }}  >
+                      <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
+
+                      </Image>
+                      <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px', zIndex: 2 }}>
+                        <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
+                          Re-generate
+                        </Text>
+                      </Flex>
+                    </ActionIcon>
+                    <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => { newPrompt() }}  >
+                      <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
+
+                      </Image>
+                      <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px', zIndex: 2 }}>
+                        <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
+                          New prompt
+                        </Text>
+                      </Flex>
+                    </ActionIcon>
+                    {/* <Button bg='none' w={148} h={58} className={classes.button} onClick={() => { }} >
                       <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px' }}>
                         <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
                           Agree
@@ -196,7 +231,7 @@ export const BetaAI = () => {
                         </Text>
                       </Flex>
 
-                    </Button>
+                    </Button> */}
                   </Flex>
                 </Box>
               </Box>

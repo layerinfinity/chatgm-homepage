@@ -35,9 +35,10 @@
 
 .button {
   background-image: url("images/demo_ai/button.png");
-  width: 148;
-  height: 58;
+
 }
+
+
 
 .send_button {
   background-image: url("images/demo_ai/send_button.svg");
