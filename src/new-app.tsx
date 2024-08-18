@@ -197,13 +197,10 @@ export const App = () => {
             >
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/gm-ecosystem" element={<GmEcosystemPage />} />
-                <Route path="/fortress" element={<FortressPage />} />
                 <Route path="/tos" element={<TermsOfUsePage />} />
                 <Route path="/privacy-policy" element={<PPPage />} />
-                <Route path="/white-paper" element={<ComingSon />} />
-                <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/500" element={<Error500Page />} />
+                {/* <Route path="/about-us" element={<AboutUs />} /> */}
+                <Route path="/*" element={<Error500Page />} />
                 <Route path="/mission" element={<Mission />} />
                 <Route path="/protocol" element={<Protocol />} />
                 <Route path="/a1" element={<Tokenomics />} />

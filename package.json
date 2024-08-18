@@ -23,6 +23,7 @@
     "@mantine/notifications": "6.0.21",
     "@tabler/icons-react": "2.46.0",
     "@tanstack/react-query": "5.17.19",
+    "axios": "1.7.4",
     "dayjs": "1.11.9",
     "embla-carousel-autoplay": "7.1.0",
     "embla-carousel-react": "7.1.0",

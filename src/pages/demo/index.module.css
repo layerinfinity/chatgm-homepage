@@ -12,6 +12,15 @@
   padding: 55px 60px 55px 60px;
   /* height: 360px; */
   box-sizing: border-box;
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    padding: 55px 20px 55px 20px;
+  }
+
 }
 
 .box_result {
@@ -20,7 +29,7 @@
   border: 1px solid #735699;
   background: #3C2168;
   padding: 14px 29px;
-  width: fit-content;
+  /* width: fit-content; */
   box-sizing: border-box;
 }
 
@@ -28,6 +37,13 @@
   background-image: url("images/demo_ai/button.svg");
   width: 148;
   height: 58;
+}
+
+.send_button {
+  background-image: url("images/demo_ai/send_button.svg");
+  background: 'none';
+  width: 20;
+  height: 20;
 }
 
 .loader {
@@ -62,5 +78,137 @@
     width: 64px;
     height: 64px;
     transform: rotate(360deg)
+  }
+}
+
+.top {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+.a1 {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 30px;
+  background: #d21f1f;
+}
+
+.a1:before {
+  background: #d21f1f;
+  animation-delay: 0s;
+  content: "";
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: ani 2s infinite ease-in;
+}
+
+.a2 {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 30px;
+  background: #69c820;
+}
+
+.a2:before {
+  background: #69c820;
+  animation-delay: 0.2s;
+  content: "";
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: ani 2s infinite ease-in;
+}
+
+.a3 {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 30px;
+  background: #ceb32a;
+}
+
+.a3:before {
+  background: #ceb32a;
+  animation-delay: 0.4s;
+  content: "";
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: ani 2s infinite ease-in;
+}
+
+.a4 {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 30px;
+  background: #306bb3;
+  animation-delay: 6s;
+
+
+}
+
+.a4:before {
+  background: #306bb3;
+  animation-delay: 6s;
+  content: "";
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: ani 2s infinite ease-in;
+}
+
+.top:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: ani 2s infinite ease-in;
+}
+
+@keyframes ani {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }

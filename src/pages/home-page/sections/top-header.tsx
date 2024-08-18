@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Image, Text, createStyles, em, useMantineTheme } from '@mantine/core';
+import { Anchor, Box, Button, Container, Flex, Image, Text, createStyles, em, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import Typewriter from 'typewriter-effect';
 const useStyles = createStyles((theme) => ({
@@ -66,7 +66,8 @@ export const TopHeader = () => {
                             }}
                         />
                     </Text>
-                    <Button onClick={() => { window.open('https://app.chatgm.com', '_blank') }} mt={56} w={150} h={52} style={{ background: '#644CFF', borderRadius: 15 }}>
+
+                    <Button onClick={() => { window.open('https://1chain.ai/beta', '_blank') }} mt={56} w={150} h={52} style={{ background: '#644CFF', borderRadius: 15 }}>
                         <Image pos='absolute' style={{ width: 60 }} fit='contain' left={-60} src='images/one-chainai/svg/letstart.svg'></Image>
                         Let’s start!
                     </Button>

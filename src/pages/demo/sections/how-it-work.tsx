@@ -44,7 +44,7 @@ export const HowItWork = () => {
 
   return (
     <Box
-      mt={95}
+    // mt={95}
     >
       {/* <Flex direction='row'>
         <Text ff="Outfit" fw={400} size={18} color="white.0" ta="center">

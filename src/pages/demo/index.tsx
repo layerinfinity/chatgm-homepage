@@ -1,24 +1,69 @@
 import { ActionIcon, BackgroundImage, Box, Button, Center, Container, Flex, Image, Text, TextInput, rem } from '@mantine/core';
 import classes from './index.module.css';
+import './index.module.css';
 // import { MeetOurTeam } from './meet-our-team';
+import axios from 'axios';
 
 import { HowItWork } from './sections/how-it-work';
 import { useInputState } from '@mantine/hooks';
 import { IconArrowRight, IconSearch, IconPlayerPlayFilled } from '@tabler/icons-react';
+import { useEffect, useState } from 'react';
 
 export const BetaAI = () => {
-  const [stringValue, setStringValue] = useInputState('');
+  const [question, setQuestion] = useState('');
+  const [message, setMessage] = useState('');
+  const [nodes, setNodes] = useState(0);
+  const [accuraty, setAccuraty] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onMovedEcoSystemClicked = (idElement: string) => {
+
+    const element = document.getElementById(idElement);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  async function fetchAnswer(question: string) {
+    if (isLoading) return
+    if (question.length == 0) return
+    setIsLoading(true)
+    onMovedEcoSystemClicked('loading')
+    try {
+      const response = await axios.post('https://api.chatgm.com/api/ai/messages', { message: question });
+      setMessage(response.data.data.message)
+      setNodes(response.data.data.nodes)
+      setAccuraty(response.data.data.accuraty)
+      setIsLoading(false)
+      onMovedEcoSystemClicked('answer')
+    } catch (error) {
+      console.error(error);
+    }
+
+    // setTimeout(() => {
+    //   setIsLoading(false)
+
+    //   onMovedEcoSystemClicked('answer')
+    // }, 3000)
+
+  }
+  function newPrompt() {
+    if (isLoading) return
+    setQuestion('')
+    onMovedEcoSystemClicked('question')
+
+  }
 
   return (
-    <>
-      {/* <Image style={{ position: 'absolute', bottom: -1000, height: '1297px', width: '100%' }} src='images/demo_ai/demo_bottom.png' /> */}
+    < Box pt={95} pb={190} pos='relative' >
+      <Image style={{ position: 'absolute', bottom: 0, width: '100%', opacity: 0.2 }} src='images/demo_ai/demo_bottom.png' />
       <Image style={{ position: 'absolute', left: 0, top: 250, width: '44%', maxWidth: 637, zIndex: -1 }} src='images/demo_ai/left.png' />
       <Image style={{ position: 'absolute', right: 0, top: 0, width: '44%', maxWidth: 340, zIndex: -1 }} src='images/demo_ai/right.png' />
       <Container>
         <HowItWork />
         <Box>
-          <Flex direction='row' justify='center' ml='auto' mr='auto' mt={46}>
-            <Box className={classes.box} bg='red' w={680} mih={360}>
+          <Flex direction={{ md: 'row', base: 'column-reverse' }} justify='center' align='center' ml='auto' mr='auto' mt={46}>
+            <Box id='question' mt={{ md: 0, base: 40 }} className={classes.box} maw={680} w='100%' mih={360}>
               <Text style={{ lineHeight: '80px' }} pos='absolute' color='#FF4BE2' size={72} weight={600} ff='Outfit' w={74} h={80} right={60} top={20}> 01
               </Text>
               <Text mt={5} color='white' size={20} weight={700} ff='Outfit'>
@@ -26,10 +71,14 @@ export const BetaAI = () => {
               </Text>
               <TextInput
                 mt={30}
-
+                value={question}
                 // radius="xl"
                 size="md"
                 placeholder="Prompt here type something"
+                onChange={(event) =>
+                  setQuestion(event.currentTarget.value)
+
+                }
                 styles={{
                   input: {
                     fontFamily: 'Open Sans',
@@ -40,8 +89,11 @@ export const BetaAI = () => {
 
 
                 rightSection={
+                  <ActionIcon variant="filled" color='white' onClick={() => { fetchAnswer(question) }}  >
+                    <Image style={{ cursor: 'pointer' }} width={20} fit='contain' src='images/demo_ai/send_button.svg' />
+                  </ActionIcon>
 
-                  <Image style={{ cursor: 'pointer' }} width={20} fit='contain' src='images/demo_ai/send_button.svg' />
+
 
                 }
               />
@@ -50,7 +102,7 @@ export const BetaAI = () => {
               </Text>
 
             </Box>
-            <Box ml={74} maw={330} >
+            <Box ml={{ md: 74, base: 0 }} maw={{ md: 330, base: '100%' }} >
               <Flex direction='column' justify='flex-start' mt={10}>
                 <Text ff='Outfit' size={12} color='#FF80AB'>
                   STEP 1:
@@ -83,19 +135,17 @@ export const BetaAI = () => {
             </Box>
 
           </Flex>
-          {/* loading */}
-          <Box h={300}>
-            <Box className={classes.loader}>
+          <Flex id='loading' h={150} justify='center' align='center'>
+            {isLoading ? <Box className={classes.loader} /> : <></>}
 
-            </Box>
-          </Box>
 
+          </Flex>
 
           {/* result */}
-          <Flex justify='flex-end'>
+          <Flex id='answer' mt={100} justify={{ base: 'flex-end', sx: 'center' }}>
             <Box maw={680} w='100%' mih={360} pos='relative'>
               {/* <Box pos='relative' > */}
-              <Image style={{ position: 'absolute', width: 363, top: -260, right: -60 }} src='images/demo_ai/EDITION.png'></Image>
+              <Image style={{ position: 'absolute', width: 363, top: -260, right: -60, zIndex: -2 }} src='images/demo_ai/EDITION.png'></Image>
               {/* </Box> */}
               <Box className={classes.box} bg='red' w='100%' h='100%'>
 
@@ -106,15 +156,15 @@ export const BetaAI = () => {
                 </Text>
                 <Box mt={30}>
                   <Text mt={20} color='white' size={12} weight={400} ff='Open Sans'>
-                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >99%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>4,535 </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>234</span> notes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>10 LLMs </span>
+                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >{accuraty}%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>4,535 </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{nodes}</span> notes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>10 LLMs </span>
                   </Text>
                   <Box mt={25} className={classes.box_result}>
                     <Text ff='Open Sans' size={14} color='#FECBFF'>
-                      The standard chunk of Lorem lpsum used since the 1500s is reproduced below for those interested
+                      {message}
                     </Text>
                   </Box>
-                  <Flex wrap="wrap" gap={50} mt={25}>
-                    <Button bg='none' w={148} h={58} className={classes.button} >
+                  <Flex wrap="wrap" justify='center' gap={50} mt={25}>
+                    <Button bg='none' w={148} h={58} className={classes.button} onClick={() => { }} >
                       <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px' }}>
                         <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
                           Agree
@@ -122,7 +172,9 @@ export const BetaAI = () => {
                       </Flex>
 
                     </Button>
-                    <Button bg='none' w={148} h={58} className={classes.button} >
+                    <Button bg='none' w={148} h={58} className={classes.button} onClick={() => {
+                      fetchAnswer(question)
+                    }} >
                       <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px' }}>
                         <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
                           Re-generate
@@ -131,7 +183,9 @@ export const BetaAI = () => {
 
                     </Button>
 
-                    <Button bg='none' w={148} h={58} className={classes.button} >
+                    <Button bg='none' w={148} h={58} className={classes.button} onClick={() => {
+                      newPrompt()
+                    }} >
                       <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px' }}>
                         <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
                           New prompt
@@ -151,6 +205,6 @@ export const BetaAI = () => {
       </Container >
 
 
-    </>
+    </Box>
   );
 };
