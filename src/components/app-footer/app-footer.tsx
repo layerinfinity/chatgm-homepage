@@ -10,6 +10,7 @@ import {
   TELEGRAM_URL,
   TWITTER_URL,
 } from '~/configs';
+import { useLocation } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -49,22 +50,24 @@ const useStyles = createStyles((theme) => ({
 
 export const AppFooter = () => {
   const { classes, theme } = useStyles();
+  const location = useLocation();
 
 
   return (
-    <Box className={classes.container}>
-      <Container>
-        <Flex direction="column" align="center" justify="center">
-          <Button onClick={() => { window.open('https://twitter.com/1ChainAI', '_blank') }} mt={35} w={180} h={60} style={{ background: '#644CFF', borderRadius: 20 }}>
-            <Image pos='absolute' style={{ width: 60, transform: 'scale(-1,-1)' }} fit='revert' right={-60} src='images/one-chainai/svg/letstart.svg'></Image>
-            <Text ff="Open Sans" fw={700} size={18} color='white.0' align='center' >
-              Follow us
-            </Text>
-          </Button>
+    location.pathname == '/beta' ? <></> :
+      <Box className={classes.container}>
+        <Container>
+          <Flex direction="column" align="center" justify="center">
+            <Button onClick={() => { window.open('https://twitter.com/1ChainAI', '_blank') }} mt={35} w={180} h={60} style={{ background: '#644CFF', borderRadius: 20 }}>
+              <Image pos='absolute' style={{ width: 60, transform: 'scale(-1,-1)' }} fit='revert' right={-60} src='images/one-chainai/svg/letstart.svg'></Image>
+              <Text ff="Open Sans" fw={700} size={18} color='white.0' align='center' >
+                Follow us
+              </Text>
+            </Button>
 
 
-          {/* Download Buttons */}
-          {/* <Flex
+            {/* Download Buttons */}
+            {/* <Flex
             wrap="wrap"
             align="center"
             justify="center"
@@ -112,67 +115,67 @@ export const AppFooter = () => {
 
           </Flex> */}
 
-          {/* Contact */}
-          <Flex
-            direction={{ base: 'column', sm: 'row' }}
-            align="center"
-            justify='space-between'
-            w="100%"
-            mt={40}
-            px={{ base: 0, lg: 45 }}
-          // mb={{ sm: 50, md: 85 }}
-          >
-            {/* Left */}
-            <Flex direction='column' align={{ sm: 'flex-start', base: 'center' }} >
-              <Text ff="Outfit" fw={600} size={32} lh="2.5rem" color="purpleGlow.5">
-                Connect Us
-              </Text>
-              <Text ff="Open Sans" fw={400} size={16} lh="1.375rem" color="purpleGlow.5" mt={10}>
-                We will answer all your questions
-              </Text>
-
-            </Flex>
-
-
-          </Flex>
-          <Flex
-            direction={{ base: 'column', lg: 'row' }}
-            align="center"
-            justify={{ base: 'center', lg: 'space-between' }}
-            gap={2}
-            w="100%"
-            mih={80}
-            mt={10}
-            py={{ base: 10, sm: 0 }}
-            px={{ base: 0, lg: 45 }}
-            style={{
-              borderTop: `1px solid ${theme.colors.purpleGlow[6]}`,
-            }}
-          >
-            <Box >
-              <Text ff="Outfit" fw={400} size={18} color="purpleGlow.5" mb={{ base: 10, sm: 0 }}>
-                ©2024 1chain.AI. All rights reserved
-              </Text>
-            </Box>
-
+            {/* Contact */}
             <Flex
-              wrap="wrap"
-              rowGap={5}
-              columnGap={25}
-              justify="center"
-              style={{ color: theme.colors.gray[2] }}
+              direction={{ base: 'column', sm: 'row' }}
+              align="center"
+              justify='space-between'
+              w="100%"
+              mt={40}
+              px={{ base: 0, lg: 45 }}
+            // mb={{ sm: 50, md: 85 }}
             >
+              {/* Left */}
+              <Flex direction='column' align={{ sm: 'flex-start', base: 'center' }} >
+                <Text ff="Outfit" fw={600} size={32} lh="2.5rem" color="purpleGlow.5">
+                  Connect Us
+                </Text>
+                <Text ff="Open Sans" fw={400} size={16} lh="1.375rem" color="purpleGlow.5" mt={10}>
+                  We will answer all your questions
+                </Text>
 
-              <Anchor color="purpleGlow.5" href="tos" target="_blank">
-                Terms Of Use
-              </Anchor>
-              <Anchor color="purpleGlow.5" href="privacy-policy" target="_blank">
-                Privacy Policy
-              </Anchor>
+              </Flex>
+
+
+            </Flex>
+            <Flex
+              direction={{ base: 'column', lg: 'row' }}
+              align="center"
+              justify={{ base: 'center', lg: 'space-between' }}
+              gap={2}
+              w="100%"
+              mih={80}
+              mt={10}
+              py={{ base: 10, sm: 0 }}
+              px={{ base: 0, lg: 45 }}
+              style={{
+                borderTop: `1px solid ${theme.colors.purpleGlow[6]}`,
+              }}
+            >
+              <Box >
+                <Text ff="Outfit" fw={400} size={18} color="purpleGlow.5" mb={{ base: 10, sm: 0 }}>
+                  ©2024 1chain.AI. All rights reserved
+                </Text>
+              </Box>
+
+              <Flex
+                wrap="wrap"
+                rowGap={5}
+                columnGap={25}
+                justify="center"
+                style={{ color: theme.colors.gray[2] }}
+              >
+
+                <Anchor color="purpleGlow.5" href="tos" target="_blank">
+                  Terms Of Use
+                </Anchor>
+                <Anchor color="purpleGlow.5" href="privacy-policy" target="_blank">
+                  Privacy Policy
+                </Anchor>
+              </Flex>
             </Flex>
           </Flex>
-        </Flex>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
   );
 };

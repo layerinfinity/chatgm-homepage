@@ -12,6 +12,7 @@ import Mission from './pages/mission';
 import { Protocol } from './pages/protocol';
 import ScrollToTop from './scroll_to_top';
 import { Tokenomics } from './pages/tokenomics';
+import { BetaAI } from './pages/demo';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -180,7 +181,7 @@ export const App = () => {
                 root: {
                   padding: 0,
                   margin: 0,
-                  background: '#00000026'
+
                 },
                 main: {
                   padding: 0,
@@ -206,6 +207,7 @@ export const App = () => {
                 <Route path="/mission" element={<Mission />} />
                 <Route path="/protocol" element={<Protocol />} />
                 <Route path="/a1" element={<Tokenomics />} />
+                <Route path="/beta" element={<BetaAI />} />
               </Routes>
             </AppShell>
           </ScrollToTop>
