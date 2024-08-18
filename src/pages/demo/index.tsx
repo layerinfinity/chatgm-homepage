@@ -160,7 +160,7 @@ export const BetaAI = () => {
                 </Text>
                 <Box mt={30}>
                   <Text mt={20} color='white' size={12} weight={400} ff='Open Sans'>
-                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >{accuraty}%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{timer} </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{nodes}</span> notes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>10 LLMs </span>
+                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >{accuraty}%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{timer} </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{nodes}</span> nodes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>10 LLMs </span>
                   </Text>
                   <Box mt={25} className={classes.box_result}>
                     <Text ff='Open Sans' size={14} color='#FECBFF'>
