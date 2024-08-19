@@ -143,15 +143,15 @@ export const BetaAI = () => {
           <Flex id='loading' wrap='wrap' mih={240} justify='center' align='center'>
 
             {isLoading ? <>
-              <Box className={classes.a1}></Box>
-              <Box className={classes.a2}></Box>
-              <Box className={classes.a3}></Box>
-              <Box className={classes.a4}></Box>
-              <Box className={classes.a5}></Box>
-              <Box className={classes.a6}></Box>
-              <Box className={classes.a7}></Box>
-              <Box className={classes.a8}></Box>
-              <Box className={classes.a9}></Box>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM1.png' className={classes.a1}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM2.png' className={classes.a2}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM3.png' className={classes.a3}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM4.png' className={classes.a4}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM5.png' className={classes.a5}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM6.png' className={classes.a6}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM7.png' className={classes.a7}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM8.png' className={classes.a8}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM9.png' className={classes.a9}></BackgroundImage>
 
             </> : <></>}
 

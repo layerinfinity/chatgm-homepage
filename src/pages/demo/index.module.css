@@ -91,9 +91,6 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM1.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
 
   &:before {
@@ -101,10 +98,10 @@
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
     animation: ani 2s infinite ease-in;
@@ -119,18 +116,15 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM2.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     background: greenyellow;
     z-index: -1;
     border-radius: 50%;
@@ -146,19 +140,16 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM3.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     background: #ceb32a;
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
     animation: ani 2s infinite ease-in;
@@ -173,18 +164,15 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM4.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
     background: #306bb3;
@@ -200,21 +188,18 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM5.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
-    background: #306bb3;
+    background: #d21f1f;
     animation: ani 2s infinite ease-in;
     animation-delay: 0.8s;
   }
@@ -227,21 +212,18 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM6.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
-    background: #306bb3;
+    background: greenyellow;
     animation: ani 2s infinite ease-in;
     animation-delay: 1s;
   }
@@ -254,21 +236,18 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM7.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
-    background: #306bb3;
+    background: #ceb32a;
     animation: ani 2s infinite ease-in;
     animation-delay: 1.2s;
   }
@@ -281,18 +260,15 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM8.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
     background: #306bb3;
@@ -308,21 +284,18 @@
   height: 50px;
   border-radius: 50%;
   margin: 15px;
-  background: url('images/demo_ai/LLMs/LLM9.png');
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 60px;
-    height: 60px;
+    left: 0px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     z-index: -1;
-    background: #306bb3;
+    background: #d21f1f;
     animation: ani 2s infinite ease-in;
     animation-delay: 1.6s;
   }
