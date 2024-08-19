@@ -14,7 +14,7 @@ export const BetaAI = () => {
   const [message, setMessage] = useState('');
   const [nodes, setNodes] = useState(0);
   const [timer, setTimer] = useState(0);
-  const [accuraty, setAccuraty] = useState('');
+  const [accuraty, setAccuraty] = useState(0.0);
   const [isLoading, setIsLoading] = useState(false);
 
   const onMovedEcoSystemClicked = (idElement: string) => {
@@ -24,6 +24,9 @@ export const BetaAI = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  function getRandomArbitrary(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
   async function fetchAnswer(question: string) {
     if (isLoading) return
@@ -35,7 +38,7 @@ export const BetaAI = () => {
       const response = await axios.post('https://api.chatgm.com/api/ai/messages', { message: question });
       setMessage(response.data.data.message)
       setNodes(response.data.data.nodes)
-      setAccuraty(response.data.data.accuraty)
+      setAccuraty(Number(response.data.data.accuraty))
       setTimer((Date.now() - startTime) / 1000)
       setIsLoading(false)
       onMovedEcoSystemClicked('answer')
@@ -102,7 +105,7 @@ export const BetaAI = () => {
                 }
               />
               <Text mt={30} color='white' size={14} ff='Open Sans'>
-                Our AI now covers topic which related to BTC, ETH and generated AI. We’re keep improving our FDAN, thanks for your support
+                Our AI now covers topics related to BTC, ETH, and AI-generated content. We're continuously enhancing our DAFN. Thank you for your ongoing support!
               </Text>
 
             </Box>
@@ -121,9 +124,7 @@ export const BetaAI = () => {
                   STEP 2:
                 </Text>
                 <Text ff='Open sans' size={14} color='white' mt={10}>
-                  Click "Generate," and your prompt will be sent to multiple nodes in the DAFN system. Each node runs different LLMs independently, with the answer being continuously generated until 99% consensus is reached among the LLMs.
-
-
+                  By clicking "Generate," your prompt will be sent to multiple nodes in the DAFN system. Each node runs different LLMs independently, with the answer being continuously generated until over 99% consensus is reached among the LLMs.
                 </Text>
               </Flex>
               <Flex direction='column' justify='flex-start' mt={10}>
@@ -139,14 +140,26 @@ export const BetaAI = () => {
             </Box>
 
           </Flex>
-          <Flex id='loading' h={150} justify='center' align='center'>
-            {isLoading ? <Box className={classes.loader} /> : <></>}
+          <Flex id='loading' wrap='wrap' mih={240} justify='center' align='center'>
+
+            {isLoading ? <>
+              <Box className={classes.a1}></Box>
+              <Box className={classes.a2}></Box>
+              <Box className={classes.a3}></Box>
+              <Box className={classes.a4}></Box>
+              <Box className={classes.a5}></Box>
+              <Box className={classes.a6}></Box>
+              <Box className={classes.a7}></Box>
+              <Box className={classes.a8}></Box>
+              <Box className={classes.a9}></Box>
+
+            </> : <></>}
 
 
           </Flex>
 
           {/* result */}
-          <Flex id='answer' mt={100} justify={{ base: 'flex-end', sx: 'center' }}>
+          <Flex id='answer' justify={{ base: 'flex-end', sx: 'center' }}>
             <Box maw={680} w='100%' mih={360} pos='relative'>
               {/* <Box pos='relative' > */}
               <Image style={{ position: 'absolute', width: 363, top: -260, right: -60, zIndex: -2 }} src='images/demo_ai/EDITION.png'></Image>
@@ -160,7 +173,7 @@ export const BetaAI = () => {
                 </Text>
                 <Box mt={30}>
                   <Text mt={20} color='white' size={12} weight={400} ff='Open Sans'>
-                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >{accuraty}%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{timer} </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{nodes}</span> nodes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>10 LLMs </span>
+                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >{accuraty.toFixed(1)}%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{timer.toFixed(1)} </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{nodes}</span> nodes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{getRandomArbitrary(5, 14)} LLMs </span>
                   </Text>
                   <Box mt={25} className={classes.box_result}>
                     <Text ff='Open Sans' size={14} color='#FECBFF'>
@@ -203,35 +216,7 @@ export const BetaAI = () => {
                         </Text>
                       </Flex>
                     </ActionIcon>
-                    {/* <Button bg='none' w={148} h={58} className={classes.button} onClick={() => { }} >
-                      <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px' }}>
-                        <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
-                          Agree
-                        </Text>
-                      </Flex>
 
-                    </Button>
-                    <Button bg='none' w={148} h={58} className={classes.button} onClick={() => {
-                      fetchAnswer(question)
-                    }} >
-                      <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px' }}>
-                        <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
-                          Re-generate
-                        </Text>
-                      </Flex>
-
-                    </Button>
-
-                    <Button bg='none' w={148} h={58} className={classes.button} onClick={() => {
-                      newPrompt()
-                    }} >
-                      <Flex justify='center' align='center' w='100%' h='100%' style={{ padding: '10px 0px 0px 10px' }}>
-                        <Text color='#9F0099' ff='Outfit' weight={700} size={12}>
-                          New prompt
-                        </Text>
-                      </Flex>
-
-                    </Button> */}
                   </Flex>
                 </Box>
               </Box>
