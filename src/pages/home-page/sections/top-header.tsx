@@ -8,9 +8,11 @@ const useStyles = createStyles((theme) => ({
 export const TopHeader = () => {
     const { classes, theme } = useStyles();
     const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+    const isSmallScreen = useMediaQuery(`(max-width: ${em(400)})`);
     return (
         <Box
             pb={isMobile ? 50 : 100}
+            pt={80}
 
             style={{
                 background: ' linear-gradient(180deg, rgba(0,0,0,0) , rgba(144, 144, 144, 0.1) )',
@@ -20,10 +22,24 @@ export const TopHeader = () => {
                 <Text mt={55} ff="Outfit" fw={400} size={18} color={theme.colors.white[0]} ta="left" style={{ lineHeight: '22px' }}>
                     1chain.AI
                 </Text>
+                <Box>
 
-                <Text style={{ lineHeight: '80px', textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" >
-                    Cryptobot.Chat
-                </Text>
+                    <Text style={{ width: 'fit-content', lineHeight: isMobile ? '50px' : '80px', textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" >
+                        <Box pos='relative' >
+                            <Box pos='absolute' top={isMobile ? -60 : -75} right={{ base: 0, xs: -195 }}>
+                                <Button onClick={() => { }} w={{ xs: 180, base: 140 }} h={{ xs: 60, base: 50 }} style={{ background: '#00BFA5', borderRadius: 20 }}>
+                                    <Image pos='absolute' style={{ width: 60 }} fit='revert' left={-60} src='images/one-chainai/svg/letstart.svg'></Image>
+                                    <Text ff="Open Sans" fw={700} size={isSmallScreen ? 14 : 18} color='white.0' align='center' >
+                                        Coming soon
+                                    </Text>
+                                </Button>
+                            </Box>
+                        </Box>
+                        Cryptobot.Chat
+                    </Text>
+                </Box>
+
+
                 <Text color={theme.colors.teal[2]} style={{ lineHeight: '22.68px', marginTop: '30px' }}>
                     Grow Your Wealth with Expertly Crafted Automated Bots
                 </Text>
