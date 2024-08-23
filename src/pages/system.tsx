@@ -19,7 +19,7 @@ const useStyles = createStyles((theme) => ({
 
 export const System = () => {
   const { classes, theme } = useStyles();
-  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
 
   return (
     <Box style={{ height: '100%', width: '100%', zIndex: -100 }}>
@@ -28,16 +28,22 @@ export const System = () => {
       <Box
       >
         <Box pos='absolute' w='100%'>
-          <Image
-            style={{ width: '40%', maxWidth: 800 }}
-            src='images/cryptobot_chat/system1.png'
-          />
 
 
         </Box>
         <Container>
-          <Flex justify='end'>
-            <Box maw={333}>
+
+          <Flex direction={{ base: 'column', xs: 'row' }} mt={{ base: 20, xs: 10 }}>
+            <Box pos='relative' style={{ flex: 2 }}>
+              <Image
+                top={0}
+                ml={{ base: '0', xs: '-50%' }}
+
+                style={{ width: isMobile ? '100%' : '145%' }}
+                src='images/cryptobot_chat/system1.png'
+              />
+            </Box>
+            <Box style={{ flex: 1 }} maw={333}>
               <Text mt={55} ff="Outfit" fw={400} size={18} color={theme.colors.white[0]} ta="left" style={{ lineHeight: '22px' }}>
                 Cryptobot.chat
               </Text>
@@ -52,7 +58,7 @@ export const System = () => {
             </Box>
           </Flex>
           <Image
-            mt={461}
+            mt={50}
             mb={118}
             style={{ width: '100%', maxWidth: 879 }}
             src='images/cryptobot_chat/system2.png'

@@ -20,11 +20,11 @@ export const HomePage = () => {
   return (
     <Box
     >
-      <Box style={{ position: 'absolute', height: 660, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }}>
+      <Box style={{ position: 'absolute', height: 360, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }}>
       </Box>
       <Space h={55} />
       <TopHeader />
-      {/* <HowItWork /> */}
+      <HowItWork />
       <OurPartner />
 
     </Box>

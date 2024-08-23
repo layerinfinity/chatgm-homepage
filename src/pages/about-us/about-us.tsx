@@ -1,4 +1,4 @@
-import { Anchor, Box, Button, Center, Container, Flex, Image, MediaQuery, Space, Text, createStyles, em } from '@mantine/core';
+import { Anchor, BackgroundImage, Box, Button, Center, Container, Flex, Image, MediaQuery, Space, Text, createStyles, em } from '@mantine/core';
 import { ANDROID_STORE_URL, IOS_STORE_URL } from '~/configs';
 import Typewriter from 'typewriter-effect';
 import { useMediaQuery } from '@mantine/hooks';
@@ -19,30 +19,33 @@ const useStyles = createStyles((theme) => ({
 
 export const AboutUs = () => {
   const { classes, theme } = useStyles();
-  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  const isMobile = useMediaQuery(`(max-width: ${em(576)})`);
 
   return (
     <Box>
       <Box style={{ position: 'absolute', height: 760, width: '100%', background: theme.fn.linearGradient(0, '#6016D900', '#000000FF'), zIndex: -1 }}>
       </Box>
-      <Space h={55} />
-      <Box
-      >
-        <Box pos='absolute'
-          top={{ base: 50, sm: 0 }}
-          right={-65}
-          w={{ base: '60%', sm: '50%' }}
-          maw={800}
 
+      <Box>
+        {/* <Box pos='initial'
+          bg='red'
+        > */}
+        <Image
+          pos='absolute'
+          top={{ base: 40, sm: 0 }}
+          right={0}
+
+          fit='contain'
+          src='images/cryptobot_chat/about.png'
+          maw={800}
+          // bg='yellow'
+          // w={{ base: '60%', sm: '50%' }}
+          style={{ width: isMobile ? '60%' : '55%', zIndex: -1 }}
+        // height='auto'
         >
-          <Image
-            fit='contain'
-            src='images/cryptobot_chat/about.png'
-            style={{ width: '100%', }}
-          >
-          </Image>
-        </Box>
-        <Container pt={70} pb={70}>
+        </Image>
+        {/* </Box> */}
+        <Container pt={150} pb={70}>
           <Image
             // bg='red'
             fit='contain'

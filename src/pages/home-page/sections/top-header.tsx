@@ -32,7 +32,7 @@ export const TopHeader = () => {
                     Cryptobot.Chat uses 1Chain.AI to simplify crypto for everyone. Convert local currencies to crypto and vice versa, complete 1-step KYC, trade popular and alternative crypto assets (like altcoins and memecoins), and engage in yield farming (a kind of crypto saving) or airdrop hunting (complete tasks to get crypto rewards. Execute all tasks, from easy to complicated, on any blockchain, CEX, or DEX with simple AI chat commands. No more going through endless buttons, steps or different platforms – just chat with your CryptoBot and get all things crypto done effortlessly and securely.
                 </Text>
             </Container>
-            <HowItWork />
+            {/* <HowItWork /> */}
         </Box>
     );
 };

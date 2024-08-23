@@ -80,7 +80,11 @@ export const HowItWork = () => {
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   return (
     <Box
-      pt={{ base: 100, md: 200 }}
+      pt={{ base: 60, md: 100 }}
+      pb={{ base: 100, md: 148 }}
+      style={{
+        background: ' linear-gradient(180deg, rgba(0,0,0,0) , rgba(144, 144, 144, 0.1) )',
+      }}
     >
       <Container >
         <Box >
