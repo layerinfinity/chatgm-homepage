@@ -12,3 +12,9 @@ export const TWITTER_URL = 'https://twitter.com/ChatGM_Official';
 export const FACEBOOK_URL = 'https://www.facebook.com/ChatGMSocialxCrypto';
 export const MEDIUM_URL = 'https://medium.com/@chatGM';
 export const TELEGRAM_URL = 'https://t.me/+qmKYRO2AUA0wOGE0';
+
+declare global {
+  interface Window {
+    highlightSyntax: () => void
+  }
+}
