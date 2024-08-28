@@ -139,7 +139,7 @@ function initDrawingCanvas() {
     createLoader();
     if (loader) {
         createExploader();
-        createParticles();
+        // createParticles();
     }
 
 }
@@ -198,14 +198,14 @@ function draw() {
     }
 }
 function highlightSyntax() {
-    drawingCanvas = document.getElementById("drawing_canvas"),
-        drawingCanvas.width = viewWidth;
-    drawingCanvas.height = viewHeight;
-    ctx = drawingCanvas.getContext('2d');
-    createParticles();
+    const answertag = document.getElementById("answerId")
+    const canvas = document.getElementById("drawing_canvas")
 
-    //     initDrawingCanvas();
-    //     requestAnimationFrame(loop);
+    canvas.style.left = answertag.offsetLeft + 'px';
+    canvas.style.top = answertag.offsetTop - 10 + 'px';
+    canvas.style.width = answertag.offsetWidth + 'px';
+    canvas.style.height = answertag.offsetHeight + 'px';
+    createParticles();
 }
 
 
@@ -230,7 +230,7 @@ function loop() {
         loader.reset();
         exploader.reset();
         particles.length = 0;
-        createParticles();
+        // createParticles();
     }
 
     requestAnimationFrame(loop);

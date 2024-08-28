@@ -32,7 +32,12 @@ export const BetaAI = () => {
   async function fetchAnswer(question: string) {
 
     if (isLoading) return
-    if (question.length == 0) return
+    if (question.length == 0) {
+      if (message.length > 0) {
+        setMessage('')
+      }
+      return
+    }
     setIsLoading(true)
     onMovedEcoSystemClicked('loading')
     const startTime = Date.now()
@@ -59,6 +64,9 @@ export const BetaAI = () => {
   function newPrompt() {
     if (isLoading) return
     setQuestion('')
+    if (message.length > 0) {
+      setMessage('')
+    }
     onMovedEcoSystemClicked('question')
 
   }
@@ -142,9 +150,10 @@ export const BetaAI = () => {
             </Box>
 
           </Flex>
-          <Flex id='loading' wrap='wrap' mih={540} justify='center' align='center'>
-            <Box>
-              {/* LOADING DOTS... */}
+          <Flex id='loading' wrap='wrap' mih={250} justify='center' align='center'>
+
+
+            {isLoading ? <>
               <div className={classes.pulse_container}>
                 <BackgroundImage src='images/demo_ai/LLMs/LLM1.png' className={`${classes.pulse_bubble} anotherClass ${classes.pulse_bubble_1}`}></BackgroundImage>
                 <BackgroundImage src='images/demo_ai/LLMs/LLM2.png' className={`${classes.pulse_bubble} anotherClass ${classes.pulse_bubble_2}`}></BackgroundImage>
@@ -152,33 +161,12 @@ export const BetaAI = () => {
                 <BackgroundImage src='images/demo_ai/LLMs/LLM4.png' className={`${classes.pulse_bubble} anotherClass ${classes.pulse_bubble_4}`}></BackgroundImage>
                 <BackgroundImage src='images/demo_ai/LLMs/LLM5.png' className={`${classes.pulse_bubble} anotherClass ${classes.pulse_bubble_5}`}></BackgroundImage>
               </div>
-
-              {/* <!-- SOLAR SYSTEM --> */}
-              <div className={classes.spinner_box}>
-                <div className={classes.solar_system}>
-                  <div className={classes.earth_orbit + classes.orbit}>
-                    <div className={classes.planet + classes.earth}></div>
-                    <div className={`${classes.venus_orbit} anotherClass ${classes.orbit}`}>
-                      <BackgroundImage src='images/demo_ai/LLMs/LLM3.png' className={`${classes.planet} anotherClass ${classes.venus}`}></BackgroundImage>
-                      <div className={`${classes.mercury_orbit} anotherClass ${classes.orbit}`}>
-                        <BackgroundImage src='images/demo_ai/LLMs/LLM2.png' className={`${classes.planet} anotherClass ${classes.mercury}`}></BackgroundImage>
-                        <BackgroundImage src='images/demo_ai/LLMs/LLM5.png' className={classes.sun}></BackgroundImage>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* electric */}
-
-            </Box>
-
-            {isLoading ? <>
-              <BackgroundImage src='images/demo_ai/LLMs/LLM1.png' className={classes.a1}></BackgroundImage>
+              {/* <BackgroundImage src='images/demo_ai/LLMs/LLM1.png' className={classes.a1}></BackgroundImage>
               <BackgroundImage src='images/demo_ai/LLMs/LLM2.png' className={classes.a2}></BackgroundImage>
               <BackgroundImage src='images/demo_ai/LLMs/LLM3.png' className={classes.a3}></BackgroundImage>
               <BackgroundImage src='images/demo_ai/LLMs/LLM4.png' className={classes.a4}></BackgroundImage>
               <BackgroundImage src='images/demo_ai/LLMs/LLM5.png' className={classes.a5}></BackgroundImage>
-              {/* <BackgroundImage src='images/demo_ai/LLMs/LLM6.png' className={classes.a6}></BackgroundImage>
+              <BackgroundImage src='images/demo_ai/LLMs/LLM6.png' className={classes.a6}></BackgroundImage>
               <BackgroundImage src='images/demo_ai/LLMs/LLM7.png' className={classes.a7}></BackgroundImage>
               <BackgroundImage src='images/demo_ai/LLMs/LLM8.png' className={classes.a8}></BackgroundImage>
               <BackgroundImage src='images/demo_ai/LLMs/LLM9.png' className={classes.a9}></BackgroundImage> */}
@@ -189,8 +177,8 @@ export const BetaAI = () => {
           </Flex>
 
           {/* result */}
-          <Flex id='answer' justify={{ base: 'flex-end', sx: 'center' }}>
-            <Box maw={680} w='100%' mih={360} pos='relative'>
+          <Flex justify={{ base: 'flex-end', sx: 'center' }}>
+            <Box id='answerId' maw={680} w='100%' mih={360} pos='relative'>
               {/* <Box pos='relative' > */}
               <Image style={{ position: 'absolute', width: 363, top: -260, right: -60, zIndex: -2 }} src='images/demo_ai/EDITION.png'></Image>
               {/* </Box> */}
@@ -214,7 +202,10 @@ export const BetaAI = () => {
                   </Box>
                   <Flex wrap="wrap" justify='center' gap={50} mt={25}>
 
-                    <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => { window?.highlightSyntax(); }}  >
+                    <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => {
+                      if (isLoading || message.length == 0) return;
+                      window?.highlightSyntax();
+                    }}  >
                       <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
 
                       </Image>
