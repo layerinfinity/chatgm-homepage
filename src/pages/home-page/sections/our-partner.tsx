@@ -31,7 +31,10 @@ const parners = [
     { name: 'BITGET', iconName: 'bitget', domain: 'bitget.com/' },
     { name: 'BITSTAMP', iconName: 'bitstamp', domain: 'bitstamp.com/' },
     { name: 'KRAKEN', iconName: 'kraken', domain: 'kraken.com/' },
-    { name: 'GATE.IO', iconName: 'gateio', domain: 'gate.io' }
+    { name: 'GATE.IO', iconName: 'gateio', domain: 'gate.io/' },
+    { name: 'GEMINI', iconName: 'gemini', domain: 'gemini.com/' },
+    { name: 'HTX', iconName: 'htx', domain: 'htx.com/' },
+    { name: 'KUCOIN', iconName: 'kucoin', domain: 'kucoin.com/' }
 ]
 export const OurPartner = () => {
     const { classes, theme } = useStyles();
