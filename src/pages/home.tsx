@@ -8,8 +8,8 @@ import PayGMSection from '~/sections/paygm';
 import MobileFocused from '~/sections/mobile-focused';
 import PotentialB2B from '~/sections/potential-b2b';
 
-import AppHeader from '~/components/header';
-import AppFooter from '~/components/footer';
+// import AppHeader from '~/components/header';
+// import AppFooter from '~/components/footer';
 
 const HomePage = () => {
   const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
@@ -23,7 +23,7 @@ const HomePage = () => {
       <Drawer opened={opened} onClose={close} title="Authentication">
         {/* Drawer content */}
       </Drawer>
-      <AppHeader />
+      {/* <AppHeader /> */}
       <Space h={140} />
       <IntroductionSection onClick={scrollIntoView} />
       <Space h={100} ref={targetRef} />
@@ -35,7 +35,7 @@ const HomePage = () => {
       <Space h={100} />
       <PotentialB2B />
 
-      <AppFooter />
+      {/* <AppFooter /> */}
     </Layout>
   );
 };
