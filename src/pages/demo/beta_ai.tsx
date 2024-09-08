@@ -17,6 +17,7 @@ export const BetaAI = () => {
   const [message, setMessage] = useState('');
   const [nodes, setNodes] = useState(0);
   const [timer, setTimer] = useState(0);
+  const [qtyLLMS, setQtyLLMS] = useState(0);
   const [accuraty, setAccuraty] = useState(0.0);
   const [isLoading, setIsLoading] = useState(false);
   const [msgError, setMsgError] = useState('');
@@ -26,6 +27,7 @@ export const BetaAI = () => {
     isPending,
     writeContract,
     error,
+    isSuccess
   } = useWriteContract()
   const { isConnected, chainId, chain } = useAccount()
 
@@ -79,6 +81,7 @@ export const BetaAI = () => {
       setNodes(response.data.data.nodes)
       setAccuraty(Number(response.data.data.accuraty))
       setTimer((Date.now() - startTime) / 1000)
+      setQtyLLMS(getRandomArbitrary(5, 14))
       setIsLoading(false)
       onMovedEcoSystemClicked('answer')
 
@@ -186,7 +189,7 @@ export const BetaAI = () => {
           <Flex id='loading' wrap='wrap' mih={250} justify='center' align='center'>
 
 
-            {isLoading ? <>
+            {isLoading || isPending ? <>
               <div className={classes.pulse_container}>
                 <BackgroundImage src='images/demo_ai/LLMs/LLM1.png' className={`${classes.pulse_bubble} anotherClass ${classes.pulse_bubble_1}`}></BackgroundImage>
                 <BackgroundImage src='images/demo_ai/LLMs/LLM2.png' className={`${classes.pulse_bubble} anotherClass ${classes.pulse_bubble_2}`}></BackgroundImage>
@@ -211,18 +214,19 @@ export const BetaAI = () => {
                   YOUR PROMPT
                 </Text>
                 <Box mt={30}>
-                  <Text mt={20} color='white' size={12} weight={400} ff='Open Sans'>
-                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >{accuraty.toFixed(1)}%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{timer.toFixed(1)} </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{nodes}</span> nodes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{getRandomArbitrary(5, 14)} LLMs </span>
-                  </Text>
-                  <Box mt={25} className={classes.box_result}>
-                    <Text ff='Open Sans' size={14} color='#FECBFF'>
-                      {message}
-                    </Text>
+                  {isLoading || !isSuccess ? <Text mt={20} color='white' size={12} weight={400} ff='Open Sans'>
+                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >0.00 %</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>0.00 </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>0</span> nodes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>0 LLMs </span>
+                  </Text> : <Text mt={20} color='white' size={12} weight={400} ff='Open Sans'>
+                    This result is getting <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }} >{accuraty.toFixed(1)}%</span> + consensus from <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{timer.toFixed(1)} </span> times running of <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{nodes}</span> nodes in <span style={{ color: '#FFF960', fontSize: 14, fontWeight: 700 }}>{qtyLLMS} LLMs </span>
+                  </Text>}
 
+                  <Box mt={25} className={classes.box_result}>
+                    {isLoading || !isSuccess ? <></> : <Text ff='Open Sans' size={14} color='#FECBFF'>
+                      {message}
+                    </Text>}
 
                   </Box>
                   <Flex wrap="wrap" justify='center' gap={50} mt={25}>
-
                     <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => {
                       if (isLoading || message.length == 0) return;
                       window?.highlightSyntax();
@@ -236,10 +240,6 @@ export const BetaAI = () => {
                         </Text>
                       </Flex>
                     </ActionIcon>
-
-
-
-
                     <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => { fetchAnswer(question) }}  >
                       <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
 
@@ -260,23 +260,13 @@ export const BetaAI = () => {
                         </Text>
                       </Flex>
                     </ActionIcon>
-
                   </Flex>
                 </Box>
               </Box>
-
             </Box>
           </Flex>
-
-
         </Box >
-
-
       </Container >
-
-      <Modal opened={opened} onClose={close} title="Authentication">
-        Modal content
-      </Modal>
     </Box >
   );
 };
