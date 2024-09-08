@@ -38,7 +38,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: 16,
     color: theme.colors.white[2],
     fontWeight: 400,
-    textAlign: 'justify',
+    // textAlign: 'justify',
   },
 }));
 

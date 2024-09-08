@@ -33,7 +33,7 @@ const useStyles = createStyles((theme) => ({
     color: theme.colors.white[2],
     fontWeight: 400,
     lineHeight: '22px',
-    textAlign: 'justify',
+    // textAlign: 'justify',
   },
 
 }));
