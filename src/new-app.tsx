@@ -12,7 +12,10 @@ import Mission from './pages/mission';
 import { Protocol } from './pages/protocol';
 import ScrollToTop from './scroll_to_top';
 import { Tokenomics } from './pages/tokenomics';
-import { BetaAI } from './pages/demo';
+import { BetaAI } from './pages/demo/beta_ai';
+import { BetaHome } from './pages/demo';
+import { WagmiProvider } from 'wagmi';
+import { config } from './pages/demo/wagmi/config';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'light',
@@ -169,48 +172,51 @@ const queryClient = new QueryClient();
 
 export const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-        <Notifications position="bottom-right" />
-        <Router>
-          <ScrollToTop>
-            <AppShell
-              header={<AppHeader />}
-              footer={<AppFooter />}
-              styles={() => ({
-                root: {
-                  padding: 0,
-                  margin: 0,
+    <WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+          <Notifications position="bottom-right" />
+          <Router>
+            <ScrollToTop>
+              <AppShell
+                header={<AppHeader />}
+                footer={<AppFooter />}
+                styles={() => ({
+                  root: {
+                    padding: 0,
+                    margin: 0,
 
-                },
-                main: {
-                  padding: 0,
-                  margin: 0,
+                  },
+                  main: {
+                    padding: 0,
+                    margin: 0,
 
-                },
-                body: {
-                  padding: 0,
-                  margin: 0,
+                  },
+                  body: {
+                    padding: 0,
+                    margin: 0,
 
-                }
-              })}
-            >
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/tos" element={<TermsOfUsePage />} />
-                <Route path="/privacy-policy" element={<PPPage />} />
-                {/* <Route path="/about-us" element={<AboutUs />} /> */}
-                <Route path="/*" element={<Error500Page />} />
-                <Route path="/mission" element={<Mission />} />
-                <Route path="/protocol" element={<Protocol />} />
-                <Route path="/a1" element={<Tokenomics />} />
-                <Route path="/beta" element={<BetaAI />} />
-              </Routes>
-            </AppShell>
-          </ScrollToTop>
+                  }
+                })}
+              >
+                <Routes>
+                  <Route path="" element={<HomePage />} />
+                  <Route path="/tos" element={<TermsOfUsePage />} />
+                  <Route path="/privacy-policy" element={<PPPage />} />
+                  {/* <Route path="/about-us" element={<AboutUs />} /> */}
+                  <Route path="/*" element={<Error500Page />} />
+                  <Route path="/mission" element={<Mission />} />
+                  <Route path="/protocol" element={<Protocol />} />
+                  <Route path="/a1" element={<Tokenomics />} />
+                  <Route path="/beta" element={<BetaHome />} />
+                </Routes>
+              </AppShell>
+            </ScrollToTop>
 
-        </Router>
-      </MantineProvider>
-    </QueryClientProvider>
+          </Router>
+        </MantineProvider>
+
+      </QueryClientProvider>
+    </WagmiProvider>
   );
 };

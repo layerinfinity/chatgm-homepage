@@ -70,7 +70,27 @@ export const AppHeader = () => {
   };
 
   return (
-    location.pathname == '/beta' ? <></> :
+    location.pathname == '/beta' ? <Header height={85} style={{
+      border: 0,
+      backgroundColor: `${theme.colors.white[1]}00`,
+      WebkitBackdropFilter: 'blur(12px)',
+      backdropFilter: 'blur(12px)',
+    }}>
+      <Container>
+        <Flex h={85} align="center" justify="space-between">
+          <Link className={classes.logo} to="/" onClick={onLinkClicked}>
+            <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
+          </Link>
+          <Group className={classes.navBar}>
+
+            <w3m-button />
+          </Group>
+        </Flex>
+
+
+
+      </Container>
+    </Header> :
       <>
         <Header
           height={85}

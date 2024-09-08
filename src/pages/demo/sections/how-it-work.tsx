@@ -54,8 +54,8 @@ export const HowItWork = () => {
           AI
         </Text>
       </Flex> */}
-      <Image height={29} width='auto' fit="contain" src="images/one-chainai/onechain-logo.png" />
-
+      {/* <Image height={29} width='auto' fit="contain" src="images/one-chainai/onechain-logo.png" />
+ */}
 
 
       <Text style={{ textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
