@@ -318,7 +318,7 @@
   }
 }
 
-.drawing_canvas {
+/* .drawing_canvas {
   position: absolute;
   width: 512px;
   height: 512px;
@@ -328,7 +328,7 @@
   transform: translateX(-50%);
   right: 0;
   pointer-events: none;
-}
+} */
 
 
 /* KEYFRAMES */

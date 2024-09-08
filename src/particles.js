@@ -133,8 +133,8 @@ var particles = [],
     phase = 0;
 
 function initDrawingCanvas() {
-    drawingCanvas.width = viewWidth;
-    drawingCanvas.height = viewHeight;
+    // drawingCanvas.width = viewWidth;
+    // drawingCanvas.height = viewHeight;
     ctx = drawingCanvas.getContext('2d');
 
     createLoader();
@@ -201,6 +201,7 @@ function draw() {
 function highlightSyntax() {
     const answertag = document.getElementById("answerId")
     const canvas = document.getElementById("drawing_canvas")
+    console.log(canvas)
 
     canvas.style.left = answertag.offsetLeft + 'px';
     canvas.style.top = answertag.offsetTop - 10 + 'px';

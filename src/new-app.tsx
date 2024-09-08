@@ -185,16 +185,20 @@ export const App = () => {
                   root: {
                     padding: 0,
                     margin: 0,
+                    // width: '100%',
 
                   },
                   main: {
                     padding: 0,
                     margin: 0,
+                    // width: '100%',
 
                   },
                   body: {
                     padding: 0,
                     margin: 0,
+                    // width: '100%',
+                    // height: '100%'
 
                   }
                 })}

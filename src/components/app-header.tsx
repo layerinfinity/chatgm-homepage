@@ -11,6 +11,7 @@ import {
   Group,
   Menu,
   Anchor,
+  Box,
 } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import {
@@ -78,13 +79,23 @@ export const AppHeader = () => {
     }}>
       <Container>
         <Flex h={85} align="center" justify="space-between">
+          {/* <MediaQuery smallerThan="sm" styles={{ display: 'none' }}> */}
           <Link className={classes.logo} to="/" onClick={onLinkClicked}>
+
             <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
           </Link>
-          <Group className={classes.navBar}>
+          {/* </MediaQuery> */}
+          {/* <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+            <Link className={classes.logo} to="/" onClick={onLinkClicked}>
 
-            <w3m-button />
-          </Group>
+              <Image width={70} fit="contain" src="images/one-chainai/onechain-logo.png" />
+            </Link>
+          </MediaQuery> */}
+
+          {/* <Group className={classes.navBar}> */}
+
+          <w3m-button />
+          {/* </Group> */}
         </Flex>
 
 
