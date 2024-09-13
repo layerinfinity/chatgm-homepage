@@ -1,6 +1,8 @@
-import { Box, Container, Flex, Image, List, MediaQuery, Text, createStyles, em, useMantineTheme } from '@mantine/core';
+import { ActionIcon, Box, Button, Container, Flex, Image, List, MediaQuery, Popover, Text, createStyles, em, useMantineTheme } from '@mantine/core';
 import { ListItem } from '@mantine/core/lib/List/ListItem/ListItem';
-import { useMediaQuery } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
+import Tutorial from './tutorial';
+import classes1 from './tutorial.module.css'
 
 
 const useStyles = createStyles((theme) => ({
@@ -40,11 +42,12 @@ const useStyles = createStyles((theme) => ({
 export const HowItWork = () => {
   const { classes, theme } = useStyles();
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  const [opened, { close, open }] = useDisclosure(false);
 
 
   return (
     <Box
-    // mt={95}
+    // bg='red'
     >
       {/* <Flex direction='row'>
         <Text ff="Outfit" fw={400} size={18} color="white.0" ta="center">
@@ -57,10 +60,31 @@ export const HowItWork = () => {
       {/* <Image height={29} width='auto' fit="contain" src="images/one-chainai/onechain-logo.png" />
  */}
 
+      <Flex direction='row' align='end'>
+        <Text style={{ textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
+          HOW IT WORK
+        </Text>
+        <Popover width={310} trapFocus position="bottom" shadow="md">
+          <Popover.Target>
+            <ActionIcon style={{ marginLeft: 10, marginBottom: 20 }} >
+              <Image style={{ cursor: 'pointer' }} width={24} src='images/demo_ai/exclamation-circle.svg' />
+            </ActionIcon>
+          </Popover.Target>
+          <Popover.Dropdown className={classes1.box} p={0}>
+            <Tutorial />
 
-      <Text style={{ textDecoration: 'underline', textDecorationColor: theme.colors.purpleGlow[6], textDecorationThickness: '4px', textUnderlineOffset: '20px' }} ff="Outfit" fw={600} size={isMobile ? 40 : 72} color="white.0" mt={-10}>
-        HOW IT WORK
-      </Text>
+          </Popover.Dropdown>
+        </Popover>
+        {/* <ActionIcon w={50} h={50} color='00000000'>
+          <Flex w={40} h={68} align='center' justify='center' onClick={() => {
+
+          }}>
+            <Image width={20} src='images/demo_ai/exclamation-circle.svg' />
+          </Flex>
+        </ActionIcon> */}
+
+      </Flex>
+
       <Text ff='Open Sans' color='white' size={14} maw={900} mt={30}>
         1chain.AI is a Web3 protocol that simplifies dApp onboarding with AI agents boasting over 99% accuracy. Using a Decentralized AI Fidelity Network (DAFN), it prevents AI hallucinations and ensures precise prompt interpretation. Our goal is to build trust, lower barriers, and drive crypto adoption.
       </Text>
