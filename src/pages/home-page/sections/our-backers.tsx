@@ -16,85 +16,102 @@ export const OurBackers = () => {
           Investors
         </Text>
 
-        <Flex wrap="wrap" gap={50} justify="center" align='center' mt={80}>
-          <Flex align='end' justify='center' h={168}>
-            <Image src="images/bakers/axie-infinity.png" width={225} fit="contain" />
+        <Flex wrap="wrap" gap={50} justify="center" align='center' mt={80} >
+          <Flex direction='column' align='center' justify='center' w={240}
+            h={230}>
+            <Box maw={240} h={80}>
+              <Image src="images/bakers/server.png" height={80} fit="contain" />
+            </Box>
 
-          </Flex>
-
-          <Flex align='end' justify='center' h={168}>
-            <Image src="images/bakers/other-2.png" width={218} fit="contain" />
-
-          </Flex>
-          <Flex align='end' justify='center' h={168}>
-            <Image src="images/bakers/cvvc.png" width={121} fit="contain" />
-
-          </Flex>
-          <Flex align='end' justify='center' h={55}>
-            <Image src="images/bakers/sky_mavic.png" width={323} fit="contain" />
-
-          </Flex>
-
-          <Flex align='end' justify='center' h={55}>
-            <Image src="images/bakers/server.png" width={248} fit="contain" />
-
-          </Flex>
-          <Flex align='end' justify='center' h={55}>
-            <Image src="images/bakers/parsig.png" width={202} fit="contain" />
-
-          </Flex>
-        </Flex>
-
-
-        <Flex mt={80} wrap="wrap" gap={60} justify="center" align='center'  >
-          <Flex direction="column" maw={240} h={130}>
-
+            <Text mt={20} ff="Open Sans" fw={700} size={20} ta="center" color='#FFD600'>
+              Tallinn
+            </Text>
             <Text ff="Open Sans" fw={700} size={20} ta="center" color={theme.colors.white[0]}>
+              Estonia
+            </Text>
+
+          </Flex>
+
+          <Flex direction='column' align='center' justify='center' w={240}
+            h={230}>
+
+            <Image src="images/bakers/cvvc.png" height={80} fit="contain" />
+            <Text mt={20} ff="Open Sans" fw={700} size={20} ta="center" color='#FFD600'>
+              Zug
+            </Text>
+            <Text ff="Open Sans" fw={700} size={20} ta="center" color={theme.colors.white[0]}>
+              Switzerland
+            </Text>
+
+          </Flex>
+          <Flex direction='column' align='center' justify='center'
+            w={240}
+            h={230}>
+            <Box maw={240} h={80}>
+              <Image src="images/bakers/parsig.png" height={80} fit="contain" />
+            </Box>
+
+            <Text mt={20} ff="Open Sans" fw={700} size={20} ta="center" color='#FFD600'>
+              Singapore
+            </Text>
+            <Text ff="Open Sans" fw={700} size={20} ta="center" color={theme.colors.white[0]}>
+              Singapore
+            </Text>
+          </Flex>
+
+          {/* </Flex>
+
+
+        <Flex mt={80} wrap="wrap" gap={60} justify="center" align='center'  > */}
+          <Flex
+            direction="column"
+            align="center"
+            w={260}
+            h={320}
+          >
+
+            <Image src="images/bakers/axie-infinity.png" height={120} fit="contain" />
+            <Image src="images/bakers/sky_mavic.png" height={60} fit="contain" />
+
+
+
+            <Text mt={20} ff="Open Sans" fw={700} size={20} ta="center" color='#FFD600'>
+              Founding team
+            </Text>
+            <Text mt={8} ff="Open Sans" size={16} fw={400} ta="center" color='white'>
+              (Trung - CEO, Aleks - Chairman, Andy - CTO,  Jihoz - Growth)
+            </Text>
+          </Flex>
+
+
+          <Flex direction="column" w={260} h={320}>
+            <Image src="images/bakers/other-2.png" height={180} fit="contain" />
+
+            <Text mt={20} ff="Open Sans" fw={700} size={20} ta="center" color='#FFD600'>
               Sebastien Borget
             </Text>
-            <Text mt={8} ff="Open Sans" size={16} fw={400} ta="center" color='#B6DEFF'>
-              Co-Founder/COO of The Sandbox, President of Blockchain Game Alliance.
+            <Text mt={8} ff="Open Sans" size={16} fw={400} ta="center" color='white'>
+              Co-Founder/COO of The Sandbox, Prez of Blockchain Game Alliance.
             </Text>
           </Flex>
-          <MediaQuery smallerThan={1000} styles={{ display: 'none' }}>
-            <Box w={2} h={70} bg='#B6DEFF'>
 
-            </Box>
-          </MediaQuery>
+
+
 
 
           <Flex
             direction="column"
             align="center"
-            maw={240}
-            h={130}
+            w={260}
+            h={320}
           >
+            <Image src="images/bakers/other-3.png" height={180} fit="contain" />
 
-            <Text ff="Open Sans" fw={700} size={20} ta="center" color={theme.colors.white[0]}>
-              The founding team of Sky Mavis
+            <Text mt={20} ff="Open Sans" fw={700} size={20} ta="center" color='#FFD600'>
+              YOU, our new investor(!?)
             </Text>
-            <Text mt={8} ff="Open Sans" size={16} fw={400} ta="center" color='#B6DEFF'>
-              Trung - CEO, Aleks - Chairman, Andy - CTO,  Jihoz - Growth
-            </Text>
-          </Flex>
-          <MediaQuery smallerThan={1000} styles={{ display: 'none' }}>
-            <Box w={2} h={70} bg='#B6DEFF'>
-
-            </Box>
-          </MediaQuery>
-
-          <Flex
-            direction="column"
-            align="center"
-            maw={240}
-            h={130}
-          >
-
-            <Text ff="Open Sans" fw={700} size={20} ta="center" color={theme.colors.white[0]}>
-              Other investors
-            </Text>
-            <Text mt={8} ff="Open Sans" size={16} fw={400} ta="center" color='#B6DEFF'>
-              CVVC, Parsiq, and Server Partners
+            <Text mt={8} ff="Open Sans" size={16} fw={400} ta="center" color='white'>
+              Track Record, Web3 believer, Know-how, Network Access
             </Text>
           </Flex>
         </Flex>
