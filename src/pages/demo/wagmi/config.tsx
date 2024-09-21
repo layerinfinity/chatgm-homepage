@@ -20,7 +20,7 @@ const metadata = {
 
 
 const chains = [skaleTitanTestnet, skaleEuropaTestnet] as const
-export const memoContracts: { [key: string]: string } = { 1020352220: '35Dfb847548213ECF763104B65012A28c87ea9af', 1444673419: '09769DD5Eb254Aa5CAb9AAB71FE80D3a50688373' }
+export const memoContracts: { [key: string]: string } = { 1020352220: '9950A6Ff4a68C8c02B563605d5c95B7302076f17', 1444673419: '09769DD5Eb254Aa5CAb9AAB71FE80D3a50688373' }
 
 const connectors: CreateConnectorFn[] = []
 connectors.push(walletConnect({ projectId, metadata, showQrModal: false })) // showQrModal must be false
