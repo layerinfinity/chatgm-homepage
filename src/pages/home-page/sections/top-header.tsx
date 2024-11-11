@@ -59,7 +59,7 @@ export const TopHeader = () => {
                         <Typewriter
 
                             options={{
-                                strings: ['Simplify Web3 Mass Adoption with AI'],
+                                strings: ['The Quality Control Layer for AI Models'],
                                 autoStart: true,
                                 loop: true,
                                 delay: 50,
