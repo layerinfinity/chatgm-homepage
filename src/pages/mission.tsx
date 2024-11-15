@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Container, Space, Stack, Text, Title, createStyles, Box } from '@mantine/core';
+import { Container, Space, Stack, Text, Title, createStyles, Box, Flex, Image } from '@mantine/core';
 const useStyles = createStyles((theme) => ({
   heading: {
     fontFamily: "Outfit",
@@ -20,9 +20,9 @@ const useStyles = createStyles((theme) => ({
   },
   policyTitle: {
     fontFamily: "Outfit",
-    fontSize: '1.875rem',
+    fontSize: '40px',
     // lineHeight: '3rem',
-    color: theme.colors.purpleGlow[0],
+    color: theme.colors.white[0],
     fontWeight: 500,
   },
   policySubTitle: {
@@ -30,12 +30,12 @@ const useStyles = createStyles((theme) => ({
     fontSize: '1.125rem',
 
     // lineHeight: '3rem',
-    color: theme.colors.purpleGlow[1],
+    color: theme.colors.white[0],
     fontWeight: 700,
   },
   policycontent: {
     fontFamily: "Open Sans",
-    fontSize: '1rem',
+    fontSize: '16px',
     color: theme.colors.white[2],
     fontWeight: 400,
     // textAlign: 'justify',
@@ -58,53 +58,81 @@ const Mission = () => {
           <Title ta="center" color="white.0" className={classes.heading}>Mission of 1chain.AI</Title>
           <Box>
             {/* 1 */}
-            <Box pt={45}>
-              <Text className={classes.policyTitle}>
-                1. Problems
-              </Text>
+            <Box mt={45} px={25} pb={45} pt={20} style={{ background: theme.fn.linearGradient(90, '#0D042F00', '#331B6F80'), borderRadius: 50 }}>
+              <Flex pl={40} gap={15} h={70} direction='row' align='center'>
+                <Image src="images/one-chainai/svg/triangle.svg" width={32} fit="contain" />
+                <Text className={classes.policyTitle} style={{ color: 'white' }}>
+                  Problems
+                </Text>
+              </Flex>
+
               <Box pt={15}>
-                <Text className={classes.policySubTitle}>
-                  1.1. Web3 Onboarding Complexity:
-                </Text>
-                <Text className={classes.policycontent}>
-                  The steep learning curve for new users hinders mainstream adoption and lowers retention rates for new crypto services. Users often find it challenging to navigate and understand the intricacies of blockchain technology.
-                </Text>
+                <Flex wrap={{ base: 'wrap', sm: 'nowrap' }} display='flex' dir='row' gap={20} >
+                  <Box style={{ borderRadius: 20, background: '#8A32324d', overflow: 'hidden' }}>
+                    <Flex h={70} justify='center' bg='#CC434380' align='center'>
+                      <Text className={classes.policySubTitle}>
+                        1. Web3 Onboarding Complexity
+                      </Text>
+                    </Flex>
+                    <Text pt={10} pb={40} px={25} className={classes.policycontent} style={{ textAlign: 'center', color: '#BC8888' }}>
+                      The steep learning curve for new users hinders mainstream adoption and lowers retention rates for new crypto services. Users often find it challenging to navigate and understand the intricacies of blockchain technology.
+                    </Text>
+                  </Box>
+                  <Box style={{ borderRadius: 20, background: '#8A32324d', overflow: 'hidden' }}>
+                    <Flex h={70} justify='center' bg='#CC434380' align='center'>
+                      <Text className={classes.policySubTitle}>
+                        2. Irreversible Mistakes
+                      </Text>
+                    </Flex>
+                    <Text pt={10} pb={40} px={25} className={classes.policycontent} style={{ textAlign: 'center', color: '#BC8888' }}>
+                      New crypto users fear making irreversible errors on the blockchain, often due to a lack of knowledge and poor UI/UX. These mistakes can lead to loss of assets and discourage users from engaging with blockchain technologies.
+                    </Text>
+                  </Box>
+
+                </Flex>
+                <Box mt={20} style={{ borderRadius: 20, background: '#8A32324d', overflow: 'hidden' }}>
+                  <Flex h={70} justify='center' bg='#CC434380' align='center'>
+                    <Text className={classes.policySubTitle}>
+                      3. Technical Complexity of AI
+                    </Text>
+                  </Flex>
+
+                  <Text pt={10} pb={40} px={25} className={classes.policycontent} style={{ textAlign: 'center', color: '#BC8888' }}>
+                    Integrating AI into crypto-related dApps is a challenging process that requires specialized knowledge, limiting broader adoption. The risk of AI hallucinations is particularly concerning in sectors like crypto and fintech, where errors can lead to severe financial consequences. According to Fast Company, current AI models can exhibit hallucinations up to 27% of the time on complex tasks, highlighting the need for high-fidelity AI outputs in environments where precision is critical.
+                  </Text>
+                </Box>
+
               </Box>
-              <Box pt={15}>
-                <Text className={classes.policySubTitle}>
-                  1.2. Irreversible Mistakes:
-                </Text>
-                <Text className={classes.policycontent}>
-                  New crypto users fear making irreversible errors on the blockchain, often due to a lack of knowledge and poor UI/UX. These mistakes can lead to loss of assets and discourage users from engaging with blockchain technologies.
-                </Text>
-              </Box>
-              <Box pt={15}>
-                <Text className={classes.policySubTitle}>
-                  1.3. Technical Complexity of AI:
-                </Text>
-                <Text className={classes.policycontent}>
-                  Embedding AI into crypto-related dApps poses significant challenges due to complexity and required expertise, limiting adoption. AI hallucinations are a major issue, especially in crypto, where blockchain's irreversible nature makes AI-created mistakes more severe.
-                </Text>
-              </Box>
+
             </Box>
 
             {/* 2 */}
-            <Box pt={45}>
-              <Text className={classes.policyTitle}>
-                2. Mission
-              </Text>
-              <Text pt={15} className={classes.policycontent}>
-                1chain.AI’s mission is to revolutionize web3 mass adoption by integrating advanced AI into decentralized applications, making blockchain technology accessible, user-friendly, and secure for mainstream consumers and developers alike. Envisioning a future where AI-powered interactions and transactions in the crypto space are the norm, 1chain.AI is dedicated to empowering a global decentralized ecosystem where AI and blockchain converge to drive innovation and trust.
-              </Text>
-            </Box>
+            <Flex direction='row' mt={50} gap={30} >
+              <Box maw={442} px={25} pb={45} pt={20} style={{ background: theme.fn.linearGradient(90, '#0D042F00', '#331B6F80'), borderRadius: 50 }}>
+                <Flex pl={40} gap={15} h={70} direction='row' align='center'>
+                  <Image src="images/one-chainai/svg/shield-bolt.svg" width={32} fit="contain" />
+                  <Text className={classes.policyTitle} style={{ color: 'white' }}>
+                    Mission
+                  </Text>
+                </Flex>
+                <Text pt={15} className={classes.policycontent}>
+                  1chain.AI’s mission is to revolutionize web3 mass adoption by integrating advanced AI into decentralized applications, making blockchain technology accessible, user-friendly, and secure for mainstream consumers and developers. As highlighted by Mustafa Suleyman, co-founder of Google DeepMind and CEO of Microsoft AI, the next generation of Generative AI—Interactive AI—will enable AI agents to autonomously execute tasks by communicating with external systems, enhancing user interaction and functionality. 1chain.AI leverages decentralization to ensure secure and accurate AI execution, particularly in the financially impactful and security-intensive sectors of crypto and fintech. By building trust and lowering the entry barrier through reliable AI, 1chain.AI aims to transform the Web3 landscape and deliver mass mainstream crypto adoption.
+                </Text>
+              </Box>
+              <Image src="images/one-chainai/svg/Frame.svg" maw={614} fit="contain" />
+            </Flex>
+
 
             {/* 3 */}
-            <Box pt={45}>
-              <Text className={classes.policyTitle}>
-                3. Timing
-              </Text>
+            <Box mt={50} px={25} pb={45} pt={20} style={{ background: theme.fn.linearGradient(90, '#0D042F00', '#331B6F80'), borderRadius: 50 }}>
+              <Flex pl={40} gap={15} h={70} direction='row' align='center'>
+                <Image src="images/one-chainai/svg/stopwatch.svg" width={32} fit="contain" />
+                <Text className={classes.policyTitle} style={{ color: 'white' }}>
+                  Timing
+                </Text>
+              </Flex>
               <Text pt={15} className={classes.policycontent}>
-                AI development in the US is rapidly progressing towards Artificial General Intelligence (AGI), but regulatory risks in both the US and China hinder the integration of AI with Web3. Operating outside these regions, 1chain.AI aims to create a unique competitive advantage in both Web2 and Web3 markets by ultimately gaining Web3 AGI. Strategically positioning itself as the AI infrastructure for Web3, 1chain.AI aim to integrate multiple major Large Language Models (LLMs) across major Layer 1s, Layer 2s, dApps and other infrastructures.
+                As AI development accelerates toward Artificial General Intelligence (AGI), regulatory challenges in the US and China limit the seamless integration of AI with Web3. Operating outside these regions, 1chain.AI seizes the opportunity to establish a competitive advantage in both Web2 and Web3 markets, with an eye on the future of Web3 AGI. By positioning itself as a core AI infrastructure for Web3, 1chain.AI aims to incorporate top-tier Large Language Models (LLMs) across major Layer 1s, Layer 2s, dApps, and other key infrastructures. With a commitment to delivering over 99% accuracy in AI outputs, 1chain.AI focuses on ensuring reliable and precise task execution, critical for high-stakes applications in crypto and fintech. This emphasis on high-fidelity not only enhances current AI capabilities but also prepares for a future where trustworthy AGI becomes a reality.
               </Text>
             </Box>
           </Box>
