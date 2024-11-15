@@ -104,8 +104,8 @@ export const Tokenomics = () => {
 
 
           </Container>
-          <Image src="images/one-chainai/tokenomics.png" maw={945} mt={40} mr='auto' ml='auto' width='100%' fit="contain" />
-          <Image src="images/one-chainai/tokenomics2.png" maw={945} mt={40} mr='auto' ml='auto' width='100%' fit="contain" />
+          <Image src="images/one-chainai/tokenomics.png" maw={945} mah={445} mt={40} mr='auto' ml='auto' width='100%' fit="contain" />
+          <Image src="images/one-chainai/tokenomics2.png" maw={945} mah={519} mt={40} mr='auto' ml='auto' width='100%' fit="contain" />
           {/* <Flex mt={40} direction='row' gap={10}>
             <Box className={classes.item} style={{ flex: 5.7, background: '#64FFDA' }} >
               <Text pos='absolute' ff="Outfit" size={28} fw={700} color='#135555' ml={33}>
@@ -138,41 +138,67 @@ export const Tokenomics = () => {
               <Text mt={15} className={classes.policycontent}>
                 Staking is a core component of the 1chain.AI network's security and functionality, encouraging long-term participation and ensuring network stability.
               </Text>
-              <Box pt={15}>
-                <Text className={classes.policySubTitle}>
-                  1.1. Staking Mechanism
-                </Text>
-                <Text className={classes.policycontent}>
-                  Both node operators and community members can stake $A1 tokens to secure the network and validate AI outputs. This staking process not only ensures the reliability of data but also incentivizes participants to maintain the network's integrity.
-                </Text>
-              </Box>
-              <Box pt={15}>
-                <Text className={classes.policySubTitle}>
-                  1.2. Rewards
-                </Text>
-                <Text className={classes.policycontent}>
-                  Stakers earn rewards in $A1 tokens, distributed based on the amount staked and the duration of staking. The annual percentage yield (APY) for stakers is designed to be competitive, encouraging consistent and long-term staking. This approach ensures sustained participation and enhances the network's security and efficiency.
-                </Text>
-              </Box>
-              <Box pt={15}>
-                <Text className={classes.policySubTitle}>
-                  1.3. Incentives for Node Operators
-                </Text>
-                <Text className={classes.policycontent}>
-                  A portion of the staking rewards is allocated specifically to node operators. This allocation compensates them for their crucial role in maintaining network integrity and performance, ensuring that the AI outputs remain accurate and reliable.
-                </Text>
-              </Box>
+              <Flex pt={15} direction='row' gap={40}>
+                <Flex direction='column' >
+                  {isMobile && <Center py={30}><Image src="images/one-chainai/tokenomics3.png" maw={378} width='100%' fit="contain" /></Center>
+                  }
+                  <Box >
+                    <Text className={classes.policySubTitle}>
+                      1.1. Staking Mechanism
+                    </Text>
+                    <Text className={classes.policycontent}>
+                      Both node operators and community members can stake $A1 tokens to secure the network and validate AI outputs. This staking process not only ensures the reliability of data but also incentivizes participants to maintain the network's integrity.
+                    </Text>
+                  </Box>
+                  <Box pt={15}>
+                    <Text className={classes.policySubTitle}>
+                      1.2. Rewards
+                    </Text>
+                    <Text className={classes.policycontent}>
+                      Stakers earn rewards in $A1 tokens, distributed based on the amount staked and the duration of staking. The annual percentage yield (APY) for stakers is designed to be competitive, encouraging consistent and long-term staking. This approach ensures sustained participation and enhances the network's security and efficiency.
+                    </Text>
+                  </Box>
+                  <Box pt={15}>
+                    <Text className={classes.policySubTitle}>
+                      1.3. Incentives for Node Operators
+                    </Text>
+                    <Text className={classes.policycontent}>
+                      A portion of the staking rewards is allocated specifically to node operators. This allocation compensates them for their crucial role in maintaining network integrity and performance, ensuring that the AI outputs remain accurate and reliable.
+                    </Text>
+                  </Box>
+
+                </Flex>
+
+                {!isMobile && <Image src="images/one-chainai/tokenomics3.png" width={378} fit="contain" />
+                }
+
+              </Flex>
+
             </Box>
 
             {/* 2 */}
-            <Box pt={45}>
-              <Text className={classes.policyTitle}>
-                2.Governance
-              </Text>
-              <Text pt={15} className={classes.policycontent}>
-                $A1 token holders have governance rights within the 1chain.AI ecosystem, fostering a decentralized and community-driven development process. Token holders can propose changes or enhancements to the network, allowing the community to directly influence the platform's evolution and ensure it meets user needs. Governance decisions, such as protocol upgrades and fund allocation, are made through token-holder voting, giving all stakeholders a voice in the network's development and promoting transparency and inclusivity. This democratic approach ensures that the network adapts effectively while maintaining a robust and fair governance structure.
-              </Text>
-            </Box>
+            <Flex pt={45} direction={{ base: 'column', sm: 'row' }}
+              gap={40}
+              justify={{ sm: 'center' }}
+              align={{ base: 'center', sm: 'flex-start' }}>
+
+              {!isMobile && <Image src="images/one-chainai/tokenomics4.png" width={365} fit="contain" />
+              }
+
+              <Flex direction='column'>
+                <Text className={classes.policyTitle}>
+                  2.Governance
+                </Text>
+                {isMobile && <Center py={30}><Image src="images/one-chainai/tokenomics4.png" maw={365} width='100%' fit="contain" /></Center>
+                }
+                <Text pt={15} className={classes.policycontent}>
+                  $A1 token holders have governance rights within the 1chain.AI ecosystem, fostering a decentralized and community-driven development process. Token holders can propose changes or enhancements to the network, allowing the community to directly influence the platform's evolution and ensure it meets user needs. Governance decisions, such as protocol upgrades and fund allocation, are made through token-holder voting, giving all stakeholders a voice in the network's development and promoting transparency and inclusivity. This democratic approach ensures that the network adapts effectively while maintaining a robust and fair governance structure.
+                </Text>
+
+
+              </Flex>
+            </Flex>
+
 
             {/* 3 */}
             <Box pt={45}>
@@ -187,7 +213,7 @@ export const Tokenomics = () => {
         </Box>
 
 
-      </Container>
-    </Box>
+      </Container >
+    </Box >
   );
 };
