@@ -18,7 +18,7 @@ import { WagmiProvider } from 'wagmi';
 import { config } from './pages/demo/wagmi/config';
 
 const theme: MantineThemeOverride = {
-  colorScheme: 'light',
+  colorScheme: 'dark',
   colors: {
     white: [
       '#FFFFFF',
@@ -147,7 +147,8 @@ const theme: MantineThemeOverride = {
       overflowX: 'hidden',
     },
     body: {
-      background: t.fn.linearGradient(90, '#0D042F', '#301C61'),
+      background: 'linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(87.81deg, #0D042F -3.05%, #301C61 102.8%)'
+      // background: t.fn.linearGradient(90, '#0D042F', '#301C61'),
     },
     ul: {
       listStyle: 'none',
@@ -185,21 +186,14 @@ export const App = () => {
                   root: {
                     padding: 0,
                     margin: 0,
-                    // width: '100%',
-
                   },
                   main: {
                     padding: 0,
-                    margin: 0,
-                    // width: '100%',
-
+                    margin: 0
                   },
                   body: {
                     padding: 0,
                     margin: 0,
-                    // width: '100%',
-                    // height: '100%'
-
                   }
                 })}
               >

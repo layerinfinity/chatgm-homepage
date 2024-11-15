@@ -17,7 +17,6 @@ import { UseCase } from './sections/usecase';
 export const HomePage = () => {
   return (
     <Box>
-
       <TopHeader />
       <UseCase />
       <EcoSystem />

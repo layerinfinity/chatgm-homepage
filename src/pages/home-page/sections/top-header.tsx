@@ -28,13 +28,11 @@ export const TopHeader = () => {
     const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
     return (
         <Box
-
             h={760}
             style={{
                 background: theme.fn.linearGradient(0, '#6016D900', '#000000ff'),
             }}
         >
-
             <Flex top={-450} w='100%' align='center' justify='center' pos='absolute'>
                 <Box
                     h={1500}

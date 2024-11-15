@@ -5,14 +5,15 @@ import { useMediaQuery } from '@mantine/hooks';
 const useStyles = createStyles((theme) => ({
 
     bgitem: {
-        width: 165,
-        height: 60,
+        width: 236,
+        height: 80,
         // background: theme.fn.linearGradient(180, '#8C57FF3d', '#54FCF23d'),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
         borderRadius: 4,
-        border: '1px solid #454C74',
+        border: '1px solid #C1A96B',
 
         color: `${theme.colors.white[0]}`
 
@@ -38,7 +39,7 @@ export const OurPartner = () => {
                     Our Partners
                 </Text>
 
-                <Flex wrap="wrap" gap={50} justify='center' ml='auto' mr='auto' maw={595} mt={50}>
+                <Flex wrap="wrap" gap={50} justify='center' ml='auto' mr='auto' mt={50}>
                     <Box className={classes.bgitem}>
                         <Image src="images/one-chainai/svg/parner/kyber.svg" width={165} fit="contain" />
                     </Box>
