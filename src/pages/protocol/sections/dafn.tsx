@@ -67,41 +67,13 @@ export const DAFN = () => {
         </Text>
 
 
-        <Text ff="Open Sans" fw={400} size='0.875rem' color="white.2" mt={30}>
-          AI fidelity refers to the degree of accuracy, reliability, and consistency with which an AI system understands prompts, interprets data, and executes tasks. It ensures that AI models provide precise, error-free outputs and make accurate decisions based on both on-chain and off-chain data. Current AI models, such as GPT-4, have hallucination rates ranging from 3% to 27%, with most models averaging around 10-15%​​. For blockchain applications, where transactions are irreversible, the ideal AI fidelity rate should be close to 99% to ensure precision and trustworthiness. High AI fidelity is crucial for maintaining trust and security, enabling the mass adoption of AI in web3. This, in turn, paves the way for broader adoption of crypto via AI, as reliable AI systems become integral to crypto infrastructures, apps, and interactions, making them more user-friendly and secure.
+        <Text ff="Open Sans" fw={400} size='14px' color="white.2" mt={30}>
+          AI fidelity refers to the accuracy, reliability, and consistency with which an AI system understands prompts, interprets data, and executes tasks. Ensuring precise, error-free outputs is crucial, especially for financial transactions involving both fiat and crypto. According to Fast Company, current leading AI models, like GPT-4, exhibit hallucination rates ranging from 3% for simple tasks to 27% for more complex ones, with an average rate of 10-15%​​​​. This high error rate is a significant obstacle to achieving Interactive AI, the next generation of Generative AI, where AI models autonomously execute tasks by communicating with external software, platforms, apps, and dApps, as envisioned by Google DeepMind's co-founder Mustafa Suleyman. For crypto, where transactions are irreversible on the blockchain, the need to achieve near-100% AI fidelity is parallel to the fundamental blockchain principles of verification and consensus. High AI fidelity ensures precision and trustworthiness, essential for maintaining trust and security in web3 applications.
         </Text>
-        <Text ff="Open Sans" fw={400} size='0.875rem' color="white.2" mt={20}>
-          DAFN (Decentralized AI Fidelity Network) leverages a network of decentralized nodes to validate AI-generated responses, reducing the risk of AI hallucinations and improving the reliability and security of AI outputs. This decentralized approach ensures that AI systems remain accurate and trustworthy, further enhancing the integration of AI in blockchain applications and supporting the widespread use of cryptocurrency through secure and reliable AI interactions.
+        <Text ff="Open Sans" fw={400} size='14px' color="white.2" mt={20}>
+          DAFN leverages decentralized nodes to validate AI-generated responses from prompt inputs with on-chain and off-chain data, reducing hallucinations and enhancing reliability. This approach ensures AI systems maintain over 99% accuracy and consistency, integrating securely with existing core crypto infrastructures and decentralized applications. By aligning the need for high AI fidelity with blockchain's verification and consensus mechanisms, DAFN enhances the reliability of AI interactions, driving the mass adoption of crypto by making it accessible and secure for billions of new users using AI.
         </Text>
-        <Box mt={100}>
-          <Text ff="Outfit" fw={500} size={40} color={theme.colors.purpleGlow[0]} mt={-10} align='center'>
-            Core Components
-          </Text>
-          <Box pt={15}>
-            <Text ml={4} className={classes.policySubTitle}>
-              1. In-app AI Assistants
-            </Text>
-            <Text className={classes.policycontent}>
-              AI Assistants are customizable agents embedded within dApps, designed to assist users with fundamental tasks such as wallet creation, fiat-on/off-ramp, KYC, swapping, transfer, and more.
-            </Text>
-          </Box>
-          <Box pt={15}>
-            <Text ml={4} className={classes.policySubTitle}>
-              2. Large Action Models (LAMs)
-            </Text>
-            <Text className={classes.policycontent}>
-              LAMs are advanced AI models trained, using an aggregation of LLMs, to execute blockchain tasks, ensuring convenience, accuracy, and security.
-            </Text>
-          </Box>
-          <Box pt={15}>
-            <Text ml={4} className={classes.policySubTitle}>
-              3. Cross-Blockchain Interoperability
-            </Text>
-            <Text className={classes.policycontent}>
-              The protocol supports interoperability across multiple blockchains, focusing on EVM L1s and L2s, and BTC layers, allowing seamless interactions across the biggest and most liquid ecosystems.
-            </Text>
-          </Box>
-        </Box>
+
         <Box mt={100} >
           <Flex justify='center'>
             <Text maw={600} ff="Outfit" fw={500} size={isMobile ? 30 : 40} color="white.0" ta='center'>
@@ -222,6 +194,9 @@ export const DAFN = () => {
                 This method significantly enhances AI models' ability to recall accurate information, reducing errors and ensuring consistency in outputs. Fidelity Tuning involves fine-tuning millions of specialized adapters, such as Low-Rank Adapters (LoRAs), to embed precise facts into the model. Each adapter functions like an expert memory unit, specializing in various factual domains. During inference, the model retrieves the most relevant experts at each layer, ensuring the integration of accurate data and prompt interpretations. This approach results in a sparsely activated model, known as the Mixture of Fidelity Experts (MoFE), which scales to an enormous number of parameters at a fixed computational inference cost. Fidelity Tuning prioritizes exact facts over nearly correct answers, embedding precise factual data directly into the LLMs’ core. This ensures that AI models can recall specific blockchain-related information accurately while maintaining general reasoning capabilities. It is ideal for use cases requiring high factual accuracy in web3 and crypto applications, such as DeFi, smart contract execution, and other blockchain-based processes.
               </Text>
             </Box>
+            <Flex direction='column' align='center' py={40}>
+              <Image src='images/one-chainai/dafn/dafn3.png' style={{ width: '70%', height: 'auto' }} fit='contain' />
+            </Flex>
             <Box pt={15}>
               <Text className={classes.policySubTitle}>
                 <li>
@@ -236,15 +211,14 @@ export const DAFN = () => {
 
           </Box>
 
-          <Flex direction='column' align='center' mt={100} bg='#02000733' py={60} >
-            <Image src='images/one-chainai/dafn/dafn3.png' style={{ width: '70%', height: 'auto' }} fit='contain' />
-            <Image mt={146} src='images/one-chainai/dafn/dafn4.png' style={{ width: '70%', height: 'auto' }} fit='contain' />
+          <Flex direction='column' align='center' py={40} >
+            <Image src='images/one-chainai/dafn/dafn4.png' style={{ width: '70%', height: 'auto' }} fit='contain' />
           </Flex>
 
 
 
         </Box>
-        <Box mt={100} mb={92}>
+        <Box mt={60} mb={92}>
           <Text ff="Outfit" fw={500} size={isMobile ? 30 : 40} color="white.0" ta='center'>
             <span style={{ color: theme.colors.purpleGlow[0] }}>AI </span>
             <span >Oracles</span>
