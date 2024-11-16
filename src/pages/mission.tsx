@@ -107,8 +107,8 @@ const Mission = () => {
             </Box>
 
             {/* 2 */}
-            <Flex direction='row' mt={50} gap={30} >
-              <Box maw={442} px={25} pb={45} pt={20} style={{ background: theme.fn.linearGradient(90, '#0D042F00', '#331B6F80'), borderRadius: 50 }}>
+            <Flex mt={50} direction='column' pos='relative' >
+              <Box w={{ base: '100%', md: '50%', sm: '50%' }} px={25} pb={45} pt={20} style={{ background: theme.fn.linearGradient(90, '#0D042F00', '#331B6F80'), borderRadius: 50 }}>
                 <Flex pl={40} gap={15} h={70} direction='row' align='center'>
                   <Image src="images/one-chainai/svg/shield-bolt.svg" width={32} fit="contain" />
                   <Text className={classes.policyTitle} style={{ color: 'white' }}>
@@ -119,7 +119,7 @@ const Mission = () => {
                   1chain.AI’s mission is to revolutionize web3 mass adoption by integrating advanced AI into decentralized applications, making blockchain technology accessible, user-friendly, and secure for mainstream consumers and developers. As highlighted by Mustafa Suleyman, co-founder of Google DeepMind and CEO of Microsoft AI, the next generation of Generative AI—Interactive AI—will enable AI agents to autonomously execute tasks by communicating with external systems, enhancing user interaction and functionality. 1chain.AI leverages decentralization to ensure secure and accurate AI execution, particularly in the financially impactful and security-intensive sectors of crypto and fintech. By building trust and lowering the entry barrier through reliable AI, 1chain.AI aims to transform the Web3 landscape and deliver mass mainstream crypto adoption.
                 </Text>
               </Box>
-              <Image src="images/one-chainai/svg/Frame.svg" maw={614} fit="contain" />
+              <Image pos={{ base: 'relative', sm: 'absolute' }} top={0} right='-30%' src="images/one-chainai/Group.png" width='76%' />
             </Flex>
 
 
