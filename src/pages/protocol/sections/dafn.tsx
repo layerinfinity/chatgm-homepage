@@ -76,10 +76,11 @@ export const DAFN = () => {
 
         <Box mt={100} >
           <Flex justify='center'>
-            <Text maw={600} ff="Outfit" fw={500} size={isMobile ? 30 : 40} color="white.0" ta='center'>
+            <Text ff="Outfit" fw={500} size={isMobile ? 30 : 40} color="white.0" ta='center'>
               <span >The Process of  </span>
-              <span style={{ color: theme.colors.purpleGlow[0] }}>1chain.AI's
+              <span style={{ color: theme.colors.purpleGlow[0] }}>1chain.AI's <br />
                 Decentralized AI Fidelity Network</span>
+              <span> (DAFN) </span>
             </Text>
           </Flex>
           <Image mt={100} src='images/one-chainai/dafn/dafn1.png' width='100%' fit='contain' />
