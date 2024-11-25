@@ -79,6 +79,7 @@ export const AppHeader = () => {
     }
   };
   useEffect(() => {
+    console.log(chainId)
 
     async function checkBalance() {
       try {
@@ -119,7 +120,7 @@ export const AppHeader = () => {
           </> :
             <Flex gap={10}>
               <Box pos='relative' w={30} >  <Loader size={30} style={{ background: 'transparent' }} display='' color="blue" /></Box>
-              <Text>
+              <Text color='white' style={{ textTransform: 'capitalize' }}>
                 {status}
               </Text>
             </Flex>
