@@ -12,6 +12,7 @@ import {
   Menu,
   Anchor,
   Box,
+  Loader,
 } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import {
@@ -21,8 +22,13 @@ import {
   IconBrandTwitterFilled,
   IconChevronDown,
 } from '@tabler/icons-react';
+import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useAccount, useConnect, useWriteContract } from 'wagmi'
+import { getBalance } from '@wagmi/core'
 import { DISCORD_URL, MEDIUM_URL, TELEGRAM_URL, TWITTER_URL } from '~/configs';
+import { config } from '../pages/demo/wagmi/config'
+import axios from 'axios';
 
 const useStyles = createStyles((theme) => ({
   logo: {
@@ -56,6 +62,9 @@ export const AppHeader = () => {
   const [opened, { toggle, close }] = useDisclosure(false);
   const [, scrollTo] = useWindowScroll();
   const location = useLocation();
+  const { status, isReconnecting, address, chainId } = useAccount()
+
+
 
   const onLinkClicked = () => {
     close();
@@ -69,6 +78,27 @@ export const AppHeader = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  useEffect(() => {
+
+    async function checkBalance() {
+      try {
+        const result = await getBalance(config, {
+          address: address!
+        })
+        //  if (receiverBalance < amount && receiverBalance < 0.000005 ether) {
+        if (Number(result.formatted) < 0.000005) {
+          await axios.post('https://api.chatgm.com/api/ai/faucet', { address, chainId });
+        }
+      } catch (error) {
+        console.log('error' + error)
+      }
+    }
+    if (address) {
+      checkBalance()
+    }
+
+
+  }, [address, chainId])
 
   return (
     location.pathname == '/beta' ? <Header height={85} style={{
@@ -84,22 +114,17 @@ export const AppHeader = () => {
 
             <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
           </Link>
-          {/* </MediaQuery> */}
-          {/* <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-            <Link className={classes.logo} to="/" onClick={onLinkClicked}>
-
-              <Image width={70} fit="contain" src="images/one-chainai/onechain-logo.png" />
-            </Link>
-          </MediaQuery> */}
-
-          {/* <Group className={classes.navBar}> */}
-
-          <w3m-button />
-          {/* </Group> */}
+          {!isReconnecting ? <>
+            <w3m-button />
+          </> :
+            <Flex gap={10}>
+              <Box pos='relative' w={30} >  <Loader size={30} style={{ background: 'transparent' }} display='' color="blue" /></Box>
+              <Text>
+                {status}
+              </Text>
+            </Flex>
+          }
         </Flex>
-
-
-
       </Container>
     </Header> :
       <>

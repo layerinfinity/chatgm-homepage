@@ -11,6 +11,15 @@ import { useAccount, useConnect, useWriteContract } from 'wagmi'
 import { abi } from './wagmi/abi'
 import { memoContracts } from './wagmi/config'
 
+import {
+  useSendTransaction,
+  useWaitForTransactionReceipt
+} from 'wagmi'
+import { parseEther } from 'viem';
+
+import { useTransactionCount } from 'wagmi'
+
+
 
 export const BetaAI = () => {
   const [question, setQuestion] = useState('');
@@ -29,7 +38,15 @@ export const BetaAI = () => {
     error,
     isSuccess
   } = useWriteContract()
-  const { isConnected, chainId, chain } = useAccount()
+  const {
+
+    sendTransaction
+  } = useSendTransaction()
+  const { address, isConnected, chainId, chain } = useAccount()
+  const result = useTransactionCount({
+    address: address,
+    blockTag: 'latest',
+  })
 
   const onMovedEcoSystemClicked = (idElement: string) => {
 
@@ -49,6 +66,9 @@ export const BetaAI = () => {
   }, [error])
 
 
+  async function claimFaucest() {
+
+  }
 
   async function fetchAnswer(question: string) {
     setMsgError('')
@@ -68,9 +88,9 @@ export const BetaAI = () => {
     setIsLoading(true)
     onMovedEcoSystemClicked('loading')
     const startTime = Date.now()
+
     try {
       const response = await axios.post('https://api.chatgm.com/api/ai/messages', { message: question });
-
       writeContract({
         address: `0x${memoContracts[chainId ?? 0]}`,
         abi,
@@ -87,12 +107,12 @@ export const BetaAI = () => {
       onMovedEcoSystemClicked('answer')
 
     } catch (error) {
-      console.error(error);
+      setIsLoading(false)
+      // console.error(error);
     }
   }
 
   function openModal() {
-    console.log('open modal')
     open();
   }
   function newPrompt() {
@@ -135,10 +155,14 @@ export const BetaAI = () => {
                     setMsgError('')
                   }}
                   styles={{
+
                     input: {
                       fontFamily: 'Open Sans',
-                      color: 'black'
+                      color: 'black',
+                      background: 'white',
+                      borderRadius: 10
                     }
+
                   }}
                   rightSection={
                     <ActionIcon variant="filled" color='white' onClick={() => { fetchAnswer(question) }}  >
@@ -209,7 +233,7 @@ export const BetaAI = () => {
                   <Text style={{ lineHeight: '80px' }} pos='absolute' color='#FF4BE2' size={72} weight={600} ff='Outfit' w={74} h={80} right={60} top={20}> 02
                   </Text>
                   <Text mt={5} color='white' size={20} weight={700} ff='Outfit'>
-                    YOUR PROMPT
+                    YOUR RESULT
                   </Text>
                   <Box mt={30}>
                     {isLoading || !isSuccess ? <Text mt={20} color='white' size={12} weight={400} ff='Open Sans'>
@@ -222,11 +246,10 @@ export const BetaAI = () => {
                       {isLoading || !isSuccess ? <></> : <Text ff='Open Sans' size={14} color='#FECBFF'>
                         {message}
                       </Text>}
-
                     </Box>
-                    <Flex wrap="wrap" justify='center' gap={50} mt={25}>
-                      <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => {
-                        if (isLoading || message.length == 0) return;
+                    <Flex wrap="wrap" justify='space-around' mt={25}>
+                      {/* <ActionIcon w={149} h={49} variant="unstyled" onClick={() => {
+                        // if (isLoading || message.length == 0) return;
                         window?.highlightSyntax();
                       }}  >
                         <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
@@ -237,8 +260,8 @@ export const BetaAI = () => {
                             Agree
                           </Text>
                         </Flex>
-                      </ActionIcon>
-                      <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => { fetchAnswer(question) }}  >
+                      </ActionIcon> */}
+                      <ActionIcon w={149} h={49} variant="unstyled" onClick={() => { fetchAnswer(question) }}  >
                         <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
 
                         </Image>
@@ -248,7 +271,7 @@ export const BetaAI = () => {
                           </Text>
                         </Flex>
                       </ActionIcon>
-                      <ActionIcon w={149} h={49} variant="filled" color='transparent' onClick={() => { newPrompt() }}  >
+                      <ActionIcon w={149} h={49} variant="unstyled" onClick={() => { newPrompt() }}  >
                         <Image style={{ cursor: 'pointer', position: 'absolute', zIndex: 0 }} width={149} fit='contain' src='images/demo_ai/button.svg' >
 
                         </Image>
