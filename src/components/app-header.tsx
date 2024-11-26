@@ -62,10 +62,12 @@ export const AppHeader = () => {
   const [opened, { toggle, close }] = useDisclosure(false);
   const [, scrollTo] = useWindowScroll();
   const location = useLocation();
-  const { status, isReconnecting, address, chainId } = useAccount()
+  const { status, isReconnecting, address, chainId, isConnected, isConnecting } = useAccount()
 
-
-
+  console.log(status)
+  console.log("isConnected:" + isConnected)
+  console.log("isConnected:" + isConnected)
+  console.log("isConnecting:" + isConnecting)
   const onLinkClicked = () => {
     close();
     scrollTo({ y: 0 });
@@ -79,7 +81,6 @@ export const AppHeader = () => {
     }
   };
   useEffect(() => {
-    console.log(chainId)
 
     async function checkBalance() {
       try {
