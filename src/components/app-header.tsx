@@ -27,7 +27,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useAccount, useConnect, useWriteContract } from 'wagmi'
 import { getBalance } from '@wagmi/core'
 import { DISCORD_URL, MEDIUM_URL, TELEGRAM_URL, TWITTER_URL } from '~/configs';
-import { config } from '../pages/demo/wagmi/config'
+import { wagmiAdapter } from '../pages/demo/wagmi/config'
 import axios from 'axios';
 
 const useStyles = createStyles((theme) => ({
@@ -84,8 +84,9 @@ export const AppHeader = () => {
 
     async function checkBalance() {
       try {
-        const result = await getBalance(config, {
-          address: address!
+        const result = await getBalance(wagmiAdapter.wagmiConfig, {
+          address: address!,
+          chainId
         })
         //  if (receiverBalance < amount && receiverBalance < 0.000005 ether) {
         if (Number(result.formatted) < 0.000005) {
@@ -116,8 +117,9 @@ export const AppHeader = () => {
 
             <Image width={140} fit="contain" src="images/one-chainai/onechain-logo.png" />
           </Link>
-          {!isReconnecting ? <>
-            <w3m-button />
+          <appkit-button />
+          {/* {!isReconnecting ? <>
+            <appkit-button />
           </> :
             <Flex gap={10}>
               <Box pos='relative' w={30} >  <Loader size={30} style={{ background: 'transparent' }} display='' color="blue" /></Box>
@@ -125,7 +127,7 @@ export const AppHeader = () => {
                 {status}
               </Text>
             </Flex>
-          }
+          } */}
         </Flex>
       </Container>
     </Header> :

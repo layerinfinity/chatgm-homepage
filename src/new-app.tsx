@@ -15,7 +15,7 @@ import { Tokenomics } from './pages/tokenomics';
 import { BetaAI } from './pages/demo/beta_ai';
 import { BetaHome } from './pages/demo';
 import { WagmiProvider } from 'wagmi';
-import { config } from './pages/demo/wagmi/config';
+import { wagmiAdapter } from './pages/demo/wagmi/config';
 
 const theme: MantineThemeOverride = {
   colorScheme: 'dark',
@@ -173,7 +173,7 @@ const queryClient = new QueryClient();
 
 export const App = () => {
   return (
-    <WagmiProvider config={config}>
+    <WagmiProvider config={wagmiAdapter.wagmiConfig}>
       <QueryClientProvider client={queryClient}>
         <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
           <Notifications position="bottom-right" />

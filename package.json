@@ -21,6 +21,8 @@
     "@mantine/core": "6.0.21",
     "@mantine/hooks": "6.0.21",
     "@mantine/notifications": "6.0.21",
+    "@reown/appkit": "1.5.2",
+    "@reown/appkit-adapter-wagmi": "1.5.2",
     "@tabler/icons-react": "2.46.0",
     "@tanstack/react-query": "5.17.19",
     "@web3modal/wagmi": "5.1.5",
