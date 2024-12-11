@@ -9,7 +9,7 @@ import { IconArrowRight, IconSearch, IconPlayerPlayFilled } from '@tabler/icons-
 import { useEffect, useState } from 'react';
 import { useAccount, useConnect, useWriteContract } from 'wagmi'
 import { abi } from './wagmi/abi'
-import { memoContracts } from './wagmi/config'
+import { memoContracts, BASE_URL } from './wagmi/config'
 
 import {
   useSendTransaction,
@@ -18,6 +18,7 @@ import {
 import { parseEther } from 'viem';
 
 import { useTransactionCount } from 'wagmi'
+import { readContract } from 'viem/actions';
 
 
 
@@ -91,13 +92,8 @@ export const BetaAI = () => {
 
     try {
       const response = await axios.post('https://api.chatgm.com/api/ai/messages', { message: question });
-      writeContract({
-        address: `0x${memoContracts[chainId ?? 0]}`,
-        abi,
-        functionName: 'sendMemo',
-        args: [question],
-      })
 
+      await postToChain(question, response.data.data.message)
       setMessage(response.data.data.message)
       setNodes(response.data.data.nodes)
       setAccuraty(Number(response.data.data.accuraty))
@@ -108,8 +104,22 @@ export const BetaAI = () => {
 
     } catch (error) {
       setIsLoading(false)
-      // console.error(error);
     }
+  }
+
+  async function postToChain(question: string, responsive: string) {
+    try {
+      const response = await axios.post(`${BASE_URL}/api/ai/role`, { address: address, chainId: chainId });
+      writeContract({
+        address: `0x${memoContracts[chainId ?? 0]}`,
+        abi,
+        functionName: 'sendMemo',
+        args: [question, responsive],
+      })
+    } catch (error) {
+
+    }
+
   }
 
   function openModal() {

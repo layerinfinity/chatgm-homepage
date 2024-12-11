@@ -27,8 +27,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { useAccount, useConnect, useWriteContract } from 'wagmi'
 import { getBalance } from '@wagmi/core'
 import { DISCORD_URL, MEDIUM_URL, TELEGRAM_URL, TWITTER_URL } from '~/configs';
-import { wagmiAdapter } from '../pages/demo/wagmi/config'
+import { BASE_URL, wagmiAdapter } from '../pages/demo/wagmi/config'
 import axios from 'axios';
+import { formatEther } from 'viem';
 
 const useStyles = createStyles((theme) => ({
   logo: {
@@ -64,10 +65,8 @@ export const AppHeader = () => {
   const location = useLocation();
   const { status, isReconnecting, address, chainId, isConnected, isConnecting } = useAccount()
 
-  console.log(status)
-  console.log("isConnected:" + isConnected)
-  console.log("isConnected:" + isConnected)
-  console.log("isConnecting:" + isConnecting)
+  // console.log(address)
+  // console.log("isConnected:" + isConnected)
   const onLinkClicked = () => {
     close();
     scrollTo({ y: 0 });
@@ -88,10 +87,18 @@ export const AppHeader = () => {
           address: address!,
           chainId
         })
-        //  if (receiverBalance < amount && receiverBalance < 0.000005 ether) {
-        if (Number(result.formatted) < 0.000005) {
-          await axios.post('https://api.chatgm.com/api/ai/faucet', { address, chainId });
+        if (chainId == 1020352220) {
+          // test net
+          if (Number(formatEther(result.value)) < 0.000005) {
+            await axios.post(`${BASE_URL}/api/ai/faucet`, { address, chainId });
+          }
+        } else if (chainId == 1350216234) {
+          // mainnet
+          if (Number(formatEther(result.value)) < 0.005) {
+            await axios.post(`${BASE_URL}/api/ai/faucet`, { address, chainId });
+          }
         }
+
       } catch (error) {
         console.log('error' + error)
       }

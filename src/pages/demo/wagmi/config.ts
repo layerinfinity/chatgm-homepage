@@ -1,20 +1,11 @@
 import { CreateConnectorFn } from 'wagmi'
-// import { skaleTitanTestnet, skaleEuropa, skaleEuropaTestnet } from 'wagmi/chains'
 import { coinbaseWallet, injected, metaMask, safe, walletConnect } from 'wagmi/connectors'
-
-// import { createWeb3Modal } from '@web3modal/wagmi/react'
-// import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
-import { authConnector } from '@web3modal/wagmi'
-
 import { createAppKit } from '@reown/appkit/react'
-
-import { WagmiProvider } from 'wagmi'
-import { skaleTitanTestnet, skaleEuropaTestnet, AppKitNetwork } from '@reown/appkit/networks'
+import { skaleTitanTestnet, skaleTitan, AppKitNetwork } from '@reown/appkit/networks'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 
-// 0. Setup queryClient
 export const queryClient = new QueryClient()
 const projectId = '796a6fe9221b10997a9ff594b6282bb5'
 
@@ -25,9 +16,9 @@ const metadata = {
   icons: ['https://1chain.ai/images/seo/search-tool.png']
 }
 
-
-const chains = [skaleTitanTestnet, skaleEuropaTestnet] as const
-export const memoContracts: { [key: string]: string } = { 1020352220: '9950A6Ff4a68C8c02B563605d5c95B7302076f17', 1444673419: '09769DD5Eb254Aa5CAb9AAB71FE80D3a50688373' }
+// export const BASE_URL = 'http://localhost:3001'
+export const BASE_URL = 'https://api.chatgm.com'
+export const memoContracts: { [key: string]: string } = { 1350216234: "7f69aC0A564863C222b2ff51e8E5127F1797696C", 1020352220: '5f058BC90096D89dc3c06a0a1826951d15f0Cfc1', }
 
 
 
@@ -42,18 +33,8 @@ connectors.push(
   })
 )
 
-// connectors.push(
-//   authConnector({
-//     options: { projectId },
-//     // socials: ['google', 'x', 'github', 'discord', 'apple', 'facebook', 'farcaster'], // add Social logins
-//     showWallets: true,
-//     email: false,
-//     walletFeatures: true
-//   })
-// )
-const networks = [skaleTitanTestnet, skaleEuropaTestnet]
+const networks = [skaleTitan, skaleTitanTestnet]
 
-// 4. Create Wagmi Adapter
 export const wagmiAdapter = new WagmiAdapter({
   networks,
   projectId,
@@ -63,7 +44,7 @@ export const wagmiAdapter = new WagmiAdapter({
 
 createAppKit({
   adapters: [wagmiAdapter],
-  networks: [skaleTitanTestnet, skaleEuropaTestnet],
+  networks: [skaleTitan, skaleTitanTestnet],
   projectId,
   metadata,
   features: {
