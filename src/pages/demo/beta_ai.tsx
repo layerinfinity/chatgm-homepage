@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import { useAccount, useConnect, useWriteContract } from 'wagmi'
 import { abi } from './wagmi/abi'
 import { memoContracts, BASE_URL } from './wagmi/config'
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 import {
   useSendTransaction,
@@ -254,7 +256,8 @@ export const BetaAI = () => {
 
                     <Box mt={25} className={classes.box_result}>
                       {isLoading || !isSuccess ? <></> : <Text ff='Open Sans' size={14} color='#FECBFF'>
-                        {message}
+                        <Markdown remarkPlugins={[remarkGfm]}>{message}</Markdown>
+
                       </Text>}
                     </Box>
                     <Flex wrap="wrap" justify='space-around' mt={25}>
